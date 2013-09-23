@@ -1,3 +1,5 @@
 Dependencies for Project 'Lab1', Target 'Lab 1': (DO NOT MODIFY !)
-F (.\startup_stm32f4xx.s)(0x52408529)(--cpu Cortex-M4.fp -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx --list "startup_stm32f4xx.lst" --xref -o "startup_stm32f4xx.o" --depend "startup_stm32f4xx.d")
-F (.\lab1Asm.s)(0x524084F5)(--cpu Cortex-M4.fp -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx --list "lab1Asm.lst" --xref -o "lab1Asm.o" --depend "lab1Asm.d")
+F (.\startup_stm32f4xx.s)(0x52409D07)(--cpu Cortex-M4.fp -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx --list "startup_stm32f4xx.lst" --xref -o "startup_stm32f4xx.o" --depend "startup_stm32f4xx.d")
+F (.\lab1Asm.s)(0x52409672)(--cpu Cortex-M4.fp -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx --list "lab1Asm.lst" --xref -o "lab1Asm.o" --depend "lab1Asm.d")
+F (.\Part1Main.c)(0x52409F7E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx -o "part1main.o" --omf_browse "part1main.crf" --depend "part1main.d")
+I (C:\Keil\ARM\ARMCC\bin\..\include\stdio.h)(0x516F2AA6)

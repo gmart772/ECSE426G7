@@ -7,16 +7,41 @@ ARM Macro Assembler    Page 1
     1 00000000                 AREA             Lab1Asm, CODE, READONLY
     2 00000000         
     3 00000000                 EXPORT           encryptionAsm
-    4 00000000         
-    5 00000000         encryptionAsm
-    6 00000000         
-    7 00000000 F04F 0119       MOV              R1, #25
-    8 00000004 F04F 024B       MOV              R2, #75
-    9 00000008 4411            ADD              R1, R1, R2
-   10 0000000A         
-   11 0000000A 4770            BX               LR          ;
-   12 0000000C         
-   13 0000000C                 END
+    4 00000000                 EXPORT           decryptionAsm
+    5 00000000         ; Lab 1, Assembly encryption/decryption routines
+    6 00000000         ; REGISTERS
+    7 00000000         ; R0: Pointer to key -> D0
+    8 00000000         ; R1: Pointer to data -> D1
+    9 00000000         ; R2: Sum
+   10 00000000         ; R3: Delta
+   11 00000000         ; R4: Loop counter (N)
+   12 00000000         ; R5: Temp
+   13 00000000         ; R6-R8: T0-T3
+   14 00000000         ; R9-R12: K0-K3
+   15 00000000         
+   16 00000000         encryptionAsm
+   17 00000000         
+   18 00000000 BC01            POP              {R0}        ; Get pointer to ke
+                                                            y from stack
+   19 00000002 BC02            POP              {R1}        ; Get pointer to da
+                                                            ta from stack
+   20 00000004         
+   21 00000004 460D            MOV              R5, R1      ; Copy data pointer
+                                                             to temp register
+   22 00000006         
+   23 00000006 E890 1E00       LDM              R0, {R9-R12} ; Load key into re
+                                                            gisters 9 - 12
+   24 0000000A         
+   25 0000000A E895 0003       LDM              R5, {R0 - R1} ; Load data into 
+                                                            D0 and D1
+   26 0000000E         
+   27 0000000E 4770            BX               LR
+   28 00000010         
+   29 00000010                 ENDP
+   30 00000010         
+   31 00000010         decryptionAsm
+   32 00000010         
+   33 00000010                 END
 Command Line: --debug --xref --cpu=Cortex-M4.fp --apcs=interwork --depend=lab1A
 sm.d -olab1Asm.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\A
 RM\Inc\ST\STM32F4xx --list=lab1Asm.lst lab1Asm.s
@@ -34,13 +59,21 @@ Symbol: Lab1Asm
    Uses
       None
 Comment: Lab1Asm unused
+decryptionAsm 00000010
+
+Symbol: decryptionAsm
+   Definitions
+      At line 31 in file lab1Asm.s
+   Uses
+      At line 4 in file lab1Asm.s
+Comment: decryptionAsm used once
 encryptionAsm 00000000
 
 Symbol: encryptionAsm
    Definitions
-      At line 5 in file lab1Asm.s
+      At line 16 in file lab1Asm.s
    Uses
       At line 3 in file lab1Asm.s
 Comment: encryptionAsm used once
-2 symbols
-333 symbols in table
+3 symbols
+334 symbols in table
