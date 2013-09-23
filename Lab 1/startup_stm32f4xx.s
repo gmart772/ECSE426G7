@@ -169,13 +169,14 @@ __Vectors_Size  EQU  __Vectors_End - __Vectors
 ; Reset handler
 Reset_Handler    PROC
                  EXPORT  Reset_Handler             [WEAK]
-        IMPORT  SystemInit
-        IMPORT  __main
-
-                 LDR     R0, =SystemInit
-                 BLX     R0
-                 LDR     R0, =__main
-                 BX      R0
+        ;IMPORT  SystemInit
+        ;IMPORT  __main
+				IMPORT encryptionAsm
+         ;        LDR     R0, =SystemInit
+          ;       BLX     R0
+           ;      LDR     R0, =__main
+				LDR R0, =encryptionAsm
+                 BLX      R0
                  ENDP
 
 ; Dummy Exception Handlers (infinite loops which can be modified)
@@ -407,7 +408,7 @@ FPU_IRQHandler
                 
                  ELSE
                 
-                 IMPORT  __use_two_region_memory
+               ;  IMPORT  __use_two_region_memory
                  EXPORT  __user_initial_stackheap
                  
 __user_initial_stackheap

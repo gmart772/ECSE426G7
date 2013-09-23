@@ -7,3 +7,154 @@ C:\Users\gmarti37\ECSE427G7\Lab 1\Lab1.uvproj
 Project File Date:  09/23/2013
 
 <h2>Output:</h2>
+Build target 'Lab 1'
+assembling startup_stm32f4xx.s...
+assembling lab1Asm.s...
+lab1Asm.s(3): error: A1145E: Undefined exported symbol 'encryptionAsm'
+Target not created
+Build target 'Lab 1'
+assembling startup_stm32f4xx.s...
+assembling lab1Asm.s...
+lab1Asm.s(3): error: A1145E: Undefined exported symbol 'encryptionAsm'
+Target not created
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(3): error: A1145E: Undefined exported symbol 'encryptionAsm'
+Target not created
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(3): error: A1145E: Undefined exported symbol 'encryptionAsm'
+Target not created
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(3): error: A1145E: Undefined exported symbol 'encryptionAsm'
+Target not created
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(3): error: A1145E: Undefined exported symbol 'encryptionAsm'
+Target not created
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(3): error: A1145E: Undefined exported symbol 'encryptionAsm'
+Target not created
+Build target 'Lab 1'
+assembling lab1Asm.s...
+linking...
+Lab1.axf: Warning: L6665W: Neither Lib$$Request$$armlib Lib$$Request$$cpplib defined, not searching ARM libraries.
+Lab1.axf: Error: L6218E: Undefined symbol __use_two_region_memory (referred from startup_stm32f4xx.o).
+Lab1.axf: Error: L6218E: Undefined symbol encryptionAsm (referred from startup_stm32f4xx.o).
+Target not created
+Build target 'Lab 1'
+assembling startup_stm32f4xx.s...
+linking...
+Lab1.axf: Warning: L6665W: Neither Lib$$Request$$armlib Lib$$Request$$cpplib defined, not searching ARM libraries.
+Lab1.axf: Error: L6218E: Undefined symbol encryptionAsm (referred from startup_stm32f4xx.o).
+Target not created
+Build target 'Lab 1'
+linking...
+Lab1.axf: Warning: L6665W: Neither Lib$$Request$$armlib Lib$$Request$$cpplib defined, not searching ARM libraries.
+Lab1.axf: Error: L6218E: Undefined symbol encryptionAsm (referred from startup_stm32f4xx.o).
+Target not created
+Build target 'Lab 1'
+linking...
+Lab1.axf: Warning: L6665W: Neither Lib$$Request$$armlib Lib$$Request$$cpplib defined, not searching ARM libraries.
+Lab1.axf: Error: L6218E: Undefined symbol encryptionAsm (referred from startup_stm32f4xx.o).
+Target not created
+Build target 'Lab 1'
+linking...
+Lab1.axf: Warning: L6665W: Neither Lib$$Request$$armlib Lib$$Request$$cpplib defined, not searching ARM libraries.
+Lab1.axf: Error: L6218E: Undefined symbol encryptionAsm (referred from startup_stm32f4xx.o).
+Target not created
+Build target 'Lab 1'
+linking...
+Lab1.axf: Warning: L6665W: Neither Lib$$Request$$armlib Lib$$Request$$cpplib defined, not searching ARM libraries.
+Lab1.axf: Error: L6218E: Undefined symbol encryptionAsm (referred from startup_stm32f4xx.o).
+Target not created
+Build target 'Lab 1'
+assembling lab1Asm.s...
+linking...
+Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+assembling startup_stm32f4xx.s...
+linking...
+Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+linking...
+Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+linking...
+Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+linking...
+Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+linking...
+Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+linking...
+Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+linking...
+Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+linking...
+Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+linking...
+Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+linking...
+Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+linking...
+Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+linking...
+Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+assembling startup_stm32f4xx.s...
+linking...
+Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).

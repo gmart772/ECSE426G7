@@ -1,0 +1,46 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             Lab1Asm, CODE, READONLY
+    2 00000000         
+    3 00000000                 EXPORT           encryptionAsm
+    4 00000000         
+    5 00000000         encryptionAsm
+    6 00000000         
+    7 00000000 F04F 0119       MOV              R1, #25
+    8 00000004 F04F 024B       MOV              R2, #75
+    9 00000008 4411            ADD              R1, R1, R2
+   10 0000000A         
+   11 0000000A 4770            BX               LR          ;
+   12 0000000C         
+   13 0000000C                 END
+Command Line: --debug --xref --cpu=Cortex-M4.fp --apcs=interwork --depend=lab1A
+sm.d -olab1Asm.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\A
+RM\Inc\ST\STM32F4xx --list=lab1Asm.lst lab1Asm.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Lab1Asm 00000000
+
+Symbol: Lab1Asm
+   Definitions
+      At line 1 in file lab1Asm.s
+   Uses
+      None
+Comment: Lab1Asm unused
+encryptionAsm 00000000
+
+Symbol: encryptionAsm
+   Definitions
+      At line 5 in file lab1Asm.s
+   Uses
+      At line 3 in file lab1Asm.s
+Comment: encryptionAsm used once
+2 symbols
+333 symbols in table
