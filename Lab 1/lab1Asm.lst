@@ -21,27 +21,25 @@ ARM Macro Assembler    Page 1
    15 00000000         
    16 00000000         encryptionAsm
    17 00000000         
-   18 00000000 BC01            POP              {R0}        ; Get pointer to ke
-                                                            y from stack
-   19 00000002 BC02            POP              {R1}        ; Get pointer to da
-                                                            ta from stack
-   20 00000004         
-   21 00000004 460D            MOV              R5, R1      ; Copy data pointer
+   18 00000000         ;POP {R0} ; Get pointer to key from stack
+   19 00000000         ;POP {R1} ; Get pointer to data from stack
+   20 00000000         
+   21 00000000 460D            MOV              R5, R1      ; Copy data pointer
                                                              to temp register
-   22 00000006         
-   23 00000006 E890 1E00       LDM              R0, {R9-R12} ; Load key into re
+   22 00000002         
+   23 00000002 E890 1E00       LDM              R0, {R9-R12} ; Load key into re
                                                             gisters 9 - 12
-   24 0000000A         
-   25 0000000A E895 0003       LDM              R5, {R0 - R1} ; Load data into 
+   24 00000006         
+   25 00000006 E895 0003       LDM              R5, {R0 - R1} ; Load data into 
                                                             D0 and D1
-   26 0000000E         
-   27 0000000E 4770            BX               LR
-   28 00000010         
-   29 00000010                 ENDP
-   30 00000010         
-   31 00000010         decryptionAsm
-   32 00000010         
-   33 00000010                 END
+   26 0000000A         
+   27 0000000A 4770            BX               LR
+   28 0000000C         
+   29 0000000C                 ENDP
+   30 0000000C         
+   31 0000000C         decryptionAsm
+   32 0000000C         
+   33 0000000C                 END
 Command Line: --debug --xref --cpu=Cortex-M4.fp --apcs=interwork --depend=lab1A
 sm.d -olab1Asm.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\A
 RM\Inc\ST\STM32F4xx --list=lab1Asm.lst lab1Asm.s
@@ -59,7 +57,7 @@ Symbol: Lab1Asm
    Uses
       None
 Comment: Lab1Asm unused
-decryptionAsm 00000010
+decryptionAsm 0000000C
 
 Symbol: decryptionAsm
    Definitions

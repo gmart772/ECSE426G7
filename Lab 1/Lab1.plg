@@ -8,403 +8,140 @@ Project File Date:  09/23/2013
 
 <h2>Output:</h2>
 Build target 'Lab 1'
-assembling startup_stm32f4xx.s...
-assembling lab1Asm.s...
-lab1Asm.s(3): error: A1145E: Undefined exported symbol 'encryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling startup_stm32f4xx.s...
-assembling lab1Asm.s...
-lab1Asm.s(3): error: A1145E: Undefined exported symbol 'encryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(3): error: A1145E: Undefined exported symbol 'encryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(3): error: A1145E: Undefined exported symbol 'encryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(3): error: A1145E: Undefined exported symbol 'encryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(3): error: A1145E: Undefined exported symbol 'encryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(3): error: A1145E: Undefined exported symbol 'encryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
 linking...
-Lab1.axf: Warning: L6665W: Neither Lib$$Request$$armlib Lib$$Request$$cpplib defined, not searching ARM libraries.
-Lab1.axf: Error: L6218E: Undefined symbol __use_two_region_memory (referred from startup_stm32f4xx.o).
-Lab1.axf: Error: L6218E: Undefined symbol encryptionAsm (referred from startup_stm32f4xx.o).
-Target not created
-Build target 'Lab 1'
-assembling startup_stm32f4xx.s...
-linking...
-Lab1.axf: Warning: L6665W: Neither Lib$$Request$$armlib Lib$$Request$$cpplib defined, not searching ARM libraries.
-Lab1.axf: Error: L6218E: Undefined symbol encryptionAsm (referred from startup_stm32f4xx.o).
-Target not created
+Program Size: Code=3244 RO-data=436 RW-data=16 ZI-data=1888  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
 Build target 'Lab 1'
 linking...
-Lab1.axf: Warning: L6665W: Neither Lib$$Request$$armlib Lib$$Request$$cpplib defined, not searching ARM libraries.
-Lab1.axf: Error: L6218E: Undefined symbol encryptionAsm (referred from startup_stm32f4xx.o).
-Target not created
+Program Size: Code=3244 RO-data=436 RW-data=16 ZI-data=1888  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
 Build target 'Lab 1'
 linking...
-Lab1.axf: Warning: L6665W: Neither Lib$$Request$$armlib Lib$$Request$$cpplib defined, not searching ARM libraries.
-Lab1.axf: Error: L6218E: Undefined symbol encryptionAsm (referred from startup_stm32f4xx.o).
-Target not created
+Program Size: Code=3244 RO-data=436 RW-data=16 ZI-data=1888  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
 Build target 'Lab 1'
 linking...
-Lab1.axf: Warning: L6665W: Neither Lib$$Request$$armlib Lib$$Request$$cpplib defined, not searching ARM libraries.
-Lab1.axf: Error: L6218E: Undefined symbol encryptionAsm (referred from startup_stm32f4xx.o).
-Target not created
+Program Size: Code=3244 RO-data=436 RW-data=16 ZI-data=1888  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
 Build target 'Lab 1'
-linking...
-Lab1.axf: Warning: L6665W: Neither Lib$$Request$$armlib Lib$$Request$$cpplib defined, not searching ARM libraries.
-Lab1.axf: Error: L6218E: Undefined symbol encryptionAsm (referred from startup_stm32f4xx.o).
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
+compiling Part1Main.c...
 linking...
 Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
 Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-assembling startup_stm32f4xx.s...
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
+Program Size: Code=2990 RO-data=406 RW-data=16 ZI-data=1800  
 "Lab1.axf" - 0 Error(s), 2 Warning(s).
 Build target 'Lab 1'
 linking...
 Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
 Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
+Program Size: Code=2990 RO-data=406 RW-data=16 ZI-data=1800  
 "Lab1.axf" - 0 Error(s), 2 Warning(s).
 Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(5): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(6): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(7): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(7): warning:  #177-D: variable "z" was declared but never referenced
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(8): warning:  #177-D: variable "z" was declared but never referenced
 linking...
 Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
 Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-assembling lab1Asm.s...
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-assembling startup_stm32f4xx.s...
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-assembling startup_stm32f4xx.s...
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=68 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling startup_stm32f4xx.s...
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling startup_stm32f4xx.s...
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(4): error: A1145E: Undefined exported symbol 'decryptionAsm'
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(14): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=88 RO-data=392 RW-data=0 ZI-data=1536  
+Program Size: Code=96 RO-data=392 RW-data=0 ZI-data=1536  
 "Lab1.axf" - 0 Error(s), 3 Warning(s).
 Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(14): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-lab1Asm.s(24): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-lab1Asm.s(25): warning: A1313W: Missing END directive at end of file
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=88 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 5 Warning(s).
-Build target 'Lab 1'
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=88 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=88 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=88 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(23): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-lab1Asm.s(33): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-lab1Asm.s(34): warning: A1313W: Missing END directive at end of file
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=88 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 5 Warning(s).
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(23): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=88 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 3 Warning(s).
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(18): error: A1215E: Bad register list symbol
-lab1Asm.s(22): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+compiling Part1Main.c...
+Part1Main.c(6): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(7): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(8): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(8): warning:  #177-D: variable "z" was declared but never referenced
 Target not created
 Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(22): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=72 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 3 Warning(s).
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(18): error: A1215E: Bad register list symbol
-lab1Asm.s(19): error: A1215E: Bad register list symbol
-lab1Asm.s(25): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+compiling Part1Main.c...
+Part1Main.c(6): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(8): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(10): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(10): warning:  #550-D: variable "z" was set but never used
 Target not created
 Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(18): error: A1215E: Bad register list symbol
-lab1Asm.s(19): error: A1215E: Bad register list symbol
-lab1Asm.s(25): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+compiling Part1Main.c...
+Part1Main.c(8): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(10): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(10): warning:  #550-D: variable "z" was set but never used
 Target not created
 Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(18): error: A1215E: Bad register list symbol
-lab1Asm.s(19): error: A1215E: Bad register list symbol
-lab1Asm.s(25): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+compiling Part1Main.c...
+Part1Main.c(8): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(10): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(10): warning:  #550-D: variable "z" was set but never used
 Target not created
 Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(18): error: A1215E: Bad register list symbol
-lab1Asm.s(19): error: A1215E: Bad register list symbol
-lab1Asm.s(25): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+compiling Part1Main.c...
+Part1Main.c(8): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(10): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(10): warning:  #550-D: variable "z" was set but never used
 Target not created
 Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(25): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+compiling Part1Main.c...
+Part1Main.c(8): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(10): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(10): warning:  #550-D: variable "z" was set but never used
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(8): warning:  #177-D: variable "z" was declared but never referenced
 linking...
 Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
 Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=72 RO-data=392 RW-data=0 ZI-data=1536  
+Program Size: Code=96 RO-data=392 RW-data=0 ZI-data=1536  
 "Lab1.axf" - 0 Error(s), 3 Warning(s).
 Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(26): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+compiling Part1Main.c...
+Part1Main.c(14): error:  #29: expected an expression
+Part1Main.c(14): error:  #137: expression must be a modifiable lvalue
+Part1Main.c(16): error:  #137: expression must be a modifiable lvalue
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(14): error:  #29: expected an expression
+Part1Main.c(14): error:  #137: expression must be a modifiable lvalue
+Part1Main.c(16): error:  #137: expression must be a modifiable lvalue
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(17): error:  #137: expression must be a modifiable lvalue
+Part1Main.c(11): warning:  #550-D: variable "key_temp" was set but never used
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(20): error:  #137: expression must be a modifiable lvalue
+Part1Main.c(11): warning:  #550-D: variable "key_temp" was set but never used
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(11): warning:  #550-D: variable "key_temp" was set but never used
+Part1Main.c(12): warning:  #550-D: variable "data_temp" was set but never used
 linking...
 Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
 Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=72 RO-data=392 RW-data=0 ZI-data=1536  
+Program Size: Code=132 RO-data=392 RW-data=0 ZI-data=1536  
+"Lab1.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(24): warning:  #167-D: argument of type "unsigned int *" is incompatible with parameter of type "int *"
+linking...
+Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=140 RO-data=392 RW-data=0 ZI-data=1536  
 "Lab1.axf" - 0 Error(s), 3 Warning(s).
 Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(27): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+compiling Part1Main.c...
 linking...
 Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
 Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=76 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 3 Warning(s).
-Build target 'Lab 1'
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=76 RO-data=392 RW-data=0 ZI-data=1536  
+Program Size: Code=140 RO-data=392 RW-data=0 ZI-data=1536  
 "Lab1.axf" - 0 Error(s), 2 Warning(s).
 Build target 'Lab 1'
 assembling lab1Asm.s...
@@ -412,363 +149,23 @@ lab1Asm.s(29): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
 linking...
 Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
 Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=80 RO-data=392 RW-data=0 ZI-data=1536  
+Program Size: Code=136 RO-data=392 RW-data=0 ZI-data=1536  
 "Lab1.axf" - 0 Error(s), 3 Warning(s).
 Build target 'Lab 1'
 linking...
 Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
 Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=80 RO-data=392 RW-data=0 ZI-data=1536  
+Program Size: Code=136 RO-data=392 RW-data=0 ZI-data=1536  
 "Lab1.axf" - 0 Error(s), 2 Warning(s).
 Build target 'Lab 1'
 linking...
 Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
 Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=80 RO-data=392 RW-data=0 ZI-data=1536  
+Program Size: Code=136 RO-data=392 RW-data=0 ZI-data=1536  
 "Lab1.axf" - 0 Error(s), 2 Warning(s).
 Build target 'Lab 1'
 linking...
 Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
 Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=80 RO-data=392 RW-data=0 ZI-data=1536  
+Program Size: Code=136 RO-data=392 RW-data=0 ZI-data=1536  
 "Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=80 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-compiling Part1Main.c...
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=80 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=80 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=80 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-linking...
-Lab1.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-Lab1.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=80 RO-data=392 RW-data=0 ZI-data=1536  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-assembling startup_stm32f4xx.s...
-compiling Part1Main.c...
-Part1Main.c(5): warning:  #1-D: last line of file ends without a newline
-linking...
-Lab1.axf: Error: L6218E: Undefined symbol SystemInit (referred from startup_stm32f4xx.o).
-Target not created
-Build target 'Lab 1'
-linking...
-Lab1.axf: Error: L6218E: Undefined symbol SystemInit (referred from startup_stm32f4xx.o).
-Target not created
-Build target 'Lab 1'
-assembling startup_stm32f4xx.s...
-linking...
-Lab1.axf: Error: L6218E: Undefined symbol SystemInit (referred from startup_stm32f4xx.o).
-Target not created
-Build target 'Lab 1'
-assembling startup_stm32f4xx.s...
-linking...
-Program Size: Code=312 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-compiling Part1Main.c...
-Part1Main.c(6): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=312 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 1 Warning(s).
-Build target 'Lab 1'
-compiling Part1Main.c...
-linking...
-Program Size: Code=312 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-compiling Part1Main.c...
-Part1Main.c(4): warning:  #177-D: variable "x" was declared but never referenced
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 1 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE427G7\\Lab 1\\Lab1.axf" 
-Internal DLL Error
-Build target 'Lab 1'
-compiling Part1Main.c...
-linking...
-Program Size: Code=312 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-compiling Part1Main.c...
-linking...
-Program Size: Code=312 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-compiling Part1Main.c...
-Part1Main.c(2): warning:  #177-D: variable "x" was declared but never referenced
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 1 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Rebuild target 'Lab 1'
-assembling startup_stm32f4xx.s...
-assembling lab1Asm.s...
-lab1Asm.s(29): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-compiling Part1Main.c...
-Part1Main.c(2): warning:  #177-D: variable "x" was declared but never referenced
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-assembling startup_stm32f4xx.s...
-startup_stm32f4xx.s(182): error: A1112E: Expected address expression
-Target not created
-Build target 'Lab 1'
-assembling startup_stm32f4xx.s...
-startup_stm32f4xx.s(182): error: A1112E: Expected address expression
-Target not created
-Build target 'Lab 1'
-assembling startup_stm32f4xx.s...
-startup_stm32f4xx.s(182): error: A1112E: Expected address expression
-Target not created
-Build target 'Lab 1'
-assembling startup_stm32f4xx.s...
-startup_stm32f4xx.s(182): error: A1112E: Expected address expression
-Target not created
-Build target 'Lab 1'
-assembling startup_stm32f4xx.s...
-startup_stm32f4xx.s(182): error: A1112E: Expected address expression
-Target not created
-Build target 'Lab 1'
-assembling startup_stm32f4xx.s...
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-compiling main.c...
-main.c(3): warning:  #1-D: last line of file ends without a newline
-linking...
-Lab1.axf: Error: L6200E: Symbol __ARM_use_no_argv multiply defined (by main.o and part1main.o).
-Lab1.axf: Error: L6200E: Symbol main multiply defined (by main.o and part1main.o).
-Target not created
-Build target 'Lab 1'
-linking...
-Lab1.axf: Error: L6200E: Symbol __ARM_use_no_argv multiply defined (by main.o and part1main.o).
-Lab1.axf: Error: L6200E: Symbol main multiply defined (by main.o and part1main.o).
-Target not created
-Build target 'Lab 1'
-linking...
-Lab1.axf: Error: L6200E: Symbol __ARM_use_no_argv multiply defined (by main.o and part1main.o).
-Lab1.axf: Error: L6200E: Symbol main multiply defined (by main.o and part1main.o).
-Target not created
-Build target 'Lab 1'
-linking...
-Lab1.axf: Error: L6200E: Symbol __ARM_use_no_argv multiply defined (by main.o and part1main.o).
-Lab1.axf: Error: L6200E: Symbol main multiply defined (by main.o and part1main.o).
-Target not created
-Build target 'Lab 1'
-linking...
-Lab1.axf: Error: L6200E: Symbol __ARM_use_no_argv multiply defined (by main.o and part1main.o).
-Lab1.axf: Error: L6200E: Symbol main multiply defined (by main.o and part1main.o).
-Target not created
-Build target 'Lab 1'
-linking...
-Lab1.axf: Error: L6200E: Symbol __ARM_use_no_argv multiply defined (by main.o and part1main.o).
-Lab1.axf: Error: L6200E: Symbol main multiply defined (by main.o and part1main.o).
-Target not created
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-assembling startup_stm32f4xx.s...
-linking...
-Program Size: Code=352 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=352 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=352 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=352 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-assembling startup_stm32f4xx.s...
-linking...
-Program Size: Code=344 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=344 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=344 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=344 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=344 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-assembling startup_stm32f4xx.s...
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=316 RO-data=408 RW-data=0 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-compiling Part1Main.c...
-Part1Main.c(4): warning:  #177-D: variable "x" was declared but never referenced
-linking...
-Program Size: Code=3248 RO-data=436 RW-data=16 ZI-data=1888  
-"Lab1.axf" - 0 Error(s), 1 Warning(s).
-Build target 'Lab 1'
-compiling Part1Main.c...
-Part1Main.c(4): warning:  #177-D: variable "x" was declared but never referenced
-linking...
-Program Size: Code=3244 RO-data=436 RW-data=16 ZI-data=1888  
-"Lab1.axf" - 0 Error(s), 1 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=3244 RO-data=436 RW-data=16 ZI-data=1888  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=3244 RO-data=436 RW-data=16 ZI-data=1888  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=3244 RO-data=436 RW-data=16 ZI-data=1888  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=3244 RO-data=436 RW-data=16 ZI-data=1888  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=3244 RO-data=436 RW-data=16 ZI-data=1888  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=3244 RO-data=436 RW-data=16 ZI-data=1888  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=3244 RO-data=436 RW-data=16 ZI-data=1888  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Lab 1'
-linking...
-Program Size: Code=3244 RO-data=436 RW-data=16 ZI-data=1888  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).

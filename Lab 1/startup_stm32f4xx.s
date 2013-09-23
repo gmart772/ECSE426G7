@@ -173,13 +173,13 @@ Reset_Handler    PROC
         IMPORT  __main
 			;	IMPORT encryptionAsm
 			;	IMPORT decryptionAsm
-       ;          LDR     R0, =SystemInit
-          ;       BLX     R0
-                 LDR     R0, =__main
-			;	LDR R0, =encryptionAsm
-            ;     BLX      R0
-			;	 LDR R0, =decryptionAsm
-				 BLX R0
+       ;        LDR     R0, =SystemInit
+                LDR     R0, =__main
+				BLX R0
+				;LDR R0, =encryptionAsm
+                 ;BLX      R0
+				 ;LDR R0, =decryptionAsm
+				 ;BLX R0
                  ENDP
 
 ; Dummy Exception Handlers (infinite loops which can be modified)

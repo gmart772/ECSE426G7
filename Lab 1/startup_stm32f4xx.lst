@@ -474,13 +474,13 @@ ARM Macro Assembler    Page 8
   173 00000000                 IMPORT           __main
   174 00000000         ; IMPORT encryptionAsm
   175 00000000         ; IMPORT decryptionAsm
-  176 00000000         ;          LDR     R0, =SystemInit
-  177 00000000         ;       BLX     R0
-  178 00000000 4808            LDR              R0, =__main
-  179 00000002         ; LDR R0, =encryptionAsm
-  180 00000002         ;     BLX      R0
-  181 00000002         ;  LDR R0, =decryptionAsm
-  182 00000002 4780            BLX              R0
+  176 00000000         ;        LDR     R0, =SystemInit
+  177 00000000 4808            LDR              R0, =__main
+  178 00000002 4780            BLX              R0
+  179 00000004         ;LDR R0, =encryptionAsm
+  180 00000004         ;BLX      R0
+  181 00000004         ;LDR R0, =decryptionAsm
+  182 00000004         ;BLX R0
   183 00000004                 ENDP
   184 00000004         
   185 00000004         ; Dummy Exception Handlers (infinite loops which can be 
@@ -1959,7 +1959,7 @@ Symbol: __main
    Definitions
       At line 173 in file startup_stm32f4xx.s
    Uses
-      At line 178 in file startup_stm32f4xx.s
+      At line 177 in file startup_stm32f4xx.s
 Comment: __main used once
 1 symbol
 444 symbols in table

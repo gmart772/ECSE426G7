@@ -15,8 +15,8 @@
 	
 encryptionAsm	
 	
-	POP {R0} ; Get pointer to key from stack
-	POP {R1} ; Get pointer to data from stack
+	;POP {R0} ; Get pointer to key from stack
+	;POP {R1} ; Get pointer to data from stack
 	
 	MOV R5, R1 ; Copy data pointer to temp register
 	
