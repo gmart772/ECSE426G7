@@ -23,17 +23,19 @@ encryptionAsm
 	
 	LDM R0, {R9 - R12} ; Load key into registers 9 - 12
 	
-	LDM R5, {R0 - R1} ; Load data into D0 and D1
+	LDM R5, {R0 - R1} ; Load data into R0 and R1
 	
 	MOV R4, #0 ; Set loop counter to 0
 	
-	MOV R0, #0xCAFE
+	MOV R0, #0x47474747
+	MOV R1, #0x49494949
 	
-	STM R5, {R0 - R1} ; Put data back in memory
+	STM R5!, {R0 - R1} ; Put data back in memory
+	;STR R0, [R5, #0]!
 	
-	;POP {R2}
-	;POP {R1}
-	;POP {R0}
+	POP {R2}
+	POP {R1}
+	POP {R0}
 	; Increment stack pointer by 3 registers
 	
 	BX LR

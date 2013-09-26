@@ -31,32 +31,34 @@ ARM Macro Assembler    Page 1
    22 00000006 460D            MOV              R5, R1      ; Copy data pointer
                                                              to temp register
    23 00000008         
-   24 00000008 E890 1E00       LDM              R0, {R9-R12} ; Load key into re
-                                                            gisters 9 - 12
+   24 00000008 E890 1E00       LDM              R0, {R9 - R12} ; Load key into 
+                                                            registers 9 - 12
    25 0000000C         
    26 0000000C E895 0003       LDM              R5, {R0 - R1} ; Load data into 
-                                                            D0 and D1
+                                                            R0 and R1
    27 00000010         
    28 00000010 F04F 0400       MOV              R4, #0      ; Set loop counter 
                                                             to 0
    29 00000014         
-   30 00000014 F64C 20FE       MOV              R0, #0xCAFE
-   31 00000018         
-   32 00000018 E885 0003       STM              R5, {R0 - R1} ; Put data back i
-                                                            n memory
-   33 0000001C         
-   34 0000001C         ;POP {R2}
-   35 0000001C         ;POP {R1}
-   36 0000001C         ;POP {R0}
-   37 0000001C         ; Increment stack pointer by 3 registers
-   38 0000001C         
-   39 0000001C 4770            BX               LR
-   40 0000001E         
-   41 0000001E                 ENDP
-   42 0000001E         
-   43 0000001E         decryptionAsm
-   44 0000001E         
-   45 0000001E                 END
+   30 00000014 F04F 3047       MOV              R0, #0x47474747
+   31 00000018 F04F 3149       MOV              R1, #0x49494949
+   32 0000001C         
+   33 0000001C C503            STM              R5!, {R0 - R1} ; Put data back 
+                                                            in memory
+   34 0000001E         ;STR R0, [R5, #0]!
+   35 0000001E         
+   36 0000001E BC04            POP              {R2}
+   37 00000020 BC02            POP              {R1}
+   38 00000022 BC01            POP              {R0}
+   39 00000024         ; Increment stack pointer by 3 registers
+   40 00000024         
+   41 00000024 4770            BX               LR
+   42 00000026         
+   43 00000026                 ENDP
+   44 00000026         
+   45 00000026         decryptionAsm
+   46 00000026         
+   47 00000026                 END
 Command Line: --debug --xref --cpu=Cortex-M4.fp --apcs=interwork --depend=lab1A
 sm.d -olab1Asm.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\A
 RM\Inc\ST\STM32F4xx --list=lab1Asm.lst lab1Asm.s
@@ -74,11 +76,11 @@ Symbol: Lab1Asm
    Uses
       None
 Comment: Lab1Asm unused
-decryptionAsm 0000001E
+decryptionAsm 00000026
 
 Symbol: decryptionAsm
    Definitions
-      At line 43 in file lab1Asm.s
+      At line 45 in file lab1Asm.s
    Uses
       At line 4 in file lab1Asm.s
 Comment: decryptionAsm used once
