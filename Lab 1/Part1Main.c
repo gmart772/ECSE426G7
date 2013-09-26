@@ -35,7 +35,7 @@
 		//key_temp = { 0xBEEF, 0xDEAD, 0xCAFE, 0xFADE };
 		int i = 0;
 		for (i = 0; i < 4; i++) {
-			key_temp[i] = 0xBEEF;
+			key_temp[i] = 0xDEADBEEF;
 		}
 		
 	//	data_temp = " 0@P 0@P";

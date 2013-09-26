@@ -96,7 +96,7 @@ Image Symbol Table
     .text                                    0x08000398   Section        0  _printf_char_common.o(.text)
     _printf_input_char                       0x08000399   Thumb Code    10  _printf_char_common.o(.text)
     .text                                    0x080003c8   Section        0  ferror.o(.text)
-    Lab1Asm                                  0x080003d0   Section       38  lab1asm.o(Lab1Asm)
+    Lab1Asm                                  0x080003d0   Section       56  lab1asm.o(Lab1Asm)
     $v0                                      0x080003d0   Number         0  lab1asm.o(Lab1Asm)
     .data                                    0x20000000   Section        8  part1main.o(.data)
     HEAP                                     0x20000008   Section      512  startup_stm32f4xx.o(HEAP)
@@ -217,7 +217,7 @@ Image Symbol Table
     WWDG_IRQHandler                          0x080001b3   Thumb Code     0  startup_stm32f4xx.o(.text)
     __user_initial_stackheap                 0x080001b5   Thumb Code     0  startup_stm32f4xx.o(.text)
     fputc                                    0x080001d5   Thumb Code    30  part1main.o(.text)
-    __main                                   0x080001f3   Thumb Code   104  part1main.o(.text)
+    __main                                   0x080001f3   Thumb Code   102  part1main.o(.text)
     __2printf                                0x08000275   Thumb Code    20  noretval__2printf.o(.text)
     __printf                                 0x0800028d   Thumb Code   104  __printf.o(.text)
     _printf_str                              0x080002f5   Thumb Code    82  _printf_str.o(.text)
@@ -228,7 +228,7 @@ Image Symbol Table
     _printf_char_common                      0x080003a3   Thumb Code    32  _printf_char_common.o(.text)
     ferror                                   0x080003c9   Thumb Code     8  ferror.o(.text)
     encryptionAsm                            0x080003d1   Thumb Code     0  lab1asm.o(Lab1Asm)
-    decryptionAsm                            0x080003f7   Thumb Code     0  lab1asm.o(Lab1Asm)
+    decryptionAsm                            0x08000409   Thumb Code     0  lab1asm.o(Lab1Asm)
     __stdout                                 0x20000000   Data           4  part1main.o(.data)
     __stdin                                  0x20000004   Data           4  part1main.o(.data)
 
@@ -240,9 +240,9 @@ Memory Map of the image
 
   Image entry point : Not specified.
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000400, Max: 0x00100000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000410, Max: 0x00100000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x000003f8, Max: 0x00100000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00000408, Max: 0x00100000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -263,7 +263,7 @@ Memory Map of the image
     0x08000374   0x00000024   Code   RO           98    .text               c_w.l(_printf_char_file.o)
     0x08000398   0x00000030   Code   RO          101    .text               c_w.l(_printf_char_common.o)
     0x080003c8   0x00000008   Code   RO          103    .text               c_w.l(ferror.o)
-    0x080003d0   0x00000026   Code   RO           10    Lab1Asm             lab1asm.o
+    0x080003d0   0x00000038   Code   RO           10    Lab1Asm             lab1asm.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00000608, Max: 0x00020000, ABSOLUTE)
@@ -282,14 +282,14 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-        38          0          0          0          0        176   lab1asm.o
-       168         26          0          8          0       5045   part1main.o
+        56          0          0          0          0        180   lab1asm.o
+       168         28          0          8          0       5045   part1main.o
         56         22        392          0       1536        784   startup_stm32f4xx.o
 
     ----------------------------------------------------------------------
-       264         48        392          8       1536       6005   Object Totals
+       280         50        392          8       1536       6009   Object Totals
          0          0          0          0          0          0   (incl. Generated)
-         2          0          0          0          0          0   (incl. Padding)
+         0          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -326,15 +326,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-       624         62        392          8       1536       6093   Grand Totals
-       624         62        392          8       1536       6093   ELF Image Totals
-       624         62        392          8          0          0   ROM Totals
+       640         64        392          8       1536       6097   Grand Totals
+       640         64        392          8       1536       6097   ELF Image Totals
+       640         64        392          8          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 1016 (   0.99kB)
+    Total RO  Size (Code + RO Data)                 1032 (   1.01kB)
     Total RW  Size (RW Data + ZI Data)              1544 (   1.51kB)
-    Total ROM Size (Code + RO Data + RW Data)       1024 (   1.00kB)
+    Total ROM Size (Code + RO Data + RW Data)       1040 (   1.02kB)
 
 ==============================================================================
 

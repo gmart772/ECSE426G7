@@ -27,11 +27,25 @@ encryptionAsm
 	
 	MOV R4, #0 ; Set loop counter to 0
 	
-	MOV R0, #0x47474747
-	MOV R1, #0x49494949
+	MOV R0, #0
+	MOV R1, #0
 	
+	; BEGIN LOOP
+Loop	
+	CMP R4, #32 ; Compare loop counter and 32
+	BEQ EndLoop ; if equal, loop is done, exit
+	
+	; Logic here
+	; Dummy logic:
+	ADD R0, R0, #1
+	ADD R1, R1, #1
+	
+	
+	ADD R4, R4, #1 ; increment counter
+	B	Loop
+EndLoop	
+	; AFTER LOOP
 	STM R5!, {R0 - R1} ; Put data back in memory
-	;STR R0, [R5, #0]!
 	
 	POP {R2}
 	POP {R1}

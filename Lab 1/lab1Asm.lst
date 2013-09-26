@@ -40,25 +40,48 @@ ARM Macro Assembler    Page 1
    28 00000010 F04F 0400       MOV              R4, #0      ; Set loop counter 
                                                             to 0
    29 00000014         
-   30 00000014 F04F 3047       MOV              R0, #0x47474747
-   31 00000018 F04F 3149       MOV              R1, #0x49494949
+   30 00000014 F04F 0000       MOV              R0, #0
+   31 00000018 F04F 0100       MOV              R1, #0
    32 0000001C         
-   33 0000001C C503            STM              R5!, {R0 - R1} ; Put data back 
+   33 0000001C         ; BEGIN LOOP
+   34 0000001C         Loop
+   35 0000001C 2C20            CMP              R4, #32     ; Compare loop coun
+                                                            ter and 32
+   36 0000001E D006            BEQ              EndLoop     ; if equal, loop is
+                                                             done, exit
+   37 00000020         
+   38 00000020         ; Logic here
+   39 00000020         ; Dummy logic:
+   40 00000020 F100 0001       ADD              R0, R0, #1
+   41 00000024 F101 0101       ADD              R1, R1, #1
+   42 00000028         
+   43 00000028         
+   44 00000028 F104 0401       ADD              R4, R4, #1  ; increment counter
+                                                            
+   45 0000002C E7F6            B                Loop
+   46 0000002E         EndLoop
+   47 0000002E         ; AFTER LOOP
+   48 0000002E C503            STM              R5!, {R0 - R1} ; Put data back 
                                                             in memory
-   34 0000001E         ;STR R0, [R5, #0]!
-   35 0000001E         
-   36 0000001E BC04            POP              {R2}
-   37 00000020 BC02            POP              {R1}
-   38 00000022 BC01            POP              {R0}
-   39 00000024         ; Increment stack pointer by 3 registers
-   40 00000024         
-   41 00000024 4770            BX               LR
-   42 00000026         
-   43 00000026                 ENDP
-   44 00000026         
-   45 00000026         decryptionAsm
-   46 00000026         
-   47 00000026                 END
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   49 00000030         
+   50 00000030 BC04            POP              {R2}
+   51 00000032 BC02            POP              {R1}
+   52 00000034 BC01            POP              {R0}
+   53 00000036         ; Increment stack pointer by 3 registers
+   54 00000036         
+   55 00000036 4770            BX               LR
+   56 00000038         
+   57 00000038                 ENDP
+   58 00000038         
+   59 00000038         decryptionAsm
+   60 00000038         
+   61 00000038                 END
 Command Line: --debug --xref --cpu=Cortex-M4.fp --apcs=interwork --depend=lab1A
 sm.d -olab1Asm.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\A
 RM\Inc\ST\STM32F4xx --list=lab1Asm.lst lab1Asm.s
@@ -68,6 +91,14 @@ RM\Inc\ST\STM32F4xx --list=lab1Asm.lst lab1Asm.s
 ARM Macro Assembler    Page 1 Alphabetic symbol ordering
 Relocatable symbols
 
+EndLoop 0000002E
+
+Symbol: EndLoop
+   Definitions
+      At line 46 in file lab1Asm.s
+   Uses
+      At line 36 in file lab1Asm.s
+Comment: EndLoop used once
 Lab1Asm 00000000
 
 Symbol: Lab1Asm
@@ -76,11 +107,19 @@ Symbol: Lab1Asm
    Uses
       None
 Comment: Lab1Asm unused
-decryptionAsm 00000026
+Loop 0000001C
+
+Symbol: Loop
+   Definitions
+      At line 34 in file lab1Asm.s
+   Uses
+      At line 45 in file lab1Asm.s
+Comment: Loop used once
+decryptionAsm 00000038
 
 Symbol: decryptionAsm
    Definitions
-      At line 45 in file lab1Asm.s
+      At line 59 in file lab1Asm.s
    Uses
       At line 4 in file lab1Asm.s
 Comment: decryptionAsm used once
@@ -92,5 +131,5 @@ Symbol: encryptionAsm
    Uses
       At line 3 in file lab1Asm.s
 Comment: encryptionAsm used once
-3 symbols
-334 symbols in table
+5 symbols
+336 symbols in table
