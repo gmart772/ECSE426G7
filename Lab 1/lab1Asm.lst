@@ -12,8 +12,8 @@ ARM Macro Assembler    Page 1
     6 00000000         ; REGISTERS
     7 00000000         ; R0: Pointer to key -> D0
     8 00000000         ; R1: Pointer to data -> D1
-    9 00000000         ; R2: Sum
-   10 00000000         ; R3: Delta
+    9 00000000         ; R2: Delta
+   10 00000000         ; R3: Sum
    11 00000000         ; R4: Loop counter (N)
    12 00000000         ; R5: Temp
    13 00000000         ; R6-R8: T0-T3
@@ -21,27 +21,42 @@ ARM Macro Assembler    Page 1
    15 00000000         
    16 00000000         encryptionAsm
    17 00000000         
-   18 00000000 B401            PUSH             {R0}        ; Get pointer to ke
-                                                            y from stack
-   19 00000002 B402            PUSH             {R1}        ; Get pointer to da
-                                                            ta from stack
-   20 00000004         
-   21 00000004 460D            MOV              R5, R1      ; Copy data pointer
+   18 00000000 B401            PUSH             {R0}        ; Put key pointer o
+                                                            n stack
+   19 00000002 B402            PUSH             {R1}        ; Put data pointer 
+                                                            on stack
+   20 00000004 B404            PUSH             {R2}        ; Put delta on stac
+                                                            k
+   21 00000006         
+   22 00000006 460D            MOV              R5, R1      ; Copy data pointer
                                                              to temp register
-   22 00000006         
-   23 00000006 E890 1E00       LDM              R0, {R9-R12} ; Load key into re
+   23 00000008         
+   24 00000008 E890 1E00       LDM              R0, {R9-R12} ; Load key into re
                                                             gisters 9 - 12
-   24 0000000A         
-   25 0000000A E895 0003       LDM              R5, {R0 - R1} ; Load data into 
+   25 0000000C         
+   26 0000000C E895 0003       LDM              R5, {R0 - R1} ; Load data into 
                                                             D0 and D1
-   26 0000000E         
-   27 0000000E 4770            BX               LR
-   28 00000010         
-   29 00000010                 ENDP
-   30 00000010         
-   31 00000010         decryptionAsm
-   32 00000010         
-   33 00000010                 END
+   27 00000010         
+   28 00000010 F04F 0400       MOV              R4, #0      ; Set loop counter 
+                                                            to 0
+   29 00000014         
+   30 00000014 F64C 20FE       MOV              R0, #0xCAFE
+   31 00000018         
+   32 00000018 E885 0003       STM              R5, {R0 - R1} ; Put data back i
+                                                            n memory
+   33 0000001C         
+   34 0000001C         ;POP {R2}
+   35 0000001C         ;POP {R1}
+   36 0000001C         ;POP {R0}
+   37 0000001C         ; Increment stack pointer by 3 registers
+   38 0000001C         
+   39 0000001C 4770            BX               LR
+   40 0000001E         
+   41 0000001E                 ENDP
+   42 0000001E         
+   43 0000001E         decryptionAsm
+   44 0000001E         
+   45 0000001E                 END
 Command Line: --debug --xref --cpu=Cortex-M4.fp --apcs=interwork --depend=lab1A
 sm.d -olab1Asm.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\A
 RM\Inc\ST\STM32F4xx --list=lab1Asm.lst lab1Asm.s
@@ -59,11 +74,11 @@ Symbol: Lab1Asm
    Uses
       None
 Comment: Lab1Asm unused
-decryptionAsm 00000010
+decryptionAsm 0000001E
 
 Symbol: decryptionAsm
    Definitions
-      At line 31 in file lab1Asm.s
+      At line 43 in file lab1Asm.s
    Uses
       At line 4 in file lab1Asm.s
 Comment: decryptionAsm used once
