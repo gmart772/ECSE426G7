@@ -21,43 +21,37 @@
 		}
 
 	extern void encryptionAsm(unsigned int *key,  char *data, int delta);
+	extern void decryptionAsm(unsigned int *key,  char *data, int delta, int sum);
 	void encryptionC(unsigned int *key,  char *data, int delta);
 
 	int main(int argc, char* argv[]) {
-//		printf("test\n");
-		//int x = 1;
-		//int y = 2;
-		//int z = x + y;
-		unsigned int key_temp[4];
+		
+		unsigned int key_temp[4] = { 0x1, 0x2, 0x3, 0x4 };
 		char data_temp[8];
 		
-		int delta = 0x9E3779B9;
+		int delta 	= 0x9E3779B9;
+		int sum 		= 0xC6EF3720;
 		
-		//key_temp = { 0xBEEF, 0xDEAD, 0xCAFE, 0xFADE };
-		int i = 0;
-		for (i = 0; i < 4; i++) {
-			key_temp[i] = 0xDEADBEEF;
-		}
+		int i 			= 0;
 		
-	//	data_temp = " 0@P 0@P";
-			data_temp[0] = 'A';
-			data_temp[1] = 'B';		
-			data_temp[2] = 'C';
-			data_temp[3] = 'D';
-			data_temp[4] = 'E';	
-			data_temp[5] = 'F';		
-			data_temp[6] = 'G';
-			data_temp[7] = 'H';		
-			
-	//	for (i = 0; i < 4; i++) {
-	//		data_temp[i] = 0x00;
-	//	}
-		
+		data_temp[0] = 'A';
+		data_temp[1] = 'B';		
+		data_temp[2] = 'C';
+		data_temp[3] = 'D';
+		data_temp[4] = 'E';	
+		data_temp[5] = 'F';		
+		data_temp[6] = 'G';
+		data_temp[7] = 'H';	
 
+		printf("Data_temp: %s\n", data_temp);
 		
 		encryptionAsm(key_temp, data_temp, delta);
 		
-		printf("Data_temp: %s", data_temp);
+		printf("Data_temp: %s\n", data_temp);
+		
+		decryptionAsm(key_temp, data_temp, delta, sum);
+		
+		printf("Data_temp: %s\n", data_temp);
 		
 		return 0;
 	}

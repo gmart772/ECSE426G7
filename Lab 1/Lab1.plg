@@ -3,15 +3,303 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-C:\Users\gmarti37\ECSE426G7\Lab 1\Lab1.uvproj
+C:\Users\pwhite8\ECSE426G7\Lab 1\Lab1.uvproj
 Project File Date:  09/28/2013
 
 <h2>Output:</h2>
 Build target 'Lab 1'
 assembling startup_stm32f4xx.s...
 assembling lab1Asm.s...
-lab1Asm.s(57): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(93): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
 compiling Part1Main.c...
 linking...
-Program Size: Code=896 RO-data=424 RW-data=8 ZI-data=1632  
+Program Size: Code=944 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(93): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(115): error: A1108E: Multiply defined symbol 'Loop'
+lab1Asm.s(162): error: A1108E: Multiply defined symbol 'EndLoop'
+lab1Asm.s(174): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+compiling Part1Main.c...
+Target not created
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(93): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(174): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+linking...
+Program Size: Code=1056 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(93): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(174): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(177): warning: A1313W: Missing END directive at end of file
+linking...
+Program Size: Code=1056 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(93): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(174): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+linking...
+Program Size: Code=1056 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+linking...
+Program Size: Code=1072 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(93): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(175): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+compiling Part1Main.c...
+Part1Main.c(23): error:  #40: expected an identifier
+Target not created
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(93): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(175): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+compiling Part1Main.c...
+Part1Main.c(23): error:  #40: expected an identifier
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+linking...
+Program Size: Code=1084 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(93): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(175): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+linking...
+Program Size: Code=1088 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+linking...
+Program Size: Code=1096 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+linking...
+Program Size: Code=1156 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+linking...
+Program Size: Code=1156 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+linking...
+Program Size: Code=1156 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(40): error:  #29: expected an expression
+Part1Main.c(40): error:  #137: expression must be a modifiable lvalue
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+linking...
+Program Size: Code=1168 RO-data=440 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(45): error:  #20: identifier "i" is undefined
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(44): error:  #268: declaration may not appear after executable statement in block
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(44): error:  #268: declaration may not appear after executable statement in block
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+linking...
+Program Size: Code=1148 RO-data=440 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+linking...
+Program Size: Code=1148 RO-data=440 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+linking...
+Program Size: Code=1152 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+linking...
+Program Size: Code=1076 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+linking...
+Program Size: Code=1076 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(93): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(175): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+linking...
+Program Size: Code=1076 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+linking...
+Program Size: Code=1076 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(93): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(175): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+linking...
+Program Size: Code=1076 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+linking...
+Program Size: Code=1076 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(89): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(171): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+linking...
+Program Size: Code=1068 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(92): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(174): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+linking...
+Program Size: Code=1072 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(93): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(175): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+compiling Part1Main.c...
+linking...
+Program Size: Code=1076 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(86): error: A1114E: Expected register relative expression
+lab1Asm.s(95): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(177): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+compiling Part1Main.c...
+Target not created
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(86): error: A1152E: Unexpected operator
+lab1Asm.s(95): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(177): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+Target not created
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(93): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(175): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+linking...
+Program Size: Code=1076 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(93): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(175): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+linking...
+Program Size: Code=1072 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(93): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(175): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+linking...
+Program Size: Code=1072 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(93): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(179): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+linking...
+Program Size: Code=1076 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(93): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(174): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+linking...
+Program Size: Code=1072 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+linking...
+Program Size: Code=1072 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(93): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(174): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+linking...
+Program Size: Code=1072 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(93): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(174): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+compiling Part1Main.c...
+linking...
+Program Size: Code=1076 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(101): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(182): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+linking...
+Program Size: Code=1092 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(101): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(187): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+compiling Part1Main.c...
+Part1Main.c(36): warning:  #177-D: variable "a" was declared but never referenced
+Part1Main.c(37): warning:  #177-D: variable "b" was declared but never referenced
+Part1Main.c(38): warning:  #177-D: variable "c" was declared but never referenced
+Part1Main.c(39): warning:  #177-D: variable "d" was declared but never referenced
+linking...
+Program Size: Code=1120 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(113): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(213): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+linking...
+Program Size: Code=1208 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(36): warning:  #177-D: variable "a" was declared but never referenced
+Part1Main.c(37): warning:  #177-D: variable "b" was declared but never referenced
+Part1Main.c(38): warning:  #177-D: variable "c" was declared but never referenced
+Part1Main.c(39): warning:  #177-D: variable "d" was declared but never referenced
+Part1Main.c(40): warning:  #177-D: variable "e" was declared but never referenced
+Part1Main.c(41): warning:  #177-D: variable "f" was declared but never referenced
+Part1Main.c(42): warning:  #177-D: variable "g" was declared but never referenced
+Part1Main.c(43): warning:  #177-D: variable "h" was declared but never referenced
+linking...
+Program Size: Code=1224 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 8 Warning(s).
+Build target 'Lab 1'
+linking...
+Program Size: Code=1224 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(35): warning:  #177-D: variable "i" was declared but never referenced
+linking...
+Program Size: Code=1188 RO-data=440 RW-data=8 ZI-data=1632  
 "Lab1.axf" - 0 Error(s), 1 Warning(s).
