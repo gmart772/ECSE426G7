@@ -4,6 +4,14 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 C:\Users\gmarti37\ECSE426G7\Lab 1\Lab1.uvproj
-Project File Date:  09/25/2013
+Project File Date:  09/28/2013
 
 <h2>Output:</h2>
+Build target 'Lab 1'
+assembling startup_stm32f4xx.s...
+assembling lab1Asm.s...
+lab1Asm.s(57): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+compiling Part1Main.c...
+linking...
+Program Size: Code=896 RO-data=424 RW-data=8 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 1 Warning(s).

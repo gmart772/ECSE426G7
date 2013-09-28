@@ -5,7 +5,7 @@
 ### List of Objects: adding '"lab1asm.o"'
 ### List of Objects: adding '"part1main.o"'
 ### ADS-LD Command completed:
---cpu Cortex-M4.fp "startup_stm32f4xx.o" "lab1asm.o" "part1main.o" 
+--cpu Cortex-M4 "startup_stm32f4xx.o" "lab1asm.o" "part1main.o" 
 --strict --scatter "Lab1.sct" 
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
 --info sizes --info totals --info unused --info veneers 
@@ -13,7 +13,7 @@
 ### ADS-LD Output File: 'Lab1.axf'
 ### ADS-LD Command File: 'Lab1.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile 'Lab1.lnp', Handle=0x000006DC
+### Creating CmdFile 'Lab1.lnp', Handle=0x000003C4
 ### Writing '.lnp' file
 ### ADS-LD Command file 'Lab1.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

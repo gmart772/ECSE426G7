@@ -20,9 +20,10 @@
 			return(ch);
 		}
 
-	extern char encryptionAsm(unsigned int *key,  char *data, int delta);
+	extern void encryptionAsm(unsigned int *key,  char *data, int delta);
+	void encryptionC(unsigned int *key,  char *data, int delta);
 
-	int __main(int argc, char* argv[]) {
+	int main(int argc, char* argv[]) {
 //		printf("test\n");
 		//int x = 1;
 		//int y = 2;
@@ -59,4 +60,8 @@
 		printf("Data_temp: %s", data_temp);
 		
 		return 0;
+	}
+	
+	void encryptionC(unsigned int *key,  char *data, int delta) {
+		
 	}

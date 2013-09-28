@@ -82,9 +82,9 @@ ARM Macro Assembler    Page 2
    59 00000038         decryptionAsm
    60 00000038         
    61 00000038                 END
-Command Line: --debug --xref --cpu=Cortex-M4.fp --apcs=interwork --depend=lab1A
-sm.d -olab1Asm.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\A
-RM\Inc\ST\STM32F4xx --list=lab1Asm.lst lab1Asm.s
+Command Line: --debug --xref --cpu=Cortex-M4 --apcs=interwork --depend=lab1Asm.
+d -olab1Asm.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\
+Inc\ST\STM32F4xx --list=lab1Asm.lst lab1Asm.s
 
 
 
@@ -132,4 +132,4 @@ Symbol: encryptionAsm
       At line 3 in file lab1Asm.s
 Comment: encryptionAsm used once
 5 symbols
-336 symbols in table
+335 symbols in table

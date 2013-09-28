@@ -862,10 +862,10 @@ ARM Macro Assembler    Page 14
               00000400 
               00000200 
               00000000 
-Command Line: --debug --xref --cpu=Cortex-M4.fp --apcs=interwork --depend=start
-up_stm32f4xx.d -ostartup_stm32f4xx.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS
-\Include -IC:\Keil\ARM\Inc\ST\STM32F4xx --list=startup_stm32f4xx.lst startup_st
-m32f4xx.s
+Command Line: --debug --xref --cpu=Cortex-M4 --apcs=interwork --depend=startup_
+stm32f4xx.d -ostartup_stm32f4xx.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\In
+clude -IC:\Keil\ARM\Inc\ST\STM32F4xx --list=startup_stm32f4xx.lst startup_stm32
+f4xx.s
 
 
 
@@ -1962,4 +1962,4 @@ Symbol: __main
       At line 177 in file startup_stm32f4xx.s
 Comment: __main used once
 1 symbol
-444 symbols in table
+443 symbols in table
