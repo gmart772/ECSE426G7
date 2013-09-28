@@ -22,6 +22,7 @@
 
 	extern void encryptionAsm(unsigned int *key,  char *data, int delta);
 	void encryptionC(unsigned int *key,  char *data, int delta);
+	void decryptionC(unsigned int *key,  char *data, int delta, int sum); 
 
 	int main(int argc, char* argv[]) {
 //		printf("test\n");
@@ -36,7 +37,7 @@
 		//key_temp = { 0xBEEF, 0xDEAD, 0xCAFE, 0xFADE };
 		int i = 0;
 		for (i = 0; i < 4; i++) {
-			key_temp[i] = 0xDEADBEEF;
+			key_temp[i] = i + 1;
 		}
 		
 	//	data_temp = " 0@P 0@P";
@@ -48,6 +49,8 @@
 			data_temp[5] = 'F';		
 			data_temp[6] = 'G';
 			data_temp[7] = 'H';		
+
+			printf("Data_temp pre-encryption: %s\n", data_temp);
 			
 	//	for (i = 0; i < 4; i++) {
 	//		data_temp[i] = 0x00;
@@ -55,13 +58,79 @@
 		
 
 		
-		encryptionAsm(key_temp, data_temp, delta);
+//		encryptionAsm(key_temp, data_temp, delta);
 		
-		printf("Data_temp: %s", data_temp);
+		//for (i = 0; i < 8; i+=2) {
+			encryptionC(key_temp, data_temp, delta);
+		//}
+		
+		printf("Data_temp encrypted: %s\n", data_temp);
+		
+		decryptionC(key_temp, data_temp, delta, 0);
+		
+		printf("Data_temp decrypted: %s\n", data_temp);
 		
 		return 0;
 	}
 	
 	void encryptionC(unsigned int *key,  char *data, int delta) {
+		unsigned int sum = 0;
+		int i, N;
+		unsigned int t1, t2, t3; // temp sums
+		int *d0, *d1;
 		
+		d0 = (int *) &data[0];
+		d1 = (int *) &data[4];		
+		
+		
+		N = 32; 
+		
+		// initialize variables
+		//t1 = t2 = t3 = 0;
+		
+		// get data values
+	
+		// encryption loop
+		for (i = 0; i < N; i++) {
+			sum += delta;
+			
+			t1 = (*d1 << 4) + key[0];
+			t2 = (*d1 >> 5) + key[1];
+			t3 = *d1 + sum;
+			t3 = t1 ^ t2 ^ t3;
+			*d0 += t3;
+			
+			t1 = (*d0 << 4) + key[2];
+			t2 = (*d0 >> 5) + key[3];
+			t3 = *d0 + sum;
+			t3 = t1 ^ t2 ^ t3;
+			*d1 += t3;
+
+		}
+	}
+	
+	void decryptionC(unsigned int *key,  char *data, int delta, int sum) {
+		int i;
+		unsigned int t1, t2, t3; // temp sums
+		int *d0, *d1;
+		
+		d0 = (int *) &data[0];
+		d1 = (int *) &data[4];	
+		
+		sum = 0xC6EF3720;		
+		for (i = 0; i < 32; i++) {
+			t1 = (*d0 << 4) + key[2];
+			t2 = (*d0 >> 5) + key[3];
+			t3 = *d0 + sum;
+			t3 = t1 ^ t2 ^ t3;
+			*d1 -= t3;
+			
+			t1 = (*d1 << 4) + key[0];
+			t2 = (*d1 >> 5) + key[1];
+			t3 = *d1 + sum;
+			t3 = t1 ^ t2 ^ t3;
+			*d0 -= t3;
+			
+			sum -= delta;
+		}
 	}
