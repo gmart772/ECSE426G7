@@ -28,36 +28,28 @@
 	void encryptionC(unsigned int *key,  char *data, int delta);
 	void decryptionC(unsigned int *key,  char *data, int delta, int sum); 
 		
-	void decryptTAsMessage(unsigned int *key,  char *data); 
+	void decryptTAsMessage(unsigned int *key,  unsigned int *data); 
 
 	int main(int argc, char* argv[]) {
-		unsigned int key_perm[4] = { 0x1, 0x2, 0x3, 0x4 };
-		char data_temp[8];
-
+		unsigned int key_perm[4] = { 3, 5, 9, 4 };
+		
 		int delta = 0x9E3779B9;
 		int sum = 0xC6EF3720;
-
-			data_temp[0] = 'A';
-			data_temp[1] = 'T';		
-			data_temp[2] = ' ';
-			data_temp[3] = ' ';
-			data_temp[4] = ' ';	
-			data_temp[5] = ' ';		
-			data_temp[6] = ' ';
-			data_temp[7] = ' ';
-
-			printf("Data_temp pre-encryption: %s\n", data_temp);
-			encryptionC(key_perm, data_temp, delta);	
-			printf("Data_temp encrypted: %s\n", data_temp);	
+		
+		
+		
+//			encryptionAsm(key_perm, data, delta);	
+//		decryptionC(key_perm, data_temp, delta, sum);
+/*			printf("Data_temp encrypted: %s\n", data_temp);	
 			decryptionC(key_perm, data_temp, delta, sum);		
 			printf("Data_temp decrypted: %s\n", data_temp);
 			printf("Data_temp pre-encryption: %s\n", data_temp);
 			encryptionAsm(key_perm, data_temp, delta);
 			printf("Data_temp encrypted: %s\n", data_temp);		
 			decryptionAsm(key_perm, data_temp, delta, sum);	
-			printf("Data_temp decrypted: %s\n", data_temp);
+		printf("Data_temp decrypted: %s\n", data_temp); */
 			
-			decryptTAsMessage( key_perm, (char *)Secret_Quote_Group_7);
+			decryptTAsMessage( key_perm, Secret_Quote_Group_7);
 		
 			return 0;
 	}
@@ -123,246 +115,66 @@
 		}
 	}
 	
-	void decryptTAsMessage(unsigned int *key, char *data) {
+	void decryptTAsMessage(unsigned int *key, unsigned int *data) {
 		
 		int delta = 0x9E3779B9;
 		int sum = 0xC6Ef3720;
-		int i = 0, k = 0;
-		
-		// Create a new key for decryption
+		int i = 0, k = 0, j = 0;
+		unsigned int dataLength = 13;
+		char data_holder[104];
+		//char *data_holder;
 		unsigned int decrypt_key[4];
+		unsigned int character;
+
+		unsigned int TA[2] = {'T', 'A'};
+		
+
+		//memcpy((void *) data_holder, (void *) data, dataLength*8);
+		// Create a new key for decryption
+
 		
 		// Data used to generate first two 32-bit keys
-		char TAData[8] = { ' ', ' ', ' ', ' ', ' ', ' ', 'T', 'A' };
+	//	char TAData[8] = { ' ', ' ', ' ', ' ', ' ', ' ', 'T', 'A' };
+		
+		//unsigned int T = 0x54;
+		//unsigned int A = 0x41;
+
 		
 		// Ecrypt the letter TA and place them in key 0 and key 1
-		encryptionC(key, TAData, delta);
-		decrypt_key[0] = (unsigned int) TAData[0];
-		decrypt_key[1] = (unsigned int) TAData[4];
+		encryptionC(key, (char *) TA, delta);
+		decrypt_key[0] = TA[0];
+		decrypt_key[1] = TA[1];
+
+
 		
-		for (i = 0; i < 4; i++)
-		{
-			for (k = 0; k < 4; k++)
+		
+			for (i = 0x64; i < 0x69; i++)
 			{
-				switch (i)
+				for (k = 0x64; k < 0x69; k++)
 				{
-					case 0 ://d :
-						
-						switch (k)
-						{
-							case 0 ://d :
-								decrypt_key[2] = 0x64;
-								decrypt_key[3] = 0x64;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							case 1 : //e :
-								decrypt_key[2] = 0x64;
-								decrypt_key[3] = 0x65;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							case 2 : //f :
-								decrypt_key[2] = 0x64;
-								decrypt_key[3] = 0x66;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-							printf("\n");
-							case 3 : //g :
-								decrypt_key[2] = 0x64;
-								decrypt_key[3] = 0x67;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							case 4 : //h :
-								decrypt_key[2] = 0x64;
-								decrypt_key[3] = 0x68;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							default :
-								break;
-						}	
-					
-					case 1 : //e :
-						switch (k)
-						{
-							case 0 : //d :
-								decrypt_key[2] = 0x65;
-								decrypt_key[3] = 0x64;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							case 1 : //e :
-								decrypt_key[2] = 0x65;
-								decrypt_key[3] = 0x65;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							case 2 : //f :
-								decrypt_key[2] = 0x65;
-								decrypt_key[3] = 0x66;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							case 3 : //g :
-								decrypt_key[2] = 0x65;
-								decrypt_key[3] = 0x67;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							case 4 : //h :
-								decrypt_key[2] = 0x65;
-								decrypt_key[3] = 0x68;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							default :
-								break;
-						}	
-						
-					case 2 : //f :
-						
-						switch (k)
-						{
-							case 0 : //d :
-								decrypt_key[2] = 0x66;
-								decrypt_key[3] = 0x64;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							case 1 : //e :
-								decrypt_key[2] = 0x66;
-								decrypt_key[3] = 0x65;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							case 2 : //f :
-								decrypt_key[2] = 0x66;
-								decrypt_key[3] = 0x66;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							case 3 : //g :
-								decrypt_key[2] = 0x66;
-								decrypt_key[3] = 0x67;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							case 4 : //h :
-								decrypt_key[2] = 0x66;
-								decrypt_key[3] = 0x68;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							default :
-						}	
-						
-					case 3 : //g :
-						
-						switch (k)
-						{
-							case 0 : //d :
-								decrypt_key[2] = 0x67;
-								decrypt_key[3] = 0x64;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							case 1 : //e :
-								decrypt_key[2] = 0x67;
-								decrypt_key[3] = 0x65;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							case 2 : //f :
-								decrypt_key[2] = 0x67;
-								decrypt_key[3] = 0x66;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							case 3 : //g :
-								decrypt_key[2] = 0x67;
-								decrypt_key[3] = 0x67;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							case 4 : //h :
-								decrypt_key[2] = 0x67;
-								decrypt_key[3] = 0x68;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							default :
-								break;
-						}	
-						
-					case 4 : //h :
-						
-						switch (k)
-						{
-							case 0 : //d :
-								decrypt_key[2] = 0x68;
-								decrypt_key[3] = 0x64;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							case 1 : //e :
-								decrypt_key[2] = 0x68;
-								decrypt_key[3] = 0x65;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							case 2 : //f :
-								decrypt_key[2] = 0x68;
-								decrypt_key[3] = 0x66;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							case 3 : //g :
-								decrypt_key[2] = 0x68;
-								decrypt_key[3] = 0x67;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							case 4 : //h :
-								decrypt_key[2] = 0x68;
-								decrypt_key[3] = 0x68;
-								decryptionC(decrypt_key, data, delta, sum);
-								printf("Key Used: %s\n", (char *)decrypt_key);
-								printf("Decrypted Message: %s\n", data);
-								printf("\n");
-							default :
-								break;
-						}				
-					default :
-						break;
-				}	
+					memcpy(data_holder, data, 104);
+					decrypt_key[2] = i;
+					decrypt_key[3] = k;
+					printf("Key Used: %d %d %d %d\n", decrypt_key[0], decrypt_key[1], decrypt_key[2], decrypt_key[3]);
+
+					for (j = 0; j < dataLength; j++) {
+						sum = 0xC6EF3720;
+						decryptionAsm(decrypt_key, data_holder + j*8, delta, sum);
+					}
+					//printf("Decrypted Message: %s\n", data_holder);
+					printf("Integers: ");
+					for (j = 0; j < 26; j++) {
+						character = data_holder[j];
+						printf(" %d ", data_holder[j]);
+					}	
+					printf("\n");
+					for (j = 0; j < 26; j++) {
+						character = data_holder[j];
+						printf("%c", character);
+					}	
+					printf("\n\n");
+				}
 			}
-		}
 		
 		
 		
