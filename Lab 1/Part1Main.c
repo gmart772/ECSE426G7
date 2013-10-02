@@ -28,28 +28,15 @@
 	void encryptionC(unsigned int *key,  char *data, int delta);
 	void decryptionC(unsigned int *key,  char *data, int delta, int sum); 
 		
-	void decryptTAsMessage(unsigned int *key,  unsigned int *data); 
+	void decryptTAsMessage(); 
 
 	int main(int argc, char* argv[]) {
 		unsigned int key_perm[4] = { 3, 5, 9, 4 };
 		
 		int delta = 0x9E3779B9;
 		int sum = 0xC6EF3720;
-		
-		
-		
-//			encryptionAsm(key_perm, data, delta);	
-//		decryptionC(key_perm, data_temp, delta, sum);
-/*			printf("Data_temp encrypted: %s\n", data_temp);	
-			decryptionC(key_perm, data_temp, delta, sum);		
-			printf("Data_temp decrypted: %s\n", data_temp);
-			printf("Data_temp pre-encryption: %s\n", data_temp);
-			encryptionAsm(key_perm, data_temp, delta);
-			printf("Data_temp encrypted: %s\n", data_temp);		
-			decryptionAsm(key_perm, data_temp, delta, sum);	
-		printf("Data_temp decrypted: %s\n", data_temp); */
 			
-			decryptTAsMessage( key_perm, Secret_Quote_Group_7);
+			decryptTAsMessage();
 		
 			return 0;
 	}
@@ -115,63 +102,48 @@
 		}
 	}
 	
-	void decryptTAsMessage(unsigned int *key, unsigned int *data) {
+	void decryptTAsMessage() {
 		
 		int delta = 0x9E3779B9;
 		int sum = 0xC6Ef3720;
 		int i = 0, k = 0, j = 0;
 		unsigned int dataLength = 13;
-		char data_holder[104];
 		//char *data_holder;
 		unsigned int decrypt_key[4];
 		unsigned int character;
-
+		
+		unsigned int data_holder[26];
 		unsigned int TA[2] = {'T', 'A'};
 		
-
-		//memcpy((void *) data_holder, (void *) data, dataLength*8);
-		// Create a new key for decryption
-
-		
-		// Data used to generate first two 32-bit keys
-	//	char TAData[8] = { ' ', ' ', ' ', ' ', ' ', ' ', 'T', 'A' };
-		
-		//unsigned int T = 0x54;
-		//unsigned int A = 0x41;
-
+		unsigned int key[4] = { 3, 5, 9, 4 };
 		
 		// Ecrypt the letter TA and place them in key 0 and key 1
-		encryptionC(key, (char *) TA, delta);
+		encryptionAsm(key, (char *) TA, delta);
+		
 		decrypt_key[0] = TA[0];
 		decrypt_key[1] = TA[1];
-
-
-		
 		
 			for (i = 0x64; i < 0x69; i++)
 			{
 				for (k = 0x64; k < 0x69; k++)
 				{
-					memcpy(data_holder, data, 104);
 					decrypt_key[2] = i;
 					decrypt_key[3] = k;
-					printf("Key Used: %d %d %d %d\n", decrypt_key[0], decrypt_key[1], decrypt_key[2], decrypt_key[3]);
+					printf("Key Used: %d %d %d %d\n", decrypt_key[3], decrypt_key[2], decrypt_key[1], decrypt_key[0]);
+					
+					// Copy secret string into data_holder
+					memcpy(data_holder, Secret_Quote_Group_7, 26*4);
 
 					for (j = 0; j < dataLength; j++) {
 						sum = 0xC6EF3720;
-						decryptionAsm(decrypt_key, data_holder + j*8, delta, sum);
+						decryptionAsm(decrypt_key, (char *)data_holder + j*8, delta, sum);
+					}					
+					printf("Data_out : ");
+					for (j = 0; j < 26; j++)
+					{
+						
+						printf("%c", (char) data_holder[j]);
 					}
-					//printf("Decrypted Message: %s\n", data_holder);
-					printf("Integers: ");
-					for (j = 0; j < 26; j++) {
-						character = data_holder[j];
-						printf(" %d ", data_holder[j]);
-					}	
-					printf("\n");
-					for (j = 0; j < 26; j++) {
-						character = data_holder[j];
-						printf("%c", character);
-					}	
 					printf("\n\n");
 				}
 			}

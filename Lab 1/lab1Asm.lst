@@ -72,7 +72,7 @@ ARM Macro Assembler    Page 2
    55 00000040 444E            ADD              R6, R6, R9
    56 00000042         
    57 00000042         ; T2 = D1 >> 5 + K1
-   58 00000042 EA4F 1761       ASR              R7, R1, #5
+   58 00000042 EA4F 1751       LSR              R7, R1, #5
    59 00000046 4457            ADD              R7, R7, R10
    60 00000048         
    61 00000048         ; T3 = D1 + Sum
@@ -90,7 +90,7 @@ ARM Macro Assembler    Page 2
    73 0000005A 445E            ADD              R6, R6, R11
    74 0000005C         
    75 0000005C         ; T2 = D0 >> 5 + K3
-   76 0000005C EA4F 1760       ASR              R7, R0, #5
+   76 0000005C EA4F 1750       LSR              R7, R0, #5
    77 00000060 4467            ADD              R7, R7, R12
    78 00000062         
    79 00000062         ; T3 = D0 + Sum
@@ -179,7 +179,7 @@ ARM Macro Assembler    Page 3
   149 000000D8 445E            ADD              R6, R6, R11
   150 000000DA         
   151 000000DA         ; T2 = D0 >> 5 + K3
-  152 000000DA EA4F 1760       ASR              R7, R0, #5
+  152 000000DA EA4F 1750       LSR              R7, R0, #5
   153 000000DE 4467            ADD              R7, R7, R12
   154 000000E0         
   155 000000E0         ; T3 = D0 + Sum
@@ -203,7 +203,7 @@ ARM Macro Assembler    Page 4
   167 000000F4 444E            ADD              R6, R6, R9
   168 000000F6         
   169 000000F6         ; T2 = D1 >> 5 + K1
-  170 000000F6 EA4F 1761       ASR              R7, R1, #5
+  170 000000F6 EA4F 1751       LSR              R7, R1, #5
   171 000000FA 4457            ADD              R7, R7, R10
   172 000000FC         
   173 000000FC         ; T3 = D1 + Sum

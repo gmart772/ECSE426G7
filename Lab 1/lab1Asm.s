@@ -55,7 +55,7 @@ EncryptionLoop
 	ADD R6, R6, R9
 	
 	; T2 = D1 >> 5 + K1
-	ASR R7, R1, #5
+	LSR R7, R1, #5
 	ADD R7, R7, R10
 	
 	; T3 = D1 + Sum
@@ -73,7 +73,7 @@ EncryptionLoop
 	ADD R6, R6, R11
 	
 	; T2 = D0 >> 5 + K3
-	ASR R7, R0, #5
+	LSR R7, R0, #5
 	ADD R7, R7, R12
 	
 	; T3 = D0 + Sum
@@ -149,7 +149,7 @@ DecryptionLoop
 	ADD R6, R6, R11
 	
 	; T2 = D0 >> 5 + K3
-	ASR R7, R0, #5
+	LSR R7, R0, #5
 	ADD R7, R7, R12
 	
 	; T3 = D0 + Sum
@@ -167,7 +167,7 @@ DecryptionLoop
 	ADD R6, R6, R9
 	
 	; T2 = D1 >> 5 + K1
-	ASR R7, R1, #5
+	LSR R7, R1, #5
 	ADD R7, R7, R10
 	
 	; T3 = D1 + Sum

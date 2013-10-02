@@ -1,7 +1,7 @@
 Dependencies for Project 'Lab1', Target 'Lab 1': (DO NOT MODIFY !)
-F (.\startup_stm32f4xx.s)(0x5249F730)(--cpu Cortex-M4 -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx --list "startup_stm32f4xx.lst" --xref -o "startup_stm32f4xx.o" --depend "startup_stm32f4xx.d")
-F (.\lab1Asm.s)(0x524A1103)(--cpu Cortex-M4 -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx --list "lab1Asm.lst" --xref -o "lab1Asm.o" --depend "lab1Asm.d")
-F (.\Part1Main.c)(0x524A1C82)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx -o "part1main.o" --omf_browse "part1main.crf" --depend "part1main.d")
+F (.\startup_stm32f4xx.s)(0x524C96DB)(--cpu Cortex-M4 -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx --list "startup_stm32f4xx.lst" --xref -o "startup_stm32f4xx.o" --depend "startup_stm32f4xx.d")
+F (.\lab1Asm.s)(0x524C9A41)(--cpu Cortex-M4 -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx --list "lab1Asm.lst" --xref -o "lab1Asm.o" --depend "lab1Asm.d")
+F (.\Part1Main.c)(0x524C9C21)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx -o "part1main.o" --omf_browse "part1main.crf" --depend "part1main.d")
 I (C:\Keil\ARM\ARMCC\bin\..\include\stdio.h)(0x516F2AA6)
 I (C:\Keil\ARM\Inc\ST\STM32F4xx\STM32F4xx.h)(0x51544A18)
 I (C:\Keil\ARM\CMSIS\Include\core_cm4.h)(0x515ED174)
@@ -10,5 +10,5 @@ I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x515ED174)
 I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x515ED174)
 I (C:\Keil\ARM\CMSIS\Include\core_cm4_simd.h)(0x515ED174)
 I (C:\Keil\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x50FFF3EA)
-I (EncrypteMessages.h)(0x5249F730)
-F (.\EncrypteMessages.h)(0x5249F730)()
+I (EncrypteMessages.h)(0x524C96DB)
+F (.\EncrypteMessages.h)(0x524C96DB)()
