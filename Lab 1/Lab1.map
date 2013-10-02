@@ -11,8 +11,8 @@ Section Cross References
     startup_stm32f4xx.o(.text) refers to startup_stm32f4xx.o(STACK) for Stack_Mem
     part1main.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     part1main.o(.text) refers to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    part1main.o(.text) refers to _printf_dec.o(.text) for _printf_int_dec
     part1main.o(.text) refers to _printf_c.o(.ARM.Collect$$_printf_percent$$00000013) for _printf_c
+    part1main.o(.text) refers to _printf_dec.o(.text) for _printf_int_dec
     part1main.o(.text) refers to _printf_str.o(.text) for _printf_str
     part1main.o(.text) refers to lab1asm.o(Lab1Asm) for encryptionAsm
     part1main.o(.text) refers to noretval__2printf.o(.text) for __2printf
@@ -290,25 +290,25 @@ Image Symbol Table
     .ARM.Collect$$rtexit$$00000004           0x0800022c   Section        6  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
     .text                                    0x08000234   Section       56  startup_stm32f4xx.o(.text)
     .text                                    0x0800026c   Section        0  part1main.o(.text)
-    .text                                    0x080004b0   Section        0  noretval__2printf.o(.text)
-    .text                                    0x080004c8   Section        0  __printf.o(.text)
-    .text                                    0x08000530   Section        0  _printf_str.o(.text)
-    .text                                    0x08000584   Section        0  _printf_dec.o(.text)
-    .text                                    0x080005fc   Section      100  rt_memcpy_w.o(.text)
-    .text                                    0x08000660   Section        0  _printf_intcommon.o(.text)
-    .text                                    0x08000718   Section        0  _printf_char.o(.text)
-    .text                                    0x08000744   Section        0  _printf_char_file.o(.text)
-    .text                                    0x08000768   Section        0  _printf_char_common.o(.text)
-    _printf_input_char                       0x08000769   Thumb Code    10  _printf_char_common.o(.text)
-    .text                                    0x08000798   Section        0  ferror.o(.text)
-    .text                                    0x080007a0   Section       74  sys_stackheap_outer.o(.text)
-    .text                                    0x080007ea   Section        0  exit.o(.text)
-    .text                                    0x080007f8   Section        8  libspace.o(.text)
-    .text                                    0x08000800   Section        0  sys_exit.o(.text)
-    .text                                    0x0800080c   Section        2  use_no_semi.o(.text)
-    .text                                    0x0800080e   Section        0  indicate_semi.o(.text)
-    Lab1Asm                                  0x08000810   Section      318  lab1asm.o(Lab1Asm)
-    .constdata                               0x08000950   Section       40  part1main.o(.constdata)
+    .text                                    0x080004b4   Section        0  noretval__2printf.o(.text)
+    .text                                    0x080004cc   Section        0  __printf.o(.text)
+    .text                                    0x08000534   Section        0  _printf_str.o(.text)
+    .text                                    0x08000588   Section        0  _printf_dec.o(.text)
+    .text                                    0x08000600   Section      100  rt_memcpy_w.o(.text)
+    .text                                    0x08000664   Section        0  _printf_intcommon.o(.text)
+    .text                                    0x0800071c   Section        0  _printf_char.o(.text)
+    .text                                    0x08000748   Section        0  _printf_char_file.o(.text)
+    .text                                    0x0800076c   Section        0  _printf_char_common.o(.text)
+    _printf_input_char                       0x0800076d   Thumb Code    10  _printf_char_common.o(.text)
+    .text                                    0x0800079c   Section        0  ferror.o(.text)
+    .text                                    0x080007a4   Section       74  sys_stackheap_outer.o(.text)
+    .text                                    0x080007ee   Section        0  exit.o(.text)
+    .text                                    0x080007fc   Section        8  libspace.o(.text)
+    .text                                    0x08000804   Section        0  sys_exit.o(.text)
+    .text                                    0x08000810   Section        2  use_no_semi.o(.text)
+    .text                                    0x08000812   Section        0  indicate_semi.o(.text)
+    Lab1Asm                                  0x08000814   Section      318  lab1asm.o(Lab1Asm)
+    .constdata                               0x08000954   Section       40  part1main.o(.constdata)
     .data                                    0x20000000   Section     2504  part1main.o(.data)
     .bss                                     0x200009c8   Section       96  libspace.o(.bss)
     HEAP                                     0x20000a28   Section      512  startup_stm32f4xx.o(HEAP)
@@ -505,38 +505,38 @@ Image Symbol Table
     WWDG_IRQHandler                          0x0800024b   Thumb Code     0  startup_stm32f4xx.o(.text)
     __user_initial_stackheap                 0x0800024d   Thumb Code     0  startup_stm32f4xx.o(.text)
     fputc                                    0x0800026d   Thumb Code    30  part1main.o(.text)
-    decryptTAsMessage                        0x0800028b   Thumb Code   182  part1main.o(.text)
-    main                                     0x08000341   Thumb Code    34  part1main.o(.text)
-    encryptionC                              0x08000363   Thumb Code   136  part1main.o(.text)
-    decryptionC                              0x080003eb   Thumb Code   134  part1main.o(.text)
-    __2printf                                0x080004b1   Thumb Code    20  noretval__2printf.o(.text)
-    __printf                                 0x080004c9   Thumb Code   104  __printf.o(.text)
-    _printf_str                              0x08000531   Thumb Code    82  _printf_str.o(.text)
-    _printf_int_dec                          0x08000585   Thumb Code   102  _printf_dec.o(.text)
-    __aeabi_memcpy4                          0x080005fd   Thumb Code     0  rt_memcpy_w.o(.text)
-    __aeabi_memcpy8                          0x080005fd   Thumb Code     0  rt_memcpy_w.o(.text)
-    __rt_memcpy_w                            0x080005fd   Thumb Code   100  rt_memcpy_w.o(.text)
-    _memcpy_lastbytes_aligned                0x08000645   Thumb Code     0  rt_memcpy_w.o(.text)
-    _printf_int_common                       0x08000661   Thumb Code   184  _printf_intcommon.o(.text)
-    _printf_cs_common                        0x08000719   Thumb Code    20  _printf_char.o(.text)
-    _printf_char                             0x0800072d   Thumb Code    16  _printf_char.o(.text)
-    _printf_string                           0x0800073d   Thumb Code     8  _printf_char.o(.text)
-    _printf_char_file                        0x08000745   Thumb Code    32  _printf_char_file.o(.text)
-    _printf_char_common                      0x08000773   Thumb Code    32  _printf_char_common.o(.text)
-    ferror                                   0x08000799   Thumb Code     8  ferror.o(.text)
-    __user_setup_stackheap                   0x080007a1   Thumb Code    74  sys_stackheap_outer.o(.text)
-    exit                                     0x080007eb   Thumb Code    12  exit.o(.text)
-    __user_libspace                          0x080007f9   Thumb Code     8  libspace.o(.text)
-    __user_perproc_libspace                  0x080007f9   Thumb Code     0  libspace.o(.text)
-    __user_perthread_libspace                0x080007f9   Thumb Code     0  libspace.o(.text)
-    _sys_exit                                0x08000801   Thumb Code     8  sys_exit.o(.text)
-    __I$use$semihosting                      0x0800080d   Thumb Code     0  use_no_semi.o(.text)
-    __use_no_semihosting_swi                 0x0800080d   Thumb Code     2  use_no_semi.o(.text)
-    __semihosting_library_function           0x0800080f   Thumb Code     0  indicate_semi.o(.text)
-    encryptionAsm                            0x08000811   Thumb Code     0  lab1asm.o(Lab1Asm)
-    decryptionAsm                            0x080008af   Thumb Code     0  lab1asm.o(Lab1Asm)
-    Region$$Table$$Base                      0x08000978   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08000998   Number         0  anon$$obj.o(Region$$Table)
+    decryptTAsMessage                        0x0800028b   Thumb Code   186  part1main.o(.text)
+    main                                     0x08000345   Thumb Code    34  part1main.o(.text)
+    encryptionC                              0x08000367   Thumb Code   136  part1main.o(.text)
+    decryptionC                              0x080003ef   Thumb Code   134  part1main.o(.text)
+    __2printf                                0x080004b5   Thumb Code    20  noretval__2printf.o(.text)
+    __printf                                 0x080004cd   Thumb Code   104  __printf.o(.text)
+    _printf_str                              0x08000535   Thumb Code    82  _printf_str.o(.text)
+    _printf_int_dec                          0x08000589   Thumb Code   102  _printf_dec.o(.text)
+    __aeabi_memcpy4                          0x08000601   Thumb Code     0  rt_memcpy_w.o(.text)
+    __aeabi_memcpy8                          0x08000601   Thumb Code     0  rt_memcpy_w.o(.text)
+    __rt_memcpy_w                            0x08000601   Thumb Code   100  rt_memcpy_w.o(.text)
+    _memcpy_lastbytes_aligned                0x08000649   Thumb Code     0  rt_memcpy_w.o(.text)
+    _printf_int_common                       0x08000665   Thumb Code   184  _printf_intcommon.o(.text)
+    _printf_cs_common                        0x0800071d   Thumb Code    20  _printf_char.o(.text)
+    _printf_char                             0x08000731   Thumb Code    16  _printf_char.o(.text)
+    _printf_string                           0x08000741   Thumb Code     8  _printf_char.o(.text)
+    _printf_char_file                        0x08000749   Thumb Code    32  _printf_char_file.o(.text)
+    _printf_char_common                      0x08000777   Thumb Code    32  _printf_char_common.o(.text)
+    ferror                                   0x0800079d   Thumb Code     8  ferror.o(.text)
+    __user_setup_stackheap                   0x080007a5   Thumb Code    74  sys_stackheap_outer.o(.text)
+    exit                                     0x080007ef   Thumb Code    12  exit.o(.text)
+    __user_libspace                          0x080007fd   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x080007fd   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x080007fd   Thumb Code     0  libspace.o(.text)
+    _sys_exit                                0x08000805   Thumb Code     8  sys_exit.o(.text)
+    __I$use$semihosting                      0x08000811   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x08000811   Thumb Code     2  use_no_semi.o(.text)
+    __semihosting_library_function           0x08000813   Thumb Code     0  indicate_semi.o(.text)
+    encryptionAsm                            0x08000815   Thumb Code     0  lab1asm.o(Lab1Asm)
+    decryptionAsm                            0x080008b3   Thumb Code     0  lab1asm.o(Lab1Asm)
+    Region$$Table$$Base                      0x0800097c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800099c   Number         0  anon$$obj.o(Region$$Table)
     Secret_Quote_Group_1                     0x20000000   Data         104  part1main.o(.data)
     Secret_Quote_Group_2                     0x20000068   Data         104  part1main.o(.data)
     Secret_Quote_Group_3                     0x200000d0   Data         104  part1main.o(.data)
@@ -574,9 +574,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000189
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00001360, Max: 0x00100000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00001364, Max: 0x00100000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00000998, Max: 0x00100000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x0000099c, Max: 0x00100000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -631,30 +631,30 @@ Memory Map of the image
     0x0800022c   0x00000006   Code   RO          197    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
     0x08000232   0x00000002   PAD
     0x08000234   0x00000038   Code   RO            4    .text               startup_stm32f4xx.o
-    0x0800026c   0x00000244   Code   RO           15    .text               part1main.o
-    0x080004b0   0x00000018   Code   RO           70    .text               c_w.l(noretval__2printf.o)
-    0x080004c8   0x00000068   Code   RO           72    .text               c_w.l(__printf.o)
-    0x08000530   0x00000052   Code   RO           74    .text               c_w.l(_printf_str.o)
-    0x08000582   0x00000002   PAD
-    0x08000584   0x00000078   Code   RO           76    .text               c_w.l(_printf_dec.o)
-    0x080005fc   0x00000064   Code   RO          101    .text               c_w.l(rt_memcpy_w.o)
-    0x08000660   0x000000b8   Code   RO          106    .text               c_w.l(_printf_intcommon.o)
-    0x08000718   0x0000002c   Code   RO          108    .text               c_w.l(_printf_char.o)
-    0x08000744   0x00000024   Code   RO          110    .text               c_w.l(_printf_char_file.o)
-    0x08000768   0x00000030   Code   RO          128    .text               c_w.l(_printf_char_common.o)
-    0x08000798   0x00000008   Code   RO          130    .text               c_w.l(ferror.o)
-    0x080007a0   0x0000004a   Code   RO          134    .text               c_w.l(sys_stackheap_outer.o)
-    0x080007ea   0x0000000c   Code   RO          138    .text               c_w.l(exit.o)
-    0x080007f6   0x00000002   PAD
-    0x080007f8   0x00000008   Code   RO          146    .text               c_w.l(libspace.o)
-    0x08000800   0x0000000c   Code   RO          205    .text               c_w.l(sys_exit.o)
-    0x0800080c   0x00000002   Code   RO          216    .text               c_w.l(use_no_semi.o)
-    0x0800080e   0x00000000   Code   RO          218    .text               c_w.l(indicate_semi.o)
-    0x0800080e   0x00000002   PAD
-    0x08000810   0x0000013e   Code   RO           10    Lab1Asm             lab1asm.o
-    0x0800094e   0x00000002   PAD
-    0x08000950   0x00000028   Data   RO           16    .constdata          part1main.o
-    0x08000978   0x00000020   Data   RO          270    Region$$Table       anon$$obj.o
+    0x0800026c   0x00000248   Code   RO           15    .text               part1main.o
+    0x080004b4   0x00000018   Code   RO           70    .text               c_w.l(noretval__2printf.o)
+    0x080004cc   0x00000068   Code   RO           72    .text               c_w.l(__printf.o)
+    0x08000534   0x00000052   Code   RO           74    .text               c_w.l(_printf_str.o)
+    0x08000586   0x00000002   PAD
+    0x08000588   0x00000078   Code   RO           76    .text               c_w.l(_printf_dec.o)
+    0x08000600   0x00000064   Code   RO          101    .text               c_w.l(rt_memcpy_w.o)
+    0x08000664   0x000000b8   Code   RO          106    .text               c_w.l(_printf_intcommon.o)
+    0x0800071c   0x0000002c   Code   RO          108    .text               c_w.l(_printf_char.o)
+    0x08000748   0x00000024   Code   RO          110    .text               c_w.l(_printf_char_file.o)
+    0x0800076c   0x00000030   Code   RO          128    .text               c_w.l(_printf_char_common.o)
+    0x0800079c   0x00000008   Code   RO          130    .text               c_w.l(ferror.o)
+    0x080007a4   0x0000004a   Code   RO          134    .text               c_w.l(sys_stackheap_outer.o)
+    0x080007ee   0x0000000c   Code   RO          138    .text               c_w.l(exit.o)
+    0x080007fa   0x00000002   PAD
+    0x080007fc   0x00000008   Code   RO          146    .text               c_w.l(libspace.o)
+    0x08000804   0x0000000c   Code   RO          205    .text               c_w.l(sys_exit.o)
+    0x08000810   0x00000002   Code   RO          216    .text               c_w.l(use_no_semi.o)
+    0x08000812   0x00000000   Code   RO          218    .text               c_w.l(indicate_semi.o)
+    0x08000812   0x00000002   PAD
+    0x08000814   0x0000013e   Code   RO           10    Lab1Asm             lab1asm.o
+    0x08000952   0x00000002   PAD
+    0x08000954   0x00000028   Data   RO           16    .constdata          part1main.o
+    0x0800097c   0x00000020   Data   RO          270    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00001028, Max: 0x00020000, ABSOLUTE)
@@ -675,11 +675,11 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
        318          0          0          0          0        264   lab1asm.o
-       580         64         40       2504          0       9932   part1main.o
+       584         64         40       2504          0       9932   part1main.o
         56         22        392          0       1536        736   startup_stm32f4xx.o
 
     ----------------------------------------------------------------------
-       956         86        464       2504       1536      10932   Object Totals
+       960         86        464       2504       1536      10932   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          2          0          0          0          0          0   (incl. Padding)
 
@@ -741,15 +741,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      1992        134        464       2504       1632      11384   Grand Totals
-      1992        134        464       2504       1632      11384   ELF Image Totals
-      1992        134        464       2504          0          0   ROM Totals
+      1996        134        464       2504       1632      11384   Grand Totals
+      1996        134        464       2504       1632      11384   ELF Image Totals
+      1996        134        464       2504          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 2456 (   2.40kB)
+    Total RO  Size (Code + RO Data)                 2460 (   2.40kB)
     Total RW  Size (RW Data + ZI Data)              4136 (   4.04kB)
-    Total ROM Size (Code + RO Data + RW Data)       4960 (   4.84kB)
+    Total ROM Size (Code + RO Data + RW Data)       4964 (   4.85kB)
 
 ==============================================================================
 

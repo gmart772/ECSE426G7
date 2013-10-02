@@ -245,10 +245,10 @@
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>12</ColumnNumber>
+      <ColumnNumber>5</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>162</TopLine>
-      <CurrentLine>204</CurrentLine>
+      <TopLine>180</TopLine>
+      <CurrentLine>205</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\lab1Asm.s</PathWithFileName>
       <FilenameWithoutPath>lab1Asm.s</FilenameWithoutPath>
@@ -261,10 +261,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>11</ColumnNumber>
+      <ColumnNumber>34</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>121</TopLine>
-      <CurrentLine>143</CurrentLine>
+      <CurrentLine>142</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Part1Main.c</PathWithFileName>
       <FilenameWithoutPath>Part1Main.c</FilenameWithoutPath>

@@ -129,7 +129,7 @@
 				{
 					decrypt_key[2] = i;
 					decrypt_key[3] = k;
-					printf("Key Used: %d %d %d %d\n", decrypt_key[3], decrypt_key[2], decrypt_key[1], decrypt_key[0]);
+					printf("Key Used: %c %c %d %d\n", (char) decrypt_key[3], (char) decrypt_key[2], decrypt_key[1], decrypt_key[0]);
 					
 					// Copy secret string into data_holder
 					memcpy(data_holder, Secret_Quote_Group_7, 26*4);

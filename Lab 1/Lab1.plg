@@ -9,79 +9,6 @@ Project File Date:  10/02/2013
 <h2>Output:</h2>
 Build target 'Lab 1'
 compiling Part1Main.c...
-Part1Main.c(36): warning:  #177-D: variable "delta" was declared but never referenced
-Part1Main.c(37): warning:  #177-D: variable "sum" was declared but never referenced
-Part1Main.c(105): error:  #147-D: declaration is incompatible with "void decryptTAsMessage(unsigned int *, unsigned int *)" (declared at line 31)
-Part1Main.c(121): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(138): error:  #167: argument of type "unsigned int *" is incompatible with parameter of type "char *"
-Target not created
-Build target 'Lab 1'
-compiling Part1Main.c...
-Part1Main.c(36): warning:  #177-D: variable "delta" was declared but never referenced
-Part1Main.c(37): warning:  #177-D: variable "sum" was declared but never referenced
-Part1Main.c(105): error:  #147-D: declaration is incompatible with "void decryptTAsMessage(unsigned int *, unsigned int *)" (declared at line 31)
-Part1Main.c(121): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(138): warning:  #767-D: conversion from pointer to smaller integer
-Part1Main.c(138): error:  #167: argument of type "int" is incompatible with parameter of type "char *"
-Target not created
-Build target 'Lab 1'
-compiling Part1Main.c...
-Part1Main.c(36): warning:  #177-D: variable "delta" was declared but never referenced
-Part1Main.c(37): warning:  #177-D: variable "sum" was declared but never referenced
-Part1Main.c(105): error:  #147-D: declaration is incompatible with "void decryptTAsMessage(unsigned int *, unsigned int *)" (declared at line 31)
-Part1Main.c(121): warning:  #223-D: function "memcpy" declared implicitly
-Target not created
-Build target 'Lab 1'
-compiling Part1Main.c...
-Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptTAsMessage - give arg types
-Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
-Part1Main.c(36): warning:  #177-D: variable "delta" was declared but never referenced
-Part1Main.c(37): warning:  #177-D: variable "sum" was declared but never referenced
-Part1Main.c(121): warning:  #223-D: function "memcpy" declared implicitly
-linking...
-Program Size: Code=2036 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 5 Warning(s).
-Build target 'Lab 1'
-compiling Part1Main.c...
-Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptTAsMessage - give arg types
-Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
-Part1Main.c(36): warning:  #177-D: variable "delta" was declared but never referenced
-Part1Main.c(37): warning:  #177-D: variable "sum" was declared but never referenced
-Part1Main.c(134): warning:  #223-D: function "memcpy" declared implicitly
-linking...
-Program Size: Code=2040 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 5 Warning(s).
-Build target 'Lab 1'
-compiling Part1Main.c...
-Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptTAsMessage - give arg types
-Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
-Part1Main.c(36): warning:  #177-D: variable "delta" was declared but never referenced
-Part1Main.c(37): warning:  #177-D: variable "sum" was declared but never referenced
-Part1Main.c(134): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(113): warning:  #177-D: variable "character" was declared but never referenced
-linking...
-Program Size: Code=1812 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 6 Warning(s).
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(113): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-lab1Asm.s(213): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-linking...
-Program Size: Code=1812 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-compiling Part1Main.c...
-Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptTAsMessage - give arg types
-Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
-Part1Main.c(36): warning:  #177-D: variable "delta" was declared but never referenced
-Part1Main.c(37): warning:  #177-D: variable "sum" was declared but never referenced
-Part1Main.c(137): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(113): warning:  #177-D: variable "character" was declared but never referenced
-linking...
-Program Size: Code=1824 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 6 Warning(s).
-Build target 'Lab 1'
-compiling Part1Main.c...
 Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptTAsMessage - give arg types
 Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
 Part1Main.c(36): warning:  #177-D: variable "delta" was declared but never referenced
@@ -89,49 +16,9 @@ Part1Main.c(37): warning:  #177-D: variable "sum" was declared but never referen
 Part1Main.c(135): warning:  #223-D: function "memcpy" declared implicitly
 Part1Main.c(113): warning:  #177-D: variable "character" was declared but never referenced
 linking...
-Program Size: Code=1812 RO-data=464 RW-data=2504 ZI-data=1632  
+Program Size: Code=1996 RO-data=464 RW-data=2504 ZI-data=1632  
 "Lab1.axf" - 0 Error(s), 6 Warning(s).
 Build target 'Lab 1'
-compiling Part1Main.c...
-Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptTAsMessage - give arg types
-Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
-Part1Main.c(36): warning:  #177-D: variable "delta" was declared but never referenced
-Part1Main.c(37): warning:  #177-D: variable "sum" was declared but never referenced
-Part1Main.c(135): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(113): warning:  #177-D: variable "character" was declared but never referenced
 linking...
-Program Size: Code=2004 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 6 Warning(s).
-Build target 'Lab 1'
-compiling Part1Main.c...
-Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptTAsMessage - give arg types
-Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
-Part1Main.c(36): warning:  #177-D: variable "delta" was declared but never referenced
-Part1Main.c(37): warning:  #177-D: variable "sum" was declared but never referenced
-Part1Main.c(135): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(113): warning:  #177-D: variable "character" was declared but never referenced
-linking...
-Program Size: Code=2000 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 6 Warning(s).
-Build target 'Lab 1'
-compiling Part1Main.c...
-Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptTAsMessage - give arg types
-Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
-Part1Main.c(36): warning:  #177-D: variable "delta" was declared but never referenced
-Part1Main.c(37): warning:  #177-D: variable "sum" was declared but never referenced
-Part1Main.c(135): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(113): warning:  #177-D: variable "character" was declared but never referenced
-linking...
-Program Size: Code=2000 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 6 Warning(s).
-Build target 'Lab 1'
-compiling Part1Main.c...
-Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptTAsMessage - give arg types
-Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
-Part1Main.c(36): warning:  #177-D: variable "delta" was declared but never referenced
-Part1Main.c(37): warning:  #177-D: variable "sum" was declared but never referenced
-Part1Main.c(135): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(113): warning:  #177-D: variable "character" was declared but never referenced
-linking...
-Program Size: Code=1992 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Program Size: Code=1996 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
