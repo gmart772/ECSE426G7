@@ -412,6 +412,11 @@
               <FileType>5</FileType>
               <FilePath>.\EncrypteMessages.h</FilePath>
             </File>
+            <File>
+              <FileName>Part1Main.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Part1Main.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

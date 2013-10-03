@@ -7,4 +7,5 @@ part1main.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
 part1main.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
 part1main.o: C:\Keil\ARM\CMSIS\Include\core_cm4_simd.h
 part1main.o: C:\Keil\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h
+part1main.o: Part1Main.h
 part1main.o: EncrypteMessages.h

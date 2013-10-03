@@ -1,16 +1,8 @@
 	#include <stdio.h>
 	#include "STM32F4xx.h" 
-	
+	#include "Part1Main.h"
 	#include "EncrypteMessages.h"
-
-	#define ITM_Port8(n)    (*((volatile unsigned char *)(0xE0000000+4*n)))
-	#define ITM_Port16(n)   (*((volatile unsigned short*)(0xE0000000+4*n)))
-	#define ITM_Port32(n)   (*((volatile unsigned long *)(0xE0000000+4*n)))
-
-	#define DEMCR           (*((volatile unsigned long *)(0xE000EDFC)))
-	#define TRCENA          0x01000000
 	
-
 	struct __FILE { int handle; /* Add whatever is needed */ };
 		FILE __stdout;
 		FILE __stdin;
@@ -23,43 +15,57 @@
 			return(ch);
 		}
 
-	extern void encryptionAsm(unsigned int *key,  char *data, int delta);
-	extern void decryptionAsm(unsigned int *key,  char *data, int delta, int sum);
-	void encryptionC(unsigned int *key,  char *data, int delta);
-	void decryptionC(unsigned int *key,  char *data, int delta, int sum); 
-		
-	void decryptTAsMessage(); 
-
 	int main(int argc, char* argv[]) {
-		unsigned int key_perm[4] = { 3, 5, 9, 4 };
 		
 		int delta = 0x9E3779B9;
-		int sum = 0xC6EF3720;
-			
-			decryptTAsMessage();
+		int sum = 0xC6Ef3720;
+		
+		unsigned int key_perm[4] = { 3, 5, 9, 4 };
+		
+		/* TEST ENCRYPTION AND DECRYPTION SUB ROUTINES */
+		char test_data[8] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H' };
+		printf("Data is %s to start\n\n", test_data);
+		// Assembly only
+		encryptionAsm(key_perm, test_data, delta);
+		printf("Data is now %s\n", test_data);
+		decryptionAsm(key_perm, test_data, delta, sum);	
+		printf("Data is now %s\n\n", test_data);
+		// C only
+		encryptionC(key_perm, test_data, delta);
+		printf("Data is now %s\n", test_data);
+		decryptionC(key_perm, test_data, delta, sum);	
+		printf("Data is now %s\n\n", test_data);
+		// Encrypt ASM Decrypt C
+		encryptionAsm(key_perm, test_data, delta);
+		printf("Data is now %s\n", test_data);
+		decryptionC(key_perm, test_data, delta, sum);	
+		printf("Data is now %s\n\n", test_data);
+		// Encrypt C Decrypt ASM
+		encryptionC(key_perm, test_data, delta);
+		printf("Data is now %s\n", test_data);
+		decryptionAsm(key_perm, test_data, delta, sum);	
+		printf("Data is now %s\n\n", test_data);	
+		printf("\n");
+		
+		// Decrypt the Secret Quote for group 7 (key is hardcoded inside to {3, 5, 9, 4}
+		decryptMessage(Secret_Quote_Group_7);
 		
 			return 0;
 	}
 	
 	void encryptionC(unsigned int *key,  char *data, int delta) {
+		// Declare variables that will be used for encryption loop
 		unsigned int sum = 0;
-		int i, N;
-		unsigned int t1, t2, t3; // temp sums
-		int *d0, *d1;
+		int N;										// Loop counter
+		unsigned int t1, t2, t3; 	// temp sums
+		unsigned int *d0, *d1;		// Pointer to data
 		
-		d0 = (int *) &data[0];
-		d1 = (int *) &data[4];		
+		// Assign data to the pointers
+		d0 = (unsigned int *) &data[0];
+		d1 = (unsigned int *) &data[4];			
 		
-		
-		N = 32; 
-		
-		// initialize variables
-		//t1 = t2 = t3 = 0;
-		
-		// get data values
-	
-		// encryption loop
-		for (i = 0; i < N; i++) {
+		// encryption loop algorithm
+		for (N = 0; N < 32; N++) {
 			sum += delta;
 			
 			t1 = (*d1 << 4) + key[0];
@@ -73,19 +79,20 @@
 			t3 = *d0 + sum;
 			t3 = t1 ^ t2 ^ t3;
 			*d1 += t3;
-
 		}
 	}
 	
 	void decryptionC(unsigned int *key,  char *data, int delta, int sum) {
-		int i;
-		unsigned int t1, t2, t3; // temp sums
-		int *d0, *d1;
+		int N;										// Loop counter
+		unsigned int t1, t2, t3; 	// temp sums
+		unsigned int *d0, *d1;		// Pointer to data
 		
-		d0 = (int *) &data[0];
-		d1 = (int *) &data[4];	
+		// Assign data to the pointers
+		d0 = (unsigned int *) &data[0];
+		d1 = (unsigned int *) &data[4];	
 		
-		for (i = 0; i < 32; i++) {
+		// Decryption loop algorithm
+		for (N = 0; N < 32; N++) {
 			t1 = (*d0 << 4) + key[2];
 			t2 = (*d0 >> 5) + key[3];
 			t3 = *d0 + sum;
@@ -102,54 +109,52 @@
 		}
 	}
 	
-	void decryptTAsMessage() {
+	void decryptMessage(uint32_t *data) {
 		
-		int delta = 0x9E3779B9;
-		int sum = 0xC6Ef3720;
-		int i = 0, k = 0, j = 0;
-		unsigned int dataLength = 13;
-		//char *data_holder;
-		unsigned int decrypt_key[4];
-		unsigned int character;
+		// Initalize variables
+		int delta = 0x9E3779B9;					// Delta for encrypt/decryot
+		int sum = 0xC6Ef3720;						// Sum for decryption algorithm
+		int i = 0, k = 0, j = 0;				// Variables that will be used for loops
+		unsigned int dataLength = 13;		// Data length is set to 13 (13 x (2 x uint32_t) of data in secret quote)
+		unsigned int decrypt_key[4];		// Decryption key that will be used
 		
-		unsigned int data_holder[26];
-		unsigned int TA[2] = {'T', 'A'};
 		
-		unsigned int key[4] = { 3, 5, 9, 4 };
+		unsigned int data_holder[26];		// Variable that will contain each decrypted message
+		unsigned int TA[2] = {'T', 'A'};// Integer array for TA that will be encrypted
+		
+		unsigned int key[4] = { 3, 5, 9, 4 };	// Key used to encrypt TA
 		
 		// Ecrypt the letter TA and place them in key 0 and key 1
-		encryptionAsm(key, (char *) TA, delta);
-		
+		encryptionAsm(key, (char *) TA, delta);	
 		decrypt_key[0] = TA[0];
 		decrypt_key[1] = TA[1];
 		
+		// Loop through all possible keys and decrypt the secret quote using it
 			for (i = 0x64; i < 0x69; i++)
 			{
+				decrypt_key[2] = i;	// Assign decrypt_key[2] to the next value
+				
 				for (k = 0x64; k < 0x69; k++)
 				{
-					decrypt_key[2] = i;
-					decrypt_key[3] = k;
-					printf("Key Used: %c %c %d %d\n", (char) decrypt_key[3], (char) decrypt_key[2], decrypt_key[1], decrypt_key[0]);
+					decrypt_key[3] = k;	// Assign decrypt_key[3] to the next value				
+					printf("Key Used: %c %c %d %d\n", (char) decrypt_key[3], (char) decrypt_key[2], decrypt_key[1], decrypt_key[0]); // Print key used (cast [3] and [2] to characters)
 					
 					// Copy secret string into data_holder
-					memcpy(data_holder, Secret_Quote_Group_7, 26*4);
+					memcpy(data_holder, data, 26*4);
 
+					// Loop through entire length of Secret_Quote_Group_7 and decrypt it back into data_holder
 					for (j = 0; j < dataLength; j++) {
-						sum = 0xC6EF3720;
 						decryptionAsm(decrypt_key, (char *)data_holder + j*8, delta, sum);
 					}					
+					
+					// Print the current decrypted data
 					printf("Data_out : ");
 					for (j = 0; j < 26; j++)
-					{
-						
+					{		
 						printf("%c", (char) data_holder[j]);
 					}
 					printf("\n\n");
 				}
 			}
-		
-		
-		
-		
 	}
 	

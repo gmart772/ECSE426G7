@@ -1,0 +1,5 @@
+EncryptionAsm 					32.6us
+DecryptionAsm					32.6us
+
+EncryptionC						60.4us
+DecryptionC						60.4us

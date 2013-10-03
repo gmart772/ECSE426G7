@@ -13,12 +13,257 @@ Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptTAsMessage - g
 Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
 Part1Main.c(36): warning:  #177-D: variable "delta" was declared but never referenced
 Part1Main.c(37): warning:  #177-D: variable "sum" was declared but never referenced
-Part1Main.c(135): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(50): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(51): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(85): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(86): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(137): warning:  #223-D: function "memcpy" declared implicitly
 Part1Main.c(113): warning:  #177-D: variable "character" was declared but never referenced
 linking...
-Program Size: Code=1996 RO-data=464 RW-data=2504 ZI-data=1632  
+Program Size: Code=2008 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 10 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptTAsMessage - give arg types
+Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
+Part1Main.c(36): warning:  #177-D: variable "delta" was declared but never referenced
+Part1Main.c(37): warning:  #177-D: variable "sum" was declared but never referenced
+Part1Main.c(50): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(51): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(85): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(86): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(137): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(113): warning:  #177-D: variable "character" was declared but never referenced
+linking...
+Program Size: Code=1676 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 10 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptTAsMessage - give arg types
+Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
+Part1Main.c(36): warning:  #177-D: variable "delta" was declared but never referenced
+Part1Main.c(37): warning:  #177-D: variable "sum" was declared but never referenced
+Part1Main.c(50): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(51): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(85): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(86): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(137): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(113): warning:  #177-D: variable "character" was declared but never referenced
+linking...
+Program Size: Code=1988 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 10 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(101): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(201): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+linking...
+Program Size: Code=1956 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(18): error: A1507E: Second parameter of register list must be greater than or equal to the first
+lab1Asm.s(101): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(201): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+Target not created
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(18): error: A1507E: Second parameter of register list must be greater than or equal to the first
+lab1Asm.s(101): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(201): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+Target not created
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(18): error: A1507E: Second parameter of register list must be greater than or equal to the first
+lab1Asm.s(101): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(201): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+Target not created
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(18): error: A1507E: Second parameter of register list must be greater than or equal to the first
+lab1Asm.s(101): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(201): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+Target not created
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(18): error: A1507E: Second parameter of register list must be greater than or equal to the first
+lab1Asm.s(101): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(201): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+Target not created
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(113): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(213): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+linking...
+Program Size: Code=1988 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(114): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(214): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+compiling Part1Main.c...
+Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptMessage - give arg types
+Part1Main.c(37): warning:  #223-D: function "decryptTAsMessage" declared implicitly
+Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
+Part1Main.c(48): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(49): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(77): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(78): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(128): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(104): warning:  #177-D: variable "character" was declared but never referenced
+linking...
+Lab1.axf: Error: L6218E: Undefined symbol decryptTAsMessage (referred from part1main.o).
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptMessage - give arg types
+Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
+Part1Main.c(48): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(49): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(77): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(78): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(128): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(104): warning:  #177-D: variable "character" was declared but never referenced
+linking...
+Program Size: Code=1980 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 8 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptMessage - give arg types
+Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
+Part1Main.c(48): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(49): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
+Part1Main.c(128): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(104): warning:  #177-D: variable "character" was declared but never referenced
+linking...
+Program Size: Code=1980 RO-data=464 RW-data=2504 ZI-data=1632  
 "Lab1.axf" - 0 Error(s), 6 Warning(s).
 Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptMessage - give arg types
+Part1Main.c(138): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(114): warning:  #177-D: variable "character" was declared but never referenced
 linking...
-Program Size: Code=1996 RO-data=464 RW-data=2504 ZI-data=1632  
+Program Size: Code=2056 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptMessage - give arg types
+Part1Main.c(157): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(133): warning:  #177-D: variable "character" was declared but never referenced
+linking...
+Program Size: Code=2184 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptMessage - give arg types
+Part1Main.c(156): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(132): warning:  #177-D: variable "character" was declared but never referenced
+linking...
+Program Size: Code=2212 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptMessage - give arg types
+Part1Main.c(156): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(132): warning:  #177-D: variable "character" was declared but never referenced
+linking...
+Program Size: Code=2232 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptMessage - give arg types
+Part1Main.c(156): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(132): warning:  #177-D: variable "character" was declared but never referenced
+linking...
+Program Size: Code=2236 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptMessage - give arg types
+Part1Main.c(154): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(132): warning:  #177-D: variable "character" was declared but never referenced
+linking...
+Program Size: Code=2236 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(154): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(132): warning:  #177-D: variable "character" was declared but never referenced
+linking...
+Program Size: Code=2244 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(153): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2244 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.c(154): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2244 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(7): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(155): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2244 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(7): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(150): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2244 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(21): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(145): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2244 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(21): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(143): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2240 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(114): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(216): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+compiling Part1Main.c...
+Part1Main.h(21): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(143): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2208 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(114): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(131): error: A1507E: Second parameter of register list must be greater than or equal to the first
+lab1Asm.s(216): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+Target not created
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(114): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(214): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+linking...
+Program Size: Code=2240 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+linking...
+Program Size: Code=2240 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+linking...
+Program Size: Code=2240 RO-data=464 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+linking...
+Program Size: Code=2240 RO-data=464 RW-data=2504 ZI-data=1632  
 "Lab1.axf" - 0 Error(s), 0 Warning(s).

@@ -13,15 +13,15 @@
 	; R6-R8: T0-T3
 	; R9-R12: K0-K3
 	
-encryptionAsm		
+encryptionAsm
 	
 	PUSH {R0} ; Put key pointer on stack
 	PUSH {R1} ; Put data pointer on stack
 	PUSH {R2} ; Put delta on stack
 	PUSH {R3} ; Put sum on stack
-	PUSH {R4} ;
-	PUSH {R5} ;
-	PUSH {R6} ;
+	PUSH {R4} 
+	PUSH {R5} 
+	PUSH {R6} 
 	PUSH {R7}
 	PUSH {R8}
 	PUSH {R9}
@@ -29,11 +29,12 @@ encryptionAsm
 	PUSH {R11}
 	PUSH {R12}
 	
+	 ; PUSH {R1}
 	; Copy data pointer to temp register
-	MOV R5, R1 
+	MOV R5, R1
 	
 	; Load key into registers 9 - 12
-	LDM R0, {R9 - R12} 
+	LDM R0, {R9 - R12}
 	
 	; Load data into R0 and R1
 	LDM R5, {R0 - R1} 
@@ -117,9 +118,9 @@ decryptionAsm
 	PUSH {R1} ; Put data pointer on stack
 	PUSH {R2} ; Put delta on stack
 	PUSH {R3} ; Put sum on stack
-	PUSH {R4} ;
-	PUSH {R5} ;
-	PUSH {R6} ;
+	PUSH {R4} 
+	PUSH {R5}
+	PUSH {R6}
 	PUSH {R7}
 	PUSH {R8}
 	PUSH {R9}
@@ -131,7 +132,7 @@ decryptionAsm
 	MOV R5, R1 
 	
 	; Load key into registers 9 - 12
-	LDM R0, {R9 - R12} 
+	LDM R0, {R9 - R12}
 	
 	; Load data into R0 and R1
 	LDM R5, {R0 - R1} 
@@ -191,7 +192,7 @@ EndDecryptionLoop
 
 	; AFTER LOOP
 	STM R5!, {R0 - R1} ; Put data back in memory
-
+	
 	POP {R12}
 	POP {R11}
 	POP {R10}
