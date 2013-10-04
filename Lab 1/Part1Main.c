@@ -22,7 +22,11 @@
 		
 		unsigned int key_perm[4] = { 3, 5, 9, 4 };
 		
-		/* TEST ENCRYPTION AND DECRYPTION SUB ROUTINES */
+		char *star_trek = "Space: the final frontier. These are the voyages of the starship Enterprise. Its continuing mission to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no one has gone before.       ";
+		int j = 0;
+		unsigned int data_holder[56];
+		
+		/* TEST ENCRYPTION AND DECRYPTION SUB ROUTINES AND TIMES */
 		char test_data[8] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H' };
 		printf("Data is %s to start\n\n", test_data);
 		// Assembly only
@@ -46,6 +50,18 @@
 		decryptionAsm(key_perm, test_data, delta, sum);	
 		printf("Data is now %s\n\n", test_data);	
 		printf("\n");
+		printf("\n");	
+		
+
+		// Encrypt star_trek string
+		memcpy(data_holder, star_trek, 28*8);					// Copy star_trek string into our data_holder
+		for (j = 0; j < 28; j++) {
+			encryptionC(key_perm, (char *)data_holder + j*8, delta);			// Encrypt string 8 characters at a time
+		}
+		// Decrypt star_trek string
+		for (j = 0; j < 28; j++) {
+			decryptionC(key_perm, (char *) data_holder + j*8, delta, sum);	// Decrypt string 8 characters at a time
+		}
 		
 		// Decrypt the Secret Quote for group 7 (key is hardcoded inside to {3, 5, 9, 4}
 		decryptMessage(Secret_Quote_Group_7);
@@ -89,7 +105,7 @@
 		
 		// Assign data to the pointers
 		d0 = (unsigned int *) &data[0];
-		d1 = (unsigned int *) &data[4];	
+		d1 = (unsigned int *) &data[4];
 		
 		// Decryption loop algorithm
 		for (N = 0; N < 32; N++) {
@@ -157,4 +173,3 @@
 				}
 			}
 	}
-	

@@ -3,267 +3,1202 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-C:\Users\pwhite8\ECSE426G7\Lab 1\Lab1.uvproj
-Project File Date:  10/02/2013
+C:\Users\gmarti37\ECSE426G7\Lab 1\Lab1.uvproj
+Project File Date:  10/04/2013
 
 <h2>Output:</h2>
 Build target 'Lab 1'
 compiling Part1Main.c...
-Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptTAsMessage - give arg types
-Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
-Part1Main.c(36): warning:  #177-D: variable "delta" was declared but never referenced
-Part1Main.c(37): warning:  #177-D: variable "sum" was declared but never referenced
-Part1Main.c(50): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(51): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(85): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(86): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(137): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(113): warning:  #177-D: variable "character" was declared but never referenced
+Part1Main.h(21): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(143): warning:  #223-D: function "memcpy" declared implicitly
 linking...
-Program Size: Code=2008 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 10 Warning(s).
-Build target 'Lab 1'
-compiling Part1Main.c...
-Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptTAsMessage - give arg types
-Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
-Part1Main.c(36): warning:  #177-D: variable "delta" was declared but never referenced
-Part1Main.c(37): warning:  #177-D: variable "sum" was declared but never referenced
-Part1Main.c(50): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(51): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(85): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(86): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(137): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(113): warning:  #177-D: variable "character" was declared but never referenced
-linking...
-Program Size: Code=1676 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 10 Warning(s).
-Build target 'Lab 1'
-compiling Part1Main.c...
-Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptTAsMessage - give arg types
-Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
-Part1Main.c(36): warning:  #177-D: variable "delta" was declared but never referenced
-Part1Main.c(37): warning:  #177-D: variable "sum" was declared but never referenced
-Part1Main.c(50): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(51): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(85): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(86): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(137): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(113): warning:  #177-D: variable "character" was declared but never referenced
-linking...
-Program Size: Code=1988 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 10 Warning(s).
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(101): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-lab1Asm.s(201): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-linking...
-Program Size: Code=1956 RO-data=464 RW-data=2504 ZI-data=1632  
+Program Size: Code=2240 RO-data=464 RW-data=2504 ZI-data=1632  
 "Lab1.axf" - 0 Error(s), 2 Warning(s).
 Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(18): error: A1507E: Second parameter of register list must be greater than or equal to the first
-lab1Asm.s(101): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-lab1Asm.s(201): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(18): error: A1507E: Second parameter of register list must be greater than or equal to the first
-lab1Asm.s(101): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-lab1Asm.s(201): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(18): error: A1507E: Second parameter of register list must be greater than or equal to the first
-lab1Asm.s(101): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-lab1Asm.s(201): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(18): error: A1507E: Second parameter of register list must be greater than or equal to the first
-lab1Asm.s(101): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-lab1Asm.s(201): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(18): error: A1507E: Second parameter of register list must be greater than or equal to the first
-lab1Asm.s(101): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-lab1Asm.s(201): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-Target not created
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(113): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-lab1Asm.s(213): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-linking...
-Program Size: Code=1988 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(114): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-lab1Asm.s(214): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
 compiling Part1Main.c...
-Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptMessage - give arg types
-Part1Main.c(37): warning:  #223-D: function "decryptTAsMessage" declared implicitly
-Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
-Part1Main.c(48): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(49): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(77): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(78): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(128): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(104): warning:  #177-D: variable "character" was declared but never referenced
-linking...
-Lab1.axf: Error: L6218E: Undefined symbol decryptTAsMessage (referred from part1main.o).
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(53): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(54): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(154): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(179): error:  #28: expression must have a constant value
+Part1Main.c(184): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(205): error:  #28: expression must have a constant value
+Part1Main.c(210): warning:  #223-D: function "memcpy" declared implicitly
 Target not created
 Build target 'Lab 1'
 compiling Part1Main.c...
-Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptMessage - give arg types
-Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
-Part1Main.c(48): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(49): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(77): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(78): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(128): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(104): warning:  #177-D: variable "character" was declared but never referenced
-linking...
-Program Size: Code=1980 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 8 Warning(s).
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(53): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(54): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(155): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(180): error:  #28: expression must have a constant value
+Part1Main.c(185): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(206): error:  #28: expression must have a constant value
+Part1Main.c(211): warning:  #223-D: function "memcpy" declared implicitly
+Target not created
 Build target 'Lab 1'
 compiling Part1Main.c...
-Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptMessage - give arg types
-Part1Main.c(34): warning:  #177-D: variable "key_perm" was declared but never referenced
-Part1Main.c(48): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(49): warning:  #513-D: a value of type "int *" cannot be assigned to an entity of type "unsigned int *"
-Part1Main.c(128): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(104): warning:  #177-D: variable "character" was declared but never referenced
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(53): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(54): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(155): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(185): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(211): warning:  #223-D: function "memcpy" declared implicitly
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(157): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(187): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(213): warning:  #223-D: function "memcpy" declared implicitly
 linking...
-Program Size: Code=1980 RO-data=464 RW-data=2504 ZI-data=1632  
+Program Size: Code=2452 RO-data=684 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(157): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(187): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(213): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2464 RO-data=684 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Lab 1'
+linking...
+Program Size: Code=2464 RO-data=684 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(157): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(187): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(213): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2536 RO-data=684 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Lab 1'
+linking...
+Program Size: Code=2536 RO-data=684 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(157): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(187): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(213): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2536 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(157): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2520 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+linking...
+Program Size: Code=2520 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(177): warning:  #177-D: variable "data_holder" was declared but never referenced
+linking...
+Program Size: Code=2492 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(177): warning:  #177-D: variable "data_holder" was declared but never referenced
+linking...
+Program Size: Code=2516 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(25): error:  #144: a value of type "char *" cannot be used to initialize an entity of type "unsigned int *"
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(177): warning:  #177-D: variable "data_holder" was declared but never referenced
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2520 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2520 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(185): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2528 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(185): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2532 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(185): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2532 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(56): error:  #167: argument of type "unsigned int *" is incompatible with parameter of type "char *"
+Part1Main.c(57): error:  #167: argument of type "unsigned int *" is incompatible with parameter of type "char *"
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(185): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(201): error:  #147-D: declaration is incompatible with "void decryptVariableMessage(unsigned int *, char *, int, int, int)" (declared at line 25 of "Part1Main.h")
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(56): error:  #167: argument of type "unsigned int *" is incompatible with parameter of type "char *"
+Part1Main.c(57): error:  #167: argument of type "unsigned int *" is incompatible with parameter of type "char *"
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(185): warning:  #223-D: function "memcpy" declared implicitly
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(185): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2664 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2516 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(177): warning:  #177-D: variable "data_holder" was declared but never referenced
+linking...
+Program Size: Code=2516 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(177): warning:  #177-D: variable "data_holder" was declared but never referenced
+linking...
+Program Size: Code=2516 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2520 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2520 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2552 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2552 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(182): error:  #137: expression must be a modifiable lvalue
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(182): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(185): error:  #65: expected a ";"
+Part1Main.c(190): warning:  #12-D: parsing restarts here after previous syntax error
+Part1Main.c(179): warning:  #177-D: variable "dataLength" was declared but never referenced
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(182): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2672 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Lab 1'
+linking...
+Program Size: Code=2672 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(182): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(208): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2688 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(182): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(208): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2620 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(182): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(179): warning:  #177-D: variable "dataLength" was declared but never referenced
+Part1Main.c(208): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2620 RO-data=692 RW-data=2504 ZI-data=1632  
 "Lab1.axf" - 0 Error(s), 6 Warning(s).
 Build target 'Lab 1'
 compiling Part1Main.c...
-Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptMessage - give arg types
-Part1Main.c(138): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(114): warning:  #177-D: variable "character" was declared but never referenced
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(182): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(179): warning:  #177-D: variable "dataLength" was declared but never referenced
+Part1Main.c(208): warning:  #223-D: function "memcpy" declared implicitly
 linking...
-Program Size: Code=2056 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Program Size: Code=2620 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
 Build target 'Lab 1'
 compiling Part1Main.c...
-Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptMessage - give arg types
-Part1Main.c(157): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(133): warning:  #177-D: variable "character" was declared but never referenced
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(182): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(208): warning:  #223-D: function "memcpy" declared implicitly
 linking...
-Program Size: Code=2184 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Program Size: Code=2656 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 5 Warning(s).
 Build target 'Lab 1'
 compiling Part1Main.c...
-Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptMessage - give arg types
-Part1Main.c(156): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(132): warning:  #177-D: variable "character" was declared but never referenced
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(182): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(208): warning:  #223-D: function "memcpy" declared implicitly
 linking...
-Program Size: Code=2212 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Program Size: Code=2656 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 5 Warning(s).
 Build target 'Lab 1'
 compiling Part1Main.c...
-Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptMessage - give arg types
-Part1Main.c(156): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(132): warning:  #177-D: variable "character" was declared but never referenced
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(182): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(208): warning:  #223-D: function "memcpy" declared implicitly
 linking...
-Program Size: Code=2232 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Program Size: Code=2660 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 5 Warning(s).
 Build target 'Lab 1'
 compiling Part1Main.c...
-Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptMessage - give arg types
-Part1Main.c(156): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(132): warning:  #177-D: variable "character" was declared but never referenced
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(182): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(208): warning:  #223-D: function "memcpy" declared implicitly
 linking...
-Program Size: Code=2236 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Program Size: Code=2652 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 5 Warning(s).
 Build target 'Lab 1'
 compiling Part1Main.c...
-Part1Main.c(31): warning:  #1295-D: Deprecated declaration decryptMessage - give arg types
-Part1Main.c(154): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(132): warning:  #177-D: variable "character" was declared but never referenced
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(182): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(208): warning:  #223-D: function "memcpy" declared implicitly
 linking...
-Program Size: Code=2236 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Program Size: Code=2656 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 5 Warning(s).
 Build target 'Lab 1'
 compiling Part1Main.c...
-Part1Main.c(154): warning:  #223-D: function "memcpy" declared implicitly
-Part1Main.c(132): warning:  #177-D: variable "character" was declared but never referenced
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(182): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(208): warning:  #223-D: function "memcpy" declared implicitly
 linking...
-Program Size: Code=2244 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Program Size: Code=2516 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 5 Warning(s).
 Build target 'Lab 1'
 compiling Part1Main.c...
-Part1Main.c(153): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(181): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+Part1Main.c(207): warning:  #223-D: function "memcpy" declared implicitly
 linking...
-Program Size: Code=2244 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 1 Warning(s).
+Program Size: Code=2512 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+linking...
+Program Size: Code=2512 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+assembling startup_stm32f4xx.s...
+linking...
+Program Size: Code=2512 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
 Build target 'Lab 1'
 compiling Part1Main.c...
-Part1Main.c(154): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(181): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+Part1Main.c(207): warning:  #223-D: function "memcpy" declared implicitly
 linking...
-Program Size: Code=2244 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 1 Warning(s).
+Program Size: Code=2512 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
 Build target 'Lab 1'
 compiling Part1Main.c...
-Part1Main.h(7): warning:  #1-D: last line of file ends without a newline
-Part1Main.c(155): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(181): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+Part1Main.c(207): warning:  #223-D: function "memcpy" declared implicitly
 linking...
-Program Size: Code=2244 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Program Size: Code=2512 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
 Build target 'Lab 1'
 compiling Part1Main.c...
-Part1Main.h(7): warning:  #1-D: last line of file ends without a newline
-Part1Main.c(150): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(181): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+Part1Main.c(207): warning:  #223-D: function "memcpy" declared implicitly
 linking...
-Program Size: Code=2244 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Program Size: Code=2512 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
 Build target 'Lab 1'
 compiling Part1Main.c...
-Part1Main.h(21): warning:  #1-D: last line of file ends without a newline
-Part1Main.c(145): warning:  #223-D: function "memcpy" declared implicitly
-linking...
-Program Size: Code=2244 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(181): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(185): error:  #167: argument of type "unsigned int *" is incompatible with parameter of type "char *"
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+Part1Main.c(207): warning:  #223-D: function "memcpy" declared implicitly
+Target not created
 Build target 'Lab 1'
 compiling Part1Main.c...
-Part1Main.h(21): warning:  #1-D: last line of file ends without a newline
-Part1Main.c(143): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(181): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+Part1Main.c(207): warning:  #223-D: function "memcpy" declared implicitly
 linking...
-Program Size: Code=2240 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Program Size: Code=2512 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
 Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(114): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-lab1Asm.s(216): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-compiling Part1Main.c...
-Part1Main.h(21): warning:  #1-D: last line of file ends without a newline
-Part1Main.c(143): warning:  #223-D: function "memcpy" declared implicitly
 linking...
-Program Size: Code=2208 RO-data=464 RW-data=2504 ZI-data=1632  
+Program Size: Code=2512 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(181): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+Part1Main.c(207): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2512 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(181): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+Part1Main.c(207): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2512 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(181): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+Part1Main.c(207): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2476 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(181): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+Part1Main.c(207): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2512 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(181): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+Part1Main.c(207): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2512 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(181): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+Part1Main.c(207): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2508 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+linking...
+Program Size: Code=2508 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+Part1Main.c(207): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2492 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+Part1Main.c(211): error:  #167: argument of type "unsigned int *" is incompatible with parameter of type "char *"
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2508 RO-data=692 RW-data=2504 ZI-data=1632  
 "Lab1.axf" - 0 Error(s), 4 Warning(s).
 Build target 'Lab 1'
-assembling lab1Asm.s...
-lab1Asm.s(114): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
-lab1Asm.s(131): error: A1507E: Second parameter of register list must be greater than or equal to the first
-lab1Asm.s(216): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(167): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(193): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2552 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(167): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(193): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2564 RO-data=688 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+Part1Main.c(211): error:  #167: argument of type "unsigned int *" is incompatible with parameter of type "char *"
 Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2508 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(181): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2528 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(177): warning:  #520-D: initialization with "{...}" expected for aggregate object
+Part1Main.c(177): error:  #20: identifier "malloc" is undefined
+Part1Main.c(177): error:  #59: function call is not allowed in a constant expression
+Part1Main.c(181): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(181): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2528 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Lab 1'
+linking...
+Program Size: Code=2528 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(116): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(216): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+linking...
+Program Size: Code=2532 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(116): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(218): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+linking...
+Program Size: Code=2540 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Lab 1'
+assembling lab1Asm.s...
+lab1Asm.s(116): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+lab1Asm.s(218): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(181): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2540 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 7 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(152): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(181): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(178): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2540 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Lab 1'
+linking...
+Program Size: Code=2540 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+linking...
+Program Size: Code=2540 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+linking...
+Program Size: Code=2540 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(57): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(166): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(195): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(192): warning:  #177-D: variable "dataLength" was declared but never referenced
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(57): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(60): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(60): error:  #20: identifier "data" is undefined
+Part1Main.c(167): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(196): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(193): warning:  #177-D: variable "dataLength" was declared but never referenced
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(57): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(60): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(167): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(196): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(193): warning:  #177-D: variable "dataLength" was declared but never referenced
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(168): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(197): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(194): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2736 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(181): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(210): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(207): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2784 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(182): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(211): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(208): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2792 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(184): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(213): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(210): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2792 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
 Build target 'Lab 1'
 assembling lab1Asm.s...
 lab1Asm.s(114): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
 lab1Asm.s(214): warning: A1464W: ENDP/ENDFUNC without corresponding PROC/FUNC
 linking...
-Program Size: Code=2240 RO-data=464 RW-data=2504 ZI-data=1632  
+Program Size: Code=2780 RO-data=692 RW-data=2504 ZI-data=1632  
 "Lab1.axf" - 0 Error(s), 2 Warning(s).
 Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(184): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(213): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(210): warning:  #177-D: variable "dataLength" was declared but never referenced
 linking...
-Program Size: Code=2240 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Program Size: Code=2780 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(184): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(213): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(210): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2780 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(184): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(213): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(210): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2780 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(168): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(197): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(194): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2724 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(168): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(197): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(194): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2704 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(168): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(197): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(194): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2704 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(168): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(197): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(194): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2704 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(168): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(197): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(194): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2704 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(168): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(197): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(194): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2704 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
 Build target 'Lab 1'
 linking...
-Program Size: Code=2240 RO-data=464 RW-data=2504 ZI-data=1632  
+Program Size: Code=2704 RO-data=692 RW-data=2504 ZI-data=1632  
 "Lab1.axf" - 0 Error(s), 0 Warning(s).
 Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(168): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(197): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(194): warning:  #177-D: variable "dataLength" was declared but never referenced
 linking...
-Program Size: Code=2240 RO-data=464 RW-data=2504 ZI-data=1632  
-"Lab1.axf" - 0 Error(s), 0 Warning(s).
+Program Size: Code=2704 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(168): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(197): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(194): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2704 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(168): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(197): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(194): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2704 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(168): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(197): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(194): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2704 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(168): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(197): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(194): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2704 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(168): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(197): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(194): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2704 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(168): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(197): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(194): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2704 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(62): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(169): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(198): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(195): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2716 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(62): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(29): warning:  #177-D: variable "data_holder_2" was declared but never referenced
+Part1Main.c(167): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(196): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(193): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2704 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 7 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(61): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(166): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(195): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(192): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2704 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(59): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(164): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(193): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(190): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2704 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(59): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(164): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(193): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(190): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2704 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(26): warning:  #223-D: function "strlen" declared implicitly
+Part1Main.c(59): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(164): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(193): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(190): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2704 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(27): warning:  #520-D: initialization with "{...}" expected for aggregate object
+Part1Main.c(27): warning:  #1296-D: extended constant initialiser used
+Part1Main.c(30): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(58): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(58): error:  #20: identifier "star_trek" is undefined
+Part1Main.c(163): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(192): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(189): warning:  #177-D: variable "dataLength" was declared but never referenced
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(27): warning:  #520-D: initialization with "{...}" expected for aggregate object
+Part1Main.c(27): warning:  #1296-D: extended constant initialiser used
+Part1Main.c(30): error:  #268: declaration may not appear after executable statement in block
+Part1Main.c(163): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(192): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(189): warning:  #177-D: variable "dataLength" was declared but never referenced
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(28): warning:  #520-D: initialization with "{...}" expected for aggregate object
+Part1Main.c(28): warning:  #1296-D: extended constant initialiser used
+Part1Main.c(164): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(193): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(190): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2580 RO-data=696 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(28): error:  #144: a value of type "unsigned int" cannot be used to initialize an entity of type "unsigned int *"
+Part1Main.c(164): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(193): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(190): warning:  #177-D: variable "dataLength" was declared but never referenced
+Target not created
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(164): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(193): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(190): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2484 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(25): warning:  #177-D: variable "star_trek" was declared but never referenced
+Part1Main.c(163): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(192): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(189): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2488 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(58): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(163): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(192): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(189): warning:  #177-D: variable "dataLength" was declared but never referenced
+linking...
+Program Size: Code=2636 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(58): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(163): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2456 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(58): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(163): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2456 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(58): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(163): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2456 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(58): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(163): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2456 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(58): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(163): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2456 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(25): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(58): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(163): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2456 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(21): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(57): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(162): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2456 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(21): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(57): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(162): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2456 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(21): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(57): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(162): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2456 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(21): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(57): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(162): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2456 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(21): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(57): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(160): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2456 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(21): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(57): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(160): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2452 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(21): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(57): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(159): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2452 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(21): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(57): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(159): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2452 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Lab 1'
+compiling Part1Main.c...
+Part1Main.h(21): warning:  #1-D: last line of file ends without a newline
+Part1Main.c(57): warning:  #223-D: function "memcpy" declared implicitly
+Part1Main.c(159): warning:  #223-D: function "memcpy" declared implicitly
+linking...
+Program Size: Code=2452 RO-data=692 RW-data=2504 ZI-data=1632  
+"Lab1.axf" - 0 Error(s), 3 Warning(s).
