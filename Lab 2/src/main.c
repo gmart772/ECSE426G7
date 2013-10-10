@@ -8,7 +8,7 @@
 
 //#include "gpio_example.h"
 
-
+static volatile uint_fast16_t ticks;
 
 int main()
 {
@@ -50,16 +50,29 @@ int main()
 	ADC_SoftwareStartConv(ADC1);
 
 	uint16_t voltage;
-	int i = 0;
-	while(i < 1000) {
 	
+	ticks = 0;
+	// Configured for 50 ms period
+	// Configure SysTick to be 20Hz
+	// NOTE: argument here must be less than 0xFFFFFF; //(24 bit timer)
+	SysTick_Config(SystemCoreClock/20); // Number of ticks between two interrupts or SystemCoreClock/Freq
+	
+	while(1){
+		
+		// Wait for an interrupt
+		while(!ticks);
+		
+		// Decrement ticks
+		ticks = 0;
+		
+		// Interrupt routine
 		// Temperature (in °C) = {(VSENSE – V25) / Avg_Slope} + 25
 		voltage = ADC_GetConversionValue(ADC1);
 		//GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 		//printf("This is a TEST?");
 		i++;
-		
 	}
+	
 }
 
 
