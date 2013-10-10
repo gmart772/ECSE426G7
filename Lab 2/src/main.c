@@ -7,6 +7,7 @@
 #include "stm32f4xx_rcc.h"
 
 //#include "gpio_example.h"
+float V25 = 0.76;
 
 static volatile uint_fast16_t ticks;
 
@@ -43,19 +44,24 @@ int main()
 	ADC_Cmd(ADC1, ENABLE);
 
 	ADC_TempSensorVrefintCmd(ENABLE);
-	ADC_RegularChannelConfig(ADC1, ADC_Channel_TempSensor, 1, ADC_SampleTime_28Cycles);
+	ADC_RegularChannelConfig(ADC1, ADC_Channel_TempSensor, 1, ADC_SampleTime_480Cycles);
 	
 	ADC_ContinuousModeCmd(ADC1, ENABLE);
 
 	ADC_SoftwareStartConv(ADC1);
 
-	uint16_t voltage;
+	//uint16_t voltage;
+	float voltage;
+	float temperature;
+	float avgSlope = 2.5;
 	
 	ticks = 0;
 	// Configured for 50 ms period
 	// Configure SysTick to be 20Hz
 	// NOTE: argument here must be less than 0xFFFFFF; //(24 bit timer)
-	SysTick_Config(SystemCoreClock/20); // Number of ticks between two interrupts or SystemCoreClock/Freq
+	SysTick_Config(SystemCoreClock / 20); // Number of ticks between two interrupts or SystemCoreClock/Freq
+	
+	int i = 0;
 	
 	while(1){
 		
@@ -67,9 +73,17 @@ int main()
 		
 		// Interrupt routine
 		// Temperature (in °C) = {(VSENSE – V25) / Avg_Slope} + 25
-		voltage = ADC_GetConversionValue(ADC1);
+		
+		/* ALL VALUES SCALED UP TO COMPENSATE FOR INT */
+		voltage =   ((float) ADC_GetConversionValue(ADC1) / 4095.0f) * 3 ;
+		
+		temperature = ((voltage - V25) / avgSlope)  + 25;
+		
+		//printf("Temp is : %d", voltage);
+		
 		//GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 		//printf("This is a TEST?");
+		i++;
 	}
 	
 }
@@ -77,6 +91,7 @@ int main()
 void SysTick_Handler() {
 	ticks = 1;
 }
+
 
 
 
