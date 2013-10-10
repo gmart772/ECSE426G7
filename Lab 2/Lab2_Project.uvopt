@@ -228,7 +228,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>173</TopLine>
+      <TopLine>174</TopLine>
       <CurrentLine>182</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\src\startup_stm32f40xx.s</PathWithFileName>
@@ -258,10 +258,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>2</ColumnNumber>
+      <ColumnNumber>12</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>15</TopLine>
-      <CurrentLine>55</CurrentLine>
+      <TopLine>20</TopLine>
+      <CurrentLine>53</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\src\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -304,7 +304,7 @@
       <GroupNumber>1</GroupNumber>
       <FileNumber>6</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -320,7 +320,7 @@
 
   <Group>
     <GroupName>STM32F4xx_StdPeriph_Driver</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -348,7 +348,7 @@
       <Focus>0</Focus>
       <ColumnNumber>23</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1161</TopLine>
+      <TopLine>1162</TopLine>
       <CurrentLine>1169</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_adc.c</PathWithFileName>
