@@ -4,218 +4,333 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 C:\Users\gmarti37\ECSE426G7\Lab 2\Lab2_Project.uvproj
-Project File Date:  10/05/2013
+Project File Date:  10/14/2013
 
 <h2>Output:</h2>
 Build target 'Target 1'
+compiling fputc_debug.c...
 compiling main.c...
-src\main.c(71): error:  #29: expected an expression
-src\main.c(53): warning:  #550-D: variable "voltage" was set but never used
+src\main.c(5): error:  #20: identifier "GPIO_InitTypeDef" is undefined
+src\main.c(6): warning:  #223-D: function "RCC_AHB1PeriphClockCmd" declared implicitly
+src\main.c(6): error:  #20: identifier "RCC_AHB1Periph_GPIOD" is undefined
+src\main.c(6): error:  #20: identifier "ENABLE" is undefined
+src\main.c(7): warning:  #223-D: function "GPIO_StructInit" declared implicitly
+src\main.c(8): error:  #20: identifier "GPIO_Pin_12" is undefined
+src\main.c(9): error:  #20: identifier "GPIO_Mode_OUT" is undefined
+src\main.c(10): error:  #20: identifier "GPIO_Speed_100MHz" is undefined
+src\main.c(11): error:  #20: identifier "GPIO_OType_PP" is undefined
+src\main.c(12): error:  #20: identifier "GPIO_PuPd_NOPULL" is undefined
+src\main.c(13): warning:  #223-D: function "GPIO_Init" declared implicitly
+src\main.c(13): error:  #20: identifier "GPIOD" is undefined
+src\main.c(15): error:  #20: identifier "ADC_InitTypeDef" is undefined
+src\main.c(16): error:  #20: identifier "ADC_CommonInitTypeDef" is undefined
+src\main.c(18): warning:  #223-D: function "RCC_APB2PeriphClockCmd" declared implicitly
+src\main.c(18): error:  #20: identifier "RCC_APB2Periph_ADC1" is undefined
+src\main.c(19): error:  #20: identifier "ADC_Mode_Independent" is undefined
+src\main.c(20): error:  #20: identifier "ADC_Prescaler_Div2" is undefined
+src\main.c(21): error:  #20: identifier "ADC_DMAAccessMode_Disabled" is undefined
+src\main.c(22): error:  #20: identifier "ADC_TwoSamplingDelay_5Cycles" is undefined
+src\main.c(23): warning:  #223-D: function "ADC_CommonInit" declared implicitly
+src\main.c(25): error:  #20: identifier "ADC_Resolution_12b" is undefined
+src\main.c(26): error:  #20: identifier "DISABLE" is undefined
+src\main.c(28): error:  #20: identifier "ADC_ExternalTrigConvEdge_None" is undefined
+src\main.c(29): error:  #20: identifier "ADC_DataAlign_Right" is undefined
+src\main.c(31): warning:  #223-D: function "ADC_Init" declared implicitly
+src\main.c(31): error:  #20: identifier "ADC1" is undefined
+src\main.c(33): warning:  #223-D: function "ADC_Cmd" declared implicitly
+src\main.c(35): warning:  #223-D: function "ADC_TempSensorVrefintCmd" declared implicitly
+src\main.c(36): warning:  #223-D: function "ADC_RegularChannelConfig" declared implicitly
+src\main.c(36): error:  #20: identifier "ADC_Channel_TempSensor" is undefined
+src\main.c(36): error:  #20: identifier "ADC_SampleTime_480Cycles" is undefined
+src\main.c(38): warning:  #223-D: function "ADC_ContinuousModeCmd" declared implicitly
+src\main.c(40): warning:  #223-D: function "ADC_SoftwareStartConv" declared implicitly
+src\main.c(47): error:  #20: identifier "ticks" is undefined
+src\main.c(51): warning:  #223-D: function "SysTick_Config" declared implicitly
+src\main.c(51): error:  #20: identifier "SystemCoreClock" is undefined
+src\main.c(66): warning:  #223-D: function "ADC_GetConversionValue" declared implicitly
+src\main.c(68): error:  #20: identifier "V25" is undefined
+src\main.c(44): warning:  #550-D: variable "temperature" was set but never used
+src\main.c(80): error:  #20: identifier "ticks" is undefined
+compiling system_stm32f4xx.c...
+compiling misc.c...
+compiling stm32f4xx_adc.c...
+compiling stm32f4xx_can.c...
+compiling stm32f4xx_crc.c...
+compiling stm32f4xx_cryp.c...
+compiling stm32f4xx_cryp_aes.c...
+compiling stm32f4xx_cryp_des.c...
+compiling stm32f4xx_cryp_tdes.c...
+compiling stm32f4xx_dac.c...
+compiling stm32f4xx_dbgmcu.c...
+compiling stm32f4xx_dcmi.c...
+compiling stm32f4xx_dma.c...
+compiling stm32f4xx_exti.c...
+compiling stm32f4xx_flash.c...
+compiling stm32f4xx_fsmc.c...
+compiling stm32f4xx_gpio.c...
+compiling stm32f4xx_hash.c...
+compiling stm32f4xx_hash_md5.c...
+compiling stm32f4xx_hash_sha1.c...
+compiling stm32f4xx_i2c.c...
+compiling stm32f4xx_iwdg.c...
+compiling stm32f4xx_pwr.c...
+compiling stm32f4xx_rcc.c...
+compiling stm32f4xx_rng.c...
+compiling stm32f4xx_rtc.c...
+compiling stm32f4xx_sdio.c...
+compiling stm32f4xx_spi.c...
+compiling stm32f4xx_syscfg.c...
+compiling stm32f4xx_tim.c...
+compiling stm32f4xx_usart.c...
+compiling stm32f4xx_wwdg.c...
 Target not created
 Build target 'Target 1'
 compiling main.c...
-src\main.c(10): warning:  #69-D: integer conversion resulted in truncation
-src\main.c(54): warning:  #550-D: variable "temperature" was set but never used
-linking...
-Program Size: Code=4380 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
+src\main.c(5): error:  #20: identifier "GPIO_InitTypeDef" is undefined
+src\main.c(6): warning:  #223-D: function "RCC_AHB1PeriphClockCmd" declared implicitly
+src\main.c(6): error:  #20: identifier "RCC_AHB1Periph_GPIOD" is undefined
+src\main.c(6): error:  #20: identifier "ENABLE" is undefined
+src\main.c(7): warning:  #223-D: function "GPIO_StructInit" declared implicitly
+src\main.c(8): error:  #20: identifier "GPIO_Pin_12" is undefined
+src\main.c(9): error:  #20: identifier "GPIO_Mode_OUT" is undefined
+src\main.c(10): error:  #20: identifier "GPIO_Speed_100MHz" is undefined
+src\main.c(11): error:  #20: identifier "GPIO_OType_PP" is undefined
+src\main.c(12): error:  #20: identifier "GPIO_PuPd_NOPULL" is undefined
+src\main.c(13): warning:  #223-D: function "GPIO_Init" declared implicitly
+src\main.c(13): error:  #20: identifier "GPIOD" is undefined
+src\main.c(15): error:  #20: identifier "ADC_InitTypeDef" is undefined
+src\main.c(16): error:  #20: identifier "ADC_CommonInitTypeDef" is undefined
+src\main.c(18): warning:  #223-D: function "RCC_APB2PeriphClockCmd" declared implicitly
+src\main.c(18): error:  #20: identifier "RCC_APB2Periph_ADC1" is undefined
+src\main.c(19): error:  #20: identifier "ADC_Mode_Independent" is undefined
+src\main.c(20): error:  #20: identifier "ADC_Prescaler_Div2" is undefined
+src\main.c(21): error:  #20: identifier "ADC_DMAAccessMode_Disabled" is undefined
+src\main.c(22): error:  #20: identifier "ADC_TwoSamplingDelay_5Cycles" is undefined
+src\main.c(23): warning:  #223-D: function "ADC_CommonInit" declared implicitly
+src\main.c(25): error:  #20: identifier "ADC_Resolution_12b" is undefined
+src\main.c(26): error:  #20: identifier "DISABLE" is undefined
+src\main.c(28): error:  #20: identifier "ADC_ExternalTrigConvEdge_None" is undefined
+src\main.c(29): error:  #20: identifier "ADC_DataAlign_Right" is undefined
+src\main.c(31): warning:  #223-D: function "ADC_Init" declared implicitly
+src\main.c(31): error:  #20: identifier "ADC1" is undefined
+src\main.c(33): warning:  #223-D: function "ADC_Cmd" declared implicitly
+src\main.c(35): warning:  #223-D: function "ADC_TempSensorVrefintCmd" declared implicitly
+src\main.c(36): warning:  #223-D: function "ADC_RegularChannelConfig" declared implicitly
+src\main.c(36): error:  #20: identifier "ADC_Channel_TempSensor" is undefined
+src\main.c(36): error:  #20: identifier "ADC_SampleTime_480Cycles" is undefined
+src\main.c(38): warning:  #223-D: function "ADC_ContinuousModeCmd" declared implicitly
+src\main.c(40): warning:  #223-D: function "ADC_SoftwareStartConv" declared implicitly
+src\main.c(47): error:  #20: identifier "ticks" is undefined
+src\main.c(51): warning:  #223-D: function "SysTick_Config" declared implicitly
+src\main.c(51): error:  #20: identifier "SystemCoreClock" is undefined
+src\main.c(66): warning:  #223-D: function "ADC_GetConversionValue" declared implicitly
+src\main.c(68): error:  #20: identifier "V25" is undefined
+src\main.c(44): warning:  #550-D: variable "temperature" was set but never used
+src\main.c(80): error:  #20: identifier "ticks" is undefined
+Target not created
 Build target 'Target 1'
 compiling main.c...
-src\main.c(10): warning:  #69-D: integer conversion resulted in truncation
-src\main.c(54): warning:  #550-D: variable "temperature" was set but never used
-linking...
-Program Size: Code=4380 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\main.c(10): warning:  #69-D: integer conversion resulted in truncation
-src\main.c(54): warning:  #550-D: variable "temperature" was set but never used
-linking...
-Program Size: Code=4364 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\main.c(54): warning:  #550-D: variable "temperature" was set but never used
-linking...
-Program Size: Code=4364 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\main.c(79): warning:  #177-D: variable "x" was declared but never referenced
-src\main.c(54): warning:  #550-D: variable "temperature" was set but never used
-linking...
-Program Size: Code=4368 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\main.c(79): warning:  #177-D: variable "x" was declared but never referenced
-src\main.c(54): warning:  #550-D: variable "temperature" was set but never used
-linking...
-Program Size: Code=4368 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\main.c(79): warning:  #177-D: variable "x" was declared but never referenced
-src\main.c(54): warning:  #550-D: variable "temperature" was set but never used
-linking...
-Program Size: Code=4288 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-linking...
-Program Size: Code=4288 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\main.c(79): warning:  #177-D: variable "x" was declared but never referenced
-src\main.c(54): warning:  #550-D: variable "temperature" was set but never used
-linking...
-Program Size: Code=4288 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-linking...
-Program Size: Code=4288 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\main.c(53): warning:  #550-D: variable "voltage" was set but never used
-src\main.c(54): warning:  #177-D: variable "temperature" was declared but never referenced
-src\main.c(55): warning:  #177-D: variable "avgSlope" was declared but never referenced
-linking...
-Program Size: Code=4280 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 3 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\main.c(53): warning:  #550-D: variable "voltage" was set but never used
-src\main.c(54): warning:  #177-D: variable "temperature" was declared but never referenced
-src\main.c(55): warning:  #177-D: variable "avgSlope" was declared but never referenced
-linking...
-Program Size: Code=4284 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 3 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\main.c(53): warning:  #550-D: variable "voltage" was set but never used
-src\main.c(54): warning:  #177-D: variable "temperature" was declared but never referenced
-src\main.c(55): warning:  #177-D: variable "avgSlope" was declared but never referenced
-linking...
-Program Size: Code=4304 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 3 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\main.c(54): warning:  #550-D: variable "temperature" was set but never used
-linking...
-Program Size: Code=4384 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\main.c(54): warning:  #550-D: variable "temperature" was set but never used
+src\main.h(12): warning:  #1-D: last line of file ends without a newline
+src\main.c(44): warning:  #550-D: variable "temperature" was set but never used
 linking...
 Program Size: Code=4392 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
+".\obj\Lab2_Project.axf" - 0 Error(s), 2 Warning(s).
 Build target 'Target 1'
 compiling main.c...
-src\main.c(54): warning:  #550-D: variable "temperature" was set but never used
+src\main.h(15): error:  #70: incomplete type is not allowed
+src\main.h(18): warning:  #1-D: last line of file ends without a newline
+src\main.h(18): warning:  #2770-D: definition at end of file not followed by a semicolon or a declarator
+src\main.c(3): error:  #65: expected a ";"
+src\main.c(44): warning:  #550-D: variable "temperature" was set but never used
+Target not created
+Build target 'Target 1'
+compiling main.c...
+src\main.c(1): warning:  #14-D: extra text after expected end of preprocessing directive
+src\main.h(15): error:  #70: incomplete type is not allowed
+src\main.h(18): warning:  #1-D: last line of file ends without a newline
+src\main.h(18): warning:  #2770-D: definition at end of file not followed by a semicolon or a declarator
+src\main.c(3): error:  #65: expected a ";"
+src\main.c(44): warning:  #550-D: variable "temperature" was set but never used
+Target not created
+Build target 'Target 1'
+compiling main.c...
+src\main.c(1): warning:  #14-D: extra text after expected end of preprocessing directive
+src\main.h(15): error:  #70: incomplete type is not allowed
+src\main.h(18): warning:  #1-D: last line of file ends without a newline
+src\main.h(18): warning:  #375-D: declaration requires a typedef name
+src\main.c(44): warning:  #550-D: variable "temperature" was set but never used
+Target not created
+Build target 'Target 1'
+compiling main.c...
+src\main.c(1): warning:  #14-D: extra text after expected end of preprocessing directive
+src\main.h(18): error:  #70: incomplete type is not allowed
+src\main.h(19): warning:  #1-D: last line of file ends without a newline
+src\main.h(19): warning:  #375-D: declaration requires a typedef name
+src\main.c(44): warning:  #550-D: variable "temperature" was set but never used
+Target not created
+Build target 'Target 1'
+compiling main.c...
+src\main.c(1): warning:  #14-D: extra text after expected end of preprocessing directive
+src\main.h(19): warning:  #1-D: last line of file ends without a newline
+src\main.h(19): warning:  #375-D: declaration requires a typedef name
+src\main.c(44): warning:  #550-D: variable "temperature" was set but never used
 linking...
-Program Size: Code=4948 RO-data=424 RW-data=52 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
+Program Size: Code=4392 RO-data=424 RW-data=44 ZI-data=1636  
+".\obj\Lab2_Project.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\main.c(1): warning:  #14-D: extra text after expected end of preprocessing directive
+src\main.h(19): warning:  #1-D: last line of file ends without a newline
+src\main.h(19): warning:  #375-D: declaration requires a typedef name
+src\main.c(44): warning:  #550-D: variable "temperature" was set but never used
+linking...
+Program Size: Code=4392 RO-data=424 RW-data=44 ZI-data=1636  
+".\obj\Lab2_Project.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\main.c(1): warning:  #14-D: extra text after expected end of preprocessing directive
+src\main.h(20): warning:  #375-D: declaration requires a typedef name
+src\main.c(44): warning:  #550-D: variable "temperature" was set but never used
+linking...
+Program Size: Code=4392 RO-data=424 RW-data=44 ZI-data=1636  
+".\obj\Lab2_Project.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\main.c(1): warning:  #14-D: extra text after expected end of preprocessing directive
+src\main.h(21): warning:  #375-D: declaration requires a typedef name
+src\main.h(24): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(25): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(26): warning:  #1-D: last line of file ends without a newline
+src\main.h(26): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
+src\main.c(10): warning:  #550-D: variable "temperature" was set but never used
+linking...
+Program Size: Code=4408 RO-data=424 RW-data=44 ZI-data=1636  
+".\obj\Lab2_Project.axf" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\main.c(1): warning:  #14-D: extra text after expected end of preprocessing directive
+src\main.h(21): warning:  #375-D: declaration requires a typedef name
+src\main.h(24): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(25): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(26): warning:  #1-D: last line of file ends without a newline
+src\main.h(26): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
+src\main.c(12): error:  #20: identifier "movingAverageFilter" is undefined
+src\main.c(12): error:  #65: expected a ";"
+src\main.c(10): warning:  #550-D: variable "temperature" was set but never used
+Target not created
+Build target 'Target 1'
+compiling main.c...
+src\main.c(1): warning:  #14-D: extra text after expected end of preprocessing directive
+src\main.h(24): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(25): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(26): warning:  #1-D: last line of file ends without a newline
+src\main.h(26): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
+src\main.c(10): warning:  #550-D: variable "temperature" was set but never used
+src\main.c(12): warning:  #177-D: variable "filter" was declared but never referenced
+linking...
+Program Size: Code=4408 RO-data=424 RW-data=44 ZI-data=1636  
+".\obj\Lab2_Project.axf" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\main.c(1): warning:  #14-D: extra text after expected end of preprocessing directive
+src\main.h(23): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(24): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(25): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
+src\main.c(38): error:  #167: argument of type "movingAverageFilter *" is incompatible with parameter of type "float"
+src\main.c(38): error:  #167: argument of type "float" is incompatible with parameter of type "movingAverageFilter *"
+Target not created
+Build target 'Target 1'
+compiling main.c...
+src\main.c(1): warning:  #14-D: extra text after expected end of preprocessing directive
+src\main.h(23): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(24): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(25): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
+src\main.c(38): error:  #167: argument of type "movingAverageFilter *" is incompatible with parameter of type "float"
+src\main.c(38): error:  #167: argument of type "float" is incompatible with parameter of type "movingAverageFilter *"
+src\main.c(93): error:  #147-D: declaration is incompatible with "void updateFilter(float, movingAverageFilter *)" (declared at line 26 of "src\main.h")
+Target not created
+Build target 'Target 1'
+compiling main.c...
+src\main.c(1): warning:  #14-D: extra text after expected end of preprocessing directive
+src\main.h(23): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(24): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(25): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
+src\main.c(38): error:  #167: argument of type "movingAverageFilter *" is incompatible with parameter of type "float"
+src\main.c(38): error:  #167: argument of type "float" is incompatible with parameter of type "movingAverageFilter *"
+src\main.c(93): error:  #147-D: declaration is incompatible with "void updateFilter(float, movingAverageFilter *)" (declared at line 26 of "src\main.h")
+Target not created
+Build target 'Target 1'
+compiling main.c...
+src\main.c(1): warning:  #14-D: extra text after expected end of preprocessing directive
+src\main.h(23): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(24): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(25): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
+linking...
+Program Size: Code=4484 RO-data=424 RW-data=44 ZI-data=1636  
+".\obj\Lab2_Project.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\main.c(1): warning:  #14-D: extra text after expected end of preprocessing directive
+src\main.h(23): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(24): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(25): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
+src\main.c(96): error:  #20: identifier "buffer" is undefined
+src\main.c(98): error:  #20: identifier "buffer" is undefined
+Target not created
+Build target 'Target 1'
+compiling main.c...
+src\main.c(1): warning:  #14-D: extra text after expected end of preprocessing directive
+src\main.h(23): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(24): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(25): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
+src\main.c(96): error:  #20: identifier "buffer" is undefined
+src\main.c(98): error:  #20: identifier "buffer" is undefined
+Target not created
+Build target 'Target 1'
+compiling main.c...
+src\main.c(1): warning:  #14-D: extra text after expected end of preprocessing directive
+src\main.h(23): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(24): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(25): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
+linking...
+Program Size: Code=4516 RO-data=424 RW-data=44 ZI-data=1636  
+".\obj\Lab2_Project.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\main.c(1): warning:  #14-D: extra text after expected end of preprocessing directive
+src\main.h(21): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(22): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(23): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
+linking...
+Program Size: Code=4584 RO-data=424 RW-data=44 ZI-data=1636  
+".\obj\Lab2_Project.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\main.h(21): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(22): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(23): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
+linking...
+Program Size: Code=4584 RO-data=424 RW-data=44 ZI-data=1636  
+".\obj\Lab2_Project.axf" - 0 Error(s), 3 Warning(s).
 Build target 'Target 1'
 linking...
-Program Size: Code=4948 RO-data=424 RW-data=52 ZI-data=1636  
+Program Size: Code=4584 RO-data=424 RW-data=44 ZI-data=1636  
 ".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
 Build target 'Target 1'
 compiling main.c...
-src\main.c(54): warning:  #550-D: variable "temperature" was set but never used
+src\main.h(21): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(22): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(23): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
 linking...
-Program Size: Code=4952 RO-data=424 RW-data=52 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
+Program Size: Code=4592 RO-data=424 RW-data=44 ZI-data=1636  
+".\obj\Lab2_Project.axf" - 0 Error(s), 3 Warning(s).
 Build target 'Target 1'
 compiling main.c...
-src\main.c(54): warning:  #550-D: variable "temperature" was set but never used
+src\main.h(21): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(22): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(23): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
 linking...
-Program Size: Code=4392 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
-Build target 'Target 1'
-linking...
-Program Size: Code=4392 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\main.c(53): warning:  #550-D: variable "voltage" was set but never used
-src\main.c(54): warning:  #177-D: variable "temperature" was declared but never referenced
-src\main.c(55): warning:  #177-D: variable "avgSlope" was declared but never referenced
-linking...
-Program Size: Code=4384 RO-data=424 RW-data=44 ZI-data=1636  
+Program Size: Code=4592 RO-data=424 RW-data=44 ZI-data=1636  
 ".\obj\Lab2_Project.axf" - 0 Error(s), 3 Warning(s).
 Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
 Erase Done.
@@ -223,11 +338,11 @@ Programming Done.
 Verify OK.
 Build target 'Target 1'
 compiling main.c...
-src\main.c(53): warning:  #550-D: variable "voltage" was set but never used
-src\main.c(54): warning:  #177-D: variable "temperature" was declared but never referenced
-src\main.c(55): warning:  #177-D: variable "avgSlope" was declared but never referenced
+src\main.h(21): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(22): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(23): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
 linking...
-Program Size: Code=4380 RO-data=424 RW-data=44 ZI-data=1636  
+Program Size: Code=4592 RO-data=424 RW-data=44 ZI-data=1636  
 ".\obj\Lab2_Project.axf" - 0 Error(s), 3 Warning(s).
 Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
 Erase Done.
@@ -235,71 +350,17 @@ Programming Done.
 Verify OK.
 Build target 'Target 1'
 compiling main.c...
-src\main.c(53): warning:  #550-D: variable "voltage" was set but never used
-src\main.c(54): warning:  #177-D: variable "temperature" was declared but never referenced
-src\main.c(55): warning:  #177-D: variable "avgSlope" was declared but never referenced
+src\main.h(21): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(22): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(23): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
 linking...
-Program Size: Code=4384 RO-data=424 RW-data=44 ZI-data=1636  
+Program Size: Code=4604 RO-data=424 RW-data=44 ZI-data=1636  
 ".\obj\Lab2_Project.axf" - 0 Error(s), 3 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
 Build target 'Target 1'
 compiling main.c...
-src\main.c(53): warning:  #550-D: variable "voltage" was set but never used
-src\main.c(54): warning:  #177-D: variable "temperature" was declared but never referenced
-src\main.c(55): warning:  #177-D: variable "avgSlope" was declared but never referenced
+src\main.h(22): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(23): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(24): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
 linking...
-Program Size: Code=4384 RO-data=424 RW-data=44 ZI-data=1636  
+Program Size: Code=4680 RO-data=424 RW-data=52 ZI-data=1636  
 ".\obj\Lab2_Project.axf" - 0 Error(s), 3 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\main.c(54): warning:  #550-D: variable "temperature" was set but never used
-linking...
-Program Size: Code=4388 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\main.c(54): warning:  #550-D: variable "temperature" was set but never used
-linking...
-Program Size: Code=4436 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\main.c(55): warning:  #550-D: variable "temperature" was set but never used
-linking...
-Program Size: Code=4472 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-src\main.c(55): warning:  #550-D: variable "temperature" was set but never used
-linking...
-Program Size: Code=4468 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\main.c(55): warning:  #550-D: variable "temperature" was set but never used
-linking...
-Program Size: Code=4392 RO-data=424 RW-data=44 ZI-data=1636  
-".\obj\Lab2_Project.axf" - 0 Error(s), 1 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.

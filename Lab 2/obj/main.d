@@ -1,4 +1,5 @@
 .\obj\main.o: src\main.c
+.\obj\main.o: src\main.h
 .\obj\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
 .\obj\main.o: src\stm32f4xx.h
 .\obj\main.o: C:\Keil\ARM\CMSIS\Include\core_cm4.h
