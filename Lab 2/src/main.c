@@ -8,70 +8,40 @@ int main()
 	initializeButton(); // GPIOA pin 0
 	initializeAdc();
 	
-	//uint16_t voltage;
-	float voltage;
-	float temperature;
-	float avgSlope = 2.5; // value from datasheet
-	movingAverageFilter filter;
-	
+	//uint16_t voltage;	
 	int current_cycle_length = 0;
 	int pwm_counter = 0;
-	uint16_t pwm_on = 0, currentstate = 0;
+	uint16_t pwm_on = 0, currentstate = 0, buttonPressed;
 	currentLED = 0;
 	
 	ticks = 0;
 	// Configured for 50 ms period
 	// Configure SysTick to be 20Hz
-	// NOTE: argument here must be less than 0xFFFFFF; //(24 bit timer)
 	SysTick_Config(SystemCoreClock / 20);
-
-	int i = 0;
+	// NOTE: argument here must be less than 0xFFFFFF; //(24 bit timer)
 	
 	initializeFilter(&filter); // initialize the moving average filter	
 			
 			while(1)
 			{
 				// Read for a button press
-				pwm_on = GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0);
+				//buttonPressed = GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0);
+				buttonPressed = isButtonPressed();
 				
-				if (pwm_on == 1)
-				{
-					if (currentstate == 0)
-					{
-						currentstate = 1;	
+				if (buttonPressed && (currentstate == TRACKING_TEMPERATURE)) {
+						currentstate = DOING_PWM;	
 						SysTick_Config(SystemCoreClock/PWM);
-					}
-					else
-					{
-						switch(currentLED)
-						{
-						case 0: 
-							GPIO_WriteBit(GPIOD, GPIO_Pin_12, 1);
-							GPIO_WriteBit(GPIOD, GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15, 0);
-							break;
-						case 1:
-							GPIO_WriteBit(GPIOD, GPIO_Pin_13, 1);
-							GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_14 | GPIO_Pin_15, 0);
-							break;
-						case 2:
-							GPIO_WriteBit(GPIOD, GPIO_Pin_14, 1);
-							GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_15, 0);
-							break;
-						case 3:
-							GPIO_WriteBit(GPIOD, GPIO_Pin_15, 1);
-							GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14, 0);
-							break;
-						default:
-							break;
-						}
-						SysTick_Config(SystemCoreClock / 20);
-						currentstate = 0;
-					}
 				}
+				else if (buttonPressed && (currentstate == DOING_PWM)) {
+						revertPinState();
+						SysTick_Config(SystemCoreClock / 20);
+						currentstate = TRACKING_TEMPERATURE;
+				}
+				
 				
 				// If pwm has changed (depending on change perform some reset)
 				
-				if (currentstate == 1)
+				if (currentstate == DOING_PWM)
 				{
 					// Wait for interrupt
 					while(!ticks);
@@ -106,24 +76,7 @@ int main()
 				}
 				else
 				{
-						// Wait for an interrupt
-						while(!ticks);
-						
-						// Decrement ticks
-						ticks = 0;
-						
-						// Interrupt routine
-						voltage =   ((float) ADC_GetConversionValue(ADC1) / 4095.0f) * 3 ;
-						
-						// Temperature (in °C) = {(VSENSE – V25) / Avg_Slope} + 25
-						temperature = ((voltage - V25) / (avgSlope/1000))  + 25;
-						
-						updateFilter(&filter, temperature);
-						
-						// Only update LED after X readings?
-						updateLED(filter.averageValue);
-						
-						i++;
+					trackTemperature();	
 				}
 			}
 	}
@@ -231,22 +184,27 @@ void updateLED(float temperature) {
 					// turn off current LED and light next in sequence. Set LED[0] to the currently set LED
 					if (currentLED == 0)
 					{					
-						GPIO_ToggleBits(GPIOD, GPIO_Pin_12 | GPIO_Pin_13);
+						GPIO_WriteBit(GPIOD, GPIO_Pin_12, 0);
+						GPIO_WriteBit(GPIOD, GPIO_Pin_13, 1);
+
 						currentLED++;
 					}
 					else if (currentLED == 1)
 					{
-						GPIO_ToggleBits(GPIOD, GPIO_Pin_13 | GPIO_Pin_14);
+						GPIO_WriteBit(GPIOD, GPIO_Pin_13, 0);
+						GPIO_WriteBit(GPIOD, GPIO_Pin_14, 1);
 						currentLED++;
 					}
 					else if (currentLED == 2)
 					{
-						GPIO_ToggleBits(GPIOD, GPIO_Pin_14 | GPIO_Pin_15);
+						GPIO_WriteBit(GPIOD, GPIO_Pin_14, 0);
+						GPIO_WriteBit(GPIOD, GPIO_Pin_15, 1);
 						currentLED++;
 					}
 					else if (currentLED == 3)
 					{
-						GPIO_ToggleBits(GPIOD, GPIO_Pin_15 | GPIO_Pin_12);
+						GPIO_WriteBit(GPIOD, GPIO_Pin_15, 0);
+						GPIO_WriteBit(GPIOD, GPIO_Pin_12, 1);
 						currentLED = 0;
 					}
 					// Set the next base temperature
@@ -257,27 +215,111 @@ void updateLED(float temperature) {
 					// turn off current LED and light next in sequence (counter-clockwise. Set LED[0] to the currently set LED
 					if (currentLED == 0)
 					{
-						GPIO_ToggleBits(GPIOD, GPIO_Pin_12 | GPIO_Pin_15);
+						GPIO_WriteBit(GPIOD, GPIO_Pin_12, 0);
+						GPIO_WriteBit(GPIOD, GPIO_Pin_15, 1);
 						currentLED = 3;
 					}
 					else if (currentLED == 1)
 					{
-						GPIO_ToggleBits(GPIOD, GPIO_Pin_15 | GPIO_Pin_14);
+						GPIO_WriteBit(GPIOD, GPIO_Pin_15, 0);
+						GPIO_WriteBit(GPIOD, GPIO_Pin_14, 1);
 						currentLED--;
 					}
 					else if (currentLED == 2)
 					{
-						GPIO_ToggleBits(GPIOD, GPIO_Pin_14 | GPIO_Pin_13);
+						GPIO_WriteBit(GPIOD, GPIO_Pin_14, 0);
+						GPIO_WriteBit(GPIOD, GPIO_Pin_13, 1);
 						currentLED--;
 					}
 					else if (currentLED == 3)
 					{
-						GPIO_ToggleBits(GPIOD, GPIO_Pin_13 | GPIO_Pin_12);
+						GPIO_WriteBit(GPIOD, GPIO_Pin_13, 0);
+						GPIO_WriteBit(GPIOD, GPIO_Pin_12, 1);
 						currentLED--;
 					}
 					// Set the next base temperature
 					baseTemperature = temperature;
 	}
+}
+
+void trackTemperature() {
+	float voltage;
+	float temperature;
+	float avgSlope = 2.5 / 1000; // value from datasheet
+	
+	// Wait for an interrupt
+	while(!ticks);
+	
+	// Decrement ticks
+	ticks = 0;
+	
+	// Interrupt routine
+	voltage = ((float) ADC_GetConversionValue(ADC1) / 4095.0f) * 3 ;
+	
+	// Temperature (in °C) = {(VSENSE – V25) / Avg_Slope} + 25
+	temperature = ((voltage - V25) / avgSlope)  + 25;
+	
+	updateFilter(&filter, temperature);
+	
+	// Only update LED after X readings?
+	updateLED(filter.averageValue);
+}
+
+void revertPinState() {
+		switch(currentLED)
+		{
+		case 0: 
+			GPIO_WriteBit(GPIOD, GPIO_Pin_12, 1);
+			GPIO_WriteBit(GPIOD, GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15, 0);
+			break;
+		case 1:
+			GPIO_WriteBit(GPIOD, GPIO_Pin_13, 1);
+			GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_14 | GPIO_Pin_15, 0);
+			break;
+		case 2:
+			GPIO_WriteBit(GPIOD, GPIO_Pin_14, 1);
+			GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_15, 0);
+			break;
+		case 3:
+			GPIO_WriteBit(GPIOD, GPIO_Pin_15, 1);
+			GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14, 0);
+			break;
+		default:
+			break;
+		}
+}
+
+// Debounces the button
+int isButtonPressed() {
+	uint16_t isBitSet;
+	
+	
+	SysTick_Config(SystemCoreClock/5);
+	
+	isBitSet = GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0);
+	if (isBitSet) {
+			while (!ticks);
+			ticks = 0;
+			isBitSet = GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0);
+			if (!isBitSet) {
+				return 1;
+			}
+			else { 
+				while (!ticks);
+				ticks = 0;
+				isBitSet = GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0);
+				if (!isBitSet) {
+					return 1;
+				}
+				else {
+					return 0;
+				}
+			}
+		}
+		else {
+			return 0;
+		}
+	
 }
 
 

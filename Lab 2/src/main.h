@@ -13,6 +13,8 @@ float LED_THRESHOLD = 2.0; // 2 degrees celsius to change LED
 int PWM = 100000;							// Duty cycles per period
 
 #define D	5 // filter depth
+#define TRACKING_TEMPERATURE 0
+#define DOING_PWM 1
 
 static volatile uint_fast16_t ticks;
 static float baseTemperature;
@@ -25,6 +27,7 @@ typedef struct  { // Struct to keep track of filter internals
 	float sum; // average of values in the buffer
 	float averageValue;
 	short index; 				// Index of next buffer entry
+	
 } movingAverageFilter;
 
 void SysTick_Handler();
@@ -35,3 +38,9 @@ void initializeFilter(movingAverageFilter *filter);
 void updateFilter(movingAverageFilter *filter, float temperature);
 void updateLED(float temperature);
 void pwn();
+void trackTemperature();
+void revertPinState();
+int isButtonPressed();
+
+
+static movingAverageFilter filter;
