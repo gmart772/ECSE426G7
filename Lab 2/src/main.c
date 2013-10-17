@@ -4,102 +4,128 @@
 Applies filter to values. */
 int main()
 {
-	initializeLed();
+	initializeLed();    // GPIOD pin 12..15
+	initializeButton(); // GPIOA pin 0
 	initializeAdc();
 	
 	//uint16_t voltage;
 	float voltage;
 	float temperature;
 	float avgSlope = 2.5; // value from datasheet
-	movingAverageFilter *filter;
-	
-	// pointer to currently used LED index (used to cycle LEDs)
-	short *currentLED;
-	currentLED[0] = 0;
+	movingAverageFilter filter;
 	
 	int current_cycle_length = 0;
 	int pwm_counter = 0;
-	int pwm_on = 1;
+	uint16_t pwm_on = 0, currentstate = 0;
+	currentLED = 0;
 	
 	ticks = 0;
 	// Configured for 50 ms period
 	// Configure SysTick to be 20Hz
 	// NOTE: argument here must be less than 0xFFFFFF; //(24 bit timer)
-	SysTick_Config(SystemCoreClock / 20); // Number of ticks between two interrupts or SystemCoreClock/Freq
+	SysTick_Config(SystemCoreClock / 20);
 
 	int i = 0;
 	
-	initializeFilter(filter); // initialize the moving average filter
-
-		// A PWN of half a period
-		if (pwm_on == 1)
-		{
-			// Increase the Systick frequency for pwm (we no longer see changes after 100 Hertz)
-			SysTick_Config(SystemCoreClock/PWM);
+	initializeFilter(&filter); // initialize the moving average filter	
 			
 			while(1)
 			{
-				// Wait for interrupt
-				while(!ticks);
+				// Read for a button press
+				pwm_on = GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0);
 				
-				// Set ticks to 0
-				ticks = 0;
-				
-				// Increment the duty cycle count
-				pwm_counter++;
-				
-				// Set the bit
-				if (current_cycle_length > pwm_counter)
+				if (pwm_on == 1)
 				{
-					GPIO_WriteBit(GPIOD, GPIO_Pin_15, 0);
+					if (currentstate == 0)
+					{
+						currentstate = 1;	
+						SysTick_Config(SystemCoreClock/PWM);
+					}
+					else
+					{
+						switch(currentLED)
+						{
+						case 0: 
+							GPIO_WriteBit(GPIOD, GPIO_Pin_12, 1);
+							GPIO_WriteBit(GPIOD, GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15, 0);
+							break;
+						case 1:
+							GPIO_WriteBit(GPIOD, GPIO_Pin_13, 1);
+							GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_14 | GPIO_Pin_15, 0);
+							break;
+						case 2:
+							GPIO_WriteBit(GPIOD, GPIO_Pin_14, 1);
+							GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_15, 0);
+							break;
+						case 3:
+							GPIO_WriteBit(GPIOD, GPIO_Pin_15, 1);
+							GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14, 0);
+							break;
+						default:
+							break;
+						}
+						SysTick_Config(SystemCoreClock / 20);
+						currentstate = 0;
+					}
 				}
-				// Else make sure the bits are cleared
-				else if (current_cycle_length <= pwm_counter)
-				{
-					GPIO_WriteBit(GPIOD, GPIO_Pin_15, 1);
-				}
 				
-				if (pwm_counter == PWM)
+				// If pwm has changed (depending on change perform some reset)
+				
+				if (currentstate == 1)
 				{
-					// Reset duty cycle counter to 0
-					pwm_counter = 0;
+					// Wait for interrupt
+					while(!ticks);
+					// Set ticks to 0
+					ticks = 0;
 					
-					// Increment the amount of cycles the LED is on for
-					current_cycle_length++;
+					if (current_cycle_length > pwm_counter)
+					{
+						GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15, 1);
+					}
+					else
+					{
+						GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15, 0);
+					}
 					
-					// Reset the LED back to low
-					if (current_cycle_length == PWM)
+					// Increment the duty cycle count
+					pwm_counter++;
+					
+					if (pwm_counter > 2000)
+					{
+						// Reset duty cycle counter to 0
+						pwm_counter = 0;
+						
+						// Set the current cycle to the next amount
+						current_cycle_length++;
+					}
+					
+					if (current_cycle_length == 200)
 					{
 						current_cycle_length = 0;
 					}
 				}
-				
-				// Toggle bit
-				GPIO_ToggleBits(GPIOD, GPIO_Pin_15);
+				else
+				{
+						// Wait for an interrupt
+						while(!ticks);
+						
+						// Decrement ticks
+						ticks = 0;
+						
+						// Interrupt routine
+						voltage =   ((float) ADC_GetConversionValue(ADC1) / 4095.0f) * 3 ;
+						
+						// Temperature (in °C) = {(VSENSE – V25) / Avg_Slope} + 25
+						temperature = ((voltage - V25) / (avgSlope/1000))  + 25;
+						
+						updateFilter(&filter, temperature);
+						
+						// Only update LED after X readings?
+						updateLED(filter.averageValue);
+						
+						i++;
+				}
 			}
-		}
-		// Normal procedure
-		else
-		{
-			while(1){
-				// Wait for an interrupt
-				while(!ticks);
-				
-				// Decrement ticks
-				ticks = 0;
-				
-				// Interrupt routine
-				voltage =   ((float) ADC_GetConversionValue(ADC1) / 4095.0f) * 3 ;
-				
-				// Temperature (in °C) = {(VSENSE – V25) / Avg_Slope} + 25
-				temperature = ((voltage - V25) / avgSlope/1000)  + 25;
-				
-				updateFilter(filter, temperature);
-				updateLED(filter->averageValue, currentLED);
-				
-				i++;
-			}
-		}
 	}
 
 void SysTick_Handler() {
@@ -110,71 +136,30 @@ void SysTick_Handler() {
 void initializeLed() {
 	
 	// Initialize LED GPIOA
-// 	GPIO_InitTypeDef gpio_init_sA;
-// 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
-// 	GPIO_StructInit(&gpio_init_sA);
-// 	gpio_init_sA.GPIO_Pin = GPIO_Pin_12;
-// 	gpio_init_sA.GPIO_Mode = GPIO_Mode_OUT;
-// 	gpio_init_sA.GPIO_Speed = GPIO_Speed_100MHz;
-// 	gpio_init_sA.GPIO_OType = GPIO_OType_PP;
-// 	gpio_init_sA.GPIO_PuPd = GPIO_PuPd_NOPULL;
-// 	GPIO_Init(GPIOA, &gpio_init_sA);
-	
-	// Initialize LED GPIOB
-	GPIO_InitTypeDef gpio_init_sB;
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
-	GPIO_StructInit(&gpio_init_sB);
-	gpio_init_sB.GPIO_Pin = GPIO_Pin_13;
-	gpio_init_sB.GPIO_Mode = GPIO_Mode_OUT;
-	gpio_init_sB.GPIO_Speed = GPIO_Speed_100MHz;
-	gpio_init_sB.GPIO_OType = GPIO_OType_PP;
-	gpio_init_sB.GPIO_PuPd = GPIO_PuPd_NOPULL;
-	GPIO_Init(GPIOB, &gpio_init_sB);
-	
-	// Initialize LED GPIOC
-	GPIO_InitTypeDef gpio_init_sC;
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
-	GPIO_StructInit(&gpio_init_sC);
-	gpio_init_sC.GPIO_Pin = GPIO_Pin_14;
-	gpio_init_sC.GPIO_Mode = GPIO_Mode_OUT;
-	gpio_init_sC.GPIO_Speed = GPIO_Speed_100MHz;
-	gpio_init_sC.GPIO_OType = GPIO_OType_PP;
-	gpio_init_sC.GPIO_PuPd = GPIO_PuPd_NOPULL;
-	GPIO_Init(GPIOC, &gpio_init_sC);
-	
-	// Initialize LED GPIOC
-	GPIO_InitTypeDef gpio_init_sD;
+	GPIO_InitTypeDef gpio_init_s;
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
-	GPIO_StructInit(&gpio_init_sC);
-	gpio_init_sD.GPIO_Pin = GPIO_Pin_15;
-	gpio_init_sD.GPIO_Mode = GPIO_Mode_OUT;
-	gpio_init_sD.GPIO_Speed = GPIO_Speed_100MHz;
-	gpio_init_sD.GPIO_OType = GPIO_OType_PP;
-	gpio_init_sD.GPIO_PuPd = GPIO_PuPd_NOPULL;
-	GPIO_Init(GPIOD, &gpio_init_sD);
+	GPIO_StructInit(&gpio_init_s);
+	gpio_init_s.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
+	gpio_init_s.GPIO_Mode = GPIO_Mode_OUT;
+	gpio_init_s.GPIO_Speed = GPIO_Speed_100MHz;
+	gpio_init_s.GPIO_OType = GPIO_OType_PP;
+	gpio_init_s.GPIO_PuPd = GPIO_PuPd_NOPULL;
+	GPIO_Init(GPIOD, &gpio_init_s);
+}
+
+/* Function initializes the LED */
+void initializeButton() {
 	
 	// Initialize LED GPIOA
-	GPIO_InitTypeDef gpio_init_sE;
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOE, ENABLE);
-	GPIO_StructInit(&gpio_init_sE);
-	gpio_init_sE.GPIO_Pin = GPIO_Pin_12;
-	gpio_init_sE.GPIO_Mode = GPIO_Mode_OUT;
-	gpio_init_sE.GPIO_Speed = GPIO_Speed_100MHz;
-	gpio_init_sE.GPIO_OType = GPIO_OType_PP;
-	gpio_init_sE.GPIO_PuPd = GPIO_PuPd_NOPULL;
-	GPIO_Init(GPIOE, &gpio_init_sE);
-	
-	/* Does not seem to want to work for anything but GPIOD */
-	// Toggle LEDs on and then off
-	GPIO_ToggleBits(GPIOA, GPIO_Pin_12);
-	GPIO_ToggleBits(GPIOB, GPIO_Pin_13);
-	GPIO_ToggleBits(GPIOC, GPIO_Pin_14);
-	GPIO_ToggleBits(GPIOD, GPIO_Pin_15);
-	
-	GPIO_ToggleBits(GPIOA, GPIO_Pin_12);
-	GPIO_ToggleBits(GPIOB, GPIO_Pin_13);
-	GPIO_ToggleBits(GPIOC, GPIO_Pin_14);
-	GPIO_ToggleBits(GPIOD, GPIO_Pin_15);
+	GPIO_InitTypeDef gpio_init_s;
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+	GPIO_StructInit(&gpio_init_s);
+	gpio_init_s.GPIO_Pin = GPIO_Pin_0;
+	gpio_init_s.GPIO_Mode = GPIO_Mode_IN;
+	gpio_init_s.GPIO_Speed = GPIO_Speed_100MHz;
+	gpio_init_s.GPIO_OType = GPIO_OType_PP;
+	gpio_init_s.GPIO_PuPd = GPIO_PuPd_NOPULL;
+	GPIO_Init(GPIOA, &gpio_init_s);
 }
 
 /* Function initializes ADC and temperature sensor */
@@ -223,11 +208,13 @@ void updateFilter(movingAverageFilter *filter, float temperature) {
 
 /* Fills the buffer with zeroes and sets the average to 0 */
 void initializeFilter(movingAverageFilter *filter) {
+	
+	
 	int i;
 	for (i = 0; i < D; i++) {
 		filter->buffer[i] = 0.0;
 	}
-	filter->sum = 0.0;
+	filter->sum = 0.0f;
 	filter->index = 0;
 }
 
@@ -237,38 +224,30 @@ void initializeFilter(movingAverageFilter *filter) {
 //		GPIO_PIN_12(0)								GPIO_PIN_14(2)	//
 //									GPIO_PIN_15(3)									//
 /*	---------------------------------------------		*/
-void updateLED(float temperature, short *LED) {
-	
-
-	
-	static float baseTemperature;
-	
+void updateLED(float temperature) {
+		
 	// if temperature rising and has risen more than 2 degrees
 	if (temperature - baseTemperature >= LED_THRESHOLD) {
 					// turn off current LED and light next in sequence. Set LED[0] to the currently set LED
-					if (LED[0] == 0)
-					{
-						GPIO_ToggleBits(GPIOA, GPIO_Pin_12);						
-						GPIO_ToggleBits(GPIOB, GPIO_Pin_13);
-						LED[0]++;
+					if (currentLED == 0)
+					{					
+						GPIO_ToggleBits(GPIOD, GPIO_Pin_12 | GPIO_Pin_13);
+						currentLED++;
 					}
-					else if (LED[0] == 1)
+					else if (currentLED == 1)
 					{
-						GPIO_ToggleBits(GPIOB, GPIO_Pin_13);						
-						GPIO_ToggleBits(GPIOC, GPIO_Pin_14);
-						LED[0]++;
+						GPIO_ToggleBits(GPIOD, GPIO_Pin_13 | GPIO_Pin_14);
+						currentLED++;
 					}
-					else if (LED[0] == 2)
+					else if (currentLED == 2)
 					{
-						GPIO_ToggleBits(GPIOC, GPIO_Pin_14);
-						GPIO_ToggleBits(GPIOD, GPIO_Pin_15);
-						LED[0]++;
+						GPIO_ToggleBits(GPIOD, GPIO_Pin_14 | GPIO_Pin_15);
+						currentLED++;
 					}
-					else if (LED[0] == 3)
+					else if (currentLED == 3)
 					{
-						GPIO_ToggleBits(GPIOD, GPIO_Pin_15);
-						GPIO_ToggleBits(GPIOA, GPIO_Pin_12);
-						LED[0] = 0;
+						GPIO_ToggleBits(GPIOD, GPIO_Pin_15 | GPIO_Pin_12);
+						currentLED = 0;
 					}
 					// Set the next base temperature
 					baseTemperature = temperature;
@@ -276,38 +255,29 @@ void updateLED(float temperature, short *LED) {
 	// if temperature falling and has fallen more than 2 degrees
 	else if (baseTemperature - temperature >= LED_THRESHOLD) {
 					// turn off current LED and light next in sequence (counter-clockwise. Set LED[0] to the currently set LED
-					if (LED[0] == 0)
+					if (currentLED == 0)
 					{
-						GPIO_ToggleBits(GPIOA, GPIO_Pin_12);						
-						GPIO_ToggleBits(GPIOD, GPIO_Pin_15);
-						LED[0] = 3;
+						GPIO_ToggleBits(GPIOD, GPIO_Pin_12 | GPIO_Pin_15);
+						currentLED = 3;
 					}
-					else if (LED[0] == 1)
+					else if (currentLED == 1)
 					{
-						GPIO_ToggleBits(GPIOB, GPIO_Pin_13);						
-						GPIO_ToggleBits(GPIOA, GPIO_Pin_12);
-						LED[0]--;
+						GPIO_ToggleBits(GPIOD, GPIO_Pin_15 | GPIO_Pin_14);
+						currentLED--;
 					}
-					else if (LED[0] == 2)
+					else if (currentLED == 2)
 					{
-						GPIO_ToggleBits(GPIOC, GPIO_Pin_14);
-						GPIO_ToggleBits(GPIOB, GPIO_Pin_13);
-						LED[0]--;
+						GPIO_ToggleBits(GPIOD, GPIO_Pin_14 | GPIO_Pin_13);
+						currentLED--;
 					}
-					else if (LED[0] == 3)
+					else if (currentLED == 3)
 					{
-						GPIO_ToggleBits(GPIOD, GPIO_Pin_15);
-						GPIO_ToggleBits(GPIOC, GPIO_Pin_14);
-						LED[0]--;
+						GPIO_ToggleBits(GPIOD, GPIO_Pin_13 | GPIO_Pin_12);
+						currentLED--;
 					}
 					// Set the next base temperature
 					baseTemperature = temperature;
 	}
-}
-
-void pwm()
-{
-	
 }
 
 

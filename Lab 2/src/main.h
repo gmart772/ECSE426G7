@@ -6,14 +6,19 @@
 #include "stm32f4xx_gpio.h"
 #include "stm32f4xx_rcc.h"
 
+
 float V25 = 0.76; // voltage reading at 25 degrees C
 float LED_THRESHOLD = 2.0; // 2 degrees celsius to change LED
 
-int PWM = 100;							// Duty cycles per period
+int PWM = 100000;							// Duty cycles per period
 
 #define D	5 // filter depth
 
 static volatile uint_fast16_t ticks;
+static float baseTemperature;
+
+static int currentLED;
+
 
 typedef struct  { // Struct to keep track of filter internals
 	float buffer[D]; // buffer
@@ -25,7 +30,8 @@ typedef struct  { // Struct to keep track of filter internals
 void SysTick_Handler();
 void initializeLed();
 void initializeAdc();
+void initializeButton();
 void initializeFilter(movingAverageFilter *filter);
 void updateFilter(movingAverageFilter *filter, float temperature);
-void updateLED(float temperature, short *LED);
+void updateLED(float temperature);
 void pwn();

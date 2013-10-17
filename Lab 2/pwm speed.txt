@@ -1,0 +1,18 @@
+We have a period of 100,000 Hertz
+
+We increment pwm_counter each pulse
+
+We increment cycle_counter each 1000 pulses
+
+
+We turn on LED when current_counter > pwm_counter
+We keep the LED off otherwise
+
+current_cycle resets after 200 pulses
+
+
+2000*(100,000 Hertz)*200
+
+20 000
+
+The PWM takes 4 seconds to operate
