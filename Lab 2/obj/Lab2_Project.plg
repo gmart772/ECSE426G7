@@ -7,3 +7,217 @@ C:\Users\gmarti37\ECSE426G7\Lab 2\Lab2_Project.uvproj
 Project File Date:  10/18/2013
 
 <h2>Output:</h2>
+Build target 'Target 1'
+assembling startup_stm32f40xx.s...
+compiling fputc_debug.c...
+compiling main.c...
+src\main.h(33): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(34): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(35): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
+src\main.h(36): warning:  #1295-D: Deprecated declaration initializeButton - give arg types
+src\main.h(40): warning:  #1295-D: Deprecated declaration pwn - give arg types
+src\main.h(41): warning:  #1295-D: Deprecated declaration trackTemperature - give arg types
+src\main.h(42): warning:  #1295-D: Deprecated declaration revertPinState - give arg types
+src\main.h(43): warning:  #1295-D: Deprecated declaration isButtonPressed - give arg types
+src\main.c(53): warning:  #188-D: enumerated type mixed with another type
+src\main.c(57): warning:  #188-D: enumerated type mixed with another type
+src\main.c(14): warning:  #177-D: variable "pwm_on" was declared but never referenced
+src\main.c(190): warning:  #188-D: enumerated type mixed with another type
+src\main.c(191): warning:  #188-D: enumerated type mixed with another type
+src\main.c(197): warning:  #188-D: enumerated type mixed with another type
+src\main.c(198): warning:  #188-D: enumerated type mixed with another type
+src\main.c(203): warning:  #188-D: enumerated type mixed with another type
+src\main.c(204): warning:  #188-D: enumerated type mixed with another type
+src\main.c(209): warning:  #188-D: enumerated type mixed with another type
+src\main.c(210): warning:  #188-D: enumerated type mixed with another type
+src\main.c(221): warning:  #188-D: enumerated type mixed with another type
+src\main.c(222): warning:  #188-D: enumerated type mixed with another type
+src\main.c(227): warning:  #188-D: enumerated type mixed with another type
+src\main.c(228): warning:  #188-D: enumerated type mixed with another type
+src\main.c(233): warning:  #188-D: enumerated type mixed with another type
+src\main.c(234): warning:  #188-D: enumerated type mixed with another type
+src\main.c(239): warning:  #188-D: enumerated type mixed with another type
+src\main.c(240): warning:  #188-D: enumerated type mixed with another type
+src\main.c(277): warning:  #188-D: enumerated type mixed with another type
+src\main.c(278): warning:  #188-D: enumerated type mixed with another type
+src\main.c(281): warning:  #188-D: enumerated type mixed with another type
+src\main.c(282): warning:  #188-D: enumerated type mixed with another type
+src\main.c(285): warning:  #188-D: enumerated type mixed with another type
+src\main.c(286): warning:  #188-D: enumerated type mixed with another type
+src\main.c(289): warning:  #188-D: enumerated type mixed with another type
+src\main.c(290): warning:  #188-D: enumerated type mixed with another type
+compiling system_stm32f4xx.c...
+compiling misc.c...
+compiling stm32f4xx_adc.c...
+compiling stm32f4xx_can.c...
+compiling stm32f4xx_crc.c...
+compiling stm32f4xx_cryp.c...
+compiling stm32f4xx_cryp_aes.c...
+compiling stm32f4xx_cryp_des.c...
+compiling stm32f4xx_cryp_tdes.c...
+compiling stm32f4xx_dac.c...
+compiling stm32f4xx_dbgmcu.c...
+compiling stm32f4xx_dcmi.c...
+compiling stm32f4xx_dma.c...
+compiling stm32f4xx_exti.c...
+compiling stm32f4xx_flash.c...
+compiling stm32f4xx_fsmc.c...
+compiling stm32f4xx_gpio.c...
+compiling stm32f4xx_hash.c...
+compiling stm32f4xx_hash_md5.c...
+compiling stm32f4xx_hash_sha1.c...
+compiling stm32f4xx_i2c.c...
+compiling stm32f4xx_iwdg.c...
+compiling stm32f4xx_pwr.c...
+compiling stm32f4xx_rcc.c...
+compiling stm32f4xx_rng.c...
+compiling stm32f4xx_rtc.c...
+compiling stm32f4xx_sdio.c...
+compiling stm32f4xx_spi.c...
+compiling stm32f4xx_syscfg.c...
+compiling stm32f4xx_tim.c...
+compiling stm32f4xx_usart.c...
+compiling stm32f4xx_wwdg.c...
+linking...
+Program Size: Code=9748 RO-data=600 RW-data=68 ZI-data=1684  
+".\obj\Lab2_Project.axf" - 0 Error(s), 35 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.h(33): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(34): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(35): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
+src\main.h(36): warning:  #1295-D: Deprecated declaration initializeButton - give arg types
+src\main.h(40): warning:  #1295-D: Deprecated declaration pwn - give arg types
+src\main.h(41): warning:  #1295-D: Deprecated declaration trackTemperature - give arg types
+src\main.h(42): warning:  #1295-D: Deprecated declaration revertPinState - give arg types
+src\main.h(43): warning:  #1295-D: Deprecated declaration isButtonPressed - give arg types
+src\main.c(53): warning:  #188-D: enumerated type mixed with another type
+src\main.c(57): warning:  #188-D: enumerated type mixed with another type
+src\main.c(14): warning:  #177-D: variable "pwm_on" was declared but never referenced
+src\main.c(190): warning:  #188-D: enumerated type mixed with another type
+src\main.c(191): warning:  #188-D: enumerated type mixed with another type
+src\main.c(197): warning:  #188-D: enumerated type mixed with another type
+src\main.c(198): warning:  #188-D: enumerated type mixed with another type
+src\main.c(203): warning:  #188-D: enumerated type mixed with another type
+src\main.c(204): warning:  #188-D: enumerated type mixed with another type
+src\main.c(209): warning:  #188-D: enumerated type mixed with another type
+src\main.c(210): warning:  #188-D: enumerated type mixed with another type
+src\main.c(221): warning:  #188-D: enumerated type mixed with another type
+src\main.c(222): warning:  #188-D: enumerated type mixed with another type
+src\main.c(227): warning:  #188-D: enumerated type mixed with another type
+src\main.c(228): warning:  #188-D: enumerated type mixed with another type
+src\main.c(233): warning:  #188-D: enumerated type mixed with another type
+src\main.c(234): warning:  #188-D: enumerated type mixed with another type
+src\main.c(239): warning:  #188-D: enumerated type mixed with another type
+src\main.c(240): warning:  #188-D: enumerated type mixed with another type
+src\main.c(277): warning:  #188-D: enumerated type mixed with another type
+src\main.c(278): warning:  #188-D: enumerated type mixed with another type
+src\main.c(281): warning:  #188-D: enumerated type mixed with another type
+src\main.c(282): warning:  #188-D: enumerated type mixed with another type
+src\main.c(285): warning:  #188-D: enumerated type mixed with another type
+src\main.c(286): warning:  #188-D: enumerated type mixed with another type
+src\main.c(289): warning:  #188-D: enumerated type mixed with another type
+src\main.c(290): warning:  #188-D: enumerated type mixed with another type
+linking...
+Program Size: Code=9748 RO-data=600 RW-data=68 ZI-data=1684  
+".\obj\Lab2_Project.axf" - 0 Error(s), 35 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.h(33): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(34): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(35): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
+src\main.h(36): warning:  #1295-D: Deprecated declaration initializeButton - give arg types
+src\main.h(40): warning:  #1295-D: Deprecated declaration pwn - give arg types
+src\main.h(41): warning:  #1295-D: Deprecated declaration trackTemperature - give arg types
+src\main.h(42): warning:  #1295-D: Deprecated declaration revertPinState - give arg types
+src\main.h(43): warning:  #1295-D: Deprecated declaration isButtonPressed - give arg types
+src\main.c(53): warning:  #188-D: enumerated type mixed with another type
+src\main.c(57): warning:  #188-D: enumerated type mixed with another type
+src\main.c(14): warning:  #177-D: variable "pwm_on" was declared but never referenced
+src\main.c(190): warning:  #188-D: enumerated type mixed with another type
+src\main.c(191): warning:  #188-D: enumerated type mixed with another type
+src\main.c(197): warning:  #188-D: enumerated type mixed with another type
+src\main.c(198): warning:  #188-D: enumerated type mixed with another type
+src\main.c(203): warning:  #188-D: enumerated type mixed with another type
+src\main.c(204): warning:  #188-D: enumerated type mixed with another type
+src\main.c(209): warning:  #188-D: enumerated type mixed with another type
+src\main.c(210): warning:  #188-D: enumerated type mixed with another type
+src\main.c(221): warning:  #188-D: enumerated type mixed with another type
+src\main.c(222): warning:  #188-D: enumerated type mixed with another type
+src\main.c(227): warning:  #188-D: enumerated type mixed with another type
+src\main.c(228): warning:  #188-D: enumerated type mixed with another type
+src\main.c(233): warning:  #188-D: enumerated type mixed with another type
+src\main.c(234): warning:  #188-D: enumerated type mixed with another type
+src\main.c(239): warning:  #188-D: enumerated type mixed with another type
+src\main.c(240): warning:  #188-D: enumerated type mixed with another type
+src\main.c(277): warning:  #188-D: enumerated type mixed with another type
+src\main.c(278): warning:  #188-D: enumerated type mixed with another type
+src\main.c(281): warning:  #188-D: enumerated type mixed with another type
+src\main.c(282): warning:  #188-D: enumerated type mixed with another type
+src\main.c(285): warning:  #188-D: enumerated type mixed with another type
+src\main.c(286): warning:  #188-D: enumerated type mixed with another type
+src\main.c(289): warning:  #188-D: enumerated type mixed with another type
+src\main.c(290): warning:  #188-D: enumerated type mixed with another type
+linking...
+Program Size: Code=9752 RO-data=600 RW-data=68 ZI-data=1684  
+".\obj\Lab2_Project.axf" - 0 Error(s), 35 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.h(33): warning:  #1295-D: Deprecated declaration SysTick_Handler - give arg types
+src\main.h(34): warning:  #1295-D: Deprecated declaration initializeLed - give arg types
+src\main.h(35): warning:  #1295-D: Deprecated declaration initializeAdc - give arg types
+src\main.h(36): warning:  #1295-D: Deprecated declaration initializeButton - give arg types
+src\main.h(40): warning:  #1295-D: Deprecated declaration pwn - give arg types
+src\main.h(41): warning:  #1295-D: Deprecated declaration trackTemperature - give arg types
+src\main.h(42): warning:  #1295-D: Deprecated declaration revertPinState - give arg types
+src\main.h(43): warning:  #1295-D: Deprecated declaration isButtonPressed - give arg types
+src\main.c(53): warning:  #188-D: enumerated type mixed with another type
+src\main.c(57): warning:  #188-D: enumerated type mixed with another type
+src\main.c(14): warning:  #177-D: variable "pwm_on" was declared but never referenced
+src\main.c(190): warning:  #188-D: enumerated type mixed with another type
+src\main.c(191): warning:  #188-D: enumerated type mixed with another type
+src\main.c(197): warning:  #188-D: enumerated type mixed with another type
+src\main.c(198): warning:  #188-D: enumerated type mixed with another type
+src\main.c(203): warning:  #188-D: enumerated type mixed with another type
+src\main.c(204): warning:  #188-D: enumerated type mixed with another type
+src\main.c(209): warning:  #188-D: enumerated type mixed with another type
+src\main.c(210): warning:  #188-D: enumerated type mixed with another type
+src\main.c(221): warning:  #188-D: enumerated type mixed with another type
+src\main.c(222): warning:  #188-D: enumerated type mixed with another type
+src\main.c(227): warning:  #188-D: enumerated type mixed with another type
+src\main.c(228): warning:  #188-D: enumerated type mixed with another type
+src\main.c(233): warning:  #188-D: enumerated type mixed with another type
+src\main.c(234): warning:  #188-D: enumerated type mixed with another type
+src\main.c(239): warning:  #188-D: enumerated type mixed with another type
+src\main.c(240): warning:  #188-D: enumerated type mixed with another type
+src\main.c(277): warning:  #188-D: enumerated type mixed with another type
+src\main.c(278): warning:  #188-D: enumerated type mixed with another type
+src\main.c(281): warning:  #188-D: enumerated type mixed with another type
+src\main.c(282): warning:  #188-D: enumerated type mixed with another type
+src\main.c(285): warning:  #188-D: enumerated type mixed with another type
+src\main.c(286): warning:  #188-D: enumerated type mixed with another type
+src\main.c(289): warning:  #188-D: enumerated type mixed with another type
+src\main.c(290): warning:  #188-D: enumerated type mixed with another type
+linking...
+Program Size: Code=9752 RO-data=600 RW-data=68 ZI-data=1684  
+".\obj\Lab2_Project.axf" - 0 Error(s), 35 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=9752 RO-data=600 RW-data=68 ZI-data=1684  
+".\obj\Lab2_Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.

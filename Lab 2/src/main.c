@@ -48,7 +48,7 @@ int main()
 					// Set ticks to 0
 					ticks = 0;
 					
-					if (current_cycle_length > pwm_counter)
+					if (current_cycle_length >= pwm_counter)
 					{
 						GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15, 1);
 					}
@@ -60,7 +60,7 @@ int main()
 					// Increment the duty cycle count
 					pwm_counter++;
 					
-					if (pwm_counter > 2000)
+					if (pwm_counter > 1500)
 					{
 						// Reset duty cycle counter to 0
 						pwm_counter = 0;
