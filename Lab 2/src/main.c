@@ -221,8 +221,8 @@ void updateLED(float temperature) {
 					}
 					else if (currentLED == 1)
 					{
-						GPIO_WriteBit(GPIOD, GPIO_Pin_15, 0);
-						GPIO_WriteBit(GPIOD, GPIO_Pin_14, 1);
+						GPIO_WriteBit(GPIOD, GPIO_Pin_13, 0);
+						GPIO_WriteBit(GPIOD, GPIO_Pin_12, 1);
 						currentLED--;
 					}
 					else if (currentLED == 2)
@@ -233,8 +233,8 @@ void updateLED(float temperature) {
 					}
 					else if (currentLED == 3)
 					{
-						GPIO_WriteBit(GPIOD, GPIO_Pin_13, 0);
-						GPIO_WriteBit(GPIOD, GPIO_Pin_12, 1);
+						GPIO_WriteBit(GPIOD, GPIO_Pin_15, 0);
+						GPIO_WriteBit(GPIOD, GPIO_Pin_14, 1);
 						currentLED--;
 					}
 					// Set the next base temperature
@@ -258,6 +258,8 @@ void trackTemperature() {
 	
 	// Temperature (in °C) = {(VSENSE – V25) / Avg_Slope} + 25
 	temperature = ((voltage - V25) / avgSlope)  + 25;
+	
+	printf("%f\n", temperature);
 	
 	updateFilter(&filter, temperature);
 	
