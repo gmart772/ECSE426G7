@@ -24,8 +24,8 @@ static int currentLED;
 
 typedef struct  { // Struct to keep track of filter internals
 	float buffer[D]; // buffer
-	float sum; // average of values in the buffer
-	float averageValue;
+	float sum; // sum of values in the buffer
+	float averageValue; // average of the values in the buffer
 	short index; 				// Index of next buffer entry
 	
 } movingAverageFilter;

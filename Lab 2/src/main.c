@@ -1,7 +1,7 @@
 #include "main.h"
 
-/* Main function. Initializes LED and ADC. Begins taking voltage measurements and converts them to temperatures.
-Applies filter to values. */
+/* Main function. Initializes LED and ADC. Tracks temperature and implements PWM. 
+Uses the button to select between the two */
 int main()
 {
 	initializeLed();    // GPIOD pin 12..15
@@ -85,7 +85,7 @@ void SysTick_Handler() {
 	ticks = 1;
 }
 
-/* Function initializes the LED */
+/* Function initializes the LEDs */
 void initializeLed() {
 	
 	// Initialize LED GPIOA
@@ -100,7 +100,7 @@ void initializeLed() {
 	GPIO_Init(GPIOD, &gpio_init_s);
 }
 
-/* Function initializes the LED */
+/* Function initializes the Button */
 void initializeButton() {
 	
 	// Initialize LED GPIOA
@@ -172,6 +172,7 @@ void initializeFilter(movingAverageFilter *filter) {
 }
 
 
+// Updates the LED according to the temperature
 /*	--------------------------------------------		*/
 // 									GPIO_PIN_13(1)									//
 //		GPIO_PIN_12(0)								GPIO_PIN_14(2)	//
@@ -244,6 +245,7 @@ void updateLED(float temperature) {
 	}
 }
 
+/* Takes a temperature reading and then applies signal processing */
 void trackTemperature() {
 	float voltage;
 	float temperature;
@@ -267,6 +269,7 @@ void trackTemperature() {
 	updateLED(filter.averageValue);
 }
 
+/* Return the pins to the last state they had when temperature tracking was on */
 void revertPinState() {
 		switch(currentLED)
 		{
@@ -291,7 +294,7 @@ void revertPinState() {
 		}
 }
 
-// Debounces the button
+/* Reads the input from the button and debounces it */
 int isButtonPressed() {
 	uint16_t isBitSet;
 	
