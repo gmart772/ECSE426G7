@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\obj\Lab2_Project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\obj\Lab2_Project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 69]: Last Updated: Thu Oct 17 20:25:41 2013
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 69]: Last Updated: Fri Oct 18 09:36:32 2013
 <BR><P>
 <H3>Maximum Stack Usage =        320 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -265,8 +265,8 @@ Global Symbols
 <P><STRONG><a name="[d6]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[74]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 160 + Unknown Stack Size
-<LI>Call Chain = __rt_entry_main &rArr; main &rArr; trackTemperature &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
+<BR><BR>[Stack]<UL><LI>Max Depth = 176 + Unknown Stack Size
+<LI>Call Chain = __rt_entry_main &rArr; main &rArr; trackTemperature &rArr; updateLED &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
@@ -616,27 +616,28 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
 </UL>
 
-<P><STRONG><a name="[7d]"></a>updateLED</STRONG> (Thumb, 394 bytes, Stack size 16 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = updateLED
+<P><STRONG><a name="[7d]"></a>updateLED</STRONG> (Thumb, 424 bytes, Stack size 24 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
+<LI>Call Chain = updateLED &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteBit
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteBit
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trackTemperature
+<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trackTemperature
 </UL>
 
 <P><STRONG><a name="[83]"></a>updateFilter</STRONG> (Thumb, 96 bytes, Stack size 0 bytes, main.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trackTemperature
+<BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trackTemperature
 </UL>
 
-<P><STRONG><a name="[7f]"></a>trackTemperature</STRONG> (Thumb, 142 bytes, Stack size 32 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 160 + Unknown Stack Size
-<LI>Call Chain = trackTemperature &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
+<P><STRONG><a name="[81]"></a>trackTemperature</STRONG> (Thumb, 112 bytes, Stack size 24 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 176 + Unknown Stack Size
+<LI>Call Chain = trackTemperature &rArr; updateLED &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetConversionValue
+<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetConversionValue
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;updateFilter
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;updateLED
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -644,7 +645,7 @@ Global Symbols
 <P><STRONG><a name="[84]"></a>revertPinState</STRONG> (Thumb, 124 bytes, Stack size 8 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = revertPinState
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteBit
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteBit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -698,17 +699,17 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[75]"></a>main</STRONG> (Thumb, 190 bytes, Stack size 0 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 160 + Unknown Stack Size
-<LI>Call Chain = main &rArr; trackTemperature &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
+<BR><BR>[Stack]<UL><LI>Max Depth = 176 + Unknown Stack Size
+<LI>Call Chain = main &rArr; trackTemperature &rArr; updateLED &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteBit
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteBit
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initializeLed
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initializeButton
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initializeAdc
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initializeFilter
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isButtonPressed
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;revertPinState
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trackTemperature
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trackTemperature
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
@@ -782,8 +783,8 @@ Global Symbols
 
 <P><STRONG><a name="[e3]"></a>ADC_DiscModeCmd</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f4xx_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[80]"></a>ADC_GetConversionValue</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f4xx_adc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trackTemperature
+<P><STRONG><a name="[82]"></a>ADC_GetConversionValue</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f4xx_adc.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trackTemperature
 </UL>
 
 <P><STRONG><a name="[e4]"></a>ADC_GetMultiModeConversionValue</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_adc.o(.text), UNUSED)
@@ -856,7 +857,7 @@ Global Symbols
 
 <P><STRONG><a name="[fc]"></a>GPIO_ResetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f4xx_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[7e]"></a>GPIO_WriteBit</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f4xx_gpio.o(.text))
+<P><STRONG><a name="[80]"></a>GPIO_WriteBit</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f4xx_gpio.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;revertPinState
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;updateLED
@@ -973,13 +974,13 @@ Global Symbols
 
 <P><STRONG><a name="[127]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[82]"></a>__2printf</STRONG> (Thumb, 20 bytes, Stack size 24 bytes, noretval__2printf.o(.text))
+<P><STRONG><a name="[7f]"></a>__2printf</STRONG> (Thumb, 20 bytes, Stack size 24 bytes, noretval__2printf.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128 + Unknown Stack Size
 <LI>Call Chain = __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_file
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trackTemperature
+<BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;updateLED
 </UL>
 
 <P><STRONG><a name="[9f]"></a>__printf</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, __printf.o(.text))
@@ -1017,7 +1018,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ferror
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
 </UL>
-<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 
 <P><STRONG><a name="[6d]"></a>__rt_locale</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, rt_locale_intlibspace.o(.text))
@@ -1160,10 +1161,10 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_f2d
 </UL>
 
-<P><STRONG><a name="[81]"></a>__aeabi_f2d</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, f2d.o(x$fpl$f2d))
+<P><STRONG><a name="[7e]"></a>__aeabi_f2d</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, f2d.o(x$fpl$f2d))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_f2d
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trackTemperature
+<BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;updateLED
 </UL>
 
 <P><STRONG><a name="[b5]"></a>_f2d</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, f2d.o(x$fpl$f2d), UNUSED)

@@ -22,10 +22,10 @@ Section Cross References
     main.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     main.o(.text) refers to _printf_f.o(.ARM.Collect$$_printf_percent$$00000003) for _printf_f
     main.o(.text) refers to printf1.o(x$fpl$printf1) for _printf_fp_dec
-    main.o(.text) refers to stm32f4xx_gpio.o(.text) for GPIO_WriteBit
-    main.o(.text) refers to stm32f4xx_adc.o(.text) for ADC_GetConversionValue
     main.o(.text) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
     main.o(.text) refers to noretval__2printf.o(.text) for __2printf
+    main.o(.text) refers to stm32f4xx_gpio.o(.text) for GPIO_WriteBit
+    main.o(.text) refers to stm32f4xx_adc.o(.text) for ADC_GetConversionValue
     main.o(.text) refers to stm32f4xx_rcc.o(.text) for RCC_APB2PeriphClockCmd
     main.o(.text) refers to main.o(.data) for baseTemperature
     main.o(.text) refers to main.o(.bss) for filter
@@ -604,14 +604,14 @@ Image Symbol Table
     .data                                    0x20000020   Section       20  system_stm32f4xx.o(.data)
     .data                                    0x20000034   Section       16  stm32f4xx_rcc.o(.data)
     APBAHBPrescTable                         0x20000034   Data          16  stm32f4xx_rcc.o(.data)
-    .bss                                     0x20000044   Section       32  main.o(.bss)
-    filter                                   0x20000044   Data          32  main.o(.bss)
-    .bss                                     0x20000064   Section       96  libspace.o(.bss)
-    HEAP                                     0x200000c8   Section      512  startup_stm32f40xx.o(HEAP)
-    Heap_Mem                                 0x200000c8   Data         512  startup_stm32f40xx.o(HEAP)
-    STACK                                    0x200002c8   Section     1024  startup_stm32f40xx.o(STACK)
-    Stack_Mem                                0x200002c8   Data        1024  startup_stm32f40xx.o(STACK)
-    __initial_sp                             0x200006c8   Data           0  startup_stm32f40xx.o(STACK)
+    .bss                                     0x20000044   Section       52  main.o(.bss)
+    filter                                   0x20000044   Data          52  main.o(.bss)
+    .bss                                     0x20000078   Section       96  libspace.o(.bss)
+    HEAP                                     0x200000d8   Section      512  startup_stm32f40xx.o(HEAP)
+    Heap_Mem                                 0x200000d8   Data         512  startup_stm32f40xx.o(HEAP)
+    STACK                                    0x200002d8   Section     1024  startup_stm32f40xx.o(STACK)
+    Stack_Mem                                0x200002d8   Data        1024  startup_stm32f40xx.o(STACK)
+    __initial_sp                             0x200006d8   Data           0  startup_stm32f40xx.o(STACK)
 
     Global Symbols
 
@@ -797,9 +797,9 @@ Image Symbol Table
     fputc                                    0x080002ab   Thumb Code    14  fputc_debug.o(.text)
     _ttywrch                                 0x080002b9   Thumb Code    12  fputc_debug.o(.text)
     _sys_exit                                0x080002c5   Thumb Code     4  fputc_debug.o(.text)
-    updateLED                                0x08000317   Thumb Code   394  main.o(.text)
-    updateFilter                             0x080004a1   Thumb Code    96  main.o(.text)
-    trackTemperature                         0x08000501   Thumb Code   142  main.o(.text)
+    updateLED                                0x08000317   Thumb Code   424  main.o(.text)
+    updateFilter                             0x080004bf   Thumb Code    96  main.o(.text)
+    trackTemperature                         0x0800051f   Thumb Code   112  main.o(.text)
     revertPinState                           0x0800058f   Thumb Code   124  main.o(.text)
     isButtonPressed                          0x0800060b   Thumb Code   102  main.o(.text)
     initializeFilter                         0x08000671   Thumb Code    36  main.o(.text)
@@ -956,8 +956,8 @@ Image Symbol Table
     PWM                                      0x20000010   Data           4  main.o(.data)
     SystemCoreClock                          0x20000020   Data           4  system_stm32f4xx.o(.data)
     AHBPrescTable                            0x20000024   Data          16  system_stm32f4xx.o(.data)
-    __libspace_start                         0x20000064   Data          96  libspace.o(.bss)
-    __temporary_stack_top$libspace           0x200000c4   Data           0  libspace.o(.bss)
+    __libspace_start                         0x20000078   Data          96  libspace.o(.bss)
+    __temporary_stack_top$libspace           0x200000d8   Data           0  libspace.o(.bss)
 
 
 
@@ -1072,7 +1072,7 @@ Memory Map of the image
     0x08002850   0x0000001c   Data   RO          960    locale$$data        c_w.l(lc_numeric_c.o)
 
 
-    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x000006c8, Max: 0x00020000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x000006d8, Max: 0x00020000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1080,11 +1080,10 @@ Memory Map of the image
     0x20000008   0x00000018   Data   RW          149    .data               main.o
     0x20000020   0x00000014   Data   RW          201    .data               system_stm32f4xx.o
     0x20000034   0x00000010   Data   RW          675    .data               stm32f4xx_rcc.o
-    0x20000044   0x00000020   Zero   RW          148    .bss                main.o
-    0x20000064   0x00000060   Zero   RW          968    .bss                c_w.l(libspace.o)
-    0x200000c4   0x00000004   PAD
-    0x200000c8   0x00000200   Zero   RW            2    HEAP                startup_stm32f40xx.o
-    0x200002c8   0x00000400   Zero   RW            1    STACK               startup_stm32f40xx.o
+    0x20000044   0x00000034   Zero   RW          148    .bss                main.o
+    0x20000078   0x00000060   Zero   RW          968    .bss                c_w.l(libspace.o)
+    0x200000d8   0x00000200   Zero   RW            2    HEAP                startup_stm32f40xx.o
+    0x200002d8   0x00000400   Zero   RW            1    STACK               startup_stm32f40xx.o
 
 
 ==============================================================================
@@ -1095,7 +1094,7 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
         76          4          0          8          0     247121   fputc_debug.o
-      1472         96          0         24         32     251991   main.o
+      1472         96          0         24         52     251987   main.o
         64         26        392          0       1536        800   startup_stm32f40xx.o
       1136         28          0          0          0      10486   stm32f4xx_adc.o
        604         36          0          0          0       4057   stm32f4xx_gpio.o
@@ -1103,7 +1102,7 @@ Image component sizes
        524         44          0         20          0       1647   system_stm32f4xx.o
 
     ----------------------------------------------------------------------
-      5292        282        424         68       1568     527017   Object Totals
+      5292        282        424         68       1588     527013   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          0          0          0          0          0          0   (incl. Padding)
 
@@ -1154,8 +1153,8 @@ Image component sizes
         48          0          0          0          0        124   fpclassify.o
 
     ----------------------------------------------------------------------
-      4456        198        176          0        100       3016   Library Totals
-        12          0          0          0          4          0   (incl. Padding)
+      4456        198        176          0         96       3016   Library Totals
+        12          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -1166,7 +1165,7 @@ Image component sizes
         48          0          0          0          0        124   m_wm.l
 
     ----------------------------------------------------------------------
-      4456        198        176          0        100       3016   Library Totals
+      4456        198        176          0         96       3016   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -1175,14 +1174,14 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      9748        480        600         68       1668     526733   Grand Totals
-      9748        480        600         68       1668     526733   ELF Image Totals
+      9748        480        600         68       1684     526729   Grand Totals
+      9748        480        600         68       1684     526729   ELF Image Totals
       9748        480        600         68          0          0   ROM Totals
 
 ==============================================================================
 
     Total RO  Size (Code + RO Data)                10348 (  10.11kB)
-    Total RW  Size (RW Data + ZI Data)              1736 (   1.70kB)
+    Total RW  Size (RW Data + ZI Data)              1752 (   1.71kB)
     Total ROM Size (Code + RO Data + RW Data)      10416 (  10.17kB)
 
 ==============================================================================

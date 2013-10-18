@@ -178,6 +178,8 @@ void initializeFilter(movingAverageFilter *filter) {
 //									GPIO_PIN_15(3)									//
 /*	---------------------------------------------		*/
 void updateLED(float temperature) {
+	
+	printf("%f\n", temperature);
 		
 	// if temperature rising and has risen more than 2 degrees
 	if (temperature - baseTemperature >= LED_THRESHOLD) {
@@ -258,8 +260,6 @@ void trackTemperature() {
 	
 	// Temperature (in °C) = {(VSENSE – V25) / Avg_Slope} + 25
 	temperature = ((voltage - V25) / avgSlope)  + 25;
-	
-	printf("%f\n", temperature);
 	
 	updateFilter(&filter, temperature);
 	

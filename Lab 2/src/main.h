@@ -12,7 +12,7 @@ float LED_THRESHOLD = 2.0; // 2 degrees celsius to change LED
 
 int PWM = 100000;							// Duty cycles per period
 
-#define D	5 // filter depth
+#define D	10 // filter depth
 #define TRACKING_TEMPERATURE 0
 #define DOING_PWM 1
 
