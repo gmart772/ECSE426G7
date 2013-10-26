@@ -1,6 +1,5 @@
 #include "conversion.h"
 
-
 double getAlpha(float ax, float ay, float az)
 {
 	// Compute alpha = arctan(ax / sqrt(ay^2 + az^2))
@@ -49,4 +48,6 @@ void getAngles(double *alpha, double *beta, float ax, float ay, float az)
 	beta = getBeta(&ACCX, &ACCY, az);
 	
 }
+
+
 

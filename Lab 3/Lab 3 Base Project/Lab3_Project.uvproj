@@ -422,6 +422,16 @@
               <FileType>1</FileType>
               <FilePath>.\src\system_stm32f4xx.c</FilePath>
             </File>
+            <File>
+              <FileName>calibrate.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\calibrate.h</FilePath>
+            </File>
+            <File>
+              <FileName>conversion.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\conversion.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

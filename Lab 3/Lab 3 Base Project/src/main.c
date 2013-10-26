@@ -3,9 +3,6 @@
 #include "stm32f4xx_conf.h"
 #include "stm32f4_discovery_lis302dl.h"
 
-
-
-
 int main()
 {
 	LIS302DL_InitTypeDef lis302dl_InitStruct;
