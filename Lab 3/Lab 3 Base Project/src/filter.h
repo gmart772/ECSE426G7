@@ -1,4 +1,4 @@
-#define D 10
+#define D 1
 
 typedef struct movingAverageFilter { // Struct to keep track of filter internals
 	int buffer[D]; // buffer
@@ -9,4 +9,4 @@ typedef struct movingAverageFilter { // Struct to keep track of filter internals
 } movingAverageFilter;
 
 void initializeFilter(movingAverageFilter *filter);
-void updateFilter(movingAverageFilter *filter, int temperature);
+void updateFilter(movingAverageFilter *filter, int acc);

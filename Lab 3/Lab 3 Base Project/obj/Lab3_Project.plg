@@ -3,49 +3,30 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-C:\Users\pwhite8\ECSE426G7\Lab 3\Lab 3 Base Project\Lab3_Project.uvproj
+C:\Users\gmarti37\ECSE426G7\Lab 3\Lab 3 Base Project\Lab3_Project.uvproj
 Project File Date:  10/26/2013
 
 <h2>Output:</h2>
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
 Build target 'Target 1'
+assembling startup_stm32f40xx.s...
 compiling fputc_debug.c...
 compiling main.c...
 src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
 src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
 src\filter.h(12): warning:  #1-D: last line of file ends without a newline
 compiling system_stm32f4xx.c...
-compiling processing.c...
-processing.c: Error:  #5: cannot open source input file "processing.c": No such file or directory
-Target not created
-Build target 'Target 1'
 compiling filter.c...
 src\filter.h(12): warning:  #1-D: last line of file ends without a newline
 compiling conversion.c...
-src\conversion.h(6): warning:  #1-D: last line of file ends without a newline
 compiling accelerometer.c...
 src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
 src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
 src\accelerometer.c(18): warning:  #1-D: last line of file ends without a newline
 compiling processing.c...
-src\processing.c(1): error:  #169: expected a declaration
-C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(315): error:  #20: identifier "size_t" is undefined
-C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(398): error:  #20: identifier "size_t" is undefined
-C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(419): error:  #20: identifier "size_t" is undefined
-C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(552): error:  #20: identifier "size_t" is undefined
-C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(578): error:  #20: identifier "size_t" is undefined
-C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(714): error:  #20: identifier "size_t" is undefined
-C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(715): error:  #20: identifier "size_t" is undefined
-C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(715): error:  #20: identifier "size_t" is undefined
-C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(730): error:  #20: identifier "size_t" is undefined
-C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(731): error:  #20: identifier "size_t" is undefined
-C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(746): error:  #20: identifier "size_t" is undefined
-C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(747): error:  #20: identifier "size_t" is undefined
-C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(747): error:  #20: identifier "size_t" is undefined
-src\conversion.h(6): warning:  #1-D: last line of file ends without a newline
-src\processing.h(4): error:  #169: expected a declaration
-src\processing.h(15): warning:  #12-D: parsing restarts here after previous syntax error
-src\processing.h(17): error:  #169: expected a declaration
-src\processing.c(44): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
 compiling misc.c...
 compiling stm32f4xx_adc.c...
 compiling stm32f4xx_can.c...
@@ -78,35 +59,308 @@ compiling stm32f4xx_tim.c...
 compiling stm32f4xx_usart.c...
 compiling stm32f4xx_wwdg.c...
 compiling stm32f4_discovery_lis302dl.c...
-Target not created
-Build target 'Target 1'
-compiling processing.c...
-src\conversion.h(6): warning:  #1-D: last line of file ends without a newline
-src\processing.c(3): error:  #169: expected a declaration
-src\processing.c(39): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
-Target not created
-Build target 'Target 1'
-compiling processing.c...
-src\conversion.h(6): warning:  #1-D: last line of file ends without a newline
-linking...
-.\obj\Lab3_Project.axf: Error: L6200E: Symbol getAlpha multiply defined (by processing.o and conversion.o).
-.\obj\Lab3_Project.axf: Error: L6200E: Symbol getBeta multiply defined (by processing.o and conversion.o).
-.\obj\Lab3_Project.axf: Error: L6200E: Symbol calibrateReading multiply defined (by processing.o and conversion.o).
-.\obj\Lab3_Project.axf: Error: L6200E: Symbol getAngles multiply defined (by processing.o and conversion.o).
-Target not created
-Build target 'Target 1'
-compiling processing.c...
-src\conversion.h(6): warning:  #1-D: last line of file ends without a newline
 linking...
 Program Size: Code=5104 RO-data=424 RW-data=40 ZI-data=1632  
-".\obj\Lab3_Project.axf" - 0 Error(s), 1 Warning(s).
+".\obj\Lab3_Project.axf" - 0 Error(s), 7 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
 Build target 'Target 1'
-compiling conversion.c...
-compiling processing.c...
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+compiling filter.c...
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
 linking...
-Program Size: Code=5104 RO-data=424 RW-data=40 ZI-data=1632  
+Program Size: Code=5736 RO-data=424 RW-data=48 ZI-data=1632  
+".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5736 RO-data=424 RW-data=48 ZI-data=1632  
+".\obj\Lab3_Project.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5736 RO-data=424 RW-data=48 ZI-data=1632  
+".\obj\Lab3_Project.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=5736 RO-data=424 RW-data=48 ZI-data=1632  
+".\obj\Lab3_Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+compiling filter.c...
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5732 RO-data=424 RW-data=48 ZI-data=1632  
+".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=8980 RO-data=424 RW-data=48 ZI-data=1632  
+".\obj\Lab3_Project.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=9016 RO-data=424 RW-data=48 ZI-data=1632  
+".\obj\Lab3_Project.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=9068 RO-data=424 RW-data=48 ZI-data=1632  
+".\obj\Lab3_Project.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\main.c(40): warning:  #223-D: function "TIM3_IRQ" declared implicitly
+linking...
+Program Size: Code=9080 RO-data=424 RW-data=48 ZI-data=1632  
+".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\main.c(40): warning:  #223-D: function "TIM3_IRQ" declared implicitly
+linking...
+Program Size: Code=9080 RO-data=424 RW-data=48 ZI-data=1632  
+".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=9080 RO-data=424 RW-data=48 ZI-data=1632  
 ".\obj\Lab3_Project.axf" - 0 Error(s), 0 Warning(s).
 Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\main.c(40): warning:  #223-D: function "TIM3_IRQ" declared implicitly
 linking...
-Program Size: Code=5104 RO-data=424 RW-data=40 ZI-data=1632  
+Program Size: Code=9080 RO-data=424 RW-data=48 ZI-data=1632  
+".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\main.c(39): warning:  #223-D: function "TIM3_IRQ" declared implicitly
+linking...
+Program Size: Code=9072 RO-data=424 RW-data=48 ZI-data=1632  
+".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\main.c(39): warning:  #223-D: function "TIM3_IRQ" declared implicitly
+linking...
+Program Size: Code=9056 RO-data=424 RW-data=48 ZI-data=1632  
+".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\main.c(39): warning:  #223-D: function "TIM3_IRQ" declared implicitly
+linking...
+Program Size: Code=9056 RO-data=424 RW-data=48 ZI-data=1632  
+".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\main.c(40): warning:  #223-D: function "TIM3_IRQ" declared implicitly
+linking...
+Program Size: Code=9040 RO-data=424 RW-data=48 ZI-data=1632  
+".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+linking...
+Program Size: Code=9040 RO-data=424 RW-data=48 ZI-data=1632  
 ".\obj\Lab3_Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling stm32f4xx_tim.c...
+linking...
+Program Size: Code=9040 RO-data=424 RW-data=48 ZI-data=1632  
+".\obj\Lab3_Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\main.c(40): warning:  #223-D: function "TIM3_IRQ" declared implicitly
+compiling stm32f4xx_tim.c...
+linking...
+Program Size: Code=9032 RO-data=424 RW-data=48 ZI-data=1632  
+".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\main.c(40): warning:  #223-D: function "TIM3_IRQ" declared implicitly
+linking...
+Program Size: Code=9036 RO-data=424 RW-data=48 ZI-data=1632  
+".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\main.c(40): warning:  #223-D: function "TIM3_IRQ" declared implicitly
+linking...
+Program Size: Code=9036 RO-data=424 RW-data=48 ZI-data=1632  
+".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\main.c(41): warning:  #223-D: function "TIM3_IRQ" declared implicitly
+linking...
+Program Size: Code=9044 RO-data=424 RW-data=52 ZI-data=1636  
+".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\main.c(41): warning:  #223-D: function "TIM3_IRQ" declared implicitly
+linking...
+Program Size: Code=9052 RO-data=424 RW-data=52 ZI-data=1636  
+".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=9052 RO-data=424 RW-data=52 ZI-data=1636  
+".\obj\Lab3_Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\main.c(41): warning:  #223-D: function "TIM3_IRQ" declared implicitly
+linking...
+Program Size: Code=9060 RO-data=424 RW-data=52 ZI-data=1636  
+".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\main.c(41): warning:  #223-D: function "TIM3_IRQ" declared implicitly
+linking...
+Program Size: Code=9060 RO-data=424 RW-data=52 ZI-data=1636  
+".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\main.c(41): warning:  #223-D: function "TIM3_IRQ" declared implicitly
+linking...
+Program Size: Code=9060 RO-data=424 RW-data=52 ZI-data=1636  
+".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\main.c(40): warning:  #223-D: function "TIM3_IRQ" declared implicitly
+linking...
+Program Size: Code=9072 RO-data=424 RW-data=52 ZI-data=1636  
+".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
