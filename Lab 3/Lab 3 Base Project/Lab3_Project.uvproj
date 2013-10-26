@@ -423,14 +423,49 @@
               <FilePath>.\src\system_stm32f4xx.c</FilePath>
             </File>
             <File>
-              <FileName>calibrate.h</FileName>
+              <FileName>filter.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\calibrate.h</FilePath>
+              <FilePath>.\src\filter.h</FilePath>
+            </File>
+            <File>
+              <FileName>filter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\filter.c</FilePath>
+            </File>
+            <File>
+              <FileName>conversion.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\conversion.c</FilePath>
+            </File>
+            <File>
+              <FileName>accelerometer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\accelerometer.h</FilePath>
+            </File>
+            <File>
+              <FileName>accelerometer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\accelerometer.c</FilePath>
+            </File>
+            <File>
+              <FileName>processing.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\processing.h</FilePath>
+            </File>
+            <File>
+              <FileName>processing.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\processing.c</FilePath>
             </File>
             <File>
               <FileName>conversion.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\conversion.h</FilePath>
+              <FilePath>.\src\conversion.h</FilePath>
+            </File>
+            <File>
+              <FileName>calibrate.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\calibrate.h</FilePath>
             </File>
           </Files>
         </Group>

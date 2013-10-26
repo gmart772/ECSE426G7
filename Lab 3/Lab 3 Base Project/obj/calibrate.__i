@@ -3,4 +3,4 @@
 -I C:\Keil\ARM\CMSIS\Include 
 -I C:\Keil\ARM\Inc\ST\STM32F4xx 
 -DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX 
--o ".\obj\calibrate.o" --omf_browse ".\obj\calibrate.crf" --depend ".\obj\calibrate.d" "calibrate.c"
+-o ".\obj\calibrate.o" --omf_browse ".\obj\calibrate.crf" --depend ".\obj\calibrate.d" "src\calibrate.c"

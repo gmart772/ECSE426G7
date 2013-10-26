@@ -4,6 +4,10 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 C:\Users\gmarti37\ECSE426G7\Lab 2\Lab2_Project.uvproj
-Project File Date:  10/19/2013
+Project File Date:  10/26/2013
 
 <h2>Output:</h2>
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 2\\obj\\Lab2_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.

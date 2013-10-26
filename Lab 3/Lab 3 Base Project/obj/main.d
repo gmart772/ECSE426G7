@@ -35,4 +35,6 @@
 .\obj\main.o: .\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h
 .\obj\main.o: .\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h
 .\obj\main.o: .\STM32F4xx_StdPeriph_Driver\inc\misc.h
+.\obj\main.o: src\accelerometer.h
 .\obj\main.o: .\LIS302DL\inc\stm32f4_discovery_lis302dl.h
+.\obj\main.o: src\filter.h

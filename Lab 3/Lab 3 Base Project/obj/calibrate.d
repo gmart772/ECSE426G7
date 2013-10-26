@@ -1,2 +1,2 @@
-.\obj\calibrate.o: calibrate.c
-.\obj\calibrate.o: calibrate.h
+.\obj\calibrate.o: src\calibrate.c
+.\obj\calibrate.o: src\calibrate.h

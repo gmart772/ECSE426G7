@@ -1,3 +1,5 @@
+#include "processing.h"
+
 // Returns the freefall acceleration value
 float getFreeFallAcceleration(float ax, float ay, float az)
 {
@@ -6,7 +8,7 @@ float getFreeFallAcceleration(float ax, float ay, float az)
 }
 
 // Returns 1 if freefall mode is detected, 0 otherwise
-int isFreeFall(float af)
+int isFreeFallDimensionless(float af)
 {
 	// If we are below the threshold, we are in freefall mode
 	if (af < FREEFALL_THRESHOLD)

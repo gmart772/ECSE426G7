@@ -10,8 +10,42 @@ Project File Date:  10/26/2013
 Build target 'Target 1'
 compiling fputc_debug.c...
 compiling main.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
 compiling system_stm32f4xx.c...
-compiling calibrate.c...
+compiling processing.c...
+processing.c: Error:  #5: cannot open source input file "processing.c": No such file or directory
+Target not created
+Build target 'Target 1'
+compiling filter.c...
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+compiling conversion.c...
+src\conversion.h(6): warning:  #1-D: last line of file ends without a newline
+compiling accelerometer.c...
+src\accelerometer.h(4): warning:  #1295-D: Deprecated declaration initAccelerometer - give arg types
+src\accelerometer.h(5): warning:  #1-D: last line of file ends without a newline
+src\accelerometer.c(18): warning:  #1-D: last line of file ends without a newline
+compiling processing.c...
+src\processing.c(1): error:  #169: expected a declaration
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(315): error:  #20: identifier "size_t" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(398): error:  #20: identifier "size_t" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(419): error:  #20: identifier "size_t" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(552): error:  #20: identifier "size_t" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(578): error:  #20: identifier "size_t" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(714): error:  #20: identifier "size_t" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(715): error:  #20: identifier "size_t" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(715): error:  #20: identifier "size_t" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(730): error:  #20: identifier "size_t" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(731): error:  #20: identifier "size_t" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(746): error:  #20: identifier "size_t" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(747): error:  #20: identifier "size_t" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(747): error:  #20: identifier "size_t" is undefined
+src\conversion.h(6): warning:  #1-D: last line of file ends without a newline
+src\processing.h(4): error:  #169: expected a declaration
+src\processing.h(15): warning:  #12-D: parsing restarts here after previous syntax error
+src\processing.h(17): error:  #169: expected a declaration
+src\processing.c(44): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
 compiling misc.c...
 compiling stm32f4xx_adc.c...
 compiling stm32f4xx_can.c...
@@ -44,22 +78,35 @@ compiling stm32f4xx_tim.c...
 compiling stm32f4xx_usart.c...
 compiling stm32f4xx_wwdg.c...
 compiling stm32f4_discovery_lis302dl.c...
+Target not created
+Build target 'Target 1'
+compiling processing.c...
+src\conversion.h(6): warning:  #1-D: last line of file ends without a newline
+src\processing.c(3): error:  #169: expected a declaration
+src\processing.c(39): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+Target not created
+Build target 'Target 1'
+compiling processing.c...
+src\conversion.h(6): warning:  #1-D: last line of file ends without a newline
 linking...
-Program Size: Code=4956 RO-data=424 RW-data=40 ZI-data=1632  
+.\obj\Lab3_Project.axf: Error: L6200E: Symbol getAlpha multiply defined (by processing.o and conversion.o).
+.\obj\Lab3_Project.axf: Error: L6200E: Symbol getBeta multiply defined (by processing.o and conversion.o).
+.\obj\Lab3_Project.axf: Error: L6200E: Symbol calibrateReading multiply defined (by processing.o and conversion.o).
+.\obj\Lab3_Project.axf: Error: L6200E: Symbol getAngles multiply defined (by processing.o and conversion.o).
+Target not created
+Build target 'Target 1'
+compiling processing.c...
+src\conversion.h(6): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5104 RO-data=424 RW-data=40 ZI-data=1632  
+".\obj\Lab3_Project.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling conversion.c...
+compiling processing.c...
+linking...
+Program Size: Code=5104 RO-data=424 RW-data=40 ZI-data=1632  
 ".\obj\Lab3_Project.axf" - 0 Error(s), 0 Warning(s).
 Build target 'Target 1'
 linking...
-Program Size: Code=4956 RO-data=424 RW-data=40 ZI-data=1632  
-".\obj\Lab3_Project.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-linking...
-Program Size: Code=4956 RO-data=424 RW-data=40 ZI-data=1632  
-".\obj\Lab3_Project.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-linking...
-Program Size: Code=4956 RO-data=424 RW-data=40 ZI-data=1632  
-".\obj\Lab3_Project.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-linking...
-Program Size: Code=4956 RO-data=424 RW-data=40 ZI-data=1632  
+Program Size: Code=5104 RO-data=424 RW-data=40 ZI-data=1632  
 ".\obj\Lab3_Project.axf" - 0 Error(s), 0 Warning(s).
