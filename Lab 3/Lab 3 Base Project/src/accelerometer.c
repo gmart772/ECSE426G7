@@ -1,6 +1,6 @@
 #include "accelerometer.h"
 
-void initAccelerometer() {
+void initAccelerometer(void) {
 	LIS302DL_InitTypeDef lis302dl_InitStruct;
 	
 	lis302dl_InitStruct.Axes_Enable = LIS302DL_XYZ_ENABLE;
