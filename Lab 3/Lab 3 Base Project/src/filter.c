@@ -1,6 +1,11 @@
 #include "filter.h"
 
-/* Updates the filter after each new value */
+/**
+ * @brief Updates the filter after each new value.
+ * Updates the sum, buffer, index, and average value
+ * @param filter: The movingAverageFilter to be updated.
+ * @param acc: The new acceleration to input into the filter.
+ */
 void updateFilter(movingAverageFilter *filter, int acc) {
 	
 	filter->sum -= filter->buffer[filter->index];			// Subtract the entry at index from the sum
@@ -14,7 +19,12 @@ void updateFilter(movingAverageFilter *filter, int acc) {
 	filter->averageValue = filter->sum / D;						// Computer average value, we technically could only use sum or average value and not have both
 }
 
-/* Fills the buffer with zeroes and sets the average to 0 */
+/**
+ * @brief Initializes a movingAverageFilter.
+ * Fills the buffer with zeroes and sets the sum, average
+ * and index to zero. 
+ * @param filter: The moving average filter to be initialized.
+ */
 void initializeFilter(movingAverageFilter *filter) {
 	
 	

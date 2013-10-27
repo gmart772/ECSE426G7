@@ -37,18 +37,19 @@ I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x526D343F)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x526D343F)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x526D343F)
 I (.\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x526D343F)
-F (.\src\main.c)(0x526D553A)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc -I.\LIS302DL\inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx -DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -o ".\obj\main.o" --omf_browse ".\obj\main.crf" --depend ".\obj\main.d")
+F (.\src\main.c)(0x526D6BFC)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc -I.\LIS302DL\inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx -DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -o ".\obj\main.o" --omf_browse ".\obj\main.crf" --depend ".\obj\main.d")
 I (C:\Keil\ARM\ARMCC\bin\..\include\stdio.h)(0x516F2AA6)
-I (src\stm32f4xx.h)(0x526D3440)
+I (src\accelerometer.h)(0x526D669C)
+I (.\LIS302DL\inc\stm32f4_discovery_lis302dl.h)(0x526D343F)
+I (.\src\stm32f4xx.h)(0x526D3440)
 I (C:\Keil\ARM\CMSIS\Include\core_cm4.h)(0x515ED174)
 I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x516F2AA6)
 I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x515ED174)
 I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x515ED174)
 I (C:\Keil\ARM\CMSIS\Include\core_cm4_simd.h)(0x515ED174)
 I (C:\Keil\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x50FFF3EA)
-I (src\stm32f4xx_conf.h)(0x526D3440)
+I (.\src\stm32f4xx_conf.h)(0x526D3440)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x526D343F)
-I (.\src\stm32f4xx.h)(0x526D3440)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x526D343F)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x526D343F)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x526D343F)
@@ -74,9 +75,11 @@ I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x526D343F)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x526D343F)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x526D343F)
 I (.\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x526D343F)
-I (src\accelerometer.h)(0x526D4E47)
-I (.\LIS302DL\inc\stm32f4_discovery_lis302dl.h)(0x526D343F)
-I (src\filter.h)(0x526D3440)
+I (C:\Keil\ARM\ARMCC\bin\..\include\math.h)(0x516F2AA6)
+I (src\conversion.h)(0x526D6710)
+I (src\calibrate.h)(0x526D3440)
+I (src\filter.h)(0x526D6550)
+I (src\timer.h)(0x526D5C4B)
 F (.\src\stm32f4xx.h)(0x526D3440)()
 F (.\src\stm32f4xx_conf.h)(0x526D3440)()
 F (.\src\system_stm32f4xx.c)(0x526D3440)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc -I.\LIS302DL\inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx -DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -o ".\obj\system_stm32f4xx.o" --omf_browse ".\obj\system_stm32f4xx.crf" --depend ".\obj\system_stm32f4xx.d")
@@ -115,11 +118,11 @@ I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x526D343F)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x526D343F)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x526D343F)
 I (.\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x526D343F)
-F (.\src\filter.h)(0x526D3440)()
-F (.\src\filter.c)(0x526D3440)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc -I.\LIS302DL\inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx -DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -o ".\obj\filter.o" --omf_browse ".\obj\filter.crf" --depend ".\obj\filter.d")
-I (src\filter.h)(0x526D3440)
+F (.\src\filter.h)(0x526D6550)()
+F (.\src\filter.c)(0x526D6EB8)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc -I.\LIS302DL\inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx -DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -o ".\obj\filter.o" --omf_browse ".\obj\filter.crf" --depend ".\obj\filter.d")
+I (src\filter.h)(0x526D6550)
 F (.\src\conversion.c)(0x526D3440)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc -I.\LIS302DL\inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx -DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -o ".\obj\conversion.o" --omf_browse ".\obj\conversion.crf" --depend ".\obj\conversion.d")
-I (src\conversion.h)(0x526D3440)
+I (src\conversion.h)(0x526D6710)
 I (C:\Keil\ARM\ARMCC\bin\..\include\stdio.h)(0x516F2AA6)
 I (src\stm32f4xx.h)(0x526D3440)
 I (C:\Keil\ARM\CMSIS\Include\core_cm4.h)(0x515ED174)
@@ -159,9 +162,9 @@ I (.\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x526D343F)
 I (.\LIS302DL\inc\stm32f4_discovery_lis302dl.h)(0x526D343F)
 I (C:\Keil\ARM\ARMCC\bin\..\include\math.h)(0x516F2AA6)
 I (src\calibrate.h)(0x526D3440)
-F (.\src\accelerometer.h)(0x526D4E47)()
-F (.\src\accelerometer.c)(0x526D4DEA)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc -I.\LIS302DL\inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx -DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -o ".\obj\accelerometer.o" --omf_browse ".\obj\accelerometer.crf" --depend ".\obj\accelerometer.d")
-I (src\accelerometer.h)(0x526D4E47)
+F (.\src\accelerometer.h)(0x526D669C)()
+F (.\src\accelerometer.c)(0x526D6DB6)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc -I.\LIS302DL\inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx -DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -o ".\obj\accelerometer.o" --omf_browse ".\obj\accelerometer.crf" --depend ".\obj\accelerometer.d")
+I (src\accelerometer.h)(0x526D669C)
 I (.\LIS302DL\inc\stm32f4_discovery_lis302dl.h)(0x526D343F)
 I (.\src\stm32f4xx.h)(0x526D3440)
 I (C:\Keil\ARM\CMSIS\Include\core_cm4.h)(0x515ED174)
@@ -197,10 +200,14 @@ I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x526D343F)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x526D343F)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x526D343F)
 I (.\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x526D343F)
+I (C:\Keil\ARM\ARMCC\bin\..\include\math.h)(0x516F2AA6)
+I (src\conversion.h)(0x526D6710)
+I (C:\Keil\ARM\ARMCC\bin\..\include\stdio.h)(0x516F2AA6)
+I (src\calibrate.h)(0x526D3440)
 F (.\src\processing.h)(0x526D3440)()
 F (.\src\processing.c)(0x526D3440)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc -I.\LIS302DL\inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx -DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -o ".\obj\processing.o" --omf_browse ".\obj\processing.crf" --depend ".\obj\processing.d")
 I (src\processing.h)(0x526D3440)
-I (src\conversion.h)(0x526D3440)
+I (src\conversion.h)(0x526D6710)
 I (C:\Keil\ARM\ARMCC\bin\..\include\stdio.h)(0x516F2AA6)
 I (src\stm32f4xx.h)(0x526D3440)
 I (C:\Keil\ARM\CMSIS\Include\core_cm4.h)(0x515ED174)
@@ -240,10 +247,10 @@ I (.\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x526D343F)
 I (.\LIS302DL\inc\stm32f4_discovery_lis302dl.h)(0x526D343F)
 I (C:\Keil\ARM\ARMCC\bin\..\include\math.h)(0x516F2AA6)
 I (src\calibrate.h)(0x526D3440)
-F (.\src\conversion.h)(0x526D3440)()
+F (.\src\conversion.h)(0x526D6710)()
 F (.\src\calibrate.h)(0x526D3440)()
-F (.\src\timer.c)(0x526D5327)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc -I.\LIS302DL\inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx -DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -o ".\obj\timer.o" --omf_browse ".\obj\timer.crf" --depend ".\obj\timer.d")
-I (src\timer.h)(0x526D5547)
+F (.\src\timer.c)(0x526D6E1E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc -I.\LIS302DL\inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx -DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -o ".\obj\timer.o" --omf_browse ".\obj\timer.crf" --depend ".\obj\timer.d")
+I (src\timer.h)(0x526D5C4B)
 I (src\stm32f4xx.h)(0x526D3440)
 I (C:\Keil\ARM\CMSIS\Include\core_cm4.h)(0x515ED174)
 I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x516F2AA6)
@@ -279,7 +286,7 @@ I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x526D343F)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x526D343F)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x526D343F)
 I (.\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x526D343F)
-F (.\src\timer.h)(0x526D5547)()
+F (.\src\timer.h)(0x526D5C4B)()
 F (.\STM32F4xx_StdPeriph_Driver\src\misc.c)(0x526D343F)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc -I.\LIS302DL\inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx -DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX -o ".\obj\misc.o" --omf_browse ".\obj\misc.crf" --depend ".\obj\misc.d")
 I (.\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x526D343F)
 I (.\src\stm32f4xx.h)(0x526D3440)
