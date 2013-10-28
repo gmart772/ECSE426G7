@@ -5,6 +5,7 @@
 #include "accelerometer.h"
 #include "filter.h"
 #include "timer.h"
+#include "led.h"
 
 #define NO_TIMEOUT 0
 #define TIMEOUT_OCCURRED 1
@@ -15,6 +16,7 @@ int main()
 {
 	int32_t values[3];
 	float tilts[3];
+	float pitch, roll;
 
 	initAccelerometer();
 	
@@ -27,6 +29,7 @@ int main()
 	initializeFilter(&filterZ);
 	
 	initTimer();
+	initLeds();
 
 	
 	while(1) {
@@ -43,14 +46,14 @@ int main()
 		
 		getTilt(values, tilts);
 		
-		printf("X acc: %d\n", values[0]);
-		printf("Y acc: %d\n", values[1]);
-		printf("Z acc: %d\n", values[2]);
-		printf("X tilt: %f\n", tilts[0]);
-		printf("Y tilt: %f\n", tilts[1]);
-		printf("Z tilt: %f\n", tilts[2]);
-		printf("Pitch: %f\n", (180 / PI)	* getPitch(values));
-		printf("Roll: %f\n\n", (180 / PI)	* getRoll(values));
+		pitch = getPitch(values);
+		roll = getRoll(values);
+		
+		flashLeds(pitch, roll);
+		
+		
+		printf("Pitch: %f\n", pitch);
+		printf("Roll: %f\n\n", roll);
 	}
 	
 }

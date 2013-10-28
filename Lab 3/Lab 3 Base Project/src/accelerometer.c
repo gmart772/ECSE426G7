@@ -48,7 +48,7 @@ float* getTilt(int32_t *acc, float *tilts) {
  * @return Returns the pitch in degrees as a float.
  */
 float getPitch(int32_t *acc) {
-	return getAlpha(acc[0], acc[1], acc[2]);
+	return (180 / PI) * getAlpha(acc[0], acc[1], acc[2]);
 }
 
  /**  
@@ -58,5 +58,5 @@ float getPitch(int32_t *acc) {
  * @return Returns the roll in degrees as a float.
  */
 float getRoll(int32_t *acc) {
-	return getBeta(acc[0], acc[1], acc[2]);
+	return (180 / PI) * getBeta(acc[0], acc[1], acc[2]);
 }

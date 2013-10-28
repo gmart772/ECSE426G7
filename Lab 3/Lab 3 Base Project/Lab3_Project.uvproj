@@ -477,6 +477,16 @@
               <FileType>5</FileType>
               <FilePath>.\src\timer.h</FilePath>
             </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\led.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\led.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -42,3 +42,4 @@
 .\obj\main.o: src\calibrate.h
 .\obj\main.o: src\filter.h
 .\obj\main.o: src\timer.h
+.\obj\main.o: src\led.h
