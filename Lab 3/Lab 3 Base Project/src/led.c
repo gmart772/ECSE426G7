@@ -20,7 +20,7 @@
 	// Configured for 50 ms period
 	// Configure SysTick to be 20Hz
 	 pulseFreq = 1;
-	SysTick_Config(SystemCoreClock / 4);
+	SysTick_Config(SystemCoreClock / 20);
 }
 
 /**
