@@ -18,8 +18,9 @@ void TIM3_IRQHandler(void) {
  * to generate an interrupt ever 40 ms (25 Hz).
  * No input or output.
  */
-void initTimer(void) {
+void initTimer(short mode) {
 	NVIC_InitTypeDef NVIC_InitStructure;
+	uint16_t PrescalerValue = 0;
 
   /* TIM3 clock enable */
   RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
@@ -34,13 +35,26 @@ void initTimer(void) {
 	
 	TIM_TimeBaseInitTypeDef TIM3_TimeBaseInitStruct;
 	
-	TIM3_TimeBaseInitStruct.TIM_Period = 65535; // us?
-	TIM3_TimeBaseInitStruct.TIM_Prescaler = 0;
-	TIM3_TimeBaseInitStruct.TIM_ClockDivision = 0;
-	
-	TIM_TimeBaseInit(TIM3, &TIM3_TimeBaseInitStruct);
-	
-	uint16_t PrescalerValue = 52;
+	if (mode == ACCELEROMETER)
+	{
+		TIM3_TimeBaseInitStruct.TIM_Period = 65535; // us?
+		TIM3_TimeBaseInitStruct.TIM_Prescaler = 0;
+		TIM3_TimeBaseInitStruct.TIM_ClockDivision = 0;
+		
+		TIM_TimeBaseInit(TIM3, &TIM3_TimeBaseInitStruct);
+		
+		PrescalerValue = 52;
+	}
+	else if (mode == PWM)
+	{
+		TIM3_TimeBaseInitStruct.TIM_Period = 65535; // us?
+		TIM3_TimeBaseInitStruct.TIM_Prescaler = 0;
+		TIM3_TimeBaseInitStruct.TIM_ClockDivision = 0;
+		
+		TIM_TimeBaseInit(TIM3, &TIM3_TimeBaseInitStruct);
+		
+		PrescalerValue = 26;
+	}
 	
 	TIM_PrescalerConfig(TIM3, PrescalerValue, TIM_PSCReloadMode_Immediate);
 	

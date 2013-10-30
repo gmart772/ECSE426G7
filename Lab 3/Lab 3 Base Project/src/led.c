@@ -19,7 +19,6 @@
 	ticks = 0;
 	// Configured for 50 ms period
 	// Configure SysTick to be 20Hz
-	 pulseFreq = 1;
 	SysTick_Config(SystemCoreClock / 20);
 }
 
@@ -31,6 +30,8 @@
  */
 void flashLeds(float pitch, float roll) {
  	int frequencyPitch;
+	int pulseFreq;
+	int counter;
 	
 	if ((abs(pitch) >= 60) && (abs(pitch) <= 90)) {
 		frequencyPitch = 15;
@@ -54,20 +55,38 @@ void flashLeds(float pitch, float roll) {
 		frequencyRoll = 2;
 	}
 	
-	if (pulseFreq != (frequencyRoll * frequencyPitch)) {
-		pulseFreq = frequencyRoll * frequencyPitch;
-	}
+	pulseFreq = frequencyRoll * frequencyPitch;
 	
 	SysTick_Config(SystemCoreClock / pulseFreq);
 	
+	if (pulseFreq < 5)
+	{
+		counter = 3;
+		frequencyDivisions++;
+	}
+	else if (pulseFreq < 15)
+	{
+		counter = 2;
+		frequencyDivisions++;
+	}
+	else
+	{
+		counter = 1;
+		frequencyDivisions++;
+	}
+	
 	// Wait for interrupt
-	while(!ticks);
-	// Set ticks to 0
-	ticks = 0;
-	GPIO_ToggleBits(GPIOD, GPIO_Pin_13);
-	GPIO_ToggleBits(GPIOD, GPIO_Pin_15);
-	GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
-	GPIO_ToggleBits(GPIOD, GPIO_Pin_14);
+	//while(!ticks);
+	
+	if (frequencyDivisions >= counter)
+	{
+		frequencyDivisions = 0;
+		
+		GPIO_ToggleBits(GPIOD, GPIO_Pin_13);
+		GPIO_ToggleBits(GPIOD, GPIO_Pin_15);
+		GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
+		GPIO_ToggleBits(GPIOD, GPIO_Pin_14);
+	}
 
 }
 

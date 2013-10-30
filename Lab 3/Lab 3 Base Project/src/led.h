@@ -8,8 +8,8 @@
 /*	---------------------------------------------		*/
 
 static volatile uint_fast16_t ticks;
-static int pulseFreq;
-static int led1On, led2On, led3On, led4On;
+
+static int frequencyDivisions;
 
 void initLeds(void);
 void flashLeds(float pitch, float roll);

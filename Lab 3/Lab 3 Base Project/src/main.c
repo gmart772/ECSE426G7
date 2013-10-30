@@ -30,7 +30,7 @@ int main()
 	initializeFilter(&filterY);
 	initializeFilter(&filterZ);
 	
-	initTimer();
+	initTimer(ACCELEROMETER);
 	initLeds();
 
 	
@@ -40,12 +40,18 @@ int main()
 			isTapDetected = NO_TAP_DETECTED;
 			currentState = PWM;
 			resetLatch();
+			
+			// Reset the timer for new mode (going to PWM)
+			initTimer();
 
 		}
 		else if ((isTapDetected == TAP_DETECTED) && (currentState == PWM)) {
 			isTapDetected = NO_TAP_DETECTED;
 			currentState = ACCELEROMETER;
 			resetLatch();
+			
+			// Reset the timer for new mode (going to ACCEL)
+			initTimer();
 			
 		}
 		
