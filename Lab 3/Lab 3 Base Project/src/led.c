@@ -30,7 +30,7 @@
  * @param roll: The roll measured in degrees.
  */
 void flashLeds(float pitch, float roll) {
-	int frequencyPitch;
+ 	int frequencyPitch;
 	
 	if ((abs(pitch) >= 60) && (abs(pitch) <= 90)) {
 		frequencyPitch = 15;
@@ -38,10 +38,7 @@ void flashLeds(float pitch, float roll) {
 	else if ((abs(pitch) >= 30 && abs(pitch) <= 60)) {
 		frequencyPitch = 7;
 	}
-	else if (abs(pitch) < 30 /* && abs(pitch) >= 15 */) {
-		frequencyPitch = 2;
-	}
-	else /* if (abs(pitch) < 15) */ {
+	else  {
 		frequencyPitch = 2;
 	}
 		
@@ -53,10 +50,7 @@ void flashLeds(float pitch, float roll) {
 	else if ((abs(roll) >= 30) && (abs(roll) <= 60)) {
 		frequencyRoll = 7;
 	}
-	else if (abs(roll) < 30 /* && (abs(roll) >= 15) */) {
-		frequencyRoll = 2;
-	}
-		else /*if (abs(roll) < 15) */ {
+		else {
 		frequencyRoll = 2;
 	}
 	

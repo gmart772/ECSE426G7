@@ -60,7 +60,6 @@ int main()
 				updateFilter(&filterY, values[1]);
 				updateFilter(&filterZ, values[2]);
 				
-				
 				pitch = getPitch(filterX.averageValue, filterY.averageValue, filterZ.averageValue);
 				roll = getRoll(filterX.averageValue, filterY.averageValue, filterZ.averageValue);
 				

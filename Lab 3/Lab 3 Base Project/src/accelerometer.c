@@ -12,7 +12,7 @@ void initAccelerometer(void) {
 	LIS302DL_InitTypeDef lis302dl_InitStruct;
 	LIS302DL_InterruptConfigTypeDef LIS302DL_InterruptConfigTypeDefStruct;
 		
-	uint8_t clickInterrupt = 0xE0;
+	uint8_t clickInterrupt = 0x70;
 	uint8_t zThreshold	= 0xD0;
 	uint8_t xyThreshold	= 0xFF;
 	uint8_t timeLimit = 0x40;
@@ -132,7 +132,6 @@ void calibrate(int32_t *result, int32_t *readings) {
 	for (i = 0; i < 3; i++) {
 		result[i] = 0;
 		for (j = 0; j < 4; j++) {
-			
 			result[i] +=  (int32_t) (correctionMatrix[i][j] * readings[j]); 
 		}
 	}
@@ -142,7 +141,7 @@ void calibrate(int32_t *result, int32_t *readings) {
  * @brief Resets the latch bits in the config register.
  */
 void resetLatch(void) {
-		uint8_t scratch[2];
+	uint8_t scratch[2];
 	LIS302DL_Read( scratch, LIS302DL_CLICK_SRC_REG_ADDR, 2);
 }
 
