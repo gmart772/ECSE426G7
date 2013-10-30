@@ -3,4 +3,4 @@
 -I C:\Keil\ARM\CMSIS\Include 
 -I C:\Keil\ARM\Inc\ST\STM32F4xx 
 -DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX 
--o ".\obj\timer.o" --omf_browse ".\obj\timer.crf" --depend ".\obj\timer.d" "src\timer.c"
+-o ".\obj\processing.o" --omf_browse ".\obj\processing.crf" --depend ".\obj\processing.d" "src\processing.c"

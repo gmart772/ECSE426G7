@@ -20,7 +20,7 @@
 	// Configured for 50 ms period
 	// Configure SysTick to be 20Hz
 	 pulseFreq = 1;
-	SysTick_Config(SystemCoreClock / 20);
+	SysTick_Config(SystemCoreClock / 4);
 }
 
 /**
@@ -81,6 +81,11 @@ void SysTick_Handler(void) {
 	ticks = 1;
 }
 
+/**
+ * @brief Get the absolute value of a float. 
+ * @param f: Float value.
+ * @retval The absolute value of f.
+ */
 float abs(float f) {
 	if (f < 0) {
 		return -f;

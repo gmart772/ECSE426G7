@@ -39,15 +39,13 @@ int main()
 		if ((isTapDetected == TAP_DETECTED) && (currentState == ACCELEROMETER)) {
 			isTapDetected = NO_TAP_DETECTED;
 			currentState = PWM;
-			uint8_t scratch[2];
-			LIS302DL_Read( scratch, LIS302DL_CLICK_SRC_REG_ADDR, 2);
+			resetLatch();
 
 		}
 		else if ((isTapDetected == TAP_DETECTED) && (currentState == PWM)) {
 			isTapDetected = NO_TAP_DETECTED;
 			currentState = ACCELEROMETER;
-			uint8_t scratch[2];
-			LIS302DL_Read( scratch, LIS302DL_CLICK_SRC_REG_ADDR, 2);
+			resetLatch();
 			
 		}
 		
@@ -71,8 +69,8 @@ int main()
 		//		printf("%d\n", (int) filterY.averageValue);
 		//		printf("%d\n\n", (int) filterZ.averageValue);
 				
-		//		printf("Pitch: %f\n", pitch);
-		//		printf("Roll: %f\n\n", roll);
+				printf("Pitch: %f\n", pitch);
+				printf("Roll: %f\n\n", roll);
 			
 			}
 			else {

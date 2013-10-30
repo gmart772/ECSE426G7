@@ -20,5 +20,5 @@ float* getTilt(int32_t *acc, float *tilts);
 float getPitch(int32_t accX, int32_t accY, int32_t accZ);
 float getRoll(int32_t accX, int32_t accY, int32_t accZ);
 void calibrate(int32_t *values, int32_t *readings);
-int tappingDetected(void);
+void resetLatch(void);
 void EXTI0_IRQHandler(void);

@@ -3,4 +3,4 @@
 -I C:\Keil\ARM\CMSIS\Include 
 -I C:\Keil\ARM\Inc\ST\STM32F4xx 
 -DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX 
--o ".\obj\filter.o" --omf_browse ".\obj\filter.crf" --depend ".\obj\filter.d" "src\filter.c"
+-o ".\obj\stm32f4_discovery_lis302dl.o" --omf_browse ".\obj\stm32f4_discovery_lis302dl.crf" --depend ".\obj\stm32f4_discovery_lis302dl.d" "LIS302DL\src\stm32f4_discovery_lis302dl.c"

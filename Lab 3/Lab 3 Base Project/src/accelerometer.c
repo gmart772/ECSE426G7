@@ -64,8 +64,7 @@ void initAccelerometer(void) {
   NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStruct);
 
-	uint8_t scratch[2];
-  LIS302DL_Read( scratch, LIS302DL_CLICK_SRC_REG_ADDR, 2);
+	resetLatch();
 	
 	correctionMatrix[0][0] = 1.0479;
 	correctionMatrix[0][1] = -0.0188;
@@ -83,7 +82,8 @@ void initAccelerometer(void) {
 }
 
 /**
- * @brief Gets the latest reading from the accelerometer.
+ * @brief Gets the latest reading from the accelerometer
+ * and applies correction to it.
  * @param values: Buffer where the accelerometer readings 
  * will be placed. The x reading is placed in [0], y in [1],
  * and z in [2].
@@ -92,27 +92,9 @@ void getAcceleration(int32_t *values) {
 	int32_t readings[4];
 	LIS302DL_ReadACC(readings);
 	readings[3] = 1000;
-	uint8_t scratch[2];
-	LIS302DL_Read( scratch, LIS302DL_CLICK_SRC_REG_ADDR, 2);
+	resetLatch();
 	calibrate(values, readings);
-	
-	
 }
-
-//  /**  
-//  * @brief Calculates the x, y and z tilts angles in degrees.
-//  * @param acc: Buffer with the accelerometer readings.
-//  * x in [0], y in [1], and z in [2].
-//  * @param tilts: Buffer where the tilts will be placed.
-//  * x in [0], y in [1], and z in [2].
-//  */
-// float* getTilt(int32_t *acc, float *tilts) {
-// 		tilts[0] = 180 * asin((acc[0] / G)) / PI; // x deviation
-// 		tilts[1] = 180 * asin((acc[1] / G)) / PI; // y deviation
-// 		tilts[2] = 180 * acos((acc[2] / G)) / PI; // z deviation
-// 	
-// 		return tilts;
-// }
 
  /**  
  * @brief Calculates the pitch angle in degrees.
@@ -136,6 +118,14 @@ float getRoll(int32_t accX, int32_t accY, int32_t accZ) {
 	return ((180 / PI) * getBeta(accX, accY, accZ));
 }
 
+/**
+ * @brief Corrects the raw accelerometer readings 
+ * using the calibration matrix.
+ * @param readings: Buffer with the accelerometer readings.
+ * x in [0], y in [1], and z in [2].
+ * @param result: Buffer with the corrected readings.
+ * x in [0], y in [1], and z in [2].
+ */
 void calibrate(int32_t *result, int32_t *readings) {
 	int i, j;
 	
@@ -148,16 +138,25 @@ void calibrate(int32_t *result, int32_t *readings) {
 	}
 }
 
-int tappingDetected(void) {
-	return 0;
+/**
+ * @brief Resets the latch bits in the config register.
+ */
+void resetLatch(void) {
+		uint8_t scratch[2];
+	LIS302DL_Read( scratch, LIS302DL_CLICK_SRC_REG_ADDR, 2);
 }
 
+
+/**
+ * @brief Interrupt handler for the accelerometer interrupt.
+ * Sets isTapDetected to TAP_DETECTED and clears the interrupt
+ * flag.
+ */
 void EXTI0_IRQHandler(void) {
 	// Get current interrupt status	
 	if (EXTI_GetITStatus(LIS302DL_SPI_INT1_EXTI_LINE) != RESET) {
 		isTapDetected = TAP_DETECTED;
 		EXTI_ClearITPendingBit(LIS302DL_SPI_INT1_EXTI_LINE);
 	}
-	printf("Interrupt!\n");
     EXTI_ClearFlag(LIS302DL_SPI_INT1_EXTI_LINE);
 }        
