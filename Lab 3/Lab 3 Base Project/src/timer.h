@@ -8,8 +8,10 @@
 #define PWM 1
 
 extern short timerInterrupt;
+extern short timerInterrupt4;
 
-void initTimer(short mode);
+void initTimer();
+void initTimer4();
 void TIM3_IRQHandler(void);
 
 

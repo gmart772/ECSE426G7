@@ -5,7 +5,10 @@
  * Inputs and outputs no variables.
  */void initLeds(void) {
 	
-	// Initialize LED GPIOA
+	 // Make sure GPIO is not init
+	 GPIO_DeInit(GPIOD);
+	 
+	// Initialize LED GPIOD
 	GPIO_InitTypeDef gpio_init_s;
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
 	GPIO_StructInit(&gpio_init_s);
@@ -16,10 +19,36 @@
 	gpio_init_s.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	GPIO_Init(GPIOD, &gpio_init_s);
 
-	ticks = 0;
 	// Configured for 50 ms period
 	// Configure SysTick to be 20Hz
 	SysTick_Config(SystemCoreClock / 20);
+}
+
+/**
+ * @brief Initializes the LEDs for PWM (Output compare of TIM4). 
+ * Inputs and outputs no variables.
+ */void initLedsForPWM(void)
+{
+	// Make sure GPIO is not init
+	GPIO_DeInit(GPIOD);
+	
+  GPIO_InitTypeDef GPIO_InitStructure;
+
+  /* GPIOA, GPIOB and GPIOE Clocks enable */
+  RCC_AHB1PeriphClockCmd( RCC_AHB1Periph_GPIOD , ENABLE);
+  
+  /* GPIOA Configuration: Channel 1 and 3 as alternate function push-pull */
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
+  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP ;
+  GPIO_Init(GPIOD, &GPIO_InitStructure);
+  
+  GPIO_PinAFConfig(GPIOD, GPIO_PinSource12, GPIO_AF_TIM4);
+  GPIO_PinAFConfig(GPIOD, GPIO_PinSource13, GPIO_AF_TIM4);
+	GPIO_PinAFConfig(GPIOD, GPIO_PinSource14, GPIO_AF_TIM4);
+	GPIO_PinAFConfig(GPIOD, GPIO_PinSource15, GPIO_AF_TIM4);
 }
 
 /**

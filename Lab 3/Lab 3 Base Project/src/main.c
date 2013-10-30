@@ -11,6 +11,7 @@
 #define PWM 1
 
 short timerInterrupt;
+short timerInterrupt4;
 short isTapDetected;
 
 int main()
@@ -30,7 +31,8 @@ int main()
 	initializeFilter(&filterY);
 	initializeFilter(&filterZ);
 	
-	initTimer(ACCELEROMETER);
+	initTimer();
+	initTimer4();
 	initLeds();
 
 	
@@ -41,18 +43,16 @@ int main()
 			currentState = PWM;
 			resetLatch();
 			
-			// Reset the timer for new mode (going to PWM)
-			initTimer();
-
+			// Reset the LEDs for TIM4
+			initLedsForPWM();
 		}
 		else if ((isTapDetected == TAP_DETECTED) && (currentState == PWM)) {
 			isTapDetected = NO_TAP_DETECTED;
 			currentState = ACCELEROMETER;
 			resetLatch();
 			
-			// Reset the timer for new mode (going to ACCEL)
-			initTimer();
-			
+			// Reset the LEDS for Accelerometer
+			initLeds();
 		}
 		
 		if (currentState == ACCELEROMETER) {
@@ -70,24 +70,22 @@ int main()
 				roll = getRoll(filterX.averageValue, filterY.averageValue, filterZ.averageValue);
 				
 				flashLeds(pitch, roll);
-		//		printf("%d\n", (int) filterX.averageValue);
-		//		printf("%d\n", (int) filterY.averageValue);
-		//		printf("%d\n\n", (int) filterZ.averageValue);
+	//		printf("%d\n", (int) filterX.averageValue);
+	//		printf("%d\n", (int) filterY.averageValue);
+	//		printf("%d\n\n", (int) filterZ.averageValue);
 				
 				printf("Pitch: %f\n", pitch);
 				printf("Roll: %f\n\n", roll);
 			
 			}
 			else {
-				//Turn all LEDs off until we get PWM started
+				
+				//Turn all LEDs off until we get PWM started	
 				// Debug code to detect tap
-				
-				GPIO_WriteBit(GPIOD, GPIO_Pin_13, 0);
-				GPIO_WriteBit(GPIOD, GPIO_Pin_15, 0);
-				GPIO_WriteBit(GPIOD, GPIO_Pin_12, 0);
-				GPIO_WriteBit(GPIOD, GPIO_Pin_14, 0);
-				
-				
+				//GPIO_WriteBit(GPIOD, GPIO_Pin_13, 0);
+				//GPIO_WriteBit(GPIOD, GPIO_Pin_15, 0);
+				//GPIO_WriteBit(GPIOD, GPIO_Pin_12, 0);
+				//GPIO_WriteBit(GPIOD, GPIO_Pin_14, 0);
 			}
 		
 	}

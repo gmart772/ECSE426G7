@@ -34,7 +34,7 @@ void initAccelerometer(void) {
 	
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOE, ENABLE);
 	
-		 /* Configure PA0 pin as input floating */
+	/* Configure PA0 pin as input floating */
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
   GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
@@ -78,7 +78,6 @@ void initAccelerometer(void) {
 	correctionMatrix[3][0] = 0.0483;
 	correctionMatrix[3][1] = -0.0641;
 	correctionMatrix[3][2] = -0.0125;
-	
 }
 
 /**
