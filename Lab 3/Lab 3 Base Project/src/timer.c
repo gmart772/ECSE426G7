@@ -7,7 +7,7 @@
 void TIM3_IRQHandler(void) {
 	// Get current interrupt status	
 	if (TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET) {
-			interruptStatus = TIMEOUT_OCCURRED;
+			timerInterrupt = TIMEOUT_OCCURRED;
 			TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
 		}
 }

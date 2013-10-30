@@ -4,7 +4,7 @@
 #define NO_TIMEOUT 0
 #define TIMEOUT_OCCURRED 1
 
-extern short interruptStatus;
+extern short timerInterrupt;
 
 void initTimer(void);
 void TIM3_IRQHandler(void);

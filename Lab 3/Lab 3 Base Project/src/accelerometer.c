@@ -2,17 +2,72 @@
 
 /**
  * @brief Initializes and starts the accelerometer. No input or output.
+ * Iniitializes the calibration matrix.
  */
 void initAccelerometer(void) {
 	LIS302DL_InitTypeDef lis302dl_InitStruct;
+	LIS302DL_InterruptConfigTypeDef LIS302DL_InterruptConfigTypeDefStruct;
+	EXTI_InitTypeDef EXTI_InitTypeDefStruct;
+  NVIC_InitTypeDef NVIC_InitStruct;
+	uint8_t clickInterrupt = 0x7;
+	uint8_t zThreshold	= 0x04;
+	uint8_t timeLimit = 0x01;
+	uint8_t latency = 0x00;
 	
 	lis302dl_InitStruct.Axes_Enable = LIS302DL_XYZ_ENABLE;
 	lis302dl_InitStruct.Self_Test = LIS302DL_SELFTEST_NORMAL;
 	lis302dl_InitStruct.Full_Scale = LIS302DL_FULLSCALE_2_3;
-	lis302dl_InitStruct.Output_DataRate = LIS302DL_DATARATE_400;
+	lis302dl_InitStruct.Output_DataRate = LIS302DL_DATARATE_100;
 	lis302dl_InitStruct.Power_Mode = LIS302DL_LOWPOWERMODE_ACTIVE;
 	
 	LIS302DL_Init(&lis302dl_InitStruct);
+	
+	LIS302DL_InterruptConfigTypeDefStruct.Latch_Request = LIS302DL_INTERRUPTREQUEST_LATCHED;
+  LIS302DL_InterruptConfigTypeDefStruct.SingleClick_Axes=LIS302DL_CLICKINTERRUPT_Z_ENABLE;
+  LIS302DL_InterruptConfigTypeDefStruct.DoubleClick_Axes=LIS302DL_DOUBLECLICKINTERRUPT_XYZ_DISABLE;
+  LIS302DL_InterruptConfig(&LIS302DL_InterruptConfigTypeDefStruct);
+	
+	LIS302DL_Write(&clickInterrupt,LIS302DL_CTRL_REG3_ADDR, 1);
+	
+	LIS302DL_Write(&zThreshold, LIS302DL_CLICK_THSZ_REG_ADDR, 1);
+	
+	LIS302DL_Write(&timeLimit, LIS302DL_CLICK_TIMELIMIT_REG_ADDR, 1);
+	
+  LIS302DL_Write( &latency, LIS302DL_CLICK_LATENCY_REG_ADDR, 1);
+	
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
+  SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOE, EXTI_PinSource0);
+
+	EXTI_InitTypeDefStruct.EXTI_Line = EXTI_Line0;
+  EXTI_InitTypeDefStruct.EXTI_Mode = EXTI_Mode_Interrupt;
+  EXTI_InitTypeDefStruct.EXTI_Trigger = EXTI_Trigger_Rising;  
+  EXTI_InitTypeDefStruct.EXTI_LineCmd = ENABLE;
+  EXTI_Init(&EXTI_InitTypeDefStruct);
+	
+	NVIC_InitStruct.NVIC_IRQChannel = EXTI0_IRQn;
+  NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 0x00;
+  NVIC_InitStruct.NVIC_IRQChannelSubPriority = 0x01;
+  NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
+  NVIC_Init(&NVIC_InitStruct);
+	
+
+
+	
+	uint8_t junk[2];
+  LIS302DL_Read( junk, LIS302DL_CLICK_SRC_REG_ADDR, 2);
+	
+	correctionMatrix[0][0] = 1.0479;
+	correctionMatrix[0][1] = -0.0188;
+	correctionMatrix[0][2] = 0.0064;
+	correctionMatrix[1][0] = 0.0055;
+	correctionMatrix[1][1] = 1.0246;
+	correctionMatrix[1][2] = -0.0098;
+	correctionMatrix[2][0] = -0.0203;
+	correctionMatrix[2][1] = -0.0063;
+	correctionMatrix[2][2] = 1.0125;
+	correctionMatrix[3][0] = 0.0483;
+	correctionMatrix[3][1] = -0.0641;
+	correctionMatrix[3][2] = -0.0125;
 	
 }
 
@@ -23,23 +78,30 @@ void initAccelerometer(void) {
  * and z in [2].
  */
 void getAcceleration(int32_t *values) {
-	LIS302DL_ReadACC(values);
+	int32_t readings[4];
+	LIS302DL_ReadACC(readings);
+	readings[3] = 1000;
+
+	
+	correctValues(values, readings);
+	
+	
 }
 
- /**  
- * @brief Calculates the x, y and z tilts angles in degrees.
- * @param acc: Buffer with the accelerometer readings.
- * x in [0], y in [1], and z in [2].
- * @param tilts: Buffer where the tilts will be placed.
- * x in [0], y in [1], and z in [2].
- */
-float* getTilt(int32_t *acc, float *tilts) {
-		tilts[0] = 180 * asin((acc[0] / G)) / PI; // x deviation
-		tilts[1] = 180 * asin((acc[1] / G)) / PI; // y deviation
-		tilts[2] = 180 * acos((acc[2] / G)) / PI; // z deviation
-	
-		return tilts;
-}
+//  /**  
+//  * @brief Calculates the x, y and z tilts angles in degrees.
+//  * @param acc: Buffer with the accelerometer readings.
+//  * x in [0], y in [1], and z in [2].
+//  * @param tilts: Buffer where the tilts will be placed.
+//  * x in [0], y in [1], and z in [2].
+//  */
+// float* getTilt(int32_t *acc, float *tilts) {
+// 		tilts[0] = 180 * asin((acc[0] / G)) / PI; // x deviation
+// 		tilts[1] = 180 * asin((acc[1] / G)) / PI; // y deviation
+// 		tilts[2] = 180 * acos((acc[2] / G)) / PI; // z deviation
+// 	
+// 		return tilts;
+// }
 
  /**  
  * @brief Calculates the pitch angle in degrees.
@@ -47,8 +109,8 @@ float* getTilt(int32_t *acc, float *tilts) {
  * x in [0], y in [1], and z in [2].
  * @return Returns the pitch in degrees as a float.
  */
-float getPitch(int32_t *acc) {
-	return (180 / PI) * getAlpha(acc[0], acc[1], acc[2]);
+float getPitch(int32_t accX, int32_t accY, int32_t accZ) {
+	return ((180 / PI) * getAlpha(accX, accY, accZ));
 }
 
  /**  
@@ -57,6 +119,32 @@ float getPitch(int32_t *acc) {
  * x in [0], y in [1], and z in [2].
  * @return Returns the roll in degrees as a float.
  */
-float getRoll(int32_t *acc) {
-	return (180 / PI) * getBeta(acc[0], acc[1], acc[2]);
+float getRoll(int32_t accX, int32_t accY, int32_t accZ) {
+	return ((180 / PI) * getBeta(accX, accY, accZ));
 }
+
+void correctValues(int32_t *result, int32_t *readings) {
+	int i, j;
+	
+	for (i = 0; i < 3; i++) {
+		result[i] = 0;
+		for (j = 0; j < 4; j++) {
+			
+			result[i] +=  (int32_t) (correctionMatrix[i][j] * readings[j]); 
+		}
+	}
+}
+
+int tappingDetected(void) {
+	return 0;
+}
+
+void EXTI0_IRQHandler(void) {
+	// Get current interrupt status	
+	if (EXTI_GetITStatus(LIS302DL_SPI_INT1_EXTI_LINE) != RESET) {
+		isTapDetected = TAP_DETECTED;
+		EXTI_ClearITPendingBit(LIS302DL_SPI_INT1_EXTI_LINE);
+	}
+	
+    EXTI_ClearFlag(LIS302DL_SPI_INT1_EXTI_LINE);
+}        

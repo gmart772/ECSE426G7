@@ -2,13 +2,22 @@
 #include "math.h"
 #include "conversion.h"
 
+#define NO_TAP_DETECTED 0
+#define TAP_DETECTED 1
+
+extern short isTapDetected;
+
 static float PI = 3.14159265;
 
 static float G = 1000.0; // Earth's gravity in mg
 
+static float correctionMatrix[4][3];
+
 void initAccelerometer(void);
 void getAcceleration(int32_t *values);
 float* getTilt(int32_t *acc, float *tilts);
-float getPitch(int32_t *acc);
-float getRoll(int32_t *acc);
-
+float getPitch(int32_t accX, int32_t accY, int32_t accZ);
+float getRoll(int32_t accX, int32_t accY, int32_t accZ);
+void correctValues(int32_t *values, int32_t *readings);
+int tappingDetected(void);
+void EXTI0_IRQHandler(void);

@@ -16,6 +16,11 @@
 	gpio_init_s.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	GPIO_Init(GPIOD, &gpio_init_s);
 
+	led1On = 0; 
+	led2On = 0;	
+	led3On = 0;
+	led4On = 0;
+	 
 	ticks = 0;
 	// Configured for 50 ms period
 	// Configure SysTick to be 20Hz
@@ -33,30 +38,30 @@ void flashLeds(float pitch, float roll) {
 	int frequencyPitch;
 	
 	if ((abs(pitch) >= 60) && (abs(pitch) <= 90)) {
-		frequencyPitch = 10;
+		frequencyPitch = 15;
 	}
 	else if ((abs(pitch) >= 30 && abs(pitch) <= 60)) {
 		frequencyPitch = 7;
 	}
-	else if (abs(pitch) < 30 && abs(pitch) >= 15) {
-		frequencyPitch = 3;
+	else if (abs(pitch) < 30 /* && abs(pitch) >= 15 */) {
+		frequencyPitch = 2;
 	}
-	else if (abs(pitch) < 15) {
+	else /* if (abs(pitch) < 15) */ {
 		frequencyPitch = 2;
 	}
 		
 	int frequencyRoll;
 	
 	if ((abs(roll) <= 90) && (abs(roll) > 60)) {
-		frequencyRoll = 10;
+		frequencyRoll = 15;
 	}
 	else if ((abs(roll) >= 30) && (abs(roll) <= 60)) {
 		frequencyRoll = 7;
 	}
-	else if (abs(roll) < 30 && (abs(roll) >= 15)) {
-		frequencyRoll = 3;
+	else if (abs(roll) < 30 /* && (abs(roll) >= 15) */) {
+		frequencyRoll = 2;
 	}
-		else if (abs(roll) < 15) {
+		else /*if (abs(roll) < 15) */ {
 		frequencyRoll = 2;
 	}
 	
@@ -74,7 +79,7 @@ void flashLeds(float pitch, float roll) {
 	GPIO_ToggleBits(GPIOD, GPIO_Pin_15);
 	GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 	GPIO_ToggleBits(GPIOD, GPIO_Pin_14);
-	
+
 }
 
 void SysTick_Handler(void) {
