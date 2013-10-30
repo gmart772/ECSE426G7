@@ -5,14 +5,17 @@
  * Iniitializes the calibration matrix.
  */
 void initAccelerometer(void) {
-	LIS302DL_InitTypeDef lis302dl_InitStruct;
-	LIS302DL_InterruptConfigTypeDef LIS302DL_InterruptConfigTypeDefStruct;
+	
 	EXTI_InitTypeDef EXTI_InitTypeDefStruct;
   NVIC_InitTypeDef NVIC_InitStruct;
-	uint8_t clickInterrupt = 0x7;
-	uint8_t zThreshold	= 0x04;
-	uint8_t timeLimit = 0x01;
-	uint8_t latency = 0x00;
+	GPIO_InitTypeDef GPIO_InitStructure;
+	LIS302DL_InitTypeDef lis302dl_InitStruct;
+	LIS302DL_InterruptConfigTypeDef LIS302DL_InterruptConfigTypeDefStruct;
+		
+	uint8_t clickInterrupt = 0xE0;
+	uint8_t zThreshold	= 0xC0;
+	uint8_t xyThreshold	= 0xCC;
+	uint8_t timeLimit = 0x40;
 	
 	lis302dl_InitStruct.Axes_Enable = LIS302DL_XYZ_ENABLE;
 	lis302dl_InitStruct.Self_Test = LIS302DL_SELFTEST_NORMAL;
@@ -21,19 +24,30 @@ void initAccelerometer(void) {
 	lis302dl_InitStruct.Power_Mode = LIS302DL_LOWPOWERMODE_ACTIVE;
 	
 	LIS302DL_Init(&lis302dl_InitStruct);
-	
+		
 	LIS302DL_InterruptConfigTypeDefStruct.Latch_Request = LIS302DL_INTERRUPTREQUEST_LATCHED;
-  LIS302DL_InterruptConfigTypeDefStruct.SingleClick_Axes=LIS302DL_CLICKINTERRUPT_Z_ENABLE;
-  LIS302DL_InterruptConfigTypeDefStruct.DoubleClick_Axes=LIS302DL_DOUBLECLICKINTERRUPT_XYZ_DISABLE;
+  LIS302DL_InterruptConfigTypeDefStruct.SingleClick_Axes = LIS302DL_CLICKINTERRUPT_XYZ_ENABLE;
+  LIS302DL_InterruptConfigTypeDefStruct.DoubleClick_Axes = LIS302DL_DOUBLECLICKINTERRUPT_XYZ_DISABLE;
   LIS302DL_InterruptConfig(&LIS302DL_InterruptConfigTypeDefStruct);
 	
+	//uint8_t latency = 0x6h;
+	
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOE, ENABLE);
+	
+		 /* Configure PA0 pin as input floating */
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
+  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
+  GPIO_Init(GPIOE, &GPIO_InitStructure);
+	
+  //LIS302DL_Write(&enableClickZ, LIS302DL_CLICK_SRC_REG_ADDR, 2);
+	
 	LIS302DL_Write(&clickInterrupt,LIS302DL_CTRL_REG3_ADDR, 1);
-	
 	LIS302DL_Write(&zThreshold, LIS302DL_CLICK_THSZ_REG_ADDR, 1);
-	
+	LIS302DL_Write(&xyThreshold, LIS302DL_CLICK_THSY_X_REG_ADDR, 1);
 	LIS302DL_Write(&timeLimit, LIS302DL_CLICK_TIMELIMIT_REG_ADDR, 1);
 	
-  LIS302DL_Write( &latency, LIS302DL_CLICK_LATENCY_REG_ADDR, 1);
+ // LIS302DL_Write(&latency, LIS302DL_CLICK_LATENCY_REG_ADDR, 1);
 	
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
   SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOE, EXTI_PinSource0);
@@ -45,16 +59,13 @@ void initAccelerometer(void) {
   EXTI_Init(&EXTI_InitTypeDefStruct);
 	
 	NVIC_InitStruct.NVIC_IRQChannel = EXTI0_IRQn;
-  NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 0x00;
+  NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 0x01;
   NVIC_InitStruct.NVIC_IRQChannelSubPriority = 0x01;
   NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStruct);
-	
 
-
-	
-	uint8_t junk[2];
-  LIS302DL_Read( junk, LIS302DL_CLICK_SRC_REG_ADDR, 2);
+	uint8_t scratch[2];
+  LIS302DL_Read( scratch, LIS302DL_CLICK_SRC_REG_ADDR, 2);
 	
 	correctionMatrix[0][0] = 1.0479;
 	correctionMatrix[0][1] = -0.0188;
@@ -81,9 +92,9 @@ void getAcceleration(int32_t *values) {
 	int32_t readings[4];
 	LIS302DL_ReadACC(readings);
 	readings[3] = 1000;
-
-	
-	correctValues(values, readings);
+	uint8_t scratch[2];
+	LIS302DL_Read( scratch, LIS302DL_CLICK_SRC_REG_ADDR, 2);
+	calibrate(values, readings);
 	
 	
 }
@@ -120,10 +131,12 @@ float getPitch(int32_t accX, int32_t accY, int32_t accZ) {
  * @return Returns the roll in degrees as a float.
  */
 float getRoll(int32_t accX, int32_t accY, int32_t accZ) {
+	
+	
 	return ((180 / PI) * getBeta(accX, accY, accZ));
 }
 
-void correctValues(int32_t *result, int32_t *readings) {
+void calibrate(int32_t *result, int32_t *readings) {
 	int i, j;
 	
 	for (i = 0; i < 3; i++) {
@@ -145,6 +158,6 @@ void EXTI0_IRQHandler(void) {
 		isTapDetected = TAP_DETECTED;
 		EXTI_ClearITPendingBit(LIS302DL_SPI_INT1_EXTI_LINE);
 	}
-	
+	printf("Interrupt!\n");
     EXTI_ClearFlag(LIS302DL_SPI_INT1_EXTI_LINE);
 }        

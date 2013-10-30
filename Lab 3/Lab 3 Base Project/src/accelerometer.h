@@ -1,6 +1,7 @@
 #include "stm32f4_discovery_lis302dl.h"
 #include "math.h"
 #include "conversion.h"
+#include "stm32f4xx_gpio.h"
 
 #define NO_TAP_DETECTED 0
 #define TAP_DETECTED 1
@@ -18,6 +19,6 @@ void getAcceleration(int32_t *values);
 float* getTilt(int32_t *acc, float *tilts);
 float getPitch(int32_t accX, int32_t accY, int32_t accZ);
 float getRoll(int32_t accX, int32_t accY, int32_t accZ);
-void correctValues(int32_t *values, int32_t *readings);
+void calibrate(int32_t *values, int32_t *readings);
 int tappingDetected(void);
 void EXTI0_IRQHandler(void);

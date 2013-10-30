@@ -16,7 +16,7 @@ short isTapDetected;
 int main()
 {
 	int32_t values[3];
-	float tilts[3];
+//	float tilts[3];
 	float pitch, roll;
 	uint8_t currentState = ACCELEROMETER;
 
@@ -39,15 +39,15 @@ int main()
 		if ((isTapDetected == TAP_DETECTED) && (currentState == ACCELEROMETER)) {
 			isTapDetected = NO_TAP_DETECTED;
 			currentState = PWM;
-			uint8_t junk[2];
-			LIS302DL_Read( junk, LIS302DL_CLICK_SRC_REG_ADDR, 2);
+			uint8_t scratch[2];
+			LIS302DL_Read( scratch, LIS302DL_CLICK_SRC_REG_ADDR, 2);
 
 		}
 		else if ((isTapDetected == TAP_DETECTED) && (currentState == PWM)) {
 			isTapDetected = NO_TAP_DETECTED;
 			currentState = ACCELEROMETER;
-				uint8_t junk[2];
-				LIS302DL_Read( junk, LIS302DL_CLICK_SRC_REG_ADDR, 2);
+			uint8_t scratch[2];
+			LIS302DL_Read( scratch, LIS302DL_CLICK_SRC_REG_ADDR, 2);
 			
 		}
 		
@@ -67,12 +67,12 @@ int main()
 				roll = getRoll(filterX.averageValue, filterY.averageValue, filterZ.averageValue);
 				
 				flashLeds(pitch, roll);
-				printf("%d\n", (int) filterX.averageValue);
-				printf("%d\n", (int) filterY.averageValue);
-				printf("%d\n\n", (int) filterZ.averageValue);
+		//		printf("%d\n", (int) filterX.averageValue);
+		//		printf("%d\n", (int) filterY.averageValue);
+		//		printf("%d\n\n", (int) filterZ.averageValue);
 				
-				printf("Pitch: %f\n", pitch);
-				printf("Roll: %f\n\n", roll);
+		//		printf("Pitch: %f\n", pitch);
+		//		printf("Roll: %f\n\n", roll);
 			
 			}
 			else {

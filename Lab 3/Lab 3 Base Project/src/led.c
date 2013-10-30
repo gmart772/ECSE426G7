@@ -16,11 +16,6 @@
 	gpio_init_s.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	GPIO_Init(GPIOD, &gpio_init_s);
 
-	led1On = 0; 
-	led2On = 0;	
-	led3On = 0;
-	led4On = 0;
-	 
 	ticks = 0;
 	// Configured for 50 ms period
 	// Configure SysTick to be 20Hz
