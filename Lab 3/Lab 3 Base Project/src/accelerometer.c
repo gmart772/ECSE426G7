@@ -15,7 +15,7 @@ void initAccelerometer(void) {
 	uint8_t clickInterrupt = 0xE0;
 	uint8_t zThreshold	= 0xC0;
 	uint8_t xyThreshold	= 0xCC;
-	uint8_t timeLimit = 0x40;
+	uint8_t timeLimit = 0x80;
 	
 	lis302dl_InitStruct.Axes_Enable = LIS302DL_XYZ_ENABLE;
 	lis302dl_InitStruct.Self_Test = LIS302DL_SELFTEST_NORMAL;
