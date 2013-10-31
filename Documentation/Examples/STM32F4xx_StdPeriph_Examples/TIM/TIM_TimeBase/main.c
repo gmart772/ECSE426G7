@@ -124,33 +124,25 @@ int main(void)
   TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
   TIM_OCInitStructure.TIM_Pulse = CCR1_Val;
   TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;
-
   TIM_OC1Init(TIM3, &TIM_OCInitStructure);
-
   TIM_OC1PreloadConfig(TIM3, TIM_OCPreload_Disable);
 
   /* Output Compare Timing Mode configuration: Channel2 */
   TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
   TIM_OCInitStructure.TIM_Pulse = CCR2_Val;
-
   TIM_OC2Init(TIM3, &TIM_OCInitStructure);
-
   TIM_OC2PreloadConfig(TIM3, TIM_OCPreload_Disable);
 
   /* Output Compare Timing Mode configuration: Channel3 */
   TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
   TIM_OCInitStructure.TIM_Pulse = CCR3_Val;
-
   TIM_OC3Init(TIM3, &TIM_OCInitStructure);
-
   TIM_OC3PreloadConfig(TIM3, TIM_OCPreload_Disable);
 
   /* Output Compare Timing Mode configuration: Channel4 */
   TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
   TIM_OCInitStructure.TIM_Pulse = CCR4_Val;
-
   TIM_OC4Init(TIM3, &TIM_OCInitStructure);
-
   TIM_OC4PreloadConfig(TIM3, TIM_OCPreload_Disable);
    
   /* TIM Interrupts enable */

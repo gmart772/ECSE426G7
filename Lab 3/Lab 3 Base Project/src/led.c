@@ -1,54 +1,42 @@
 #include "led.h"
 
 /**
- * @brief Initializes the LEDs. 
- * Inputs and outputs no variables.
- */void initLeds(void) {
-	
-	 // Make sure GPIO is not init
-	 GPIO_DeInit(GPIOD);
-	 
-	// Initialize LED GPIOD
-	GPIO_InitTypeDef gpio_init_s;
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
-	GPIO_StructInit(&gpio_init_s);
-	gpio_init_s.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
-	gpio_init_s.GPIO_Mode = GPIO_Mode_OUT;
-	gpio_init_s.GPIO_Speed = GPIO_Speed_100MHz;
-	gpio_init_s.GPIO_OType = GPIO_OType_PP;
-	gpio_init_s.GPIO_PuPd = GPIO_PuPd_NOPULL;
-	GPIO_Init(GPIOD, &gpio_init_s);
-
-	// Configured for 50 ms period
-	// Configure SysTick to be 20Hz
-	SysTick_Config(SystemCoreClock / 20);
-}
-
-/**
  * @brief Initializes the LEDs for PWM (Output compare of TIM4). 
  * Inputs and outputs no variables.
- */void initLedsForPWM(void)
-{
-	// Make sure GPIO is not init
-	GPIO_DeInit(GPIOD);
-	
+ */void initLeds(void)
+{	
   GPIO_InitTypeDef GPIO_InitStructure;
 
-  /* GPIOA, GPIOB and GPIOE Clocks enable */
-  RCC_AHB1PeriphClockCmd( RCC_AHB1Periph_GPIOD , ENABLE);
+  /* GPIOD Clocks enable */
+  RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD , ENABLE);
   
   /* GPIOA Configuration: Channel 1 and 3 as alternate function push-pull */
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_11 | GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
   GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
   GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP ;
   GPIO_Init(GPIOD, &GPIO_InitStructure);
   
+	GPIO_PinAFConfig(GPIOD, GPIO_PinSource11, GPIO_AF_TIM3);
   GPIO_PinAFConfig(GPIOD, GPIO_PinSource12, GPIO_AF_TIM4);
   GPIO_PinAFConfig(GPIOD, GPIO_PinSource13, GPIO_AF_TIM4);
 	GPIO_PinAFConfig(GPIOD, GPIO_PinSource14, GPIO_AF_TIM4);
 	GPIO_PinAFConfig(GPIOD, GPIO_PinSource15, GPIO_AF_TIM4);
+}
+
+/**
+ * @brief Configures the LEDs duty cycle with respect to the 
+ * Outputs no variables.
+ * @param pitch: The pitch measured in degrees.
+ * @param roll: The roll measured in degrees.
+ */
+void configureLEDS(int LED1, int LED2, int LED3, int LED4)
+{
+	TIM4->CCR1 = LED1;
+	TIM4->CCR2 = LED2;
+	TIM4->CCR3 = LED3;
+	TIM4->CCR4 = LED4;
 }
 
 /**
@@ -58,69 +46,42 @@
  * @param roll: The roll measured in degrees.
  */
 void flashLeds(float pitch, float roll) {
- 	int frequencyPitch;
-	int pulseFreq;
-	int counter;
 	
-	if ((abs(pitch) >= 60) && (abs(pitch) <= 90)) {
-		frequencyPitch = 15;
-	}
-	else if ((abs(pitch) >= 30 && abs(pitch) <= 60)) {
-		frequencyPitch = 7;
-	}
-	else  {
-		frequencyPitch = 2;
-	}
-		
-	int frequencyRoll;
+	int LED1, LED2, LED3, LED4;
 	
-	if ((abs(roll) <= 90) && (abs(roll) > 60)) {
-		frequencyRoll = 15;
-	}
-	else if ((abs(roll) >= 30) && (abs(roll) <= 60)) {
-		frequencyRoll = 7;
-	}
-		else {
-		frequencyRoll = 2;
-	}
-	
-	pulseFreq = frequencyRoll * frequencyPitch;
-	
-	SysTick_Config(SystemCoreClock / pulseFreq);
-	
-	if (pulseFreq < 5)
+	if (roll > 3)
 	{
-		counter = 3;
-		frequencyDivisions++;
+		LED3 = ((TIM4_PERIOD)/90)*roll;
+		LED1 = 0;
 	}
-	else if (pulseFreq < 15)
+	else if (roll < 3)
 	{
-		counter = 2;
-		frequencyDivisions++;
+		LED1 = ((TIM4_PERIOD/90)*(abs(roll)));
+		LED3 = 0;
 	}
 	else
 	{
-		counter = 1;
-		frequencyDivisions++;
+		LED1 = 0;
+		LED3 = 0;
 	}
 	
-	// Wait for interrupt
-	//while(!ticks);
-	
-	if (frequencyDivisions >= counter)
+	if (pitch > 3)
 	{
-		frequencyDivisions = 0;
-		
-		GPIO_ToggleBits(GPIOD, GPIO_Pin_13);
-		GPIO_ToggleBits(GPIOD, GPIO_Pin_15);
-		GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
-		GPIO_ToggleBits(GPIOD, GPIO_Pin_14);
+		LED4 = ((TIM4_PERIOD/90)*pitch);
+		LED2 = 0;
+	}
+	else if (pitch < 3)
+	{
+		LED2 = ((TIM4_PERIOD/90)*(abs(pitch)));
+		LED4 = 0;
+	}
+	else
+	{
+		LED2 = 0;
+		LED4 = 0;
 	}
 
-}
-
-void SysTick_Handler(void) {
-	ticks = 1;
+	configureLEDS(LED1, LED2, LED3, LED4);
 }
 
 /**

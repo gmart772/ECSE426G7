@@ -7,12 +7,14 @@
 //									GPIO_PIN_15   									//
 /*	---------------------------------------------		*/
 
+#define TIM4_PERIOD 65535
+
 static volatile uint_fast16_t ticks;
 
 static int frequencyDivisions;
 
 void initLeds(void);
-void initLedsForPWM(void);
+
 void flashLeds(float pitch, float roll);
-void SysTick_Handler(void);
+
 float abs(float f);

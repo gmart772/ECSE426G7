@@ -12,10 +12,10 @@ void initAccelerometer(void) {
 	LIS302DL_InitTypeDef lis302dl_InitStruct;
 	LIS302DL_InterruptConfigTypeDef LIS302DL_InterruptConfigTypeDefStruct;
 		
-	uint8_t clickInterrupt = 0x70;
-	uint8_t zThreshold	= 0xD0;
-	uint8_t xyThreshold	= 0xFF;
-	uint8_t timeLimit = 0x40;
+	uint8_t clickInterrupt 	= 0x07;
+	uint8_t zThreshold			= 0xFF;
+	uint8_t xyThreshold			= 0xFF;
+	uint8_t timeLimit 			= 0xFF;   
 	
 	lis302dl_InitStruct.Axes_Enable = LIS302DL_XYZ_ENABLE;
 	lis302dl_InitStruct.Self_Test = LIS302DL_SELFTEST_NORMAL;
@@ -30,7 +30,7 @@ void initAccelerometer(void) {
   LIS302DL_InterruptConfigTypeDefStruct.DoubleClick_Axes = LIS302DL_DOUBLECLICKINTERRUPT_XYZ_DISABLE;
   LIS302DL_InterruptConfig(&LIS302DL_InterruptConfigTypeDefStruct);
 	
-	//uint8_t latency = 0x6h;
+	uint8_t latency = 0x7F;
 	
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOE, ENABLE);
 	
@@ -47,7 +47,7 @@ void initAccelerometer(void) {
 	LIS302DL_Write(&xyThreshold, LIS302DL_CLICK_THSY_X_REG_ADDR, 1);
 	LIS302DL_Write(&timeLimit, LIS302DL_CLICK_TIMELIMIT_REG_ADDR, 1);
 	
- // LIS302DL_Write(&latency, LIS302DL_CLICK_LATENCY_REG_ADDR, 1);
+  LIS302DL_Write(&latency, LIS302DL_CLICK_LATENCY_REG_ADDR, 1);
 	
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
   SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOE, EXTI_PinSource0);

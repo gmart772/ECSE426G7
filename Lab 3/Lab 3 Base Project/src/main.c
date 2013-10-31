@@ -10,9 +10,16 @@
 #define ACCELEROMETER 0
 #define PWM 1
 
+#define PWM_hold_time 13
+
 short timerInterrupt;
 short timerInterrupt4;
 short isTapDetected;
+
+int PWM_counter;
+int PWM_hold_high_counter;
+int PWM_hold_low_counter;
+int PWM_temp_counter;
 
 int main()
 {
@@ -33,8 +40,16 @@ int main()
 	
 	initTimer();
 	initTimer4();
+	initializeTimerPin();
+	
 	initLeds();
-
+	
+	PWM_counter = 0;
+	PWM_hold_high_counter = 0;
+	PWM_hold_low_counter = 0;
+	PWM_temp_counter = 0;
+	
+	configureLEDS(TIM4_PERIOD, TIM4_PERIOD, TIM4_PERIOD, TIM4_PERIOD);
 	
 	while(1) {
 		
@@ -42,17 +57,13 @@ int main()
 			isTapDetected = NO_TAP_DETECTED;
 			currentState = PWM;
 			resetLatch();
-			
-			// Reset the LEDs for TIM4
-			initLedsForPWM();
+			configureLEDS(0, 0, 0, 0);
 		}
 		else if ((isTapDetected == TAP_DETECTED) && (currentState == PWM)) {
 			isTapDetected = NO_TAP_DETECTED;
 			currentState = ACCELEROMETER;
-			resetLatch();
-			
-			// Reset the LEDS for Accelerometer
-			initLeds();
+			resetLatch();		
+			configureLEDS(0, 0, 0, 0);
 		}
 		
 		if (currentState == ACCELEROMETER) {
@@ -70,24 +81,40 @@ int main()
 				roll = getRoll(filterX.averageValue, filterY.averageValue, filterZ.averageValue);
 				
 				flashLeds(pitch, roll);
-	//		printf("%d\n", (int) filterX.averageValue);
-	//		printf("%d\n", (int) filterY.averageValue);
-	//		printf("%d\n\n", (int) filterZ.averageValue);
+				//printf("%d\n", (int) filterX.averageValue);
+				//printf("%d\n", (int) filterY.averageValue);
+				//printf("%d\n\n", (int) filterZ.averageValue);
 				
 				printf("Pitch: %f\n", pitch);
 				printf("Roll: %f\n\n", roll);
 			
 			}
 			else {
+				while(timerInterrupt != TIMEOUT_OCCURRED);
+				timerInterrupt = NO_TIMEOUT;
 				
-				//Turn all LEDs off until we get PWM started	
-				// Debug code to detect tap
-				//GPIO_WriteBit(GPIOD, GPIO_Pin_13, 0);
-				//GPIO_WriteBit(GPIOD, GPIO_Pin_15, 0);
-				//GPIO_WriteBit(GPIOD, GPIO_Pin_12, 0);
-				//GPIO_WriteBit(GPIOD, GPIO_Pin_14, 0);
+				PWM_temp_counter = ((TIM4_PERIOD)/100)*PWM_counter;
+				configureLEDS(PWM_temp_counter, PWM_temp_counter, PWM_temp_counter, PWM_temp_counter);
+				
+				if (PWM_counter == 0 && PWM_hold_low_counter < PWM_hold_time)
+				{
+					PWM_hold_low_counter++;
+				}
+				else if (PWM_counter < 100)
+				{
+					PWM_counter += 1;
+					PWM_hold_low_counter = 0;
+				}
+				else if (PWM_hold_high_counter == PWM_hold_time)
+				{
+					PWM_counter = 0;
+					PWM_hold_high_counter = 0;
+				}
+				else
+				{
+					PWM_hold_high_counter++;
+				}
 			}
-		
 	}
 	
 }
