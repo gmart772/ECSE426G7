@@ -134,6 +134,10 @@ void calibrate(int32_t *result, int32_t *readings) {
 			result[i] +=  (int32_t) (correctionMatrix[i][j] * readings[j]); 
 		}
 	}
+	
+	result[0] += X_OFFSET;
+	result[1] += Y_OFFSET;
+	result[2] += Z_OFFSET;
 }
 
 /**

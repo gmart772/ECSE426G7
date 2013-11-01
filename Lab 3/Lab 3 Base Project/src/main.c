@@ -81,9 +81,9 @@ int main()
 				roll = getRoll(filterX.averageValue, filterY.averageValue, filterZ.averageValue);
 				
 				flashLeds(pitch, roll);
-				//printf("%d\n", (int) filterX.averageValue);
-				//printf("%d\n", (int) filterY.averageValue);
-				//printf("%d\n\n", (int) filterZ.averageValue);
+				printf("%d\n", (int) filterX.averageValue);
+				printf("%d\n", (int) filterY.averageValue);
+				printf("%d\n\n", (int) filterZ.averageValue);
 				
 				printf("Pitch: %f\n", pitch);
 				printf("Roll: %f\n\n", roll);

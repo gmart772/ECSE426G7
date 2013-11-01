@@ -3,935 +3,103 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-C:\Users\pwhite8\ECSE426G7\Lab 3\Lab 3 Base Project\Lab3_Project.uvproj
-Project File Date:  10/31/2013
+C:\Users\gmarti37\ECSE426G7\Lab 3\Lab 3 Base Project\Lab3_Project.uvproj
+Project File Date:  11/01/2013
 
 <h2>Output:</h2>
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
 Build target 'Target 1'
+assembling startup_stm32f40xx.s...
+compiling fputc_debug.c...
 compiling main.c...
 src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
 src\filter.h(12): warning:  #1-D: last line of file ends without a newline
 src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-linking...
-Program Size: Code=23736 RO-data=896 RW-data=88 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
+src\timer.h(16): warning:  #1295-D: Deprecated declaration initializeTimerPin - give arg types
+src\timer.h(18): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
+src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
+compiling system_stm32f4xx.c...
+compiling filter.c...
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+compiling conversion.c...
+src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
 compiling accelerometer.c...
 src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
 src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23736 RO-data=896 RW-data=88 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-linking...
-Program Size: Code=23736 RO-data=896 RW-data=88 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
+compiling processing.c...
 src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23736 RO-data=896 RW-data=88 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23736 RO-data=896 RW-data=88 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23736 RO-data=896 RW-data=88 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-compiling led.c...
-src\led.c(50): warning:  #550-D: variable "counter" was set but never used
-linking...
-Program Size: Code=23760 RO-data=896 RW-data=88 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling led.c...
-src\led.c(50): warning:  #550-D: variable "counter" was set but never used
-linking...
-Program Size: Code=23760 RO-data=896 RW-data=88 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 1 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling led.c...
-src\led.c(50): warning:  #550-D: variable "counter" was set but never used
-linking...
-Program Size: Code=23760 RO-data=896 RW-data=88 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 1 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-linking...
-Program Size: Code=23776 RO-data=896 RW-data=88 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling led.c...
-src\led.c(50): warning:  #550-D: variable "counter" was set but never used
-linking...
-Program Size: Code=23776 RO-data=896 RW-data=88 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 1 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling led.c...
-src\led.c(50): warning:  #177-D: variable "counter" was declared but never referenced
-linking...
-Program Size: Code=23704 RO-data=896 RW-data=80 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 1 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling led.c...
-src\led.c(50): warning:  #177-D: variable "counter" was declared but never referenced
-linking...
-Program Size: Code=23720 RO-data=896 RW-data=80 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 1 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling led.c...
-src\led.c(50): warning:  #177-D: variable "counter" was declared but never referenced
-linking...
-Program Size: Code=23704 RO-data=896 RW-data=80 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 1 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling led.c...
-src\led.c(49): warning:  #550-D: variable "pulseFreq" was set but never used
-linking...
-Program Size: Code=23848 RO-data=896 RW-data=80 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 1 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling led.c...
-src\led.c(49): warning:  #550-D: variable "pulseFreq" was set but never used
-linking...
-Program Size: Code=23856 RO-data=896 RW-data=80 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 1 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling led.c...
-src\led.c(49): warning:  #550-D: variable "pulseFreq" was set but never used
-linking...
-Program Size: Code=23872 RO-data=896 RW-data=80 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 1 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling led.c...
-src\led.c(49): warning:  #550-D: variable "pulseFreq" was set but never used
-linking...
-Program Size: Code=23872 RO-data=896 RW-data=80 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 1 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-compiling led.c...
-linking...
-Program Size: Code=23720 RO-data=896 RW-data=88 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-linking...
-Program Size: Code=23720 RO-data=896 RW-data=88 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-linking...
-Program Size: Code=23720 RO-data=896 RW-data=88 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-linking...
-Program Size: Code=23720 RO-data=896 RW-data=88 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-linking...
-Program Size: Code=23720 RO-data=896 RW-data=88 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-linking...
-Program Size: Code=23744 RO-data=896 RW-data=92 ZI-data=1684  
-".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-linking...
-Program Size: Code=23752 RO-data=896 RW-data=92 ZI-data=1684  
-".\obj\Lab3_Project.axf" - 0 Error(s), 4 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
 compiling timer.c...
 src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
+src\timer.h(16): warning:  #1295-D: Deprecated declaration initializeTimerPin - give arg types
+src\timer.h(18): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
+compiling led.c...
+compiling misc.c...
+compiling stm32f4xx_adc.c...
+compiling stm32f4xx_can.c...
+compiling stm32f4xx_crc.c...
+compiling stm32f4xx_cryp.c...
+compiling stm32f4xx_cryp_aes.c...
+compiling stm32f4xx_cryp_des.c...
+compiling stm32f4xx_cryp_tdes.c...
+compiling stm32f4xx_dac.c...
+compiling stm32f4xx_dbgmcu.c...
+compiling stm32f4xx_dcmi.c...
+compiling stm32f4xx_dma.c...
+compiling stm32f4xx_exti.c...
+compiling stm32f4xx_flash.c...
+compiling stm32f4xx_fsmc.c...
+compiling stm32f4xx_gpio.c...
+compiling stm32f4xx_hash.c...
+compiling stm32f4xx_hash_md5.c...
+compiling stm32f4xx_hash_sha1.c...
+compiling stm32f4xx_i2c.c...
+compiling stm32f4xx_iwdg.c...
+compiling stm32f4xx_pwr.c...
+compiling stm32f4xx_rcc.c...
+compiling stm32f4xx_rng.c...
+compiling stm32f4xx_rtc.c...
+compiling stm32f4xx_sdio.c...
+compiling stm32f4xx_spi.c...
+compiling stm32f4xx_syscfg.c...
+compiling stm32f4xx_tim.c...
+compiling stm32f4xx_usart.c...
+compiling stm32f4xx_wwdg.c...
+compiling stm32f4_discovery_lis302dl.c...
 linking...
-Program Size: Code=23728 RO-data=896 RW-data=92 ZI-data=1684  
+Program Size: Code=20488 RO-data=720 RW-data=96 ZI-data=1680  
+".\obj\Lab3_Project.axf" - 0 Error(s), 14 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
+src\timer.h(16): warning:  #1295-D: Deprecated declaration initializeTimerPin - give arg types
+src\timer.h(18): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
+src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
+compiling filter.c...
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=20496 RO-data=720 RW-data=96 ZI-data=1680  
+".\obj\Lab3_Project.axf" - 0 Error(s), 7 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
+src\timer.h(16): warning:  #1295-D: Deprecated declaration initializeTimerPin - give arg types
+src\timer.h(18): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
+src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
+linking...
+Program Size: Code=23904 RO-data=896 RW-data=96 ZI-data=1680  
 ".\obj\Lab3_Project.axf" - 0 Error(s), 6 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
-compiling led.c...
-linking...
-Program Size: Code=23728 RO-data=896 RW-data=92 ZI-data=1684  
-".\obj\Lab3_Project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling led.c...
-linking...
-Program Size: Code=23736 RO-data=896 RW-data=92 ZI-data=1684  
-".\obj\Lab3_Project.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
-linking...
-Program Size: Code=23752 RO-data=896 RW-data=92 ZI-data=1684  
-".\obj\Lab3_Project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
-linking...
-Program Size: Code=23752 RO-data=896 RW-data=92 ZI-data=1684  
-".\obj\Lab3_Project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
-linking...
-Program Size: Code=23752 RO-data=896 RW-data=92 ZI-data=1684  
-".\obj\Lab3_Project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
-linking...
-Program Size: Code=23752 RO-data=896 RW-data=92 ZI-data=1684  
-".\obj\Lab3_Project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
-linking...
-Program Size: Code=23760 RO-data=896 RW-data=92 ZI-data=1684  
-".\obj\Lab3_Project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
-linking...
-Program Size: Code=23760 RO-data=896 RW-data=92 ZI-data=1684  
-".\obj\Lab3_Project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
-src\main.c(116): error:  #20: identifier "PWM_hold_counter" is undefined
-Target not created
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 7 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 7 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Build target 'Target 1'
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23800 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23792 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23808 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling accelerometer.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\accelerometer.c(160): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23808 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
-src\filter.h(12): warning:  #1-D: last line of file ends without a newline
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
-compiling timer.c...
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-linking...
-Program Size: Code=23824 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 7 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling led.c...
-linking...
-Program Size: Code=23824 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling led.c...
-linking...
-Program Size: Code=23832 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling timer.c...
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(17): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-linking...
-Program Size: Code=23824 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 2 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
 Erase Done.
 Programming Done.
 Verify OK.
@@ -943,22 +111,10 @@ src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg 
 src\timer.h(16): warning:  #1295-D: Deprecated declaration initializeTimerPin - give arg types
 src\timer.h(18): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
 src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
-compiling timer.c...
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(16): warning:  #1295-D: Deprecated declaration initializeTimerPin - give arg types
-src\timer.h(18): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
 linking...
-Program Size: Code=23880 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 9 Warning(s).
-Build target 'Target 1'
-compiling timer.c...
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(16): warning:  #1295-D: Deprecated declaration initializeTimerPin - give arg types
-src\timer.h(18): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
-linking...
-Program Size: Code=23888 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 3 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Program Size: Code=24248 RO-data=896 RW-data=96 ZI-data=1680  
+".\obj\Lab3_Project.axf" - 0 Error(s), 6 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
 Erase Done.
 Programming Done.
 Verify OK.
@@ -970,18 +126,169 @@ src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg 
 src\timer.h(16): warning:  #1295-D: Deprecated declaration initializeTimerPin - give arg types
 src\timer.h(18): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
 src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
-compiling timer.c...
-src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
-src\timer.h(16): warning:  #1295-D: Deprecated declaration initializeTimerPin - give arg types
-src\timer.h(18): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
 linking...
-Program Size: Code=23896 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 9 Warning(s).
-Load "C:\\Users\\pwhite8\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Program Size: Code=20496 RO-data=720 RW-data=96 ZI-data=1680  
+".\obj\Lab3_Project.axf" - 0 Error(s), 6 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
 Erase Done.
 Programming Done.
 Verify OK.
 Build target 'Target 1'
+compiling main.c...
+src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
+src\timer.h(16): warning:  #1295-D: Deprecated declaration initializeTimerPin - give arg types
+src\timer.h(18): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
+src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
+compiling accelerometer.c...
+src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
+src\accelerometer.c(164): warning:  #1-D: last line of file ends without a newline
 linking...
-Program Size: Code=23896 RO-data=896 RW-data=96 ZI-data=1680  
-".\obj\Lab3_Project.axf" - 0 Error(s), 0 Warning(s).
+Program Size: Code=20512 RO-data=720 RW-data=96 ZI-data=1680  
+".\obj\Lab3_Project.axf" - 0 Error(s), 8 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
+src\timer.h(16): warning:  #1295-D: Deprecated declaration initializeTimerPin - give arg types
+src\timer.h(18): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
+src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
+compiling accelerometer.c...
+src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
+src\accelerometer.c(164): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23920 RO-data=896 RW-data=96 ZI-data=1680  
+".\obj\Lab3_Project.axf" - 0 Error(s), 8 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
+src\timer.h(16): warning:  #1295-D: Deprecated declaration initializeTimerPin - give arg types
+src\timer.h(18): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
+src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
+linking...
+Program Size: Code=24264 RO-data=896 RW-data=96 ZI-data=1680  
+".\obj\Lab3_Project.axf" - 0 Error(s), 6 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
+src\timer.h(16): warning:  #1295-D: Deprecated declaration initializeTimerPin - give arg types
+src\timer.h(18): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
+src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
+compiling accelerometer.c...
+src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
+src\accelerometer.c(164): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=24264 RO-data=896 RW-data=96 ZI-data=1680  
+".\obj\Lab3_Project.axf" - 0 Error(s), 8 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
+src\timer.h(16): warning:  #1295-D: Deprecated declaration initializeTimerPin - give arg types
+src\timer.h(18): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
+src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
+compiling accelerometer.c...
+src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
+src\accelerometer.c(164): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=24264 RO-data=896 RW-data=96 ZI-data=1680  
+".\obj\Lab3_Project.axf" - 0 Error(s), 8 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
+src\timer.h(16): warning:  #1295-D: Deprecated declaration initializeTimerPin - give arg types
+src\timer.h(18): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
+src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
+compiling accelerometer.c...
+src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
+src\accelerometer.c(164): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=24264 RO-data=896 RW-data=96 ZI-data=1680  
+".\obj\Lab3_Project.axf" - 0 Error(s), 8 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
+src\timer.h(16): warning:  #1295-D: Deprecated declaration initializeTimerPin - give arg types
+src\timer.h(18): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
+src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
+compiling accelerometer.c...
+src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
+src\accelerometer.c(164): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=24264 RO-data=896 RW-data=96 ZI-data=1680  
+".\obj\Lab3_Project.axf" - 0 Error(s), 8 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
+src\timer.h(16): warning:  #1295-D: Deprecated declaration initializeTimerPin - give arg types
+src\timer.h(18): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
+src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
+compiling accelerometer.c...
+src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
+src\accelerometer.c(164): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=24256 RO-data=896 RW-data=96 ZI-data=1680  
+".\obj\Lab3_Project.axf" - 0 Error(s), 8 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
+src\filter.h(12): warning:  #1-D: last line of file ends without a newline
+src\timer.h(15): warning:  #1295-D: Deprecated declaration initTimer - give arg types
+src\timer.h(16): warning:  #1295-D: Deprecated declaration initializeTimerPin - give arg types
+src\timer.h(18): warning:  #1295-D: Deprecated declaration initTimer4 - give arg types
+src\led.h(10): warning:  #47-D: incompatible redefinition of macro "TIM4_PERIOD" (declared at line 10 of "src\timer.h")
+compiling accelerometer.c...
+src\conversion.h(11): warning:  #1-D: last line of file ends without a newline
+src\accelerometer.c(164): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=24264 RO-data=896 RW-data=96 ZI-data=1680  
+".\obj\Lab3_Project.axf" - 0 Error(s), 8 Warning(s).
+Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 3\\Lab 3 Base Project\\obj\\Lab3_Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.

@@ -5,6 +5,9 @@
 
 #define NO_TAP_DETECTED 0
 #define TAP_DETECTED 1
+#define X_OFFSET 8
+#define Y_OFFSET -17
+#define Z_OFFSET -18
 
 extern short isTapDetected;
 

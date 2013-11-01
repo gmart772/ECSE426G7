@@ -1,0 +1,29 @@
+Z down
+averageX 1.3822
+averageY 18.1783
+averageZ 1.0390e+03
+
+Z up
+averageX -6.5163
+averageY 55.1576
+averageZ -996.3043
+
+Y down 
+averageX -33.9712
+averageY 1.0432e+03
+averageZ 21.0885
+
+Y up
+averageX 28.6819
+averageY -1.0100e+03
+averageZ = 44.4852
+
+X down
+averageX 1.0242e+03
+averageY 19.1745
+averageZ 4.2284
+
+X up
+averageX -1.0407e+03
+averageY -69.9069
+averageZ 185.9034
