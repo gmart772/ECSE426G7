@@ -3,6 +3,7 @@
 /**
  * @brief Interrupt handler for TIM3. Resets the 
  * interrupt flag. No input or output. 
+ * Toggle GPIOB Pin 11 to show the timer period on GPIOB Pin 11
  */
 void TIM3_IRQHandler(void) {
 	// Get current interrupt status	
@@ -10,7 +11,7 @@ void TIM3_IRQHandler(void) {
 			timerInterrupt = TIMEOUT_OCCURRED;
 			TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
 		
-			// Toggle a GPIO Pin
+			// Toggle a GPIO Pin 
 			GPIO_ToggleBits(GPIOB, GPIO_Pin_11);
 		}
 }
@@ -36,21 +37,28 @@ void initTimer() {
 	
 	TIM_TimeBaseInitTypeDef TIM3_TimeBaseInitStruct;
 	
+	/* Set period of TIM3 */
 	TIM3_TimeBaseInitStruct.TIM_Period = 65535; // us?
 	TIM3_TimeBaseInitStruct.TIM_Prescaler = 0;
 	TIM3_TimeBaseInitStruct.TIM_ClockDivision = 0;
-	
 	TIM_TimeBaseInit(TIM3, &TIM3_TimeBaseInitStruct);
 	
-	PrescalerValue = 52;
-	
+	/* Set prescaler value */
+	PrescalerValue = 50;
 	TIM_PrescalerConfig(TIM3, PrescalerValue, TIM_PSCReloadMode_Immediate);
 	
+	/* Enable interrupt on TIM3 */
 	TIM_ITConfig(TIM3, TIM_IT_Update, ENABLE);
 	
+	/* Enable the timer */
 	TIM_Cmd(TIM3, ENABLE);
 }
 
+/** 
+ * @brief Initializes GPIOB on Pin 11. This pin
+ * will be used to display the frequency of TIM3
+ * No input or output.
+ */
 void initializeTimerPin() {
 	
 	GPIO_InitTypeDef gpio_init_s;
@@ -66,8 +74,8 @@ void initializeTimerPin() {
 
 
 /** 
- * @brief Initializes and starts the TIM3 timer 
- * to generate an interrupt ever 40 ms (25 Hz).
+ * @brief Initializes and starts the TIM4 timer.
+ * Frequency of timer is 6MHz. Used for LEDs (output compare) and PWM.
  * No input or output.
  */
 void initTimer4() {
@@ -131,7 +139,7 @@ void initTimer4() {
   TIM_OC4Init(TIM4, &TIM_OCInitStructure);
   //TIM_OC4PreloadConfig(TIM4, TIM_OCPreload_Disable);
 	
-	/* TIM3 enable counter */
+	/* TIM4 enable counter */
 	TIM_Cmd(TIM4, ENABLE);
 	
 	/* TIM4 Main Output Enable */

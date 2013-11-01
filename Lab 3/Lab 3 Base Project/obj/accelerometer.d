@@ -39,4 +39,3 @@
 .\obj\accelerometer.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
 .\obj\accelerometer.o: src\conversion.h
 .\obj\accelerometer.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
-.\obj\accelerometer.o: src\calibrate.h

@@ -26,10 +26,13 @@
 }
 
 /**
- * @brief Configures the LEDs duty cycle with respect to the 
+ * @brief Configures the LEDs duty cycle with respect to TIM4 period of 65535.
+ * A value of 65535 indicates a full duty cycle (LEDs forced on)
  * Outputs no variables.
- * @param pitch: The pitch measured in degrees.
- * @param roll: The roll measured in degrees.
+ * @param LED1: New pulse time for LED1.
+ * @param LED2: New pulse time for LED2.
+ * @param LED3: New pulse time for LED3.
+ * @param LED4: New pulse time for LED4.
  */
 void configureLEDS(int LED1, int LED2, int LED3, int LED4)
 {
@@ -47,12 +50,12 @@ void configureLEDS(int LED1, int LED2, int LED3, int LED4)
  */
 void flashLeds(float pitch, float roll) {
 	
-	int LED1, LED2, LED3, LED4;
+	float LED1, LED2, LED3, LED4;
 	
 	if (roll > 3)
 	{
-		LED3 = ((TIM4_PERIOD)/90)*roll;
 		LED1 = 0;
+		LED3 = ((TIM4_PERIOD)/90)*roll;
 	}
 	else if (roll < 3)
 	{
@@ -67,8 +70,8 @@ void flashLeds(float pitch, float roll) {
 	
 	if (pitch > 3)
 	{
-		LED4 = ((TIM4_PERIOD/90)*pitch);
 		LED2 = 0;
+		LED4 = ((TIM4_PERIOD/90)*pitch);
 	}
 	else if (pitch < 3)
 	{
@@ -81,6 +84,7 @@ void flashLeds(float pitch, float roll) {
 		LED4 = 0;
 	}
 
+	// Program the new values into the LEDs pulse time
 	configureLEDS(LED1, LED2, LED3, LED4);
 }
 

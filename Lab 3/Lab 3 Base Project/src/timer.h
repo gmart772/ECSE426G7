@@ -10,7 +10,6 @@
 #define TIM4_PERIOD 665
 
 extern short timerInterrupt;
-extern short timerInterrupt4;
 
 void initTimer();
 void initializeTimerPin();

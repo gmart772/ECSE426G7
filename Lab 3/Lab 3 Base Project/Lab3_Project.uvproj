@@ -448,24 +448,9 @@
               <FilePath>.\src\accelerometer.c</FilePath>
             </File>
             <File>
-              <FileName>processing.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\src\processing.h</FilePath>
-            </File>
-            <File>
-              <FileName>processing.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\processing.c</FilePath>
-            </File>
-            <File>
               <FileName>conversion.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\src\conversion.h</FilePath>
-            </File>
-            <File>
-              <FileName>calibrate.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\src\calibrate.h</FilePath>
             </File>
             <File>
               <FileName>timer.c</FileName>

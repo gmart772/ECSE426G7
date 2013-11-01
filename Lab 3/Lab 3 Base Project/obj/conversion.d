@@ -38,4 +38,3 @@
 .\obj\conversion.o: .\STM32F4xx_StdPeriph_Driver\inc\misc.h
 .\obj\conversion.o: .\LIS302DL\inc\stm32f4_discovery_lis302dl.h
 .\obj\conversion.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
-.\obj\conversion.o: src\calibrate.h

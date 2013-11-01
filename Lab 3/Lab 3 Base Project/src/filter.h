@@ -1,5 +1,6 @@
 #define D 10
 
+
 typedef struct movingAverageFilter { // Struct to keep track of filter internals
 	int buffer[D]; // buffer
 	int sum; // sum of values in the buffer
