@@ -37,3 +37,5 @@
 .\obj\temperaturetracking.o: ../STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h
 .\obj\temperaturetracking.o: ../STM32F4xx_StdPeriph_Driver/inc/misc.h
 .\obj\temperaturetracking.o: ..\tempFilter.h
+.\obj\temperaturetracking.o: ../inc/cmsis_os.h
+.\obj\temperaturetracking.o: C:\Keil\ARM\ARMCC\bin\..\include\stddef.h

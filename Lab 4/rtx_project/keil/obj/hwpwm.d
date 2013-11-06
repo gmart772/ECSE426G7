@@ -41,5 +41,9 @@
 .\obj\hwpwm.o: ..\conversion.h
 .\obj\hwpwm.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
 .\obj\hwpwm.o: ..\led.h
+.\obj\hwpwm.o: ..\threads.h
+.\obj\hwpwm.o: ../inc/cmsis_os.h
+.\obj\hwpwm.o: C:\Keil\ARM\ARMCC\bin\..\include\stddef.h
 .\obj\hwpwm.o: ..\timer.h
+.\obj\hwpwm.o: ..\threads.h
 .\obj\hwpwm.o: ..\accFilter.h

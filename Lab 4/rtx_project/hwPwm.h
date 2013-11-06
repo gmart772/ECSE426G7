@@ -9,3 +9,5 @@ static int PWM_hold_low_counter = 0;
 static int PWM_temp_counter = 0;
 	
 static int PWM_quadratic = 0.0;
+
+void hwPwm(void);

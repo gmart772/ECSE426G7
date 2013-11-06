@@ -128,32 +128,37 @@ float getRoll(int32_t accX, int32_t accY, int32_t accZ) {
 void calculateTilts(void) {
 		int32_t values[3];
 		float pitch, roll;
-	short timerInterrupt;
+	//	short timerInterrupt;
 	
-		while(timerInterrupt != TIMEOUT_OCCURRED);
-				timerInterrupt = NO_TIMEOUT;
+	while (1) {
+		osSignalWait(1, 1);
 				
-				// Get acceleration values
-				getAcceleration(values);
-				
-				// Update filter
-				updateAccFilter(&filterX, values[0]);
-				updateAccFilter(&filterY, values[1]);
-				updateAccFilter(&filterZ, values[2]);
-				
+			// Get acceleration values
+			getAcceleration(values);
+			
+			// Update filter
+			updateAccFilter(&filterX, values[0]);
+			updateAccFilter(&filterY, values[1]);
+			updateAccFilter(&filterZ, values[2]);
+			
+			if (mode == ACCELEROMETER_MODE) {
 				// Calculate pitch and roll from the filter values
 				pitch = getPitch(filterX.averageValue, filterY.averageValue, filterZ.averageValue);
 				roll = getRoll(filterX.averageValue, filterY.averageValue, filterZ.averageValue);
 				
 				// Update LEDs
 				flashLeds(pitch, roll);
-				//printf("%d\n", (int) filterX.averageValue);
-				//printf("%d\n", (int) filterY.averageValue);
-				//printf("%d\n\n", (int) filterZ.averageValue);
-				
-				// Display pitch and roll on debugger
-				printf("Pitch: %f\n", pitch);
-				printf("Roll: %f\n\n", roll);
+			}
+			//printf("%d\n", (int) filterX.averageValue);
+			//printf("%d\n", (int) filterY.averageValue);
+			//printf("%d\n\n", (int) filterZ.averageValue);
+			
+			// Display pitch and roll on debugger
+			//printf("Pitch: %f\n", pitch);
+			//printf("Roll: %f\n\n", roll);
+			
+		//	osDelay(1500);
+			}
 }
 
 /**

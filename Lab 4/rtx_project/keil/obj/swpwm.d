@@ -38,3 +38,5 @@
 .\obj\swpwm.o: ../STM32F4xx_StdPeriph_Driver/inc/misc.h
 .\obj\swpwm.o: ..\temperatureTracking.h
 .\obj\swpwm.o: ..\tempFilter.h
+.\obj\swpwm.o: ../inc/cmsis_os.h
+.\obj\swpwm.o: C:\Keil\ARM\ARMCC\bin\..\include\stddef.h

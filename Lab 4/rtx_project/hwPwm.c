@@ -2,8 +2,8 @@
 
 void hwPwm() {
 					// Wait for a timer 3 event to occur
-				while(timerInterrupt != TIMEOUT_OCCURRED);
-				timerInterrupt = NO_TIMEOUT;
+	while (1) {
+				osSignalWait(1, 1);
 				
 				// PWM_counter ranges from 0-100
 				// PWM_quadratic is used to ramp the value of PWM_temp_counter based on this value of PWM_counter
@@ -11,7 +11,9 @@ void hwPwm() {
 				PWM_temp_counter = ((TIM4_PERIOD)/100)*PWM_quadratic;
 				
 				// Update the LEDs for the new duty cycle
-				configureLEDS(PWM_temp_counter, PWM_temp_counter, PWM_temp_counter, PWM_temp_counter);
+				if (mode == HW_PWM_MODE) {
+					configureLEDS(PWM_temp_counter, PWM_temp_counter, PWM_temp_counter, PWM_temp_counter);
+				}
 				
 				// We hold the lights off for PWM_hold_time cycles when PWM_counter = 0 (13 cycles ~ 1/2 second)
 				if (PWM_counter == 0 && PWM_hold_low_counter < PWM_hold_time)
@@ -34,5 +36,6 @@ void hwPwm() {
 				{
 					PWM_hold_high_counter++;
 				}
+			}
 
 }

@@ -5,6 +5,8 @@
 #include "led.h"
 #include "timer.h"
 #include "accFilter.h"
+#include "cmsis_os.h"
+
 
 #define NO_TAP_DETECTED 0
 #define TAP_DETECTED 1
@@ -12,8 +14,7 @@
 #define Y_OFFSET -17
 #define Z_OFFSET -18
 
-extern short isTapDetected;
-
+extern short isTapDetected; 
 //static float PI = 3.14159265;
 static float G = 1000.0; // Earth's gravity in mg
 static float correctionMatrix[4][3];

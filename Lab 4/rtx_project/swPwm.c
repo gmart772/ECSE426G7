@@ -1,6 +1,7 @@
 #include "swPwm.h"
 
 void swPwm(void) {
+	while (1) {
 			// Wait for interrupt
 		while(!ticks);
 		// Set ticks to 0
@@ -31,6 +32,7 @@ void swPwm(void) {
 		{
 			current_cycle_length = 0;
 		}
+	}
 }
 
 // void SysTick_Handler() {

@@ -1,5 +1,7 @@
 #include "stm32f4xx.h"
 #include "stm32f4xx_conf.h"
+#include "cmsis_os.h"
+#include "threads.h"
 
 #define NO_TIMEOUT 0
 #define TIMEOUT_OCCURRED 1

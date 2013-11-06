@@ -8,11 +8,12 @@
 void TIM3_IRQHandler(void) {
 	// Get current interrupt status	
 	if (TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET) {
-			timerInterrupt = TIMEOUT_OCCURRED;
+			osSignalSet(tid_thread1, 1);
+	//		osSignalSet(tid_thread2, 1);
 			TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
 		
 			// Toggle a GPIO Pin 
-			GPIO_ToggleBits(GPIOB, GPIO_Pin_11);
+			//GPIO_ToggleBits(GPIOB, GPIO_Pin_11);
 		}
 }
 

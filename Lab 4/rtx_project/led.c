@@ -53,42 +53,43 @@ void configureLEDS(int LED1, int LED2, int LED3, int LED4)
  */
 void flashLeds(float pitch, float roll) {
 	
-	float LED1, LED2, LED3, LED4;
+	//float LED1, LED2, LED3, LED4;
+	int32_t LED[4];
 	
 	if (roll > 3)
 	{
-		LED1 = 0;
-		LED3 = ((TIM4_PERIOD)/90)*roll;
+		LED[0] = 0;
+		LED[2] = ((TIM4_PERIOD)/90)*roll;
 	}
 	else if (roll < 3)
 	{
-		LED1 = ((TIM4_PERIOD/90)*(abs(roll)));
-		LED3 = 0;
+		LED[0] = ((TIM4_PERIOD/90)*(abs(roll)));
+		LED[2] = 0;
 	}
 	else
 	{
-		LED1 = 0;
-		LED3 = 0;
+		LED[0] = 0;
+		LED[2] = 0;
 	}
 	
 	if (pitch > 3)
 	{
-		LED2 = 0;
-		LED4 = ((TIM4_PERIOD/90)*pitch);
+		LED[1] = 0;
+		LED[3] = ((TIM4_PERIOD/90)*pitch);
 	}
 	else if (pitch < 3)
 	{
-		LED2 = ((TIM4_PERIOD/90)*(abs(pitch)));
-		LED4 = 0;
+		LED[1] = ((TIM4_PERIOD/90)*(abs(pitch)));
+		LED[3] = 0;
 	}
 	else
 	{
-		LED2 = 0;
-		LED4 = 0;
+		LED[1] = 0;
+		LED[3] = 0;
 	}
 
 	// Program the new values into the LEDs pulse time
-	configureLEDS(LED1, LED2, LED3, LED4);
+	configureLEDS(LED[0], LED[1], LED[2], LED[3]);	
 }
 
 /**

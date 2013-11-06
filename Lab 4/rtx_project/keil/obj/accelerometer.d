@@ -40,5 +40,9 @@
 .\obj\accelerometer.o: ..\conversion.h
 .\obj\accelerometer.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
 .\obj\accelerometer.o: ..\led.h
+.\obj\accelerometer.o: ..\threads.h
+.\obj\accelerometer.o: ../inc/cmsis_os.h
+.\obj\accelerometer.o: C:\Keil\ARM\ARMCC\bin\..\include\stddef.h
 .\obj\accelerometer.o: ..\timer.h
+.\obj\accelerometer.o: ..\threads.h
 .\obj\accelerometer.o: ..\accFilter.h

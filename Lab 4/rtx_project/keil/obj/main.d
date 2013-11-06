@@ -49,5 +49,7 @@
 .\obj\main.o: ../stm32f4_discovery_lis302dl.h
 .\obj\main.o: ../conversion.h
 .\obj\main.o: ../led.h
+.\obj\main.o: ../threads.h
 .\obj\main.o: ../timer.h
+.\obj\main.o: ../threads.h
 .\obj\main.o: ../accFilter.h

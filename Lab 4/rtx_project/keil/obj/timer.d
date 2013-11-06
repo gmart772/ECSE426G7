@@ -35,3 +35,6 @@
 .\obj\timer.o: ../STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_usart.h
 .\obj\timer.o: ../STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h
 .\obj\timer.o: ../STM32F4xx_StdPeriph_Driver/inc/misc.h
+.\obj\timer.o: ../inc/cmsis_os.h
+.\obj\timer.o: C:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\obj\timer.o: ..\threads.h

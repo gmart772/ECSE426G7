@@ -6,6 +6,8 @@
 #include "stm32f4xx_gpio.h"
 #include "stm32f4xx_rcc.h"
 #include "tempFilter.h"
+#include "cmsis_os.h"
+
 
 static volatile uint_fast16_t ticks;
 static float baseTemperature;
@@ -21,4 +23,5 @@ void initializeLed(void);
 void initializeAdc(void);
 void initializeButton(void);
 void updateLED(float temperature);
+int isButtonPressed(void);
 

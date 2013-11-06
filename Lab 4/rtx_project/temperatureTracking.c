@@ -77,27 +77,27 @@ void updateLED(float temperature) {
 					// turn off current LED and light next in sequence. Set LED[0] to the currently set LED
 					if (currentLED == 0)
 					{					
-						GPIO_WriteBit(GPIOD, GPIO_Pin_12, 0);
-						GPIO_WriteBit(GPIOD, GPIO_Pin_13, 1);
+						//GPIO_WriteBit(GPIOD, GPIO_Pin_12, 0);
+						//GPIO_WriteBit(GPIOD, GPIO_Pin_13, 1);
 
 						currentLED++;
 					}
 					else if (currentLED == 1)
 					{
-						GPIO_WriteBit(GPIOD, GPIO_Pin_13, 0);
-						GPIO_WriteBit(GPIOD, GPIO_Pin_14, 1);
+					//	GPIO_WriteBit(GPIOD, GPIO_Pin_13, 0);
+					//	GPIO_WriteBit(GPIOD, GPIO_Pin_14, 1);
 						currentLED++;
 					}
 					else if (currentLED == 2)
 					{
-						GPIO_WriteBit(GPIOD, GPIO_Pin_14, 0);
-						GPIO_WriteBit(GPIOD, GPIO_Pin_15, 1);
+						//GPIO_WriteBit(GPIOD, GPIO_Pin_14, 0);
+						//GPIO_WriteBit(GPIOD, GPIO_Pin_15, 1);
 						currentLED++;
 					}
 					else if (currentLED == 3)
 					{
-						GPIO_WriteBit(GPIOD, GPIO_Pin_15, 0);
-						GPIO_WriteBit(GPIOD, GPIO_Pin_12, 1);
+						//GPIO_WriteBit(GPIOD, GPIO_Pin_15, 0);
+						//GPIO_WriteBit(GPIOD, GPIO_Pin_12, 1);
 						currentLED = 0;
 					}
 					// Set the next base temperature
@@ -108,26 +108,26 @@ void updateLED(float temperature) {
 					// turn off current LED and light next in sequence (counter-clockwise. Set LED[0] to the currently set LED
 					if (currentLED == 0)
 					{
-						GPIO_WriteBit(GPIOD, GPIO_Pin_12, 0);
-						GPIO_WriteBit(GPIOD, GPIO_Pin_15, 1);
+					//	GPIO_WriteBit(GPIOD, GPIO_Pin_12, 0);
+					//	GPIO_WriteBit(GPIOD, GPIO_Pin_15, 1);
 						currentLED = 3;
 					}
 					else if (currentLED == 1)
 					{
-						GPIO_WriteBit(GPIOD, GPIO_Pin_13, 0);
-						GPIO_WriteBit(GPIOD, GPIO_Pin_12, 1);
+					//	GPIO_WriteBit(GPIOD, GPIO_Pin_13, 0);
+					//	GPIO_WriteBit(GPIOD, GPIO_Pin_12, 1);
 						currentLED--;
 					}
 					else if (currentLED == 2)
 					{
-						GPIO_WriteBit(GPIOD, GPIO_Pin_14, 0);
-						GPIO_WriteBit(GPIOD, GPIO_Pin_13, 1);
+					//	GPIO_WriteBit(GPIOD, GPIO_Pin_14, 0);
+					//	GPIO_WriteBit(GPIOD, GPIO_Pin_13, 1);
 						currentLED--;
 					}
 					else if (currentLED == 3)
 					{
-						GPIO_WriteBit(GPIOD, GPIO_Pin_15, 0);
-						GPIO_WriteBit(GPIOD, GPIO_Pin_14, 1);
+					//	GPIO_WriteBit(GPIOD, GPIO_Pin_15, 0);
+					//	GPIO_WriteBit(GPIOD, GPIO_Pin_14, 1);
 						currentLED--;
 					}
 					// Set the next base temperature
@@ -142,6 +142,7 @@ void trackTemperature(void) {
 	float avgSlope = 2.5 / 1000; // value from datasheet
 	
 	// Wait for an interrupt
+	while (1) {
 	while(!ticks);
 	
 	// Decrement ticks
@@ -157,6 +158,7 @@ void trackTemperature(void) {
 	
 	// Only update LED after X readings?
 	updateLED(filter.averageValue);
+	}
 }
 
 /* Return the pins to the last state they had when temperature tracking was on */
@@ -164,20 +166,20 @@ void revertPinState(void) {
 		switch(currentLED)
 		{
 		case 0: 
-			GPIO_WriteBit(GPIOD, GPIO_Pin_12, 1);
-			GPIO_WriteBit(GPIOD, GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15, 0);
+		//			GPIO_WriteBit(GPIOD, GPIO_Pin_12, 1);
+//			GPIO_WriteBit(GPIOD, GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15, 0);
 			break;
 		case 1:
-			GPIO_WriteBit(GPIOD, GPIO_Pin_13, 1);
-			GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_14 | GPIO_Pin_15, 0);
+	//		GPIO_WriteBit(GPIOD, GPIO_Pin_13, 1);
+	//		GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_14 | GPIO_Pin_15, 0);
 			break;
 		case 2:
-			GPIO_WriteBit(GPIOD, GPIO_Pin_14, 1);
-			GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_15, 0);
+	//		GPIO_WriteBit(GPIOD, GPIO_Pin_14, 1);
+	//		GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_15, 0);
 			break;
 		case 3:
-			GPIO_WriteBit(GPIOD, GPIO_Pin_15, 1);
-			GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14, 0);
+	//		GPIO_WriteBit(GPIOD, GPIO_Pin_15, 1);
+	//		GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14, 0);
 			break;
 		default:
 			break;
@@ -187,22 +189,16 @@ void revertPinState(void) {
 /* Reads the input from the button and debounces it */
 int isButtonPressed() {
 	uint16_t isBitSet;
-	
-	
-	SysTick_Config(SystemCoreClock/5);
-	
+		
 	isBitSet = GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0);
 	if (isBitSet) {
-			while (!ticks);
-			ticks = 0;
+			osDelay(200);
 			isBitSet = GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0);
 			if (!isBitSet) {
 				return 1;
 			}
 			else { 
-				while (!ticks);
-				ticks = 0;
-				isBitSet = GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0);
+				osDelay(200);
 				if (!isBitSet) {
 					return 1;
 				}
