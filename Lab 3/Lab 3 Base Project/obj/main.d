@@ -39,6 +39,7 @@
 .\obj\main.o: .\STM32F4xx_StdPeriph_Driver\inc\misc.h
 .\obj\main.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
 .\obj\main.o: src\conversion.h
+.\obj\main.o: src\led.h
 .\obj\main.o: src\filter.h
 .\obj\main.o: src\timer.h
 .\obj\main.o: src\led.h

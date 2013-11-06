@@ -2,6 +2,7 @@
 #include "math.h"
 #include "conversion.h"
 #include "stm32f4xx_gpio.h"
+#include "led.h"
 
 #define NO_TAP_DETECTED 0
 #define TAP_DETECTED 1
