@@ -6,7 +6,8 @@ void swPwm(void) {
 	
 	while (1) {
 			// Wait for interrupt
-		osDelay(50);
+		osSignalWait(1, osWaitForever);
+
 		
 		if (mode == SW_PWM_MODE) {
 				configureLEDS(pwm_counter * (TIM4_PERIOD / 80), pwm_counter * (TIM4_PERIOD / 80),

@@ -53,3 +53,5 @@
 .\obj\main.o: ../timer.h
 .\obj\main.o: ../threads.h
 .\obj\main.o: ../accFilter.h
+.\obj\main.o: ../led.h
+.\obj\main.o: ../threads.h

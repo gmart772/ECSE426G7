@@ -151,12 +151,8 @@ void trackTemperature(void) {
 	
 	// Wait for an interrupt
 	while (1) {
-//	while(!ticks);
-//		osDelay(50);
-	// Decrement ticks
-//	ticks = 0;
-	
-	// Interrupt routine
+	osSignalWait(1, osWaitForever);
+		
 	voltage = ((float) ADC_GetConversionValue(ADC1) / 4095.0f) * 3 ;
 	
 	// Temperature (in °C) = {(VSENSE – V25) / Avg_Slope} + 25

@@ -11,7 +11,7 @@
 
 static volatile uint_fast16_t ticks;
 static float baseTemperature;
-static int currentLED;
+static int currentLED = 0;
 static temperatureFilter filter;
 
 static float V25 = 0.76f; // voltage reading at 25 degrees C

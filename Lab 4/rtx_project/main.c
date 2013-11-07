@@ -4,6 +4,7 @@
 #include "cmsis_os.h"
 #include "swPwm.h"
 #include "hwPwm.h"
+#include "led.h"
 //#include "threads.h"
 //#include "temperatureTracking.h"
 //#include "accelerometer.h"
@@ -30,6 +31,11 @@ void temperatureTracking(void const * argument);
 void softwarePwm(void const * argument);
 void buttonControl(void const * argument);
 void tapDetection(void const * argument);
+void Timer1_Callback(void const *argument);
+
+osTimerId timer;
+osTimerDef(timer, Timer1_Callback);
+
 
 
 //! Thread structure for above thread
@@ -47,12 +53,11 @@ osThreadDef(tapDetection, osPriorityNormal, 1, 0);
  @brief Program entry point
  */
 int main (void) {
-
-
-	// Start thread
-//	mail = osMailCreate(osMailQ(mail), NULL);
-
+	osStatus  status;
+	osTimerId timerId;
+	
 	mode = ACCELEROMETER_MODE;
+	
 	initializeButton();
 	initializeAdc();
 	initTimer4();
@@ -60,12 +65,14 @@ int main (void) {
 	initTimer();	
 
 	modeMutex = osMutexCreate(osMutex(modeMutex));
-
+	timerId = osTimerCreate(osTimer(timer), osTimerPeriodic, NULL);
+	
+	status = osTimerStart(timerId, 50);
+	// Start thread
 	tid_thread5 = osThreadCreate(osThread(buttonControl), NULL);
 	tid_thread6 = osThreadCreate(osThread(tapDetection), NULL);
 	tid_thread1 = osThreadCreate(osThread(accelerometer), NULL);
 		tid_thread4 = osThreadCreate(osThread(softwarePwm), NULL);
-
 	tid_thread3 = osThreadCreate(osThread(temperatureTracking), NULL);
 		tid_thread2 = osThreadCreate(osThread(hardwarePwm), NULL);
 
@@ -108,9 +115,10 @@ void buttonControl(void const *argument) {
 			}
 			else if (mode == SW_PWM_MODE) {
 				mode = TEMPERATURE_MODE;
+				revertPinState();
 			}
 			osMutexRelease(modeMutex);
-			osDelay(1500);
+		//	osDelay(1);
 		}
 	}
 }
@@ -122,12 +130,18 @@ void tapDetection(void const *argument) {
 		osMutexWait(modeMutex, osWaitForever);
 		if ((mode == ACCELEROMETER_MODE) || (mode == HW_PWM_MODE)) {
 			mode = TEMPERATURE_MODE;
+			revertPinState();
 		}
 		else if ((mode == TEMPERATURE_MODE) || (mode == SW_PWM_MODE)) {
 			mode = ACCELEROMETER_MODE;
 		}
 		osMutexRelease(modeMutex);
-		osDelay(1500);
+		//osDelay(1);
 	}
+}
+
+void Timer1_Callback(void const *argument) {
+	osSignalSet(tid_thread3, 1);
+	osSignalSet(tid_thread4, 1);
 }
 

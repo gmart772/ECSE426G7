@@ -35,13 +35,13 @@ I (../STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_usart.h)(0x527AD6EF)
 I (../STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h)(0x527AD6EF)
 I (../STM32F4xx_StdPeriph_Driver/inc/misc.h)(0x527AD6EF)
 F (../startup_stm32f4xx.s)(0x527AD6F0)(--cpu Cortex-M4.fp --li --pd "__RTX SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1" -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -o ".\obj\startup_stm32f4xx.o" --depend ".\obj\startup_stm32f4xx.d")
-F (../RTX_Conf_CM.c)(0x527AEA03)(-c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB --li -g -O0 --apcs=interwork -I../ -I../rtx_cmsis -I../inc -I../CMSIS/Device/ST/STM32F4xx/Include -I../STM32F4xx_StdPeriph_Driver/inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -D__FPU_PRESENT="1" -DSTM32F4XX -DUSE_STDPERIPH_DRIVER="1" -DHSE_VALUE="8000000" -DARM_MATH_CM4="1" -o ".\obj\rtx_conf_cm.o" --omf_browse ".\obj\rtx_conf_cm.crf" --depend ".\obj\rtx_conf_cm.d")
+F (../RTX_Conf_CM.c)(0x527AF407)(-c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB --li -g -O0 --apcs=interwork -I../ -I../rtx_cmsis -I../inc -I../CMSIS/Device/ST/STM32F4xx/Include -I../STM32F4xx_StdPeriph_Driver/inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -D__FPU_PRESENT="1" -DSTM32F4XX -DUSE_STDPERIPH_DRIVER="1" -DHSE_VALUE="8000000" -DARM_MATH_CM4="1" -o ".\obj\rtx_conf_cm.o" --omf_browse ".\obj\rtx_conf_cm.crf" --depend ".\obj\rtx_conf_cm.d")
 I (../inc/cmsis_os.h)(0x527AD6EF)
 I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x516F1C96)
 I (C:\Keil\ARM\ARMCC\bin\..\include\stddef.h)(0x516F1C96)
 I (../inc/RTX_CM_lib.h)(0x527AD6EF)
 F (../rtx_lib/ARM/RTX_CM4.lib)(0x527AD6F0)()
-F (../main.c)(0x527AEB82)(-c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB --li -g -O0 --apcs=interwork -I../ -I../rtx_cmsis -I../inc -I../CMSIS/Device/ST/STM32F4xx/Include -I../STM32F4xx_StdPeriph_Driver/inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -D__FPU_PRESENT="1" -DSTM32F4XX -DUSE_STDPERIPH_DRIVER="1" -DHSE_VALUE="8000000" -DARM_MATH_CM4="1" -o ".\obj\main.o" --omf_browse ".\obj\main.crf" --depend ".\obj\main.d")
+F (../main.c)(0x527AF819)(-c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB --li -g -O0 --apcs=interwork -I../ -I../rtx_cmsis -I../inc -I../CMSIS/Device/ST/STM32F4xx/Include -I../STM32F4xx_StdPeriph_Driver/inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -D__FPU_PRESENT="1" -DSTM32F4XX -DUSE_STDPERIPH_DRIVER="1" -DHSE_VALUE="8000000" -DARM_MATH_CM4="1" -o ".\obj\main.o" --omf_browse ".\obj\main.crf" --depend ".\obj\main.d")
 I (C:\Keil\ARM\CMSIS\Include\arm_math.h)(0x515EC364)
 I (C:\Keil\ARM\CMSIS\Include\core_cm4.h)(0x5273F5B1)
 I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x516F1C96)
@@ -82,7 +82,7 @@ I (../STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h)(0x527AD6EF)
 I (../STM32F4xx_StdPeriph_Driver/inc/misc.h)(0x527AD6EF)
 I (../inc/cmsis_os.h)(0x527AD6EF)
 I (C:\Keil\ARM\ARMCC\bin\..\include\stddef.h)(0x516F1C96)
-I (../swPwm.h)(0x527AE70F)
+I (../swPwm.h)(0x527AF72D)
 I (C:\Keil\ARM\ARMCC\bin\..\include\stdio.h)(0x516F1C96)
 I (../led.h)(0x527AD6F0)
 I (../threads.h)(0x527AE178)
@@ -92,7 +92,7 @@ I (../stm32f4_discovery_lis302dl.h)(0x527AD6F0)
 I (../conversion.h)(0x527AD6EF)
 I (../timer.h)(0x527AD6F0)
 I (../accFilter.h)(0x527AD6EF)
-F (..\accelerometer.c)(0x527AE144)(-c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB --li -g -O0 --apcs=interwork -I../ -I../rtx_cmsis -I../inc -I../CMSIS/Device/ST/STM32F4xx/Include -I../STM32F4xx_StdPeriph_Driver/inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -D__FPU_PRESENT="1" -DSTM32F4XX -DUSE_STDPERIPH_DRIVER="1" -DHSE_VALUE="8000000" -DARM_MATH_CM4="1" -o ".\obj\accelerometer.o" --omf_browse ".\obj\accelerometer.crf" --depend ".\obj\accelerometer.d")
+F (..\accelerometer.c)(0x527AF892)(-c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB --li -g -O0 --apcs=interwork -I../ -I../rtx_cmsis -I../inc -I../CMSIS/Device/ST/STM32F4xx/Include -I../STM32F4xx_StdPeriph_Driver/inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -D__FPU_PRESENT="1" -DSTM32F4XX -DUSE_STDPERIPH_DRIVER="1" -DHSE_VALUE="8000000" -DARM_MATH_CM4="1" -o ".\obj\accelerometer.o" --omf_browse ".\obj\accelerometer.crf" --depend ".\obj\accelerometer.d")
 I (..\accelerometer.h)(0x527AD6EF)
 I (..\stm32f4_discovery_lis302dl.h)(0x527AD6F0)
 I (../CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x527AD6EC)
@@ -262,8 +262,8 @@ I (../STM32F4xx_StdPeriph_Driver/inc/misc.h)(0x527AD6EF)
 I (..\stm32f4_discovery_lis302dl.h)(0x527AD6F0)
 I (C:\Keil\ARM\ARMCC\bin\..\include\math.h)(0x516F1C96)
 F (..\conversion.h)(0x527AD6EF)()
-F (..\temperatureTracking.c)(0x527AEBF4)(-c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB --li -g -O0 --apcs=interwork -I../ -I../rtx_cmsis -I../inc -I../CMSIS/Device/ST/STM32F4xx/Include -I../STM32F4xx_StdPeriph_Driver/inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -D__FPU_PRESENT="1" -DSTM32F4XX -DUSE_STDPERIPH_DRIVER="1" -DHSE_VALUE="8000000" -DARM_MATH_CM4="1" -o ".\obj\temperaturetracking.o" --omf_browse ".\obj\temperaturetracking.crf" --depend ".\obj\temperaturetracking.d")
-I (..\temperatureTracking.h)(0x527AE6A4)
+F (..\temperatureTracking.c)(0x527AF794)(-c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB --li -g -O0 --apcs=interwork -I../ -I../rtx_cmsis -I../inc -I../CMSIS/Device/ST/STM32F4xx/Include -I../STM32F4xx_StdPeriph_Driver/inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -D__FPU_PRESENT="1" -DSTM32F4XX -DUSE_STDPERIPH_DRIVER="1" -DHSE_VALUE="8000000" -DARM_MATH_CM4="1" -o ".\obj\temperaturetracking.o" --omf_browse ".\obj\temperaturetracking.crf" --depend ".\obj\temperaturetracking.d")
+I (..\temperatureTracking.h)(0x527AF5C9)
 I (C:\Keil\ARM\ARMCC\bin\..\include\stdio.h)(0x516F1C96)
 I (../CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x527AD6EC)
 I (../inc/core_cm4.h)(0x527AD6EF)
@@ -304,9 +304,9 @@ I (../inc/cmsis_os.h)(0x527AD6EF)
 I (C:\Keil\ARM\ARMCC\bin\..\include\stddef.h)(0x516F1C96)
 I (..\led.h)(0x527AD6F0)
 I (..\threads.h)(0x527AE178)
-F (..\temperatureTracking.h)(0x527AE6A4)()
-F (..\swPwm.c)(0x527AE651)(-c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB --li -g -O0 --apcs=interwork -I../ -I../rtx_cmsis -I../inc -I../CMSIS/Device/ST/STM32F4xx/Include -I../STM32F4xx_StdPeriph_Driver/inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -D__FPU_PRESENT="1" -DSTM32F4XX -DUSE_STDPERIPH_DRIVER="1" -DHSE_VALUE="8000000" -DARM_MATH_CM4="1" -o ".\obj\swpwm.o" --omf_browse ".\obj\swpwm.crf" --depend ".\obj\swpwm.d")
-I (..\swPwm.h)(0x527AE70F)
+F (..\temperatureTracking.h)(0x527AF5C9)()
+F (..\swPwm.c)(0x527AF3D0)(-c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB --li -g -O0 --apcs=interwork -I../ -I../rtx_cmsis -I../inc -I../CMSIS/Device/ST/STM32F4xx/Include -I../STM32F4xx_StdPeriph_Driver/inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -D__FPU_PRESENT="1" -DSTM32F4XX -DUSE_STDPERIPH_DRIVER="1" -DHSE_VALUE="8000000" -DARM_MATH_CM4="1" -o ".\obj\swpwm.o" --omf_browse ".\obj\swpwm.crf" --depend ".\obj\swpwm.d")
+I (..\swPwm.h)(0x527AF72D)
 I (C:\Keil\ARM\ARMCC\bin\..\include\stdio.h)(0x516F1C96)
 I (../CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x527AD6EC)
 I (../inc/core_cm4.h)(0x527AD6EF)
@@ -346,7 +346,7 @@ I (..\led.h)(0x527AD6F0)
 I (..\threads.h)(0x527AE178)
 I (../inc/cmsis_os.h)(0x527AD6EF)
 I (C:\Keil\ARM\ARMCC\bin\..\include\stddef.h)(0x516F1C96)
-F (..\swPwm.h)(0x527AE70F)()
+F (..\swPwm.h)(0x527AF72D)()
 F (..\hwPwm.c)(0x527AD6EF)(-c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB --li -g -O0 --apcs=interwork -I../ -I../rtx_cmsis -I../inc -I../CMSIS/Device/ST/STM32F4xx/Include -I../STM32F4xx_StdPeriph_Driver/inc --c99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -D__FPU_PRESENT="1" -DSTM32F4XX -DUSE_STDPERIPH_DRIVER="1" -DHSE_VALUE="8000000" -DARM_MATH_CM4="1" -o ".\obj\hwpwm.o" --omf_browse ".\obj\hwpwm.crf" --depend ".\obj\hwpwm.d")
 I (..\hwPwm.h)(0x527AD6EF)
 I (C:\Keil\ARM\ARMCC\bin\..\include\math.h)(0x516F1C96)

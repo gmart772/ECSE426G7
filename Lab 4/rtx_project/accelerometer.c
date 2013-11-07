@@ -13,8 +13,8 @@ void initAccelerometer(void) {
 	LIS302DL_InterruptConfigTypeDef LIS302DL_InterruptConfigTypeDefStruct;
 		
 	uint8_t clickInterrupt 	= 0x07;
-	uint8_t zThreshold			= 0xFF;
-	uint8_t xyThreshold			= 0xFF;
+	uint8_t zThreshold			= 0xEE;
+	uint8_t xyThreshold			= 0x55;
 	uint8_t timeLimit 			= 0xFF;   
 	
 	lis302dl_InitStruct.Axes_Enable = LIS302DL_XYZ_ENABLE;
