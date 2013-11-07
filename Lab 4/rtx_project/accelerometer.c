@@ -201,7 +201,8 @@ void resetLatch(void) {
 void EXTI0_IRQHandler(void) {
 	// Get current interrupt status	
 	if (EXTI_GetITStatus(LIS302DL_SPI_INT1_EXTI_LINE) != RESET) {
-		isTapDetected = TAP_DETECTED;
+		//isTapDetected = TAP_DETECTED;
+		osSignalSet(tid_thread6, 1);
 		EXTI_ClearITPendingBit(LIS302DL_SPI_INT1_EXTI_LINE);
 	}
     //EXTI_ClearFlag(LIS302DL_SPI_INT1_EXTI_LINE);

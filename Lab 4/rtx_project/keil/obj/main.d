@@ -42,8 +42,8 @@
 .\obj\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stddef.h
 .\obj\main.o: ../swPwm.h
 .\obj\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
-.\obj\main.o: ../temperatureTracking.h
-.\obj\main.o: ../tempFilter.h
+.\obj\main.o: ../led.h
+.\obj\main.o: ../threads.h
 .\obj\main.o: ../hwPwm.h
 .\obj\main.o: ../accelerometer.h
 .\obj\main.o: ../stm32f4_discovery_lis302dl.h

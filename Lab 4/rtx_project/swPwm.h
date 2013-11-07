@@ -5,10 +5,9 @@
 #include "stm32f4xx_conf.h"
 #include "stm32f4xx_gpio.h"
 #include "stm32f4xx_rcc.h"
-#include "temperatureTracking.h"
+#include "led.h"
 
-static int current_cycle_length = 0;
-static int pwm_counter = 0;
+//extern int mode;
 
 //void SysTick_Handler();
 void swPwm(void);

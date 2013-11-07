@@ -39,3 +39,5 @@
 .\obj\temperaturetracking.o: ..\tempFilter.h
 .\obj\temperaturetracking.o: ../inc/cmsis_os.h
 .\obj\temperaturetracking.o: C:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\obj\temperaturetracking.o: ..\led.h
+.\obj\temperaturetracking.o: ..\threads.h

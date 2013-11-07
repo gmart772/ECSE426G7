@@ -70,13 +70,14 @@ void initializeAdc(void) {
 /*	---------------------------------------------		*/
 void updateLED(float temperature) {
 	
-	printf("%f\n", temperature);
+//	printf("%f\n", temperature);
 		
 	// if temperature rising and has risen more than 2 degrees
 	if (temperature - baseTemperature >= LED_THRESHOLD) {
 					// turn off current LED and light next in sequence. Set LED[0] to the currently set LED
 					if (currentLED == 0)
 					{					
+						configureLEDS(0, TIM4_PERIOD, 0, 0);
 						//GPIO_WriteBit(GPIOD, GPIO_Pin_12, 0);
 						//GPIO_WriteBit(GPIOD, GPIO_Pin_13, 1);
 
@@ -84,18 +85,21 @@ void updateLED(float temperature) {
 					}
 					else if (currentLED == 1)
 					{
+					configureLEDS(0, 0, TIM4_PERIOD, 0);
 					//	GPIO_WriteBit(GPIOD, GPIO_Pin_13, 0);
 					//	GPIO_WriteBit(GPIOD, GPIO_Pin_14, 1);
 						currentLED++;
 					}
 					else if (currentLED == 2)
 					{
+					configureLEDS(0, 0, 0, TIM4_PERIOD);						
 						//GPIO_WriteBit(GPIOD, GPIO_Pin_14, 0);
 						//GPIO_WriteBit(GPIOD, GPIO_Pin_15, 1);
 						currentLED++;
 					}
 					else if (currentLED == 3)
 					{
+						configureLEDS(TIM4_PERIOD, 0, 0, 0);						
 						//GPIO_WriteBit(GPIOD, GPIO_Pin_15, 0);
 						//GPIO_WriteBit(GPIOD, GPIO_Pin_12, 1);
 						currentLED = 0;
@@ -108,24 +112,28 @@ void updateLED(float temperature) {
 					// turn off current LED and light next in sequence (counter-clockwise. Set LED[0] to the currently set LED
 					if (currentLED == 0)
 					{
+					configureLEDS(0, 0, 0, TIM4_PERIOD);						
 					//	GPIO_WriteBit(GPIOD, GPIO_Pin_12, 0);
 					//	GPIO_WriteBit(GPIOD, GPIO_Pin_15, 1);
 						currentLED = 3;
 					}
 					else if (currentLED == 1)
 					{
+					configureLEDS(TIM4_PERIOD, 0, 0, 0);
 					//	GPIO_WriteBit(GPIOD, GPIO_Pin_13, 0);
 					//	GPIO_WriteBit(GPIOD, GPIO_Pin_12, 1);
 						currentLED--;
 					}
 					else if (currentLED == 2)
 					{
+					configureLEDS(0, TIM4_PERIOD, 0, 0);
 					//	GPIO_WriteBit(GPIOD, GPIO_Pin_14, 0);
 					//	GPIO_WriteBit(GPIOD, GPIO_Pin_13, 1);
 						currentLED--;
 					}
 					else if (currentLED == 3)
 					{
+						configureLEDS(0, 0, TIM4_PERIOD, 0);
 					//	GPIO_WriteBit(GPIOD, GPIO_Pin_15, 0);
 					//	GPIO_WriteBit(GPIOD, GPIO_Pin_14, 1);
 						currentLED--;
@@ -143,10 +151,10 @@ void trackTemperature(void) {
 	
 	// Wait for an interrupt
 	while (1) {
-	while(!ticks);
-	
+//	while(!ticks);
+//		osDelay(50);
 	// Decrement ticks
-	ticks = 0;
+//	ticks = 0;
 	
 	// Interrupt routine
 	voltage = ((float) ADC_GetConversionValue(ADC1) / 4095.0f) * 3 ;
@@ -157,7 +165,9 @@ void trackTemperature(void) {
 	updateTempFilter(&filter, temperature);
 	
 	// Only update LED after X readings?
-	updateLED(filter.averageValue);
+		if (mode == TEMPERATURE_MODE) {
+			updateLED(filter.averageValue);
+		}
 	}
 }
 
@@ -167,17 +177,21 @@ void revertPinState(void) {
 		{
 		case 0: 
 		//			GPIO_WriteBit(GPIOD, GPIO_Pin_12, 1);
+		configureLEDS(TIM4_PERIOD, 0, 0, 0);
 //			GPIO_WriteBit(GPIOD, GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15, 0);
 			break;
 		case 1:
+			configureLEDS(0,TIM4_PERIOD, 0, 0);
 	//		GPIO_WriteBit(GPIOD, GPIO_Pin_13, 1);
 	//		GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_14 | GPIO_Pin_15, 0);
 			break;
 		case 2:
+			configureLEDS(0, 0, TIM4_PERIOD, 0);
 	//		GPIO_WriteBit(GPIOD, GPIO_Pin_14, 1);
 	//		GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_15, 0);
 			break;
 		case 3:
+			configureLEDS(0, 0, 0, TIM4_PERIOD);
 	//		GPIO_WriteBit(GPIOD, GPIO_Pin_15, 1);
 	//		GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14, 0);
 			break;
@@ -198,15 +212,9 @@ int isButtonPressed() {
 				return 1;
 			}
 			else { 
-				osDelay(200);
-				if (!isBitSet) {
-					return 1;
-				}
-				else {
 					return 0;
 				}
 			}
-		}
 		else {
 			return 0;
 		}

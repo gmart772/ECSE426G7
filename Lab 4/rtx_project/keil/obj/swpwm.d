@@ -36,7 +36,7 @@
 .\obj\swpwm.o: ../STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_usart.h
 .\obj\swpwm.o: ../STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h
 .\obj\swpwm.o: ../STM32F4xx_StdPeriph_Driver/inc/misc.h
-.\obj\swpwm.o: ..\temperatureTracking.h
-.\obj\swpwm.o: ..\tempFilter.h
+.\obj\swpwm.o: ..\led.h
+.\obj\swpwm.o: ..\threads.h
 .\obj\swpwm.o: ../inc/cmsis_os.h
 .\obj\swpwm.o: C:\Keil\ARM\ARMCC\bin\..\include\stddef.h

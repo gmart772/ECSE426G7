@@ -1,36 +1,25 @@
 #include "swPwm.h"
 
 void swPwm(void) {
+ int pwm_counter = 0;
+
+	
 	while (1) {
 			// Wait for interrupt
-		while(!ticks);
-		// Set ticks to 0
-		ticks = 0;
+		osDelay(50);
 		
-		if (current_cycle_length >= pwm_counter)
-		{
-			GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15, 1);
-		}
-		else
-		{
-			GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15, 0);
+		if (mode == SW_PWM_MODE) {
+				configureLEDS(pwm_counter * (TIM4_PERIOD / 80), pwm_counter * (TIM4_PERIOD / 80),
+			pwm_counter * (TIM4_PERIOD / 80), pwm_counter * (TIM4_PERIOD / 80));
 		}
 		
 		// Increment the duty cycle count
 		pwm_counter++;
 		
-		if (pwm_counter > 1500)
+		if (pwm_counter > 80)
 		{
 			// Reset duty cycle counter to 0
 			pwm_counter = 0;
-			
-			// Set the current cycle to the next amount
-			current_cycle_length++;
-		}
-		
-		if (current_cycle_length == 200)
-		{
-			current_cycle_length = 0;
 		}
 	}
 }

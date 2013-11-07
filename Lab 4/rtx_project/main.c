@@ -12,6 +12,11 @@ short isTapDetected;
 short timerInterrupt;
 int mode;
 
+osThreadId tid_thread1, tid_thread2, tid_thread3, tid_thread4, tid_thread5, tid_thread6;
+
+osMutexId modeMutex;
+osMutexDef(modeMutex);
+
 //osMailQDef(mail, 1, LEDs); 
 
 
@@ -23,7 +28,8 @@ void accelerometer(void const * argument);
 void hardwarePwm(void const * argument);
 void temperatureTracking(void const * argument);
 void softwarePwm(void const * argument);
-void modeControl(void const * argument);
+void buttonControl(void const * argument);
+void tapDetection(void const * argument);
 
 
 //! Thread structure for above thread
@@ -31,7 +37,8 @@ osThreadDef(accelerometer, osPriorityNormal, 1, 0);
 osThreadDef(hardwarePwm, osPriorityNormal, 1, 0);
 osThreadDef(temperatureTracking, osPriorityNormal, 1, 0);
 osThreadDef(softwarePwm, osPriorityNormal, 1, 0);
-osThreadDef(modeControl, osPriorityNormal, 1, 0);
+osThreadDef(buttonControl, osPriorityNormal, 1, 0);
+osThreadDef(tapDetection, osPriorityNormal, 1, 0);
 
 // Create a thread definition for the LEDs
 //osThreadDef(leds, osPriorityNormal, 1, 0);
@@ -47,31 +54,24 @@ int main (void) {
 
 	mode = ACCELEROMETER_MODE;
 	initializeButton();
+	initializeAdc();
 	initTimer4();
 	initLeds();
 	initTimer();	
 
+	modeMutex = osMutexCreate(osMutex(modeMutex));
 
-	tid_thread5 = osThreadCreate(osThread(modeControl), NULL);
+	tid_thread5 = osThreadCreate(osThread(buttonControl), NULL);
+	tid_thread6 = osThreadCreate(osThread(tapDetection), NULL);
 	tid_thread1 = osThreadCreate(osThread(accelerometer), NULL);
-	tid_thread2 = osThreadCreate(osThread(hardwarePwm), NULL);
-	
+		tid_thread4 = osThreadCreate(osThread(softwarePwm), NULL);
 
-//	tid_thread3 = osThreadCreate(osThread(temperatureTracking), NULL);
-//	tid_thread4 = osThreadCreate(osThread(softwarePwm), NULL);
-	
+	tid_thread3 = osThreadCreate(osThread(temperatureTracking), NULL);
+		tid_thread2 = osThreadCreate(osThread(hardwarePwm), NULL);
+
 	// The below doesn't really need to be in a loop
 	while(1){
 		osDelay(osWaitForever);
-	}
-}
-
-void thread (void const *argument) {
-	while(1){
-		osDelay(1000);
-		GPIOD->BSRRL = GPIO_Pin_12;
-		osDelay(1000);
-		GPIOD->BSRRH = GPIO_Pin_12;
 	}
 }
 
@@ -92,10 +92,11 @@ void temperatureTracking(void const *argument) {
 		trackTemperature();
 }
 
-void modeControl(void const *argument) {
-		initializeButton();
+void buttonControl(void const *argument) {
+
 	while (1) {
 		if (isButtonPressed()) {
+		osMutexWait(modeMutex, osWaitForever);
 			if (mode == ACCELEROMETER_MODE) {
 				mode = HW_PWM_MODE;
 			}
@@ -108,7 +109,25 @@ void modeControl(void const *argument) {
 			else if (mode == SW_PWM_MODE) {
 				mode = TEMPERATURE_MODE;
 			}
+			osMutexRelease(modeMutex);
+			osDelay(1500);
 		}
+	}
+}
+
+void tapDetection(void const *argument) {
+	while (1) {
+		osSignalWait(1, osWaitForever);
+	
+		osMutexWait(modeMutex, osWaitForever);
+		if ((mode == ACCELEROMETER_MODE) || (mode == HW_PWM_MODE)) {
+			mode = TEMPERATURE_MODE;
+		}
+		else if ((mode == TEMPERATURE_MODE) || (mode == SW_PWM_MODE)) {
+			mode = ACCELEROMETER_MODE;
+		}
+		osMutexRelease(modeMutex);
+		osDelay(1500);
 	}
 }
 
