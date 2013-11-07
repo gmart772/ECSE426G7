@@ -17,6 +17,20 @@ void TIM3_IRQHandler(void) {
 		}
 }
 
+void TIM2_IRQHandler(void) {
+	// Get current interrupt status	
+	if (TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET) {
+			osSignalSet(tid_thread3, 1);
+			osSignalSet(tid_thread4, 1);
+	//		osSignalSet(tid_thread2, 1);
+			TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+		
+			// Toggle a GPIO Pin 
+			GPIO_ToggleBits(GPIOB, GPIO_Pin_11);
+		}
+}
+
+
 /** 
  * @brief Initializes and starts the TIM3 timer 
  * to generate an interrupt ever 40 ms (25 Hz).
@@ -145,5 +159,41 @@ void initTimer4(void) {
 	
 	/* TIM4 Main Output Enable */
   TIM_CtrlPWMOutputs(TIM4, ENABLE);
+}
+
+void initTimer2(void) {
+		NVIC_InitTypeDef NVIC_InitStructure;
+	uint16_t PrescalerValue = 0;
+
+  /* TIM3 clock enable */
+  RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
+
+  /* Enable the TIM3 global Interrupt */
+  NVIC_InitStructure.NVIC_IRQChannel = TIM2_IRQn;
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
+  NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+  NVIC_Init(&NVIC_InitStructure);
+	
+	TIM_TimeBaseInitTypeDef TIM2_TimeBaseInitStruct;
+	
+	/* Set period of TIM3 */
+	TIM2_TimeBaseInitStruct.TIM_Period = 65535; // us?
+	TIM2_TimeBaseInitStruct.TIM_Prescaler = 0;
+	TIM2_TimeBaseInitStruct.TIM_ClockDivision = 0;
+	TIM_TimeBaseInit(TIM2, &TIM2_TimeBaseInitStruct);
+	
+	/* Set prescaler value */
+	PrescalerValue = 64;
+	TIM_PrescalerConfig(TIM2, PrescalerValue, TIM_PSCReloadMode_Immediate);
+	
+	/* Enable interrupt on TIM5 */
+	TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);
+	
+	/* Enable the timer */
+	TIM_Cmd(TIM2, ENABLE);
+	
+	initializeTimerPin();
+
 }
 

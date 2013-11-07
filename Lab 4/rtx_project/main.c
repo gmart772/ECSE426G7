@@ -33,8 +33,8 @@ void buttonControl(void const * argument);
 void tapDetection(void const * argument);
 void Timer1_Callback(void const *argument);
 
-osTimerId timer;
-osTimerDef(timer, Timer1_Callback);
+//osTimerId timer;
+//osTimerDef(timer, Timer1_Callback);
 
 
 
@@ -60,12 +60,13 @@ int main (void) {
 	
 	initializeButton();
 	initializeAdc();
+	initTimer2();
 	initTimer4();
 	initLeds();
 	initTimer();	
 
 	modeMutex = osMutexCreate(osMutex(modeMutex));
-	timerId = osTimerCreate(osTimer(timer), osTimerPeriodic, NULL);
+//	timerId = osTimerCreate(osTimer(timer), osTimerPeriodic, NULL);
 	
 	status = osTimerStart(timerId, 50);
 	// Start thread
@@ -140,8 +141,8 @@ void tapDetection(void const *argument) {
 	}
 }
 
-void Timer1_Callback(void const *argument) {
+/*void Timer1_Callback(void const *argument) {
 	osSignalSet(tid_thread3, 1);
 	osSignalSet(tid_thread4, 1);
-}
+}*/
 
