@@ -10,10 +10,12 @@ void hwPwm() {
 				PWM_quadratic = pow(PWM_counter, 2)/100;
 				PWM_temp_counter = ((TIM4_PERIOD)/100)*PWM_quadratic;
 				
+				osMutexWait(modeMutex, osWaitForever);
 				// Update the LEDs for the new duty cycle
 				if (mode == HW_PWM_MODE) {
 					configureLEDS(PWM_temp_counter, PWM_temp_counter, PWM_temp_counter, PWM_temp_counter);
 				}
+				osMutexRelease(modeMutex);
 				
 				// We hold the lights off for PWM_hold_time cycles when PWM_counter = 0 (13 cycles ~ 1/2 second)
 				if (PWM_counter == 0 && PWM_hold_low_counter < PWM_hold_time)

@@ -113,29 +113,21 @@ void updateLED(float temperature) {
 					if (currentLED == 0)
 					{
 					configureLEDS(0, 0, 0, TIM4_PERIOD);						
-					//	GPIO_WriteBit(GPIOD, GPIO_Pin_12, 0);
-					//	GPIO_WriteBit(GPIOD, GPIO_Pin_15, 1);
 						currentLED = 3;
 					}
 					else if (currentLED == 1)
 					{
 					configureLEDS(TIM4_PERIOD, 0, 0, 0);
-					//	GPIO_WriteBit(GPIOD, GPIO_Pin_13, 0);
-					//	GPIO_WriteBit(GPIOD, GPIO_Pin_12, 1);
 						currentLED--;
 					}
 					else if (currentLED == 2)
 					{
 					configureLEDS(0, TIM4_PERIOD, 0, 0);
-					//	GPIO_WriteBit(GPIOD, GPIO_Pin_14, 0);
-					//	GPIO_WriteBit(GPIOD, GPIO_Pin_13, 1);
 						currentLED--;
 					}
 					else if (currentLED == 3)
 					{
 						configureLEDS(0, 0, TIM4_PERIOD, 0);
-					//	GPIO_WriteBit(GPIOD, GPIO_Pin_15, 0);
-					//	GPIO_WriteBit(GPIOD, GPIO_Pin_14, 1);
 						currentLED--;
 					}
 					// Set the next base temperature
@@ -160,10 +152,12 @@ void trackTemperature(void) {
 	
 	updateTempFilter(&filter, temperature);
 	
+		osMutexWait(modeMutex, osWaitForever);
 	// Only update LED after X readings?
 		if (mode == TEMPERATURE_MODE) {
 			updateLED(filter.averageValue);
 		}
+		osMutexRelease(modeMutex);
 	}
 }
 
@@ -172,24 +166,16 @@ void revertPinState(void) {
 		switch(currentLED)
 		{
 		case 0: 
-		//			GPIO_WriteBit(GPIOD, GPIO_Pin_12, 1);
 		configureLEDS(TIM4_PERIOD, 0, 0, 0);
-//			GPIO_WriteBit(GPIOD, GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15, 0);
 			break;
 		case 1:
 			configureLEDS(0,TIM4_PERIOD, 0, 0);
-	//		GPIO_WriteBit(GPIOD, GPIO_Pin_13, 1);
-	//		GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_14 | GPIO_Pin_15, 0);
 			break;
 		case 2:
 			configureLEDS(0, 0, TIM4_PERIOD, 0);
-	//		GPIO_WriteBit(GPIOD, GPIO_Pin_14, 1);
-	//		GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_15, 0);
 			break;
 		case 3:
 			configureLEDS(0, 0, 0, TIM4_PERIOD);
-	//		GPIO_WriteBit(GPIOD, GPIO_Pin_15, 1);
-	//		GPIO_WriteBit(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14, 0);
 			break;
 		default:
 			break;

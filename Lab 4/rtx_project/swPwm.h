@@ -7,7 +7,5 @@
 #include "stm32f4xx_rcc.h"
 #include "led.h"
 
-//extern int mode;
-
 //void SysTick_Handler();
 void swPwm(void);

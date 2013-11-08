@@ -141,14 +141,18 @@ void calculateTilts(void) {
 			updateAccFilter(&filterY, values[1]);
 			updateAccFilter(&filterZ, values[2]);
 			
+			pitch = getPitch(filterX.averageValue, filterY.averageValue, filterZ.averageValue);
+			roll = getRoll(filterX.averageValue, filterY.averageValue, filterZ.averageValue);
+		
+			osMutexWait(modeMutex, osWaitForever);
 			if (mode == ACCELEROMETER_MODE) {
 				// Calculate pitch and roll from the filter values
-				pitch = getPitch(filterX.averageValue, filterY.averageValue, filterZ.averageValue);
-				roll = getRoll(filterX.averageValue, filterY.averageValue, filterZ.averageValue);
+				
 				
 				// Update LEDs
 				flashLeds(pitch, roll);
 			}
+			osMutexRelease(modeMutex);
 			//printf("%d\n", (int) filterX.averageValue);
 			//printf("%d\n", (int) filterY.averageValue);
 			//printf("%d\n\n", (int) filterZ.averageValue);

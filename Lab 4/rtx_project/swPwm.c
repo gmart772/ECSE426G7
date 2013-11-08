@@ -9,10 +9,12 @@ void swPwm(void) {
 		osSignalWait(1, osWaitForever);
 
 		
+		osMutexWait(modeMutex, osWaitForever);
 		if (mode == SW_PWM_MODE) {
 				configureLEDS(pwm_counter * (TIM4_PERIOD / 80), pwm_counter * (TIM4_PERIOD / 80),
 			pwm_counter * (TIM4_PERIOD / 80), pwm_counter * (TIM4_PERIOD / 80));
 		}
+		osMutexRelease(modeMutex);
 		
 		// Increment the duty cycle count
 		pwm_counter++;

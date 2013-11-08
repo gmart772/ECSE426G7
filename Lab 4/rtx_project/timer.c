@@ -9,11 +9,11 @@ void TIM3_IRQHandler(void) {
 	// Get current interrupt status	
 	if (TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET) {
 			osSignalSet(tid_thread1, 1);
-	//		osSignalSet(tid_thread2, 1);
+			osSignalSet(tid_thread2, 1);
 			TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
 		
 			// Toggle a GPIO Pin 
-			//GPIO_ToggleBits(GPIOB, GPIO_Pin_11);
+			//GPIO_ToggleBits(GPIOB, GPIO_Pin_13);
 		}
 }
 
@@ -22,11 +22,10 @@ void TIM2_IRQHandler(void) {
 	if (TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET) {
 			osSignalSet(tid_thread3, 1);
 			osSignalSet(tid_thread4, 1);
-	//		osSignalSet(tid_thread2, 1);
 			TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 		
 			// Toggle a GPIO Pin 
-			GPIO_ToggleBits(GPIOB, GPIO_Pin_11);
+			//GPIO_ToggleBits(GPIOB, GPIO_Pin_11);
 		}
 }
 
@@ -79,7 +78,7 @@ void initializeTimerPin(void) {
 	GPIO_InitTypeDef gpio_init_s;
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
 	GPIO_StructInit(&gpio_init_s);
-	gpio_init_s.GPIO_Pin = GPIO_Pin_11;
+	gpio_init_s.GPIO_Pin = GPIO_Pin_11 | GPIO_Pin_13;
 	gpio_init_s.GPIO_Mode = GPIO_Mode_OUT;
 	gpio_init_s.GPIO_Speed = GPIO_Speed_100MHz;
 	gpio_init_s.GPIO_OType = GPIO_OType_PP;

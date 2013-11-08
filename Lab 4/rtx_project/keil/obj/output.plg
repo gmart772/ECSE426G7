@@ -3,13 +3,12 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-C:\Users\gmarti37\ECSE426G7\Lab 4\rtx_project\keil\rtx.uvproj
-Project File Date:  11/07/2013
+C:\Users\gmarti37\Downloads\ECSE426G7\Lab 4\rtx_project\keil\rtx.uvproj
+Project File Date:  11/08/2013
 
 <h2>Output:</h2>
 Build target 'Project'
 compiling system_stm32f4xx.c...
-assembling startup_stm32f4xx.s...
 compiling RTX_Conf_CM.c...
 compiling main.c...
 ../conversion.h(8): warning:  #1-D: last line of file ends without a newline
@@ -18,14 +17,15 @@ compiling main.c...
 ../main.c(61): warning:  #223-D: function "initializeButton" declared implicitly
 ../main.c(62): warning:  #223-D: function "initializeAdc" declared implicitly
 ../main.c(56): warning:  #550-D: variable "status" was set but never used
-../main.c(99): warning:  #223-D: function "trackTemperature" declared implicitly
-../main.c(105): warning:  #223-D: function "isButtonPressed" declared implicitly
-../main.c(118): warning:  #223-D: function "revertPinState" declared implicitly
-../main.c(133): warning:  #223-D: function "revertPinState" declared implicitly
+../main.c(100): warning:  #223-D: function "trackTemperature" declared implicitly
+../main.c(106): warning:  #223-D: function "isButtonPressed" declared implicitly
+../main.c(119): warning:  #223-D: function "revertPinState" declared implicitly
+../main.c(134): warning:  #223-D: function "revertPinState" declared implicitly
 compiling accelerometer.c...
 ..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
 ..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
-..\accelerometer.c(209): warning:  #1-D: last line of file ends without a newline
+..\accelerometer.c(147): error:  #20: identifier "modeMutex" is undefined
+..\accelerometer.c(213): warning:  #1-D: last line of file ends without a newline
 compiling tempFilter.c...
 ..\tempFilter.h(12): warning:  #1-D: last line of file ends without a newline
 compiling led.c...
@@ -34,12 +34,15 @@ compiling conversion.c...
 ..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
 compiling temperatureTracking.c...
 ..\tempFilter.h(12): warning:  #1-D: last line of file ends without a newline
+..\temperatureTracking.c(163): error:  #20: identifier "modeMutex" is undefined
 compiling swPwm.c...
+..\swPwm.c(12): error:  #20: identifier "modeMutex" is undefined
 compiling hwPwm.c...
 ..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
 ..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
 ..\hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
-..\hwPwm.c(41): warning:  #1-D: last line of file ends without a newline
+..\hwPwm.c(13): error:  #20: identifier "modeMutex" is undefined
+..\hwPwm.c(43): warning:  #1-D: last line of file ends without a newline
 compiling accFilter.c...
 ..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
 compiling misc.c...
@@ -74,95 +77,24 @@ compiling stm32f4xx_tim.c...
 compiling stm32f4xx_usart.c...
 compiling stm32f4xx_wwdg.c...
 compiling stm32f4_discovery_lis302dl.c...
-linking...
-Program Size: Code=25824 RO-data=928 RW-data=212 ZI-data=11996  
-FromELF: creating hex file...
-".\obj\output.axf" - 0 Error(s), 21 Warning(s).
+Target not created
 Build target 'Project'
-linking...
-Program Size: Code=25824 RO-data=928 RW-data=212 ZI-data=11996  
-FromELF: creating hex file...
-".\obj\output.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Project'
-compiling main.c...
-../conversion.h(8): warning:  #1-D: last line of file ends without a newline
-../accFilter.h(12): warning:  #1-D: last line of file ends without a newline
-../hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
-../main.c(61): warning:  #223-D: function "initializeButton" declared implicitly
-../main.c(62): warning:  #223-D: function "initializeAdc" declared implicitly
-../main.c(56): warning:  #550-D: variable "status" was set but never used
-../main.c(100): warning:  #223-D: function "trackTemperature" declared implicitly
-../main.c(106): warning:  #223-D: function "isButtonPressed" declared implicitly
-../main.c(119): warning:  #223-D: function "revertPinState" declared implicitly
-../main.c(134): warning:  #223-D: function "revertPinState" declared implicitly
-linking...
-Program Size: Code=25824 RO-data=928 RW-data=212 ZI-data=11996  
-FromELF: creating hex file...
-".\obj\output.axf" - 0 Error(s), 10 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Project'
-compiling timer.c...
-linking...
-Program Size: Code=25824 RO-data=928 RW-data=212 ZI-data=11996  
-FromELF: creating hex file...
-".\obj\output.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Project'
-compiling timer.c...
-linking...
-Program Size: Code=25824 RO-data=928 RW-data=212 ZI-data=11996  
-FromELF: creating hex file...
-".\obj\output.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Project'
-compiling timer.c...
-linking...
-Program Size: Code=25824 RO-data=928 RW-data=212 ZI-data=11996  
-FromELF: creating hex file...
-".\obj\output.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Project'
-compiling main.c...
-../conversion.h(8): warning:  #1-D: last line of file ends without a newline
-../accFilter.h(12): warning:  #1-D: last line of file ends without a newline
-../hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
-../main.c(61): warning:  #223-D: function "initializeButton" declared implicitly
-../main.c(62): warning:  #223-D: function "initializeAdc" declared implicitly
-../main.c(56): warning:  #550-D: variable "status" was set but never used
-../main.c(100): warning:  #223-D: function "trackTemperature" declared implicitly
-../main.c(106): warning:  #223-D: function "isButtonPressed" declared implicitly
-../main.c(119): warning:  #223-D: function "revertPinState" declared implicitly
-../main.c(134): warning:  #223-D: function "revertPinState" declared implicitly
 compiling accelerometer.c...
 ..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
 ..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
-..\accelerometer.c(209): warning:  #1-D: last line of file ends without a newline
-compiling timer.c...
+..\accelerometer.c(147): error:  #20: identifier "modeMutex" is undefined
+..\accelerometer.c(213): warning:  #1-D: last line of file ends without a newline
+compiling temperatureTracking.c...
+..\tempFilter.h(12): warning:  #1-D: last line of file ends without a newline
+..\temperatureTracking.c(163): error:  #20: identifier "modeMutex" is undefined
+compiling swPwm.c...
+..\swPwm.c(12): error:  #20: identifier "modeMutex" is undefined
 compiling hwPwm.c...
 ..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
 ..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
 ..\hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
-..\hwPwm.c(41): warning:  #1-D: last line of file ends without a newline
-linking...
-.\obj\output.axf: Error: L6200E: Symbol mode multiply defined (by accelerometer.o and main.o).
-.\obj\output.axf: Error: L6200E: Symbol mode multiply defined (by timer.o and main.o).
-.\obj\output.axf: Error: L6200E: Symbol mode multiply defined (by hwpwm.o and main.o).
+..\hwPwm.c(13): error:  #20: identifier "modeMutex" is undefined
+..\hwPwm.c(43): warning:  #1-D: last line of file ends without a newline
 Target not created
 Build target 'Project'
 compiling main.c...
@@ -179,231 +111,512 @@ compiling main.c...
 compiling accelerometer.c...
 ..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
 ..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
-..\accelerometer.c(209): warning:  #1-D: last line of file ends without a newline
+..\accelerometer.c(213): warning:  #1-D: last line of file ends without a newline
+compiling led.c...
 compiling timer.c...
+compiling temperatureTracking.c...
+..\tempFilter.h(12): warning:  #1-D: last line of file ends without a newline
+compiling swPwm.c...
 compiling hwPwm.c...
 ..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
 ..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
 ..\hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
-..\hwPwm.c(41): warning:  #1-D: last line of file ends without a newline
+..\hwPwm.c(43): warning:  #1-D: last line of file ends without a newline
 linking...
-.\obj\output.axf: Error: L6200E: Symbol tid_thread1 multiply defined (by accelerometer.o and main.o).
-.\obj\output.axf: Error: L6200E: Symbol tid_thread1 multiply defined (by timer.o and main.o).
-.\obj\output.axf: Error: L6200E: Symbol tid_thread1 multiply defined (by hwpwm.o and main.o).
-.\obj\output.axf: Error: L6200E: Symbol tid_thread2 multiply defined (by accelerometer.o and main.o).
-.\obj\output.axf: Error: L6200E: Symbol tid_thread2 multiply defined (by timer.o and main.o).
-.\obj\output.axf: Error: L6200E: Symbol tid_thread2 multiply defined (by hwpwm.o and main.o).
-.\obj\output.axf: Error: L6200E: Symbol tid_thread3 multiply defined (by accelerometer.o and main.o).
-.\obj\output.axf: Error: L6200E: Symbol tid_thread3 multiply defined (by timer.o and main.o).
-.\obj\output.axf: Error: L6200E: Symbol tid_thread3 multiply defined (by hwpwm.o and main.o).
-.\obj\output.axf: Error: L6200E: Symbol tid_thread4 multiply defined (by accelerometer.o and main.o).
-.\obj\output.axf: Error: L6200E: Symbol tid_thread4 multiply defined (by timer.o and main.o).
-.\obj\output.axf: Error: L6200E: Symbol tid_thread4 multiply defined (by hwpwm.o and main.o).
-.\obj\output.axf: Error: L6200E: Symbol tid_thread5 multiply defined (by accelerometer.o and main.o).
-.\obj\output.axf: Error: L6200E: Symbol tid_thread5 multiply defined (by timer.o and main.o).
-.\obj\output.axf: Error: L6200E: Symbol tid_thread5 multiply defined (by hwpwm.o and main.o).
-.\obj\output.axf: Error: L6200E: Symbol tid_thread6 multiply defined (by accelerometer.o and main.o).
-.\obj\output.axf: Error: L6200E: Symbol tid_thread6 multiply defined (by timer.o and main.o).
-.\obj\output.axf: Error: L6200E: Symbol tid_thread6 multiply defined (by hwpwm.o and main.o).
+Program Size: Code=25936 RO-data=928 RW-data=212 ZI-data=11996  
+FromELF: creating hex file...
+".\obj\output.axf" - 0 Error(s), 18 Warning(s).
+Build target 'Project'
+linking...
+Program Size: Code=25936 RO-data=928 RW-data=212 ZI-data=11996  
+FromELF: creating hex file...
+".\obj\output.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\gmarti37\\Downloads\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Project'
+compiling timer.c...
+linking...
+Program Size: Code=25944 RO-data=928 RW-data=212 ZI-data=11996  
+FromELF: creating hex file...
+".\obj\output.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Project'
+compiling timer.c...
+linking...
+Program Size: Code=25936 RO-data=928 RW-data=212 ZI-data=11996  
+FromELF: creating hex file...
+".\obj\output.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Project'
+compiling main.c...
+../conversion.h(8): warning:  #1-D: last line of file ends without a newline
+../accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+../hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
+../main.c(49): warning:  #223-D: function "initializeButton" declared implicitly
+../main.c(50): warning:  #223-D: function "initializeAdc" declared implicitly
+../main.c(44): warning:  #550-D: variable "status" was set but never used
+compiling accelerometer.c...
+..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
+..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+..\accelerometer.c(213): warning:  #1-D: last line of file ends without a newline
+compiling led.c...
+compiling timer.c...
+compiling temperatureTracking.c...
+..\tempFilter.h(12): warning:  #1-D: last line of file ends without a newline
+compiling swPwm.c...
+compiling hwPwm.c...
+..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
+..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+..\hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
+..\hwPwm.c(43): warning:  #1-D: last line of file ends without a newline
+compiling threads.c...
+..\threads.c(4): warning:  #223-D: function "initAccelerometer" declared implicitly
+..\threads.c(5): warning:  #223-D: function "calculateTilts" declared implicitly
+..\threads.c(9): warning:  #223-D: function "hwPwm" declared implicitly
+..\threads.c(13): warning:  #223-D: function "swPwm" declared implicitly
+..\threads.c(17): warning:  #223-D: function "trackTemperature" declared implicitly
+..\threads.c(23): warning:  #223-D: function "isButtonPressed" declared implicitly
+..\threads.c(36): warning:  #223-D: function "revertPinState" declared implicitly
+..\threads.c(51): warning:  #223-D: function "revertPinState" declared implicitly
+..\threads.c(59): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=25944 RO-data=928 RW-data=212 ZI-data=11996  
+FromELF: creating hex file...
+".\obj\output.axf" - 0 Error(s), 23 Warning(s).
+Load "C:\\Users\\gmarti37\\Downloads\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Project'
+compiling main.c...
+../conversion.h(8): warning:  #1-D: last line of file ends without a newline
+../accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+../hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
+../main.c(34): warning:  #223-D: function "initializeButton" declared implicitly
+../main.c(35): warning:  #223-D: function "initializeAdc" declared implicitly
+../main.c(45): error:  #20: identifier "os_thread_def_buttonControl" is undefined
+../main.c(46): error:  #20: identifier "os_thread_def_tapDetection" is undefined
+../main.c(47): error:  #20: identifier "os_thread_def_accelerometer" is undefined
+../main.c(48): error:  #20: identifier "os_thread_def_softwarePwm" is undefined
+../main.c(49): error:  #20: identifier "os_thread_def_temperatureTracking" is undefined
+../main.c(50): error:  #20: identifier "os_thread_def_hardwarePwm" is undefined
+compiling threads.c...
+..\threads.c(13): warning:  #223-D: function "initAccelerometer" declared implicitly
+..\threads.c(14): warning:  #223-D: function "calculateTilts" declared implicitly
+..\threads.c(18): warning:  #223-D: function "hwPwm" declared implicitly
+..\threads.c(22): warning:  #223-D: function "swPwm" declared implicitly
+..\threads.c(26): warning:  #223-D: function "trackTemperature" declared implicitly
+..\threads.c(32): warning:  #223-D: function "isButtonPressed" declared implicitly
+..\threads.c(45): warning:  #223-D: function "revertPinState" declared implicitly
+..\threads.c(60): warning:  #223-D: function "revertPinState" declared implicitly
+..\threads.c(68): warning:  #1-D: last line of file ends without a newline
 Target not created
 Build target 'Project'
 compiling main.c...
 ../conversion.h(8): warning:  #1-D: last line of file ends without a newline
 ../accFilter.h(12): warning:  #1-D: last line of file ends without a newline
 ../hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
-../main.c(61): warning:  #223-D: function "initializeButton" declared implicitly
-../main.c(62): warning:  #223-D: function "initializeAdc" declared implicitly
-../main.c(56): warning:  #550-D: variable "status" was set but never used
-../main.c(100): warning:  #223-D: function "trackTemperature" declared implicitly
-../main.c(106): warning:  #223-D: function "isButtonPressed" declared implicitly
-../main.c(119): warning:  #223-D: function "revertPinState" declared implicitly
-../main.c(134): warning:  #223-D: function "revertPinState" declared implicitly
+../main.c(38): warning:  #223-D: function "initializeButton" declared implicitly
+../main.c(39): warning:  #223-D: function "initializeAdc" declared implicitly
+compiling threads.c...
+..\threads.c(4): warning:  #223-D: function "initAccelerometer" declared implicitly
+..\threads.c(5): warning:  #223-D: function "calculateTilts" declared implicitly
+..\threads.c(9): warning:  #223-D: function "hwPwm" declared implicitly
+..\threads.c(13): warning:  #223-D: function "swPwm" declared implicitly
+..\threads.c(17): warning:  #223-D: function "trackTemperature" declared implicitly
+..\threads.c(23): warning:  #223-D: function "isButtonPressed" declared implicitly
+..\threads.c(36): warning:  #223-D: function "revertPinState" declared implicitly
+..\threads.c(51): warning:  #223-D: function "revertPinState" declared implicitly
+..\threads.c(59): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=25780 RO-data=924 RW-data=212 ZI-data=11996  
+FromELF: creating hex file...
+".\obj\output.axf" - 0 Error(s), 14 Warning(s).
+Build target 'Project'
+compiling main.c...
+../conversion.h(8): warning:  #1-D: last line of file ends without a newline
+../accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+../hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
+../main.c(35): warning:  #223-D: function "initializeButton" declared implicitly
+../main.c(36): warning:  #223-D: function "initializeAdc" declared implicitly
+linking...
+Program Size: Code=25780 RO-data=924 RW-data=212 ZI-data=11996  
+FromELF: creating hex file...
+".\obj\output.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Project'
+compiling main.c...
+../conversion.h(8): warning:  #1-D: last line of file ends without a newline
+../accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+../hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
+../main.c(35): warning:  #223-D: function "initializeButton" declared implicitly
+../main.c(36): warning:  #223-D: function "initializeAdc" declared implicitly
 compiling accelerometer.c...
 ..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
 ..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
-..\accelerometer.c(209): warning:  #1-D: last line of file ends without a newline
+..\accelerometer.c(213): warning:  #1-D: last line of file ends without a newline
+compiling led.c...
 compiling timer.c...
+compiling temperatureTracking.c...
+..\tempFilter.h(12): warning:  #1-D: last line of file ends without a newline
+compiling swPwm.c...
 compiling hwPwm.c...
 ..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
 ..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
 ..\hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
-..\hwPwm.c(41): warning:  #1-D: last line of file ends without a newline
+..\hwPwm.c(43): warning:  #1-D: last line of file ends without a newline
+compiling threads.c...
+..\threads.c(4): warning:  #223-D: function "initAccelerometer" declared implicitly
+..\threads.c(5): warning:  #223-D: function "calculateTilts" declared implicitly
+..\threads.c(9): warning:  #223-D: function "hwPwm" declared implicitly
+..\threads.c(13): warning:  #223-D: function "swPwm" declared implicitly
+..\threads.c(17): warning:  #223-D: function "trackTemperature" declared implicitly
+..\threads.c(23): warning:  #223-D: function "isButtonPressed" declared implicitly
+..\threads.c(36): warning:  #223-D: function "revertPinState" declared implicitly
+..\threads.c(51): warning:  #223-D: function "revertPinState" declared implicitly
+..\threads.c(59): warning:  #1-D: last line of file ends without a newline
 linking...
-Program Size: Code=25824 RO-data=928 RW-data=212 ZI-data=11996  
+Program Size: Code=25780 RO-data=924 RW-data=212 ZI-data=11996  
 FromELF: creating hex file...
-".\obj\output.axf" - 0 Error(s), 17 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
+".\obj\output.axf" - 0 Error(s), 22 Warning(s).
+Build target 'Project'
+compiling main.c...
+../main.c(33): warning:  #223-D: function "initializeButton" declared implicitly
+../main.c(34): warning:  #223-D: function "initializeAdc" declared implicitly
+../main.c(35): warning:  #223-D: function "initTimer2" declared implicitly
+../main.c(36): warning:  #223-D: function "initTimer4" declared implicitly
+../main.c(38): warning:  #223-D: function "initTimer" declared implicitly
+linking...
+Program Size: Code=25780 RO-data=924 RW-data=188 ZI-data=11788  
+FromELF: creating hex file...
+".\obj\output.axf" - 0 Error(s), 5 Warning(s).
+Load "C:\\Users\\gmarti37\\Downloads\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
 Erase Done.
 Programming Done.
 Verify OK.
 Build target 'Project'
-compiling timer.c...
+compiling main.c...
+../main.c(17): error:  #20: identifier "accelerometer" is undefined
+../main.c(18): error:  #20: identifier "hardwarePwm" is undefined
+../main.c(19): error:  #20: identifier "temperatureTracking" is undefined
+../main.c(20): error:  #20: identifier "softwarePwm" is undefined
+../main.c(21): error:  #20: identifier "buttonControl" is undefined
+../main.c(22): error:  #20: identifier "tapDetection" is undefined
+../main.c(30): error:  #20: identifier "ACCELEROMETER_MODE" is undefined
+../main.c(33): warning:  #223-D: function "initializeButton" declared implicitly
+../main.c(34): warning:  #223-D: function "initializeAdc" declared implicitly
+../main.c(35): warning:  #223-D: function "initTimer2" declared implicitly
+../main.c(36): warning:  #223-D: function "initTimer4" declared implicitly
+../main.c(37): warning:  #223-D: function "initLeds" declared implicitly
+../main.c(38): warning:  #223-D: function "initTimer" declared implicitly
+Target not created
+Build target 'Project'
+compiling main.c...
+../main.c(34): warning:  #223-D: function "initializeButton" declared implicitly
+../main.c(35): warning:  #223-D: function "initializeAdc" declared implicitly
+../main.c(36): warning:  #223-D: function "initTimer2" declared implicitly
+../main.c(37): warning:  #223-D: function "initTimer4" declared implicitly
+../main.c(39): warning:  #223-D: function "initTimer" declared implicitly
 linking...
-Program Size: Code=25824 RO-data=928 RW-data=212 ZI-data=11996  
+Program Size: Code=25780 RO-data=924 RW-data=188 ZI-data=11788  
+FromELF: creating hex file...
+".\obj\output.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Project'
+compiling main.c...
+../main.c(33): warning:  #223-D: function "initializeButton" declared implicitly
+../main.c(34): warning:  #223-D: function "initializeAdc" declared implicitly
+../main.c(35): warning:  #223-D: function "initTimer2" declared implicitly
+../main.c(36): warning:  #223-D: function "initTimer4" declared implicitly
+../main.c(38): warning:  #223-D: function "initTimer" declared implicitly
+linking...
+Program Size: Code=25780 RO-data=924 RW-data=188 ZI-data=11788  
+FromELF: creating hex file...
+".\obj\output.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Project'
+linking...
+Program Size: Code=25780 RO-data=924 RW-data=188 ZI-data=11788  
 FromELF: creating hex file...
 ".\obj\output.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
+Build target 'Project'
+compiling main.c...
+../main.c(32): warning:  #223-D: function "initializeButton" declared implicitly
+../main.c(33): warning:  #223-D: function "initializeAdc" declared implicitly
+../main.c(34): warning:  #223-D: function "initTimer2" declared implicitly
+../main.c(35): warning:  #223-D: function "initTimer4" declared implicitly
+../main.c(37): warning:  #223-D: function "initTimer" declared implicitly
+linking...
+Program Size: Code=25780 RO-data=924 RW-data=188 ZI-data=11788  
+FromELF: creating hex file...
+".\obj\output.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Project'
+compiling main.c...
+../main.c(33): warning:  #223-D: function "initializeButton" declared implicitly
+../main.c(34): warning:  #223-D: function "initializeAdc" declared implicitly
+../main.c(35): warning:  #223-D: function "initTimer2" declared implicitly
+../main.c(36): warning:  #223-D: function "initTimer4" declared implicitly
+../main.c(38): warning:  #223-D: function "initTimer" declared implicitly
+linking...
+Program Size: Code=25780 RO-data=924 RW-data=188 ZI-data=11788  
+FromELF: creating hex file...
+".\obj\output.axf" - 0 Error(s), 5 Warning(s).
+Load "C:\\Users\\gmarti37\\Downloads\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
 Erase Done.
 Programming Done.
 Verify OK.
 Build target 'Project'
-compiling timer.c...
+compiling main.c...
+../conversion.h(8): warning:  #1-D: last line of file ends without a newline
+../accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+../tempFilter.h(12): warning:  #1-D: last line of file ends without a newline
+../conversion.h(8): warning:  #1-D: last line of file ends without a newline
+../accFilter.h(3): error:  #101: "accFilter" has already been declared in the current scope
+../accFilter.h(9): error:  #256: invalid redeclaration of type name "accFilter" (declared at line 9)
+../accFilter.h(11): error:  #147-D: declaration is incompatible with "void initializeAccFilter(accFilter *)" (declared at line 11)
+../accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+../accFilter.h(12): error:  #147-D: declaration is incompatible with "void updateAccFilter(accFilter *, int)" (declared at line 12)
+../accelerometer.h(19): error:  #148: variable "G" has already been initialized
+../accelerometer.h(22): error:  #147: declaration is incompatible with "accFilter filterX" (declared at line 22)
+../accelerometer.h(23): error:  #147: declaration is incompatible with "accFilter filterY" (declared at line 23)
+../accelerometer.h(24): error:  #147: declaration is incompatible with "accFilter filterZ" (declared at line 24)
+../hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'Project'
+compiling main.c...
+../tempFilter.h(12): warning:  #1-D: last line of file ends without a newline
+../conversion.h(8): warning:  #1-D: last line of file ends without a newline
+../accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+../hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
 linking...
-Program Size: Code=25824 RO-data=928 RW-data=212 ZI-data=11996  
+Program Size: Code=25780 RO-data=924 RW-data=228 ZI-data=12044  
+FromELF: creating hex file...
+".\obj\output.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Project'
+compiling main.c...
+../conversion.h(8): warning:  #1-D: last line of file ends without a newline
+../accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+../hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
+../main.c(36): warning:  #223-D: function "initializeButton" declared implicitly
+../main.c(37): warning:  #223-D: function "initializeAdc" declared implicitly
+linking...
+Program Size: Code=25780 RO-data=924 RW-data=212 ZI-data=11996  
+FromELF: creating hex file...
+".\obj\output.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Project'
+linking...
+Program Size: Code=25780 RO-data=924 RW-data=212 ZI-data=11996  
 FromELF: creating hex file...
 ".\obj\output.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
 Build target 'Project'
-compiling main.c...
-../conversion.h(8): warning:  #1-D: last line of file ends without a newline
-../accFilter.h(12): warning:  #1-D: last line of file ends without a newline
-../hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
-../main.c(61): warning:  #223-D: function "initializeButton" declared implicitly
-../main.c(62): warning:  #223-D: function "initializeAdc" declared implicitly
-../main.c(56): warning:  #550-D: variable "status" was set but never used
-../main.c(101): warning:  #223-D: function "trackTemperature" declared implicitly
-../main.c(107): warning:  #223-D: function "isButtonPressed" declared implicitly
-../main.c(120): warning:  #223-D: function "revertPinState" declared implicitly
-../main.c(135): warning:  #223-D: function "revertPinState" declared implicitly
 linking...
-Program Size: Code=25824 RO-data=928 RW-data=212 ZI-data=11996  
+Program Size: Code=25780 RO-data=924 RW-data=212 ZI-data=11996  
 FromELF: creating hex file...
-".\obj\output.axf" - 0 Error(s), 10 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
+".\obj\output.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\gmarti37\\Downloads\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
 Erase Done.
 Programming Done.
 Verify OK.
 Build target 'Project'
-compiling main.c...
-../conversion.h(8): warning:  #1-D: last line of file ends without a newline
-../accFilter.h(12): warning:  #1-D: last line of file ends without a newline
-../hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
-../main.c(61): warning:  #223-D: function "initializeButton" declared implicitly
-../main.c(62): warning:  #223-D: function "initializeAdc" declared implicitly
-../main.c(56): warning:  #550-D: variable "status" was set but never used
-../main.c(100): warning:  #223-D: function "trackTemperature" declared implicitly
-../main.c(106): warning:  #223-D: function "isButtonPressed" declared implicitly
-../main.c(119): warning:  #223-D: function "revertPinState" declared implicitly
-../main.c(134): warning:  #223-D: function "revertPinState" declared implicitly
+compiling temperatureTracking.c...
+..\tempFilter.h(12): warning:  #1-D: last line of file ends without a newline
 linking...
-Program Size: Code=25824 RO-data=928 RW-data=212 ZI-data=11996  
+Program Size: Code=25780 RO-data=924 RW-data=212 ZI-data=11996  
 FromELF: creating hex file...
-".\obj\output.axf" - 0 Error(s), 10 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
+".\obj\output.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Project'
+linking...
+Program Size: Code=25780 RO-data=924 RW-data=212 ZI-data=11996  
+FromELF: creating hex file...
+".\obj\output.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Project'
+linking...
+Program Size: Code=25780 RO-data=924 RW-data=212 ZI-data=11996  
+FromELF: creating hex file...
+".\obj\output.axf" - 0 Error(s), 0 Warning(s).
 Build target 'Project'
 compiling main.c...
 ../conversion.h(8): warning:  #1-D: last line of file ends without a newline
 ../accFilter.h(12): warning:  #1-D: last line of file ends without a newline
 ../hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
-../main.c(61): warning:  #223-D: function "initializeButton" declared implicitly
-../main.c(62): warning:  #223-D: function "initializeAdc" declared implicitly
-../main.c(56): warning:  #550-D: variable "status" was set but never used
-../main.c(100): warning:  #223-D: function "trackTemperature" declared implicitly
-../main.c(106): warning:  #223-D: function "isButtonPressed" declared implicitly
-../main.c(119): warning:  #223-D: function "revertPinState" declared implicitly
-../main.c(134): warning:  #223-D: function "revertPinState" declared implicitly
+../main.c(36): warning:  #223-D: function "initializeButton" declared implicitly
+../main.c(37): warning:  #223-D: function "initializeAdc" declared implicitly
 compiling accelerometer.c...
 ..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
 ..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
-..\accelerometer.c(209): warning:  #1-D: last line of file ends without a newline
+..\accelerometer.c(213): warning:  #1-D: last line of file ends without a newline
+compiling led.c...
 compiling timer.c...
+compiling temperatureTracking.c...
+..\tempFilter.h(12): warning:  #1-D: last line of file ends without a newline
+compiling swPwm.c...
 compiling hwPwm.c...
 ..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
 ..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
 ..\hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
-..\hwPwm.c(41): warning:  #1-D: last line of file ends without a newline
+..\hwPwm.c(43): warning:  #1-D: last line of file ends without a newline
+compiling threads.c...
+..\threads.c(4): warning:  #223-D: function "initAccelerometer" declared implicitly
+..\threads.c(5): warning:  #223-D: function "calculateTilts" declared implicitly
+..\threads.c(9): warning:  #223-D: function "hwPwm" declared implicitly
+..\threads.c(13): warning:  #223-D: function "swPwm" declared implicitly
+..\threads.c(17): warning:  #223-D: function "trackTemperature" declared implicitly
+..\threads.c(23): warning:  #223-D: function "isButtonPressed" declared implicitly
+..\threads.c(36): warning:  #223-D: function "revertPinState" declared implicitly
+..\threads.c(51): warning:  #223-D: function "revertPinState" declared implicitly
+..\threads.c(59): warning:  #1-D: last line of file ends without a newline
 linking...
-Program Size: Code=25824 RO-data=928 RW-data=212 ZI-data=11996  
+Program Size: Code=25780 RO-data=924 RW-data=212 ZI-data=11996  
 FromELF: creating hex file...
-".\obj\output.axf" - 0 Error(s), 17 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Project'
-compiling timer.c...
-linking...
-Program Size: Code=25824 RO-data=928 RW-data=212 ZI-data=11996  
-FromELF: creating hex file...
-".\obj\output.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Project'
-compiling timer.c...
-linking...
-Program Size: Code=25824 RO-data=928 RW-data=212 ZI-data=11996  
-FromELF: creating hex file...
-".\obj\output.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Project'
-linking...
-Program Size: Code=25824 RO-data=928 RW-data=212 ZI-data=11996  
-FromELF: creating hex file...
-".\obj\output.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Project'
-compiling timer.c...
-linking...
-Program Size: Code=25824 RO-data=928 RW-data=212 ZI-data=11996  
-FromELF: creating hex file...
-".\obj\output.axf" - 0 Error(s), 0 Warning(s).
+".\obj\output.axf" - 0 Error(s), 22 Warning(s).
 Build target 'Project'
 compiling main.c...
 ../conversion.h(8): warning:  #1-D: last line of file ends without a newline
 ../accFilter.h(12): warning:  #1-D: last line of file ends without a newline
 ../hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
-../main.c(61): warning:  #223-D: function "initializeButton" declared implicitly
-../main.c(62): warning:  #223-D: function "initializeAdc" declared implicitly
-../main.c(56): warning:  #550-D: variable "status" was set but never used
-../main.c(100): warning:  #223-D: function "trackTemperature" declared implicitly
-../main.c(106): warning:  #223-D: function "isButtonPressed" declared implicitly
-../main.c(119): warning:  #223-D: function "revertPinState" declared implicitly
-../main.c(134): warning:  #223-D: function "revertPinState" declared implicitly
+../main.c(36): warning:  #223-D: function "initializeButton" declared implicitly
+../main.c(37): warning:  #223-D: function "initializeAdc" declared implicitly
 compiling accelerometer.c...
 ..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
 ..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
-..\accelerometer.c(209): warning:  #1-D: last line of file ends without a newline
+..\accelerometer.c(213): warning:  #1-D: last line of file ends without a newline
+compiling led.c...
 compiling timer.c...
+compiling temperatureTracking.c...
+..\tempFilter.h(12): warning:  #1-D: last line of file ends without a newline
+compiling swPwm.c...
 compiling hwPwm.c...
 ..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
 ..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
 ..\hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
-..\hwPwm.c(41): warning:  #1-D: last line of file ends without a newline
+..\hwPwm.c(43): warning:  #1-D: last line of file ends without a newline
+compiling threads.c...
+..\threads.c(4): warning:  #223-D: function "initAccelerometer" declared implicitly
+..\threads.c(5): warning:  #223-D: function "calculateTilts" declared implicitly
+..\threads.c(9): warning:  #223-D: function "hwPwm" declared implicitly
+..\threads.c(13): warning:  #223-D: function "swPwm" declared implicitly
+..\threads.c(17): warning:  #223-D: function "trackTemperature" declared implicitly
+..\threads.c(23): warning:  #223-D: function "isButtonPressed" declared implicitly
+..\threads.c(36): warning:  #223-D: function "revertPinState" declared implicitly
+..\threads.c(51): warning:  #223-D: function "revertPinState" declared implicitly
+..\threads.c(59): warning:  #1-D: last line of file ends without a newline
 linking...
-Program Size: Code=25840 RO-data=928 RW-data=212 ZI-data=11996  
+Program Size: Code=25780 RO-data=924 RW-data=212 ZI-data=11996  
 FromELF: creating hex file...
-".\obj\output.axf" - 0 Error(s), 17 Warning(s).
+".\obj\output.axf" - 0 Error(s), 22 Warning(s).
 Build target 'Project'
-compiling timer.c...
+compiling main.c...
+../conversion.h(8): warning:  #1-D: last line of file ends without a newline
+../accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+../hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
+../main.c(36): warning:  #223-D: function "initializeButton" declared implicitly
+../main.c(37): warning:  #223-D: function "initializeAdc" declared implicitly
+compiling accelerometer.c...
+..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
+..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+..\accelerometer.c(213): warning:  #1-D: last line of file ends without a newline
+compiling led.c...
+compiling temperatureTracking.c...
+..\tempFilter.h(12): warning:  #1-D: last line of file ends without a newline
+..\temperatureTracking.c(155): error:  #20: identifier "modeMutex" is undefined
+..\temperatureTracking.c(157): error:  #20: identifier "mode" is undefined
+..\temperatureTracking.c(157): error:  #20: identifier "TEMPERATURE_MODE" is undefined
+compiling swPwm.c...
+..\swPwm.c(9): warning:  #223-D: function "osSignalWait" declared implicitly
+..\swPwm.c(9): error:  #20: identifier "osWaitForever" is undefined
+..\swPwm.c(12): warning:  #223-D: function "osMutexWait" declared implicitly
+..\swPwm.c(12): error:  #20: identifier "modeMutex" is undefined
+..\swPwm.c(13): error:  #20: identifier "mode" is undefined
+..\swPwm.c(13): error:  #20: identifier "SW_PWM_MODE" is undefined
+..\swPwm.c(17): warning:  #223-D: function "osMutexRelease" declared implicitly
+compiling hwPwm.c...
+..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
+..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+..\hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
+..\hwPwm.c(43): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'Project'
+compiling main.c...
+../conversion.h(8): warning:  #1-D: last line of file ends without a newline
+../accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+../hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
+../main.c(36): warning:  #223-D: function "initializeButton" declared implicitly
+../main.c(37): warning:  #223-D: function "initializeAdc" declared implicitly
+compiling accelerometer.c...
+..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
+..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+..\accelerometer.c(213): warning:  #1-D: last line of file ends without a newline
+compiling led.c...
+compiling temperatureTracking.c...
+..\tempFilter.h(12): warning:  #1-D: last line of file ends without a newline
+compiling swPwm.c...
+compiling hwPwm.c...
+..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
+..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+..\hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
+..\hwPwm.c(43): warning:  #1-D: last line of file ends without a newline
 linking...
-Program Size: Code=25840 RO-data=928 RW-data=212 ZI-data=11996  
+Program Size: Code=25780 RO-data=924 RW-data=212 ZI-data=11996  
+FromELF: creating hex file...
+".\obj\output.axf" - 0 Error(s), 13 Warning(s).
+Build target 'Project'
+compiling main.c...
+../conversion.h(8): warning:  #1-D: last line of file ends without a newline
+../accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+../hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
+../main.c(37): warning:  #223-D: function "initializeButton" declared implicitly
+../main.c(38): warning:  #223-D: function "initializeAdc" declared implicitly
+compiling accelerometer.c...
+..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
+..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+..\accelerometer.c(213): warning:  #1-D: last line of file ends without a newline
+compiling led.c...
+compiling temperatureTracking.c...
+..\tempFilter.h(12): warning:  #1-D: last line of file ends without a newline
+compiling swPwm.c...
+compiling hwPwm.c...
+..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
+..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+..\hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
+..\hwPwm.c(43): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=25780 RO-data=924 RW-data=212 ZI-data=11996  
+FromELF: creating hex file...
+".\obj\output.axf" - 0 Error(s), 13 Warning(s).
+Build target 'Project'
+compiling main.c...
+../conversion.h(8): warning:  #1-D: last line of file ends without a newline
+../accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+../hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
+../main.c(34): warning:  #223-D: function "initializeButton" declared implicitly
+../main.c(35): warning:  #223-D: function "initializeAdc" declared implicitly
+compiling accelerometer.c...
+..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
+..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+..\accelerometer.c(213): warning:  #1-D: last line of file ends without a newline
+compiling led.c...
+compiling timer.c...
+compiling temperatureTracking.c...
+..\tempFilter.h(12): warning:  #1-D: last line of file ends without a newline
+compiling swPwm.c...
+compiling hwPwm.c...
+..\conversion.h(8): warning:  #1-D: last line of file ends without a newline
+..\accFilter.h(12): warning:  #1-D: last line of file ends without a newline
+..\hwPwm.h(13): warning:  #1-D: last line of file ends without a newline
+..\hwPwm.c(43): warning:  #1-D: last line of file ends without a newline
+compiling threads.c...
+..\threads.c(4): warning:  #223-D: function "initAccelerometer" declared implicitly
+..\threads.c(5): warning:  #223-D: function "calculateTilts" declared implicitly
+..\threads.c(9): warning:  #223-D: function "hwPwm" declared implicitly
+..\threads.c(13): warning:  #223-D: function "swPwm" declared implicitly
+..\threads.c(17): warning:  #223-D: function "trackTemperature" declared implicitly
+..\threads.c(23): warning:  #223-D: function "isButtonPressed" declared implicitly
+..\threads.c(36): warning:  #223-D: function "revertPinState" declared implicitly
+..\threads.c(51): warning:  #223-D: function "revertPinState" declared implicitly
+..\threads.c(59): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=25780 RO-data=924 RW-data=212 ZI-data=11996  
+FromELF: creating hex file...
+".\obj\output.axf" - 0 Error(s), 22 Warning(s).
+Build target 'Project'
+linking...
+Program Size: Code=25780 RO-data=924 RW-data=212 ZI-data=11996  
 FromELF: creating hex file...
 ".\obj\output.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Project'
-compiling timer.c...
-linking...
-Program Size: Code=25840 RO-data=928 RW-data=212 ZI-data=11996  
-FromELF: creating hex file...
-".\obj\output.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\gmarti37\\ECSE426G7\\Lab 4\\rtx_project\\keil\\obj\\output.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
